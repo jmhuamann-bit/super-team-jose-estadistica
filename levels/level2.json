@@ -1,0 +1,33 @@
+{
+  "id": "level2",
+  "distrito": "San Miguel",
+  "clase": "Clase 02",
+  "titulo": "El malecón del muestreo",
+  "tema": "parque",
+  "musica": "parque",
+  "vehiculo": "bus",
+  "intro": "Toca elegir CÓMO se escoge la muestra. En el malecón los bichos confunden estratos con conglomerados y le echan la culpa al encuestador de todo. Aplica el truco PECAS y pon orden.",
+  "repaso": [
+    "PECAS: Polietápico, Estratificado, Conglomerados, Aleatorio simple y Sistemático son probabilísticos.",
+    "Estrato: adentro iguales, afuera diferentes. Conglomerado: adentro diferentes, afuera iguales.",
+    "En conglomerados la unidad de muestra es el grupo; la unidad elemental sigue siendo el individuo.",
+    "Error muestral: culpa de la muestra. Error no muestral: culpa de quien recolecta o procesa."
+  ],
+  "mapa": [
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                                                                                                                            ",
+    "                                                                              o o o                                                                       #                 ",
+    "          ?    o   o o o         o       o o o o   1          #      o        ===           o   V           o o L o     o         G                      ##                 ",
+    "              o o  ===          o o      ====                ##     o o                    o o              ====       o o              #               ###                 ",
+    "      o o o  o   o             o   o                        ### o ooo  o ===              o   o                       o   o            ##  o o o o     ####                 ",
+    "  P                      E   X       E         C       E   ####                      E  X          E    C          E          E       ###       B     #####   M             ",
+    "##############   ###############   #################################   ####################  ##########################   ##################################################",
+    "##############   ###############   #################################   ####################  ##########################   ##################################################",
+    "##############   ###############   #################################   ####################  ##########################   ##################################################"
+  ]
+}

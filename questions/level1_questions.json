@@ -1,0 +1,138 @@
+{
+  "nivel": "level1",
+  "clase": "Clase 01 · Conceptos generales (Parte 01)",
+  "fuente": "Apuntes de la 1era clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e1-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Qué es la POBLACIÓN en estadística?",
+      "opciones": [
+        "Todas las personas de un país",
+        "Conjunto de personas u objetos que tienen una característica de interés para la investigación",
+        "El grupo al que finalmente se encuesta",
+        "La lista de nombres de donde se saca la muestra"
+      ],
+      "correcta": 1,
+      "explicacion": "Ojo: no siempre son personas. Pueden ser panetones, billetes o carpetas. La clave es la característica de interés que se quiere estudiar."
+    },
+    {
+      "id": "e1-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Población FINITA o INFINITA:\n\n«Conjunto de personas que entran y salen de la universidad en un día»",
+      "opciones": [
+        "Finita: se puede contar exactamente",
+        "Infinita: no se puede conocer con exactitud su número de elementos",
+        "No es una población",
+        "Depende del día"
+      ],
+      "correcta": 1,
+      "explicacion": "Infinita. Y ojo con el dato curioso: infinita NO significa que sean infinitos elementos, sino que no se puede conocer su número con exactitud."
+    },
+    {
+      "id": "e1-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Qué es la MUESTRA?",
+      "opciones": [
+        "El proceso para recoger la información",
+        "Subconjunto al que recurrimos cuando no se puede estudiar a toda la población",
+        "La lista completa de la población",
+        "Un tipo de encuesta"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un SUBCONJUNTO. El proceso para obtenerla se llama muestreo: la muestra es el resultado del muestreo."
+    },
+    {
+      "id": "e1-q4",
+      "nivel": "comprension",
+      "enunciado": "Se quiere verificar la calidad de los panetones probando su sabor.\n\n¿Por qué acá es obligatorio usar una muestra y no un censo?",
+      "opciones": [
+        "Por el alto costo",
+        "Por la destrucción de los elementos: si los pruebas todos, no queda nada que vender",
+        "Porque la población es infinita",
+        "Porque la opinión de hoy es distinta a la de mañana"
+      ],
+      "correcta": 1,
+      "explicacion": "Las cuatro razones para usar muestra son: alto costo, tiempo de validez del dato, población infinita y destrucción de elementos. Acá manda la última."
+    },
+    {
+      "id": "e1-q5",
+      "nivel": "comprension",
+      "enunciado": "«Se desea recolectar información sobre la satisfacción de los trabajadores de la empresa Coca Cola.»\n\n¿Cuál es la unidad elemental?",
+      "opciones": [
+        "La empresa Coca Cola",
+        "Un trabajador de la empresa Coca Cola",
+        "El conjunto de trabajadores de Coca Cola",
+        "El jefe de recursos humanos"
+      ],
+      "correcta": 1,
+      "explicacion": "Truco: la unidad elemental es el SINGULAR de la población. Población = conjunto de trabajadores de Coca Cola → unidad elemental = un trabajador."
+    },
+    {
+      "id": "e1-q6",
+      "nivel": "comprension",
+      "enunciado": "«Se desea recolectar información sobre las laptops que usan los alumnos de la universidad.»\n\n¿Cuál es la unidad elemental y cuál la unidad informante?",
+      "opciones": [
+        "Elemental: un alumno · Informante: la laptop",
+        "Elemental: una laptop · Informante: el alumno dueño de la laptop",
+        "Las dos son el alumno",
+        "Las dos son la laptop"
+      ],
+      "correcta": 1,
+      "explicacion": "Se estudian las laptops, así que la unidad elemental es una laptop. Pero la laptop no habla: quien brinda la información es el alumno."
+    },
+    {
+      "id": "e1-q7",
+      "nivel": "comprension",
+      "enunciado": "¿Qué es el MARCO MUESTRAL?",
+      "opciones": [
+        "Es lo mismo que la muestra",
+        "Una lista de unidades elementales disponibles, de donde se escoge la muestra",
+        "El total de la población, siempre",
+        "El procedimiento para elegir la muestra"
+      ],
+      "correcta": 1,
+      "explicacion": "El marco muestral NO es la muestra: es la lista de donde se saca. En poblaciones finitas suele coincidir con la población; en infinitas solo se enlista a quienes están disponibles."
+    },
+    {
+      "id": "e1-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Comente: «Si una muestra es aleatoria, entonces SIEMPRE será representativa.»",
+      "opciones": [
+        "Verdadero: el azar garantiza la representatividad",
+        "Falso: el azar reduce el sesgo, pero nunca hay certeza de que la muestra sea representativa",
+        "Verdadero, siempre que la población sea finita",
+        "Falso: una muestra aleatoria nunca es representativa"
+      ],
+      "correcta": 1,
+      "explicacion": "Puedes tener tan mala suerte que en una muestra al azar salgan todos varones. Nunca hay certeza de representatividad: solo hay fe. Y una muestra dirigida TAMPOCO está condenada a no serlo."
+    },
+    {
+      "id": "e1-q9",
+      "nivel": "aplicacion",
+      "enunciado": "En la población hay 500 adultos y 80 niños.\n\n¿Cuál sería una muestra representativa?",
+      "opciones": [
+        "Una con más niños y pocos adultos",
+        "Una con más adultos y pocos niños, respetando la proporción de la población",
+        "Una con la misma cantidad de adultos y de niños",
+        "Cualquiera, siempre que se haya elegido al azar"
+      ],
+      "correcta": 1,
+      "explicacion": "Representativa significa que presenta las características importantes de la población. Si la población es mayormente adulta, la muestra también debe serlo."
+    },
+    {
+      "id": "e1-q10",
+      "nivel": "aplicacion",
+      "enunciado": "PREGUNTA OBJETIVA (parcial). Marque la alternativa correcta:",
+      "opciones": [
+        "Una muestra NO aleatoria SIEMPRE es representativa",
+        "Una muestra aleatoria SIEMPRE es representativa",
+        "Una muestra NO aleatoria PUEDE ser representativa",
+        "Una muestra dirigida nunca es representativa"
+      ],
+      "correcta": 2,
+      "explicacion": "La única que sobrevive es «puede». Ni el azar garantiza representatividad, ni la muestra dirigida la tiene prohibida: las palabras SIEMPRE y NUNCA son la trampa."
+    }
+  ]
+}

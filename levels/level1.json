@@ -1,0 +1,33 @@
+{
+  "id": "level1",
+  "distrito": "Callao",
+  "clase": "Clase 01",
+  "titulo": "El puerto de las muestras",
+  "tema": "puerto",
+  "musica": "puerto",
+  "vehiculo": "mototaxi",
+  "intro": "En el puerto del Callao nadie se pone de acuerdo: unos dicen que hay que preguntarle a TODO el mundo y otros encuestan al primero que pasa. Ordena el muelle distinguiendo población, muestra y unidades.",
+  "repaso": [
+    "Población: conjunto de personas u objetos con una característica de interés (no siempre son personas).",
+    "Se usa muestra por costo, tiempo de validez, población infinita o destrucción de elementos.",
+    "Unidad elemental = singular de la población. La unidad informante es quien da la información.",
+    "El marco muestral es la lista de donde se saca la muestra: no es la muestra."
+  ],
+  "mapa": [
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                  o o o o                                           #                 ",
+    "                 o    ?           o     o o o o           1          o            V      o        ====                   G   oL       o o o o      ##                 ",
+    "                o o              o o    ====                        o o   #             o o                                 o o       ====        ###                 ",
+    "      o o o o  o   o          o o o o                            o o o o ##         o ooo  o ===                           o   o             o o ####                 ",
+    "  P                        E                   E  X   C       E         ###   E                         E   C   X    E            E       B     #####   M             ",
+    "################  ###############   ################################  ##################   #################################  ########################################",
+    "################  ###############   ################################  ##################   #################################  ########################################",
+    "################  ###############   ################################  ##################   #################################  ########################################"
+  ]
+}
