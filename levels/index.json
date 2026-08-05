@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase de Estadística 1. Se desbloquean en orden.",
+  "descripcion": "Cada distrito es una clase de Estadística 1. Los tres primeros están abiertos.",
   "niveles": [
     {
       "id": "level1",
@@ -11,7 +11,8 @@
       "retos": 8,
       "duracion": "3 min",
       "mapa": "levels/level1.json",
-      "preguntas": "questions/level1_questions.json"
+      "preguntas": "questions/level1_questions.json",
+      "abierto": true
     },
     {
       "id": "level2",
@@ -22,14 +23,20 @@
       "retos": 8,
       "duracion": "3 min",
       "mapa": "levels/level2.json",
-      "preguntas": "questions/level2_questions.json"
+      "preguntas": "questions/level2_questions.json",
+      "abierto": true
     },
     {
       "id": "level3",
       "clase": "Clase 03",
       "distrito": "Pueblo Libre",
+      "titulo": "La plaza de las variables",
       "icono": "🏛",
-      "titulo": ""
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level3.json",
+      "preguntas": "questions/level3_questions.json"
     },
     {
       "id": "level4",

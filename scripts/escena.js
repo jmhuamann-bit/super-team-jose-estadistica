@@ -162,6 +162,8 @@ const FICHAS = [
   { sprite: "pulpo", nombre: "El Pulpo del Censo", texto: "Jefe del puerto: insiste en censar hasta el último panetón." },
   { sprite: "paloma", nombre: "Paloma Presumida", texto: "Confunde estratos con conglomerados." },
   { sprite: "combi", nombre: "La Combi Polietápica", texto: "Jefa del malecón: cambia de ruta en cada etapa." },
+  { sprite: "cuy", nombre: "Cuy Cualitativo", texto: "Cree que todo número mide algo." },
+  { sprite: "torito", nombre: "El Torito de las Escalas", texto: "Jefe de la plaza: confunde intervalo con razón." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -9,12 +9,12 @@
       "nivel": "reconocimiento",
       "enunciado": "¿Qué es la POBLACIÓN en estadística?",
       "opciones": [
-        "Todas las personas de un país",
         "Conjunto de personas u objetos que tienen una característica de interés para la investigación",
+        "Todas las personas de un país",
         "El grupo al que finalmente se encuesta",
         "La lista de nombres de donde se saca la muestra"
       ],
-      "correcta": 1,
+      "correcta": 0,
       "explicacion": "Ojo: no siempre son personas. Pueden ser panetones, billetes o carpetas. La clave es la característica de interés que se quiere estudiar."
     },
     {
@@ -36,11 +36,11 @@
       "enunciado": "¿Qué es la MUESTRA?",
       "opciones": [
         "El proceso para recoger la información",
-        "Subconjunto al que recurrimos cuando no se puede estudiar a toda la población",
         "La lista completa de la población",
+        "Subconjunto al que recurrimos cuando no se puede estudiar a toda la población",
         "Un tipo de encuesta"
       ],
-      "correcta": 1,
+      "correcta": 2,
       "explicacion": "Es un SUBCONJUNTO. El proceso para obtenerla se llama muestreo: la muestra es el resultado del muestreo."
     },
     {
@@ -49,11 +49,11 @@
       "enunciado": "Se quiere verificar la calidad de los panetones probando su sabor.\n\n¿Por qué acá es obligatorio usar una muestra y no un censo?",
       "opciones": [
         "Por el alto costo",
-        "Por la destrucción de los elementos: si los pruebas todos, no queda nada que vender",
+        "Porque la opinión de hoy es distinta a la de mañana",
         "Porque la población es infinita",
-        "Porque la opinión de hoy es distinta a la de mañana"
+        "Por la destrucción de los elementos: si los pruebas todos, no queda nada que vender"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Las cuatro razones para usar muestra son: alto costo, tiempo de validez del dato, población infinita y destrucción de elementos. Acá manda la última."
     },
     {
@@ -62,11 +62,11 @@
       "enunciado": "«Se desea recolectar información sobre la satisfacción de los trabajadores de la empresa Coca Cola.»\n\n¿Cuál es la unidad elemental?",
       "opciones": [
         "La empresa Coca Cola",
-        "Un trabajador de la empresa Coca Cola",
         "El conjunto de trabajadores de Coca Cola",
+        "Un trabajador de la empresa Coca Cola",
         "El jefe de recursos humanos"
       ],
-      "correcta": 1,
+      "correcta": 2,
       "explicacion": "Truco: la unidad elemental es el SINGULAR de la población. Población = conjunto de trabajadores de Coca Cola → unidad elemental = un trabajador."
     },
     {
@@ -74,12 +74,12 @@
       "nivel": "comprension",
       "enunciado": "«Se desea recolectar información sobre las laptops que usan los alumnos de la universidad.»\n\n¿Cuál es la unidad elemental y cuál la unidad informante?",
       "opciones": [
-        "Elemental: un alumno · Informante: la laptop",
         "Elemental: una laptop · Informante: el alumno dueño de la laptop",
+        "Elemental: un alumno · Informante: la laptop",
         "Las dos son el alumno",
         "Las dos son la laptop"
       ],
-      "correcta": 1,
+      "correcta": 0,
       "explicacion": "Se estudian las laptops, así que la unidad elemental es una laptop. Pero la laptop no habla: quien brinda la información es el alumno."
     },
     {
@@ -88,11 +88,11 @@
       "enunciado": "¿Qué es el MARCO MUESTRAL?",
       "opciones": [
         "Es lo mismo que la muestra",
-        "Una lista de unidades elementales disponibles, de donde se escoge la muestra",
+        "El procedimiento para elegir la muestra",
         "El total de la población, siempre",
-        "El procedimiento para elegir la muestra"
+        "Una lista de unidades elementales disponibles, de donde se escoge la muestra"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El marco muestral NO es la muestra: es la lista de donde se saca. En poblaciones finitas suele coincidir con la población; en infinitas solo se enlista a quienes están disponibles."
     },
     {
@@ -100,12 +100,12 @@
       "nivel": "aplicacion",
       "enunciado": "Comente: «Si una muestra es aleatoria, entonces SIEMPRE será representativa.»",
       "opciones": [
-        "Verdadero: el azar garantiza la representatividad",
         "Falso: el azar reduce el sesgo, pero nunca hay certeza de que la muestra sea representativa",
+        "Verdadero: el azar garantiza la representatividad",
         "Verdadero, siempre que la población sea finita",
         "Falso: una muestra aleatoria nunca es representativa"
       ],
-      "correcta": 1,
+      "correcta": 0,
       "explicacion": "Puedes tener tan mala suerte que en una muestra al azar salgan todos varones. Nunca hay certeza de representatividad: solo hay fe. Y una muestra dirigida TAMPOCO está condenada a no serlo."
     },
     {
@@ -114,11 +114,11 @@
       "enunciado": "En la población hay 500 adultos y 80 niños.\n\n¿Cuál sería una muestra representativa?",
       "opciones": [
         "Una con más niños y pocos adultos",
-        "Una con más adultos y pocos niños, respetando la proporción de la población",
+        "Cualquiera, siempre que se haya elegido al azar",
         "Una con la misma cantidad de adultos y de niños",
-        "Cualquiera, siempre que se haya elegido al azar"
+        "Una con más adultos y pocos niños, respetando la proporción de la población"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Representativa significa que presenta las características importantes de la población. Si la población es mayormente adulta, la muestra también debe serlo."
     },
     {

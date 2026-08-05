@@ -1,0 +1,33 @@
+{
+  "id": "level3",
+  "distrito": "Pueblo Libre",
+  "clase": "Clase 03",
+  "titulo": "La plaza de las variables",
+  "tema": "plaza",
+  "musica": "parque",
+  "vehiculo": "taxi",
+  "intro": "En la plaza cada quien anota lo que le responden, pero nadie sabe si eso es una observación, una variable o un promedio disfrazado. Clasifica bien y ponle su escala a cada una.",
+  "repaso": [
+    "La observación es la respuesta de una unidad elemental; un promedio NO es una observación.",
+    "Naturaleza: cualitativa (nominal u jerárquica) o cuantitativa (discreta o continua).",
+    "Escala: si el 0 significa que no hay nada es de razón; si igual significa algo, de intervalo.",
+    "Con datos de la población es un parámetro (único); con datos de una muestra, un estimador."
+  ],
+  "mapa": [
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                            o o o o                                                                          #          ",
+    "            ?    o   o o o o    o       1                          o        ====       V    o                 o o o o    G    o        L                    ##          ",
+    "                o o  ====      o o                    #           o o                      o o                ====           o o             #             ###          ",
+    "      o o o o  o   o          o   o                  ##       o ooo  o ===                o   o                             o   o           ##  o o o     ####          ",
+    "  P                        E        E       X   C   ###   E                        E             E    C   X          E             E       ###      B    #####   M      ",
+    "################  #############   ################################   ######################  ################################   ########################################",
+    "################  #############   ################################   ######################  ################################   ########################################",
+    "################  #############   ################################   ######################  ################################   ########################################"
+  ]
+}

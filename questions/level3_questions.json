@@ -1,0 +1,138 @@
+{
+  "nivel": "level3",
+  "clase": "Clase 03 · Variables, escalas y medidas",
+  "fuente": "Apuntes de la 3era clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e3-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Qué es una OBSERVACIÓN?",
+      "opciones": [
+        "El promedio de todos los datos recogidos",
+        "El dato o respuesta recogida de una unidad elemental",
+        "La pregunta que se le hace al encuestado",
+        "La conclusión final del estudio"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la respuesta de UNA unidad elemental. Ojo con dos trampas: un promedio no es una observación (es una medida estadística) y una respuesta incoherente tampoco lo es."
+    },
+    {
+      "id": "e3-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "«El número de peces capturados por un pescador».\n\n¿Qué tipo de variable es según su naturaleza?",
+      "opciones": [
+        "Cualitativa nominal",
+        "Cualitativa jerárquica",
+        "Cuantitativa continua",
+        "Cuantitativa discreta"
+      ],
+      "correcta": 3,
+      "explicacion": "Viene de un proceso de CONTEO (1, 2, 3…), así que es discreta. La longitud del pez o el tiempo en atraparlo, en cambio, se MIDEN: son continuas."
+    },
+    {
+      "id": "e3-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "La temperatura de los distritos de Lima en grados centígrados.\n\n¿Qué escala de medición es?",
+      "opciones": [
+        "De intervalo: el 0 °C no significa ausencia de temperatura",
+        "De razón: tiene cero absoluto",
+        "Nominal",
+        "Ordinal"
+      ],
+      "correcta": 0,
+      "explicacion": "El truco: si el 0 significa que NO hay nada, es escala de razón (talla, peso, edad). Si el 0 igual significa algo, es de intervalo (temperatura, fechas del calendario)."
+    },
+    {
+      "id": "e3-q4",
+      "nivel": "comprension",
+      "enunciado": "PREGUNTA DE EXAMEN. Indique cuál de las siguientes variables es CUANTITATIVA CONTINUA:",
+      "opciones": [
+        "Número de miembros de una familia",
+        "Capacidad de las botellas de gaseosa",
+        "Peso neto del arroz contenido en bolsas de ¾ de kilo",
+        "La edad en años de los alumnos del colegio"
+      ],
+      "correcta": 2,
+      "explicacion": "El peso se mide y puede tomar cualquier valor con decimales. Las botellas de gaseosa son un caso especial: solo existen unos pocos tamaños fijos, así que es discreta. Y la edad «en años» también viene en enteros."
+    },
+    {
+      "id": "e3-q5",
+      "nivel": "comprension",
+      "enunciado": "CASO ESPECIAL. El número de la camiseta de un jugador o el número de DNI.\n\n¿Qué tipo de variable es?",
+      "opciones": [
+        "Cualitativa nominal: ese número no mide nada, funciona como un nombre",
+        "Cuantitativa discreta, porque son números enteros",
+        "Cuantitativa continua",
+        "Cualitativa jerárquica"
+      ],
+      "correcta": 0,
+      "explicacion": "Una variable cuantitativa MIDE algo con sus números. El DNI o el número de camiseta solo identifican, no miden: por eso son cualitativas nominales. Igual pasa con el código postal."
+    },
+    {
+      "id": "e3-q6",
+      "nivel": "comprension",
+      "enunciado": "«El promedio es de 30 años, y eso se concluyó a partir de una MUESTRA».\n\n¿Qué es ese 30?",
+      "opciones": [
+        "Un parámetro, porque es un promedio",
+        "Una observación",
+        "Una variable",
+        "Un estimador (o estadístico), porque viene de una muestra"
+      ],
+      "correcta": 3,
+      "explicacion": "Con datos de la POBLACIÓN es un parámetro y es único; con datos de una MUESTRA es un estimador y puede cambiar si cambias la muestra."
+    },
+    {
+      "id": "e3-q7",
+      "nivel": "comprension",
+      "enunciado": "«Una variable cualitativa jerárquica se puede formar a partir de una variable cuantitativa continua». Por ejemplo, agrupar la edad exacta en rangos: [0-5], [6-13], [13-18]…",
+      "opciones": [
+        "Falso: una vez que es cuantitativa ya no puede cambiar",
+        "Falso: los rangos siguen siendo cuantitativos",
+        "Verdadero: al agrupar en categorías ordenadas se vuelve cualitativa jerárquica",
+        "Verdadero, pero solo con la edad"
+      ],
+      "correcta": 2,
+      "explicacion": "La edad exacta (20,53 años) es cuantitativa continua, pero si la agrupas en «infante, niño, adolescente…» pasa a ser cualitativa jerárquica, y su escala pasa a ser ordinal."
+    },
+    {
+      "id": "e3-q8",
+      "nivel": "aplicacion",
+      "enunciado": "PREGUNTA DE EXAMEN. Marque la afirmación correcta:",
+      "opciones": [
+        "La Estadística Descriptiva permite realizar la estimación de parámetros",
+        "La Estadística Descriptiva se puede utilizar para datos muestrales o poblacionales",
+        "La Estadística Inferencial se encarga del cálculo de los parámetros",
+        "La Estadística Inferencial se utiliza para generalizar la información de cualquier tipo de muestra"
+      ],
+      "correcta": 1,
+      "explicacion": "La descriptiva CALCULA y resume, y sirve tanto para muestras como para poblaciones. La inferencial no calcula: ESTIMA, y exige que la muestra sea ALEATORIA (por eso la última es falsa: no sirve cualquier muestra)."
+    },
+    {
+      "id": "e3-q9",
+      "nivel": "aplicacion",
+      "enunciado": "PREGUNTA DE EXAMEN. Estudio sobre medios de información preferidos en Lima: el 15% lee «La República», el 15% escucha una radio, el señor José indicó que es abogado y el señor Manuel indicó que prefiere ver televisión.\n\n¿Cuál es la afirmación correcta?",
+      "opciones": [
+        "Lo indicado por el señor Manuel es una observación",
+        "Lo indicado por el señor José es una observación",
+        "El valor «15%» es una observación",
+        "El valor «15%» es un valor paramétrico"
+      ],
+      "correcta": 0,
+      "explicacion": "La variable es el medio de información preferido: Manuel responde eso, así que su respuesta sí es una observación. José responde su profesión (incoherente con la pregunta) y el 15% es una medida estadística, no una observación… y como sale de una muestra sería un estimador, no un parámetro."
+    },
+    {
+      "id": "e3-q10",
+      "nivel": "aplicacion",
+      "enunciado": "PREGUNTA DE EXAMEN. Variables de un estudio sobre educación:\n1. Ingreso mensual de los hogares\n2. Nivel de educación del padre y la madre\n3. Ciudad de nacimiento\n4. Número de hijos en la familia\n\n¿Cuál afirmación es correcta?",
+      "opciones": [
+        "La segunda variable es cuantitativa discreta",
+        "La cuarta variable es cuantitativa continua",
+        "La tercera variable es cualitativa nominal",
+        "La primera variable es cuantitativa discreta"
+      ],
+      "correcta": 2,
+      "explicacion": "Ciudad de nacimiento no tiene orden: cualitativa nominal. El nivel de educación es cualitativa jerárquica, el número de hijos es discreta y el ingreso mensual es continua."
+    }
+  ]
+}

@@ -9,12 +9,12 @@
       "nivel": "reconocimiento",
       "enunciado": "CENSO vs MUESTREO.\n\n¿Cuál es la diferencia?",
       "opciones": [
-        "El censo recoge información de toda la población; el muestreo, solo de un subconjunto",
         "El censo es de un subconjunto y el muestreo de toda la población",
+        "El censo recoge información de toda la población; el muestreo, solo de un subconjunto",
         "Son lo mismo",
         "El censo solo se usa con personas y el muestreo con objetos"
       ],
-      "correcta": 0,
+      "correcta": 1,
       "explicacion": "Censo = toda la población. Muestreo = el proceso de recoger información de una muestra."
     },
     {
@@ -22,12 +22,12 @@
       "nivel": "reconocimiento",
       "enunciado": "MUESTRA vs MUESTREO. Marque la definición correcta:",
       "opciones": [
-        "Muestra: proceso para recoger información de un subconjunto",
-        "Muestreo: subconjunto de personas al que se recurre cuando no se puede estudiar la población",
         "Muestra: subconjunto al que se recurre cuando no se puede estudiar a la población",
+        "Muestreo: subconjunto de personas al que se recurre cuando no se puede estudiar la población",
+        "Muestra: proceso para recoger información de un subconjunto",
         "Ninguna de las anteriores"
       ],
-      "correcta": 2,
+      "correcta": 0,
       "explicacion": "El muestreo es el PROCESO; la muestra es el RESULTADO de ese proceso. Resumen: la muestra es el resultado del muestreo."
     },
     {
@@ -49,11 +49,11 @@
       "enunciado": "Muestreo SISTEMÁTICO con una población de 100 turrones y una muestra de 10.\n\n¿Entre qué valores está el SEGUNDO elemento de la muestra?",
       "opciones": [
         "Entre 1 y 10",
-        "Entre 11 y 20",
+        "Entre 50 y 60",
         "Entre 30 y 40",
-        "Entre 50 y 60"
+        "Entre 11 y 20"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "k = N/n = 100/10 = 10. El primero es un azar entre 1 y 10; el segundo es ese número + k, así que cae entre 11 y 20."
     },
     {
@@ -62,11 +62,11 @@
       "enunciado": "ESTRATOS vs CONGLOMERADOS. Marque la alternativa correcta:",
       "opciones": [
         "Cada estrato internamente es diferente y con los de afuera es diferente",
-        "Cada conglomerado internamente es diferente y con los de afuera es igual",
         "Cada estrato internamente es diferente y con los de afuera es igual",
+        "Cada conglomerado internamente es diferente y con los de afuera es igual",
         "Ninguna de las anteriores"
       ],
-      "correcta": 1,
+      "correcta": 2,
       "explicacion": "Estrato: adentro iguales, afuera diferentes (por ejemplo, niveles socioeconómicos). Conglomerado: adentro diferentes, afuera iguales (por ejemplo, manzanas de un barrio)."
     },
     {
@@ -75,11 +75,11 @@
       "enunciado": "Quieres estudiar a los adultos de un pueblo, pero no hay marco muestral. Como las viviendas no se mueven, agrupas por manzanas, eliges manzanas al azar y encuestas a todos sus adultos.\n\n¿Cuál es la unidad de muestra y cuál la unidad elemental?",
       "opciones": [
         "Las dos son un adulto",
-        "Unidad de muestra: una manzana (el conglomerado) · Unidad elemental: un adulto",
+        "Las dos son la manzana",
         "Unidad de muestra: un adulto · Unidad elemental: una manzana",
-        "Las dos son la manzana"
+        "Unidad de muestra: una manzana (el conglomerado) · Unidad elemental: un adulto"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Es la excepción del curso: en el muestreo por conglomerados la unidad de muestra es el conglomerado, mientras que la unidad elemental sigue siendo el elemento individual."
     },
     {
@@ -87,12 +87,12 @@
       "nivel": "comprension",
       "enunciado": "La edad promedio de la muestra no coincide con la de la población porque la muestra elegida no fue del todo representativa.\n\n¿Qué tipo de error es?",
       "opciones": [
-        "Error NO muestral, porque alguien se equivocó al calcular",
         "Error MUESTRAL: la culpa es de la propia muestra, que no recoge todas las características de la población",
+        "Error NO muestral, porque alguien se equivocó al calcular",
         "No es un error",
         "Error de medición"
       ],
-      "correcta": 1,
+      "correcta": 0,
       "explicacion": "Error muestral: la culpa es de la muestra. El error NO muestral es culpa de quien recolecta o procesa: errores de medición, de cálculo, preguntas absurdas, mal uso de fórmulas."
     },
     {
@@ -114,11 +114,11 @@
       "enunciado": "MUESTREO ESTRATIFICADO. De 600 turistas: 300 son extranjeros, 100 son de Lima y el resto lugareños. Se quiere una muestra de 30.\n\n¿Cuántos salen de cada estrato?",
       "opciones": [
         "10 de cada grupo",
-        "15 extranjeros, 5 limeños, 10 lugareños",
+        "15 extranjeros, 10 limeños, 5 lugareños",
         "30 extranjeros",
-        "15 extranjeros, 10 limeños, 5 lugareños"
+        "15 extranjeros, 5 limeños, 10 lugareños"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Lugareños = 600 − 300 − 100 = 200. Proporciones: 300/600 = 0,5 → 15 · 100/600 ≈ 0,167 → 5 · 200/600 ≈ 0,333 → 10."
     },
     {
