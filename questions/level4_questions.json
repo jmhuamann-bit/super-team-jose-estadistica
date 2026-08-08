@@ -1,0 +1,138 @@
+{
+  "nivel": "level4",
+  "clase": "Clase 04 · Organización de datos cualitativos",
+  "fuente": "Apuntes de la 4ta clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e4-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "ORGANIZACIÓN POR TIPO DE VARIABLE.\n\n¿Qué gráficos le corresponden a una variable CUALITATIVA?",
+      "opciones": [
+        "Histograma y polígono",
+        "Gráfico de bastones",
+        "Gráfico de barras (para todas) y circular (solo para las nominales)",
+        "Ojiva y línea de tiempo"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada tipo de variable tiene su gráfico: la cualitativa va con barras y, si es nominal, también con circular. Los bastones son para la cuantitativa discreta; el histograma, el polígono y la ojiva, para la continua."
+    },
+    {
+      "id": "e4-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Quieres graficar el GRADO ACADÉMICO de unas madres de familia (primaria, secundaria, universidad), que es una variable cualitativa JERÁRQUICA.\n\n¿Puedes usar un gráfico circular?",
+      "opciones": [
+        "No: el circular sirve solo para NOMINALES; para una jerárquica va el gráfico de barras",
+        "Sí, el circular sirve para cualquier cualitativa",
+        "Sí, pero solo si son menos de cuatro categorías",
+        "No, porque las cualitativas no se grafican"
+      ],
+      "correcta": 0,
+      "explicacion": "El gráfico de barras es útil para NOMINALES y JERÁRQUICAS; el circular, solo para nominales. Al partir un círculo se pierde el orden de las categorías, que es justamente lo que define a una variable jerárquica."
+    },
+    {
+      "id": "e4-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "TRUCO PARA LA PC1.\n\nEn tu tabla de frecuencias, ¿cómo conviene rotular las columnas?",
+      "opciones": [
+        "Siempre con las siglas fi, fri y pi, que es lo formal",
+        "Con letras griegas",
+        "Solo con el número de la columna",
+        "Con su significado real: «Número de…», «Proporción de…» y «Porcentaje de…» + la unidad elemental"
+      ],
+      "correcta": 3,
+      "explicacion": "En los apuntes lo dicen expreso: para la PC1 no escribas fi, fri ni pi, sino lo que significan. Si la unidad elemental es un cliente: «Número de clientes», «Proporción de clientes», «Porcentaje de clientes». Así demuestras que entendiste la tabla y no solo copiaste la plantilla."
+    },
+    {
+      "id": "e4-q4",
+      "nivel": "comprension",
+      "enunciado": "En un colegio se encuestó a 80 estudiantes sobre el curso que más odian: Matemáticas 40 · Comunicación 10 · Educación Física 1 · Física 29.\n\n¿Cuál es la frecuencia relativa y el porcentaje de Física?",
+      "opciones": [
+        "fri = 0,2900 y pi = 29,00 %",
+        "fri = 0,3625 y pi = 36,25 %",
+        "fri = 3,6250 y pi = 36,25 %",
+        "fri = 0,3625 y pi = 3,63 %"
+      ],
+      "correcta": 1,
+      "explicacion": "La fri es parte/todo: 29/80 = 0,3625 (cuatro decimales). El porcentaje es fri × 100 % = 36,25 % (dos decimales). Ojo: el 29 solito es la frecuencia absoluta, no el porcentaje; y la fri nunca pasa de 1."
+    },
+    {
+      "id": "e4-q5",
+      "nivel": "comprension",
+      "enunciado": "En el gráfico de barras, ¿por qué se aconseja poner el PORCENTAJE en el eje y no el número de personas?",
+      "opciones": [
+        "Porque permite comparar con otros estudios que tengan un tamaño de muestra distinto",
+        "Porque el número de personas no se puede graficar",
+        "Porque el porcentaje siempre da números más pequeños",
+        "Porque así el gráfico se dibuja más rápido"
+      ],
+      "correcta": 0,
+      "explicacion": "Con el número de personas, dos estudios de tamaños distintos no se pueden comparar de frente: 20 de 40 no es lo mismo que 20 de 400. El porcentaje pone todo sobre la misma base y hace comparable tu gráfico con cualquier otro."
+    },
+    {
+      "id": "e4-q6",
+      "nivel": "comprension",
+      "enunciado": "PREGUNTA DE CLASE: «En un gráfico de barras, la variable SOLO puede ir en el eje X».",
+      "opciones": [
+        "Verdadero: la variable siempre va abajo",
+        "Verdadero, salvo en el gráfico circular",
+        "Falso, pero solo si la variable es nominal",
+        "FALSO: los ejes se pueden intercambiar, y conviene hacerlo cuando los nombres de las categorías son muy largos"
+      ],
+      "correcta": 3,
+      "explicacion": "Se pueden intercambiar los ejes sin problema. De hecho es lo recomendable cuando cada categoría tiene un nombre largo: puesta en horizontal, la etiqueta se lee cómoda y no hay que voltear la cabeza."
+    },
+    {
+      "id": "e4-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Se encuestó a 168 JÓVENES sobre su app de taxi preferida. 77 de ellos eligieron Huber.\n\n¿Qué porcentaje representa?",
+      "opciones": [
+        "77,00 %",
+        "16,80 %",
+        "45,83 %",
+        "21,83 %"
+      ],
+      "correcta": 2,
+      "explicacion": "Parte/todo × 100 %: 77/168 = 0,4583 → 45,83 %. Interpretado en cristiano: «45,83 % es el porcentaje de usuarios jóvenes que prefieren Huber como servicio de taxi por aplicativo»."
+    },
+    {
+      "id": "e4-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — El enunciado pide: «construya el cuadro que permita comparar EL PRODUCTO que adquiere usualmente EN RELACIÓN CON los grupos de edades».\n\n¿Cuál es la variable del estudio?",
+      "opciones": [
+        "El grupo de edades",
+        "El producto que adquiere usualmente",
+        "Las dos son la variable por igual",
+        "La cantidad de personas encuestadas"
+      ],
+      "correcta": 1,
+      "explicacion": "La regla del cuaderno: «comparar A de acuerdo con (o en relación con) B» significa que A es la variable. Acá A es el producto que adquiere; los grupos de edades son los grupos que se comparan, y van como columnas del cuadro comparativo."
+    },
+    {
+      "id": "e4-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — Tienes que comparar DOS grupos (primaria y secundaria) y quieres usar gráficos CIRCULARES en vez de barras.\n\n¿Qué tienes que hacer?",
+      "opciones": [
+        "Un solo circular, partido por la mitad",
+        "Un solo circular con doble anillo",
+        "No se puede comparar de ninguna forma",
+        "DOS gráficos circulares distintos, uno por grupo; con barras, en cambio, basta UN solo gráfico"
+      ],
+      "correcta": 3,
+      "explicacion": "Esa es la gran ventaja del gráfico de barras para comparar: en un mismo plano pones la barra de un grupo junto a la del otro, agregas leyenda y las pintas distinto. El circular no admite dos grupos a la vez, así que necesitas un gráfico por grupo."
+    },
+    {
+      "id": "e4-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — Terminaste el gráfico y toca redactar conclusiones. Una categoría se llevó el 60 % de las respuestas.\n\n¿Cómo se redacta correctamente?",
+      "opciones": [
+        "«La MAYORÍA…», porque pasa del 50 %",
+        "«La mayor parte…», porque nunca se usa «la mayoría»",
+        "«La menor parte…», porque no llega al 100 %",
+        "«Raramente…», porque es solo una categoría de varias"
+      ],
+      "correcta": 0,
+      "explicacion": "El término «la mayoría» se reserva para cuando el dato pasa del 50 %. Si el más repetido se queda por debajo del 50 %, se dice «la mayor parte», «con mayor frecuencia» o «frecuentemente». Y para el que menos se repite: «la menor parte», «raramente», «pocas veces»."
+    }
+  ]
+}

@@ -164,6 +164,9 @@ const FICHAS = [
   { sprite: "combi", nombre: "La Combi Polietápica", texto: "Jefa del malecón: cambia de ruta en cada etapa." },
   { sprite: "cuy", nombre: "Cuy Cualitativo", texto: "Cree que todo número mide algo." },
   { sprite: "torito", nombre: "El Torito de las Escalas", texto: "Jefe de la plaza: confunde intervalo con razón." },
+  { sprite: "flor", nombre: "La Flor sin Título", texto: "Dibuja tablas y gráficos preciosos, pero sin título." },
+  { sprite: "ardilla", nombre: "La Ardilla del Pastel", texto: "Quiere un gráfico circular hasta para las jerárquicas." },
+  { sprite: "monumento", nombre: "El Monumento sin Leyenda", texto: "Jefe de Jesús María: compara dos grupos y no rotula ninguno." },
 ];
 
 export function galeriaPersonajes(contenedor) {
