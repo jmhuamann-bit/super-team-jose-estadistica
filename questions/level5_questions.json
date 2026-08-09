@@ -1,0 +1,138 @@
+{
+  "nivel": "level5",
+  "clase": "Clase 05 · Organización de datos cuantitativos discretos",
+  "fuente": "Apuntes de la 5ta clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e5-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "CAMBIO DE TIPO DE VARIABLE.\n\nAhora la variable es CUANTITATIVA DISCRETA (por ejemplo, el número de hermanos). ¿Qué gráfico le toca?",
+      "opciones": [
+        "El gráfico de barras, igual que las cualitativas",
+        "El gráfico de BASTONES (varas o líneas verticales)",
+        "El histograma",
+        "El gráfico circular"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada variable con su gráfico: cualitativa va con barras (y circular si es nominal), la cuantitativa DISCRETA con bastones, y la continua con histograma, polígono u ojiva. Los bastones son líneas delgaditas, no barras gordas."
+    },
+    {
+      "id": "e5-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "SEGUNDA CONCLUSIÓN: LA MODA.\n\n¿Qué es la moda y cómo se llama una distribución con DOS modas?",
+      "opciones": [
+        "Es el promedio de los datos; con dos se llama doble",
+        "Es el dato del medio; con dos se llama partida",
+        "Es el valor más alto; con dos se llama amodal",
+        "Es el valor que más se repite; con dos modas es BIMODAL"
+      ],
+      "correcta": 3,
+      "explicacion": "La moda es el valor que aparece con mayor frecuencia. Según cuántas tenga: unimodal (1), bimodal (2), trimodal (3) o amodal (ninguna). Se concluye así: «La distribución … es unimodal. La moda se ubica en …»."
+    },
+    {
+      "id": "e5-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "PRIMERA CONCLUSIÓN: LA ASIMETRÍA.\n\n¿Qué decide si una distribución es asimétrica a la derecha o a la izquierda?",
+      "opciones": [
+        "Dónde está la colita (la menor parte de los datos)",
+        "Dónde está la barra más alta",
+        "Si el total es par o impar",
+        "Si la variable es discreta o continua"
+      ],
+      "correcta": 0,
+      "explicacion": "Se mira hacia qué lado se estira la colita, o sea dónde queda la menor parte de los datos. Si la colita apunta a la derecha es asimetría derecha (también llamada positiva); si apunta a la izquierda, asimetría izquierda (negativa)."
+    },
+    {
+      "id": "e5-q4",
+      "nivel": "comprension",
+      "enunciado": "DATO CURIOSO. En el gráfico de barras sí se podían intercambiar los ejes cuando los nombres eran largos.\n\n¿Y en el gráfico de bastones?",
+      "opciones": [
+        "También, es exactamente igual",
+        "Sí, y además es lo recomendable",
+        "NO se sugiere intercambiarlos: los bastones se dejan verticales",
+        "Solo si la muestra pasa de 50 datos"
+      ],
+      "correcta": 2,
+      "explicacion": "Acá está la diferencia con la clase anterior. En barras podías voltear los ejes para que entraran los nombres largos; en bastones no se sugiere, porque los valores de la variable son números y se leen naturalmente sobre el eje horizontal."
+    },
+    {
+      "id": "e5-q5",
+      "nivel": "comprension",
+      "enunciado": "Concluyes que la distribución del número de pruebas de descarte de COVID por hogar es ASIMÉTRICA A LA DERECHA.\n\n¿Cómo se redacta eso?",
+      "opciones": [
+        "Hay hogares que tuvieron un número de pruebas MAYOR a lo usual",
+        "Hay hogares que tuvieron un número de pruebas MENOR a lo usual",
+        "Todos los hogares tuvieron el mismo número de pruebas",
+        "La mitad de los hogares están por encima del promedio"
+      ],
+      "correcta": 0,
+      "explicacion": "Al concluir una asimetría hay que hablar de lo raro o poco frecuente. Si la colita se fue a la derecha, hay unidades elementales con valores MAYORES a lo usual. El formato es: título + tipo de asimetría + «hay … que tuvieron valores mayores/menores a lo usual»."
+    },
+    {
+      "id": "e5-q6",
+      "nivel": "comprension",
+      "enunciado": "Tienes que comparar el número de juguetes recibidos en San Isidro y en Lares, que es una variable cuantitativa DISCRETA.\n\n¿Cómo se grafica la comparación?",
+      "opciones": [
+        "En un solo plano, con los bastones de un grupo junto a los del otro",
+        "En un solo plano, con un gráfico circular por grupo",
+        "Con un histograma para los dos grupos",
+        "En gráficos SEPARADOS: un gráfico de bastones para cada grupo"
+      ],
+      "correcta": 3,
+      "explicacion": "Ojo con esta trampa. En barras cualitativas sí se usa UN solo plano con las barras pegaditas y una leyenda. En bastones NO: se dibuja un gráfico por grupo, por separado. La tabla, eso sí, sigue siendo una sola, con el título «Distribución comparativa de…»."
+    },
+    {
+      "id": "e5-q7",
+      "nivel": "aplicacion",
+      "enunciado": "LARES (Cusco), 25 niños. Número de juguetes recibidos:\n0 juguetes → 20 niños · 1 → 4 · 2 → 1 · 3 → 0\n\n¿Qué asimetría y qué moda tiene esta distribución?",
+      "opciones": [
+        "Asimétrica a la izquierda, unimodal con moda en 3",
+        "Asimétrica a la DERECHA, unimodal con moda en 0",
+        "Simétrica y bimodal",
+        "Asimétrica a la derecha, amodal"
+      ],
+      "correcta": 1,
+      "explicacion": "Casi todos se amontonan en 0 y la colita se estira hacia la derecha (los pocos que recibieron 1 y 2): asimetría a la derecha. Y como el bastón más alto es uno solo, el del 0, es unimodal con la moda en 0. Se concluye: hay niños que recibieron un número de juguetes mayor a lo usual."
+    },
+    {
+      "id": "e5-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — PREGUNTA PARA MARCAR EN EL PARCIAL.\n\nSeñale la afirmación VERDADERA:",
+      "opciones": [
+        "Para comparar una variable cualitativa con gráfico de barras se usa UN SOLO plano cartesiano para dos o más grupos",
+        "Para comparar una variable cualitativa basta UN SOLO gráfico circular para dos o más grupos",
+        "Para comparar una variable cuantitativa discreta se usa un mismo plano cartesiano para dos o más grupos",
+        "El gráfico de bastones se usa para las variables cualitativas jerárquicas"
+      ],
+      "correcta": 0,
+      "explicacion": "La primera es la única verdadera: las barras cualitativas comparten un plano con leyenda. El circular necesita un gráfico por grupo. Los bastones también van separados, uno por grupo. Y los bastones son para discretas, no para cualitativas."
+    },
+    {
+      "id": "e5-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — En la tabla del número de hermanos, la frecuencia relativa de «1 hermano» es 0,1.\n\n¿Cómo se interpreta?",
+      "opciones": [
+        "0,1 estudiantes tienen un hermano",
+        "El 0,1 % de los estudiantes tiene un hermano",
+        "0,1 es la PROPORCIÓN de estudiantes que tienen un número de hermanos igual a 1",
+        "1 de cada 0,1 estudiantes tiene un hermano"
+      ],
+      "correcta": 2,
+      "explicacion": "La receta: arrancas en la fri, subes a los títulos y bajas a la categoría. La fri es una proporción, no un conteo ni un porcentaje: para porcentaje sería la pi, y ahí sí dirías «10 % es el porcentaje de estudiantes que tienen un número de hermanos igual a 1»."
+    },
+    {
+      "id": "e5-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — Terminaste tu gráfico de bastones y toca cerrar con conclusiones.\n\n¿Cuáles son las tres que enseña la clase?",
+      "opciones": [
+        "Media, mediana y moda",
+        "Título, leyenda y fuente",
+        "Muestra, población y unidad elemental",
+        "1) Simetría o asimetría · 2) Moda · 3) Rango"
+      ],
+      "correcta": 3,
+      "explicacion": "Ese es el trío: primero hacia dónde se fue la colita, después cuántas modas hay y dónde se ubican, y por último entre qué valores varían los datos («el número de pruebas varía de 0 a 7 veces»). El rango es la menos usada, pero suma. Siempre mínimo dos o tres conclusiones."
+    }
+  ]
+}

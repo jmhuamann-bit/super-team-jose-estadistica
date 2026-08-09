@@ -1,0 +1,35 @@
+{
+  "id": "level5",
+  "distrito": "Lince",
+  "clase": "Clase 05",
+  "titulo": "La feria de los bastones",
+  "tema": "feria",
+  "musica": "feria",
+  "vehiculo": "limosina",
+  "intro": "En la feria de Lince cambiaron las reglas: ya no se cuentan categorías, se cuentan números. Los bichos siguen dibujando barras gorditas donde van bastones, meten dos grupos en el mismo plano y no saben hacia dónde se les fue la colita. Ordena los datos cuantitativos discretos.",
+  "repaso": [
+    "Cuantitativa DISCRETA: gráfico de BASTONES (varas o líneas verticales). Las barras son para las cualitativas.",
+    "En bastones NO se sugiere intercambiar los ejes, a diferencia del gráfico de barras.",
+    "Para comparar dos grupos discretos se dibujan gráficos SEPARADOS, uno por grupo. Con barras cualitativas basta un solo plano.",
+    "Las tres conclusiones: 1) simetría o asimetría, 2) moda, 3) rango.",
+    "Asimetría derecha: hay unidades con valores MAYORES a lo usual. Asimetría izquierda: valores MENORES a lo usual. La colita manda.",
+    "Moda: el valor que más se repite. Unimodal, bimodal, trimodal o amodal."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                o o o o                       o o o                                       o o o               o o o                       o o o                         o o o                   ",
+    "          ?                   o o       L                 o o     G                 o o                 V                   o o     1                   o o       L             ?               ",
+    "                ====                          ====                                        ====                ====                        ====                          ====                    ",
+    "                          o o      o                                  o o    o                  o o                    o        o o                          o                                  ",
+    "  P           E           C                 E         X         E     C                 E           X       E                   C       E           X                 E           B         M   ",
+    "##################################   #######################################   #######################################   ###################################   #################################",
+    "##################################   #######################################   #######################################   ###################################   #################################",
+    "##################################   #######################################   #######################################   ###################################   #################################"
+  ]
+}

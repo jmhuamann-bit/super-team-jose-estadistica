@@ -167,6 +167,9 @@ const FICHAS = [
   { sprite: "flor", nombre: "La Flor sin Título", texto: "Dibuja tablas y gráficos preciosos, pero sin título." },
   { sprite: "ardilla", nombre: "La Ardilla del Pastel", texto: "Quiere un gráfico circular hasta para las jerárquicas." },
   { sprite: "monumento", nombre: "El Monumento sin Leyenda", texto: "Jefe de Jesús María: compara dos grupos y no rotula ninguno." },
+  { sprite: "globo", nombre: "El Globo Asimétrico", texto: "Nunca sabe hacia qué lado se le fue la colita." },
+  { sprite: "diana", nombre: "La Diana Bimodal", texto: "Tiene dos modas y jura que la distribución es unimodal." },
+  { sprite: "payaso", nombre: "El Payaso de un Solo Plano", texto: "Jefe de Lince: mete dos grupos discretos en el mismo plano cartesiano." },
 ];
 
 export function galeriaPersonajes(contenedor) {
