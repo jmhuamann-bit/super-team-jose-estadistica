@@ -1,0 +1,35 @@
+{
+  "id": "level6",
+  "distrito": "San Isidro",
+  "clase": "Clase 06",
+  "titulo": "Las torres de los intervalos",
+  "tema": "torres",
+  "musica": "torres",
+  "vehiculo": "taxi",
+  "intro": "En San Isidro los datos ya no se dejan contar de a uno: son continuos y hay infinitos entre cualquier par de valores. Toca agruparlos en intervalos, pero los bichos de la oficina redondean como se les antoja, escriben la variable sin unidad y confunden la frecuencia simple con la acumulada. Ordena la tabla.",
+  "repaso": [
+    "En variables continuas cada clase es un INTERVALO, porque hay infinitos valores dentro de cualquier rango.",
+    "Sturges: 1) recolecta Xmín, Xmáx, decimales y n · 2) Rango = Xmáx − Xmín · 3) K = 1 + 3,3·log(n) · 4) TIC = Rango / K.",
+    "Redondeos: la K con redondeo común, el TIC SIEMPRE por exceso (para que el dato mayor entre), y la marca de clase JAMÁS se redondea.",
+    "Tallo y hoja: partes el número en dos, con mínimo 5 y máximo 15 tallos. Su último intervalo siempre va «a menos de».",
+    "Tabla completa: fi, fri y pi (simples) + Fi, Fri y Pi (acumuladas) + Mi (marca de clase).",
+    "La variable siempre va con su unidad de medida."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                    o o o o                       o o o                                         o o o               o o o                       o o o                         o o o                     ",
+    "            ?                     o o       L                 o o     G                 o o                   V                   o o     1                   o o       L             ?                 ",
+    "                    ====                          ====                                          ====                ====                        ====                          ====                      ",
+    "                              o o      o                                    o o    o                  o o                    oo       o o                          o                                    ",
+    "  P               E           C                 E         X         E       C                 E           X       E                   C       E           X                 E           B           M   ",
+    "######################################   #########################################   #######################################    ##################################   ###################################",
+    "######################################   #########################################   #######################################    ##################################   ###################################",
+    "######################################   #########################################   #######################################    ##################################   ###################################"
+  ]
+}

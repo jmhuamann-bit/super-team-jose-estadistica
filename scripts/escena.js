@@ -170,6 +170,9 @@ const FICHAS = [
   { sprite: "globo", nombre: "El Globo Asimétrico", texto: "Nunca sabe hacia qué lado se le fue la colita." },
   { sprite: "diana", nombre: "La Diana Bimodal", texto: "Tiene dos modas y jura que la distribución es unimodal." },
   { sprite: "payaso", nombre: "El Payaso de un Solo Plano", texto: "Jefe de Lince: mete dos grupos discretos en el mismo plano cartesiano." },
+  { sprite: "maletin", nombre: "El Maletín Redondeado", texto: "Redondea el TIC como se le antoja y deja datos fuera." },
+  { sprite: "cafe", nombre: "El Café Acumulado", texto: "Confunde la frecuencia simple con la acumulada." },
+  { sprite: "ejecutivo", nombre: "El Ejecutivo de los Tallos", texto: "Jefe de San Isidro: nunca sabe dónde partir el número." },
 ];
 
 export function galeriaPersonajes(contenedor) {

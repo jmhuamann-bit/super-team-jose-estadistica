@@ -1,0 +1,138 @@
+{
+  "nivel": "level6",
+  "clase": "Clase 06 · Organización de datos cuantitativos continuos",
+  "fuente": "Apuntes de la 6ta clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e6-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "DATO ORO. En una variable cuantitativa CONTINUA, cada clase ya no es un valor único sino un INTERVALO.\n\n¿Por qué?",
+      "opciones": [
+        "Porque los intervalos se ven más ordenados en la tabla",
+        "Porque así lo pide el gráfico de bastones",
+        "Porque los datos continuos toman infinitos valores dentro de un rango, y listarlos uno por uno sería impracticable",
+        "Porque los datos continuos siempre son negativos"
+      ],
+      "correcta": 2,
+      "explicacion": "Entre 1,50 y 1,51 metros hay infinitas estaturas posibles. Si armaras una fila por cada valor distinto, tendrías casi tantas filas como datos y la tabla no diría nada. Agrupar en intervalos es lo que vuelve legible la información."
+    },
+    {
+      "id": "e6-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "LA REGLA DE STURGES.\n\n¿Cuál es la fórmula del número de intervalos?",
+      "opciones": [
+        "K = 1 + 3,3 · log(n)",
+        "K = Rango / n",
+        "K = 3,3 + log(n)",
+        "K = Xmáx − Xmín"
+      ],
+      "correcta": 0,
+      "explicacion": "La K depende solo de cuántos datos tengas. Xmáx − Xmín es el RANGO (paso 2), y el Rango dividido entre K es el TIC (paso 4). Los cuatro pasos van en ese orden: recolectar, rango, K y recién el tamaño del intervalo."
+    },
+    {
+      "id": "e6-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "MÉTODO TALLO Y HOJA.\n\n¿Cuántos tallos debe tener el diagrama?",
+      "opciones": [
+        "Exactamente 10",
+        "Los que salgan, no hay regla",
+        "Uno por cada dato",
+        "Mínimo 5 y máximo 15"
+      ],
+      "correcta": 3,
+      "explicacion": "Con menos de 5 tallos quedan muy pocos intervalos y se pierde el detalle; con más de 15 quedan demasiados y tampoco se entiende nada. Si por más que muevas el corte no logras quedar en ese rango, el método no sirve para esos datos: usa Sturges."
+    },
+    {
+      "id": "e6-q4",
+      "nivel": "comprension",
+      "enunciado": "LOS TRES REDONDEOS de Sturges. ¿Cuál va con cuál?",
+      "opciones": [
+        "Los tres con redondeo común",
+        "K con redondeo COMÚN · TIC SIEMPRE por EXCESO · la marca de clase NUNCA se redondea",
+        "K por exceso · TIC común · la marca de clase por exceso",
+        "K nunca se redondea · TIC común · la marca de clase por exceso"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada uno tiene su regla y es donde más se pierden puntos. La K va al entero más cercano. El TIC siempre sube al siguiente, con los mismos decimales que los datos. Y la marca de clase se deja tal cual salga, aunque quede con muchos decimales."
+    },
+    {
+      "id": "e6-q5",
+      "nivel": "comprension",
+      "enunciado": "¿Por qué el TIC se redondea SIEMPRE por exceso y nunca hacia abajo?",
+      "opciones": [
+        "Porque así los intervalos quedan más bonitos",
+        "Porque el TIC no puede tener decimales",
+        "Porque es la única forma de que la marca de clase sea exacta",
+        "Para que el dato MÁS GRANDE entre en el último intervalo y no quede nada fuera de la tabla"
+      ],
+      "correcta": 3,
+      "explicacion": "Si redondearas hacia abajo, los intervalos sumarían menos que el rango real y el dato mayor se quedaría afuera. Subiendo el TIC te sobra un pelín de espacio, que es justo lo que quieres: que todos los datos tengan dónde caer."
+    },
+    {
+      "id": "e6-q6",
+      "nivel": "comprension",
+      "enunciado": "STURGES vs TALLO Y HOJA: el PRIMER intervalo.\n\n¿En qué se diferencian?",
+      "opciones": [
+        "En Sturges el primer intervalo SIEMPRE inicia con el valor mínimo; en tallo y hoja no necesariamente (puede coincidir por casualidad)",
+        "En los dos siempre inicia con el valor mínimo",
+        "En tallo y hoja siempre inicia con el mínimo; en Sturges no",
+        "En ninguno de los dos importa dónde inicia"
+      ],
+      "correcta": 0,
+      "explicacion": "Sturges arranca justo en el Xmín porque construye los intervalos desde ahí. El tallo y hoja parte del corte del número, así que suele empezar en una decena o centena redonda que queda por debajo del mínimo. Es una pregunta clásica para marcar."
+    },
+    {
+      "id": "e6-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Tienes n = 60 gastos mensuales en soles (números enteros). El menor es 80 y el mayor 145.\n\nPor el método de Sturges, ¿cuántos intervalos y de qué tamaño?",
+      "opciones": [
+        "K = 6 intervalos y TIC = 11",
+        "K = 7 intervalos y TIC = 9,29",
+        "K = 7 intervalos y TIC = 10",
+        "K = 6 intervalos y TIC = 10"
+      ],
+      "correcta": 2,
+      "explicacion": "K = 1 + 3,3·log(60) = 1 + 3,3(1,778) = 6,87 → con redondeo común, K = 7. El Rango es 145 − 80 = 65, así que TIC = 65/7 = 9,2857… → por exceso y con cero decimales (los datos son enteros), TIC = 10. Los intervalos van de 80 a 90, de 90 a 100… hasta 140 a menos de 150, donde entra el 145."
+    },
+    {
+      "id": "e6-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — El ÚLTIMO intervalo. ¿Qué diferencia hay entre los dos métodos?",
+      "opciones": [
+        "En los dos el límite superior siempre coincide con el dato mayor",
+        "En tallo y hoja NUNCA coincide con el dato mayor (siempre «a menos de»); en Sturges sí puede coincidir cuando el TIC sale exacto, y ahí se usa «hasta»",
+        "En Sturges nunca coincide; en tallo y hoja siempre sí",
+        "En ninguno de los dos se usa «a menos de»"
+      ],
+      "correcta": 1,
+      "explicacion": "El tallo y hoja siempre deja el último intervalo abierto, porque sus cortes son decenas o centenas redondas que se pasan del dato mayor. En Sturges, si el TIC sale sin necesidad de redondear, el último límite cae justo sobre el dato mayor y ahí conviene escribir «De X hasta Y» para que ese dato quede incluido."
+    },
+    {
+      "id": "e6-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — Te piden una tabla de frecuencias COMPLETA.\n\n¿Qué columnas debe llevar?",
+      "opciones": [
+        "Solo fi, fri y pi",
+        "Solo las acumuladas Fi, Fri y Pi",
+        "Solo la marca de clase y la fi",
+        "Las SIMPLES (fi, fri, pi) Y las ACUMULADAS (Fi, Fri, Pi), además de la marca de clase Mi"
+      ],
+      "correcta": 3,
+      "explicacion": "«Completa» significa las dos familias: las simples dicen cuánto hay en cada intervalo y las acumuladas cuánto se lleva sumado hasta ahí. Y la Mi es el punto medio del intervalo, que representa a los datos que perdieron su identidad al agruparse. Para la PC1, recuerda rotularlas con su significado real."
+    },
+    {
+      "id": "e6-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — En un estudio a 60 clientes, la F₂ (frecuencia absoluta ACUMULADA del segundo intervalo) vale 15. Los intervalos empiezan en 80 y el segundo termina en 106.\n\n¿Cómo se interpreta?",
+      "opciones": [
+        "15 de los clientes de la muestra de 60 tienen un monto de compra de 80 a menos de 106",
+        "15 de los clientes tienen un monto de compra de 93 a menos de 106",
+        "15 % de los clientes compró más de 106",
+        "15 es la proporción acumulada de clientes"
+      ],
+      "correcta": 0,
+      "explicacion": "La acumulada arranca siempre desde el primer límite inferior de la tabla, no desde el inicio de su propio intervalo. Por eso el rango va de 80 (donde empieza todo) hasta 106 (donde termina el segundo intervalo). Si dijera «de 93 a menos de 106» sería la f₂ simple, no la acumulada."
+    }
+  ]
+}
