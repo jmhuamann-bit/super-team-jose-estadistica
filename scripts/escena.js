@@ -173,6 +173,9 @@ const FICHAS = [
   { sprite: "maletin", nombre: "El Maletín Redondeado", texto: "Redondea el TIC como se le antoja y deja datos fuera." },
   { sprite: "cafe", nombre: "El Café Acumulado", texto: "Confunde la frecuencia simple con la acumulada." },
   { sprite: "ejecutivo", nombre: "El Ejecutivo de los Tallos", texto: "Jefe de San Isidro: nunca sabe dónde partir el número." },
+  { sprite: "parapente", nombre: "El Parapente sin Cerrar", texto: "Su polígono se queda abierto y no sabe por qué." },
+  { sprite: "cangrejo", nombre: "El Cangrejo de las Marcas", texto: "Lee el rango en las marcas de clase y se queda corto." },
+  { sprite: "gato", nombre: "El Gato Superpuesto", texto: "Jefe de Miraflores: compara dos grupos tapando un histograma con el otro." },
 ];
 
 export function galeriaPersonajes(contenedor) {

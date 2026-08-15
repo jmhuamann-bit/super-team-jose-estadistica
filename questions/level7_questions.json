@@ -1,0 +1,138 @@
+{
+  "nivel": "level7",
+  "clase": "Clase 07 · Gráficos de datos continuos (Parte 02)",
+  "fuente": "Apuntes de la 7ma clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e7-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "EL HISTOGRAMA.\n\n¿En qué se diferencia de un gráfico de barras común?",
+      "opciones": [
+        "En que se dibuja con líneas en vez de barras",
+        "En que usa frecuencias acumuladas",
+        "En que las barras van JUNTAS, pegaditas, sin espacio entre ellas",
+        "En que no lleva título"
+      ],
+      "correcta": 2,
+      "explicacion": "Se parece a un gráfico de barras, solo que todas están juntitas. Y tiene sentido: los intervalos de una variable continua se tocan entre sí, no hay huecos donde no pueda caer un dato. En el eje horizontal van los intervalos de clase."
+    },
+    {
+      "id": "e7-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "EL POLÍGONO DE FRECUENCIAS.\n\n¿Qué va en el eje horizontal?",
+      "opciones": [
+        "Las MARCAS DE CLASE (los puntos medios de cada intervalo)",
+        "Los intervalos de clase, igual que en el histograma",
+        "Las frecuencias acumuladas",
+        "El tamaño de la muestra"
+      ],
+      "correcta": 0,
+      "explicacion": "Esa es la diferencia clave con el histograma. El polígono se arma con puntitos que después se unen, y cada punto necesita un valor único en el eje: por eso se usa la marca de clase, que representa a todo el intervalo. Los dos gráficos llevan la misma frecuencia no acumulada."
+    },
+    {
+      "id": "e7-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "De los tres gráficos de continuos, ¿cuál es el único que usa frecuencias ACUMULADAS?",
+      "opciones": [
+        "El histograma",
+        "El polígono de frecuencias",
+        "Los tres usan acumuladas",
+        "La OJIVA"
+      ],
+      "correcta": 3,
+      "explicacion": "El histograma y el polígono trabajan con las simples (fi, fri, pi); la ojiva es la que va con las acumuladas (Fi, Fri, Pi). Por eso, si solo vas a dibujar una ojiva, te ahorras calcular las columnas simples, y al revés."
+    },
+    {
+      "id": "e7-q4",
+      "nivel": "comprension",
+      "enunciado": "En el eje vertical se aconseja poner el PORCENTAJE y no el número de clientes.\n\n¿Por qué?",
+      "opciones": [
+        "Porque el número no cabe en el eje",
+        "Porque permite COMPARAR con otros estudios que tengan un tamaño de muestra distinto",
+        "Porque el porcentaje siempre da números redondos",
+        "Porque el número de clientes solo sirve para la ojiva"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la misma razón de los distritos anteriores. Con el conteo bruto, 30 de 50 y 30 de 500 se dibujan igual de altos y engañan. El porcentaje pone todo sobre la misma base y hace tu gráfico comparable con cualquier otro."
+    },
+    {
+      "id": "e7-q5",
+      "nivel": "comprension",
+      "enunciado": "CASO AVANZADO. Te dan una tabla cuyo primer intervalo dice «Menos de 10» y el último «Más de 30».\n\n¿El polígono se cierra?",
+      "opciones": [
+        "Sí, el polígono siempre cierra",
+        "Sí, pero solo por el lado izquierdo",
+        "No se puede dibujar el polígono con esa tabla",
+        "NO: sin límite en un extremo no hay dónde apoyarlo, así que queda abierto por ese lado"
+      ],
+      "correcta": 3,
+      "explicacion": "El polígono cierra apoyándose en el intervalo vacío que va antes del primero y después del último. Si un extremo no tiene límite, ese apoyo no existe y el gráfico queda abierto. Ojo: esto solo aparece si te REGALAN la tabla, porque construyéndola con Sturges o tallo y hoja siempre hay límites."
+    },
+    {
+      "id": "e7-q6",
+      "nivel": "comprension",
+      "enunciado": "DATO ORO. Tienes que comparar la talla de mujeres y varones en un mismo gráfico.\n\n¿Cuál conviene usar?",
+      "opciones": [
+        "El POLÍGONO de frecuencias: son líneas y se ven las dos a la vez",
+        "El histograma, porque las barras se distinguen mejor",
+        "La ojiva, porque acumula",
+        "Dos gráficos circulares"
+      ],
+      "correcta": 0,
+      "explicacion": "Con dos histogramas en el mismo plano, las barras de un grupo tapan las del otro y no se entiende nada. El polígono son líneas: se cruzan y se leen las dos sin estorbarse. Por eso es el gráfico que más se sugiere para comparar."
+    },
+    {
+      "id": "e7-q7",
+      "nivel": "aplicacion",
+      "enunciado": "De la tabla comparativa de tallas: en las MUJERES (n = 50), el intervalo «de 1,5 a menos de 1,6» tiene fi = 30.\n\n¿Cuál es su porcentaje y su marca de clase?",
+      "opciones": [
+        "pi = 30 % y Mi = 1,50",
+        "pi = 60 % y Mi = 1,60",
+        "pi = 60 % y Mi = 1,55",
+        "pi = 0,60 % y Mi = 1,55"
+      ],
+      "correcta": 2,
+      "explicacion": "El porcentaje es parte/todo por cien: 30/50 = 0,60, o sea 60 %. Y la marca de clase es el punto medio del intervalo: (1,5 + 1,6)/2 = 1,55. Ese 1,55 es el valor que va en el eje si dibujas el polígono; el intervalo completo es el que va si dibujas el histograma."
+    },
+    {
+      "id": "e7-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — LA MODA EN CONTINUOS. En tu gráfico hay DOS intervalos CONSECUTIVOS con la misma frecuencia, la más alta de todas.\n\n¿Cuántas modas hay?",
+      "opciones": [
+        "Dos: es bimodal",
+        "UNA sola: al ser consecutivos forman un solo bloque, no dos picos separados",
+        "Ninguna: es amodal",
+        "Tres, contando el punto medio entre los dos"
+      ],
+      "correcta": 1,
+      "explicacion": "Acá los continuos se portan distinto que los discretos. Como los intervalos se tocan, dos tramos pegados con la misma altura son una sola zona alta, no dos picos. Sería bimodal solo si los dos máximos estuvieran separados por un tramo más bajo."
+    },
+    {
+      "id": "e7-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — EL RANGO. Estás mirando un POLÍGONO y quieres decir entre qué valores varían los datos.\n\n¿De dónde lo sacas?",
+      "opciones": [
+        "Del primer y último punto del eje, tal cual se ven",
+        "De la altura máxima del gráfico",
+        "No se puede saber con un polígono",
+        "De los LÍMITES de los intervalos, no de las marcas de clase que ves en el eje"
+      ],
+      "correcta": 3,
+      "explicacion": "Esta es la trampa. En el eje del polígono están las marcas de clase, que son puntos medios: si lees ahí, te quedas corto por los dos lados. El rango real va del límite inferior del primer intervalo al límite superior del último. En el histograma sí basta con observar, porque ahí están los intervalos completos."
+    },
+    {
+      "id": "e7-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — En un estudio a 60 clientes, la P₃ (frecuencia porcentual ACUMULADA del tercer intervalo) es 38,33 %, y los intervalos empiezan en 80 y el tercero termina en 119.\n\n¿Cómo se interpreta?",
+      "opciones": [
+        "38,33 % es el porcentaje de clientes que tienen un monto de compra de 80 a menos de 119",
+        "38,33 % de los clientes compró entre 106 y 119",
+        "38,33 es el número de clientes del tercer intervalo",
+        "38,33 % es la proporción acumulada de clientes"
+      ],
+      "correcta": 0,
+      "explicacion": "Toda acumulada arranca desde el primer límite inferior de la tabla, no desde el inicio de su propio intervalo: por eso el rango va de 80 hasta 119. Si dijera «de 106 a menos de 119» sería la p₃ simple. Y ojo con la palabra: el porcentaje es la Pi; la proporción sería la Fri, que iría en 0,3833."
+    }
+  ]
+}
