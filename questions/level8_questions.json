@@ -1,0 +1,138 @@
+{
+  "nivel": "level8",
+  "clase": "Clase 08 · Gráfico ojiva y sus matemáticas",
+  "fuente": "Apuntes de la 8va clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e8-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "CADA VARIABLE CON SU GRÁFICO.\n\n¿Cuáles son los tres gráficos de una variable cuantitativa CONTINUA?",
+      "opciones": [
+        "Histograma, polígono de frecuencias y ojiva",
+        "Barras, circular y bastones",
+        "Bastones, línea de tiempo y Pareto",
+        "Histograma, barras y circular"
+      ],
+      "correcta": 0,
+      "explicacion": "Es lo primero que hay que decidir, porque escoger mal el gráfico ya cuesta puntos. La cualitativa va en barras (y circular solo si es nominal); la cuantitativa DISCRETA va en bastones, esas varitas verticales; y la CONTINUA en los tres de esta clase. Aparte quedan los casos especiales: la línea de tiempo y el Pareto."
+    },
+    {
+      "id": "e8-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "¿CÓMO SE DIBUJA UNA OJIVA?\n\n¿Qué frecuencias se usan?",
+      "opciones": [
+        "Las simples (fi, pi), igual que en el histograma",
+        "Las marcas de clase (Mi) en los dos ejes",
+        "Solo las frecuencias absolutas, nunca los porcentajes",
+        "Las ACUMULADAS: el porcentaje acumulado en un eje y los intervalos de clase en el otro"
+      ],
+      "correcta": 3,
+      "explicacion": "Esa es la diferencia de fondo con el histograma y el polígono, que usan las frecuencias sin acumular. Para dibujar rápido basta con armar las columnas Mi, fi, pi y Pi; el resto de la tabla completa solo la haces si el examen te la pide. Y ojo con el nombre del eje Y: «porcentaje acumulado de (unidad elemental)»."
+    },
+    {
+      "id": "e8-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "PREGUNTA DE EXAMEN: «La ojiva siempre crece». ¿Verdadero o falso?\n\nElige la respuesta más precisa.",
+      "opciones": [
+        "Falso: puede bajar si un intervalo tiene menos datos que el anterior",
+        "Verdadero: sube en cada intervalo sin excepción",
+        "Casi verdadero: NUNCA decrece, pero puede quedarse constante si un intervalo no tiene datos",
+        "Depende de si la variable es discreta o continua"
+      ],
+      "correcta": 2,
+      "explicacion": "Acá está la trampa de la pregunta. Como se van acumulando datos, es imposible que la curva baje: lo acumulado no se desacumula. Pero si un intervalo viene con frecuencia cero, no se le suma nada y la ojiva se queda plana en ese tramo. Por eso lo correcto es decir que NO DECRECE, más que decir que siempre crece."
+    },
+    {
+      "id": "e8-q4",
+      "nivel": "comprension",
+      "enunciado": "1RA CONCLUSIÓN: LA CONCENTRACIÓN.\n\n¿Cómo se ve en la ojiva dónde están acumulados la mayor cantidad de datos?",
+      "opciones": [
+        "En el tramo donde la curva está más plana",
+        "En el tramo donde la ojiva tiene MAYOR PENDIENTE, o sea donde sube más empinada",
+        "En el punto donde la curva llega al 100 %",
+        "En el primer intervalo, siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "El truco es sencillo: la ojiva sube tanto como datos entren en ese intervalo. Un tramo empinado significa que ahí se metió mucha gente de golpe; un tramo casi horizontal, que casi nadie cayó ahí. Por eso en la zona más empinada suele estar la moda. Y sirve también al revés, para hablar de la MENOR concentración."
+    },
+    {
+      "id": "e8-q5",
+      "nivel": "comprension",
+      "enunciado": "TALLAS DE LA UNIVERSIDAD NACIONAL DEL FRACASO. Entre las 50 mujeres: de 1,3 a 1,4 hay 4 · de 1,4 a 1,5 hay 6 · de 1,5 a 1,6 hay 30 · de 1,6 a 1,7 hay 5 · de 1,7 a 1,8 hay 3 · de 1,8 a 1,9 hay 2.\n\n¿Dónde está la mayor concentración y cuánto vale el acumulado al llegar a 1,6?",
+      "opciones": [
+        "En el intervalo de 1,6 a 1,7, con un acumulado de 90 %",
+        "En el intervalo de 1,3 a 1,4, con un acumulado de 8 %",
+        "En el intervalo de 1,4 a 1,5, con un acumulado de 20 %",
+        "En el intervalo de 1,5 a 1,6 (60 % de las mujeres), con un acumulado de 80 %"
+      ],
+      "correcta": 3,
+      "explicacion": "Ese intervalo se lleva 30 de las 50 mujeres, o sea el 60 %, y es de lejos el salto más grande: ahí la ojiva se pone casi vertical. El acumulado va 8 %, 20 %, 80 %, 90 %, 96 % y 100 %, así que al llegar a 1,6 ya juntaste al 80 % de ellas. Conclusión que puedes escribir: la mayor concentración de estudiantes mujeres está entre 1,5 y 1,6 metros."
+    },
+    {
+      "id": "e8-q6",
+      "nivel": "comprension",
+      "enunciado": "EL COMPLEMENTO. En la ojiva de las mujeres, el acumulado hasta 1,6 metros es 80 %.\n\n¿Qué porcentaje mide MÁS de 1,6?",
+      "opciones": [
+        "20 %, porque el «mayor que» sale restando a 100 el «menor que»",
+        "80 %, es el mismo valor que se lee en el gráfico",
+        "No se puede saber con la ojiva, hay que volver a la tabla",
+        "60 %, que es lo que aporta ese intervalo"
+      ],
+      "correcta": 0,
+      "explicacion": "La ojiva está construida «hacia la izquierda»: cada punto te dice cuántos van acumulados HASTA ahí. Así que el «mayor que» nunca se lee directo, se saca por complemento: 100 − 80 = 20 %. Es el mismo razonamiento que usarás con las distribuciones continuas más adelante."
+    },
+    {
+      "id": "e8-q7",
+      "nivel": "aplicacion",
+      "enunciado": "MATEMÁTICAS DE LA OJIVA (mujeres). El 50 % cae dentro del intervalo de 1,5 a 1,6, donde el acumulado pasa de 20 % a 80 %.\n\n¿Cuánto mide como máximo el 50 % que menos mide?",
+      "opciones": [
+        "1,50 metros, el inicio del intervalo",
+        "1,60 metros, el final del intervalo",
+        "1,55 metros",
+        "1,58 metros"
+      ],
+      "correcta": 2,
+      "explicacion": "Como el punto no cae justo en la reja, hay que INTERPOLAR. La pendiente entre los dos puntos que lo rodean es m = (80 − 20) / (1,6 − 1,5) = 600. Después usas el punto conocido: 50 = 20 + 600(x − 1,5), de donde 30 = 600(x − 1,5) y x = 1,55. Conclusión: el 50 % inferior de las mujeres mide menos de 1,55 metros."
+    },
+    {
+      "id": "e8-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — LA COMPARACIÓN. Entre los 100 varones el acumulado va 0 %, 5 %, 14 %, 34 %, 74 % y 100 %.\n\n¿Cuánto mide su 50 % inferior, y qué concluyes al compararlo con el 1,55 de las mujeres?",
+      "opciones": [
+        "1,80 metros; las mujeres están más dispersas",
+        "1,74 metros; la mitad de los varones ya pasa a casi todas las mujeres",
+        "1,70 metros; los dos grupos tienen la misma mediana",
+        "1,65 metros; las dos ojivas se cruzan en ese punto"
+      ],
+      "correcta": 1,
+      "explicacion": "El 50 % cae entre 1,7 (34 %) y 1,8 (74 %). La pendiente es m = (74 − 34) / (1,8 − 1,7) = 400, y de 50 = 34 + 400(x − 1,7) sale x = 1,74. La comparación es fuerte: la mitad de los varones ya supera 1,74, mientras que en las mujeres el 80 % no llega ni a 1,60. Por eso la ojiva de los varones está corrida hacia la derecha."
+    },
+    {
+      "id": "e8-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — EL MÉTODO. Te piden un valor que NO cae en ninguna marca del gráfico.\n\n¿Cuál es el procedimiento correcto?",
+      "opciones": [
+        "Sacar la pendiente m = ΔY/ΔX con los dos puntos que lo RODEAN, y con ella y un punto conocido despejar el que falta",
+        "Redondear al punto más cercano que sí se vea en el gráfico",
+        "Usar la marca de clase del intervalo como respuesta",
+        "Promediar los dos extremos del intervalo"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la interpolación, y son dos movimientos. Primero calculas la pendiente del tramo con los dos puntos que encierran al que buscas. Segundo, tomas uno de esos puntos, que sí conoces entero, y armas la misma pendiente contra el punto incógnito para despejarlo. Redondear o promediar te acerca, pero en un examen con decimales eso ya está mal."
+    },
+    {
+      "id": "e8-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3 — LA CURIOSIDAD. ¿Se puede graficar una ojiva con una variable DISCRETA, si la ojiva es de continuas?",
+      "opciones": [
+        "No, jamás: las discretas solo aceptan el gráfico de bastones",
+        "Solo si los valores son todos números enteros positivos",
+        "No, porque la ojiva necesita marcas de clase y las discretas no tienen",
+        "SÍ: una variable discreta se puede convertir en continua agrupándola en intervalos, y ahí ya se arma la tabla completa y su ojiva"
+      ],
+      "correcta": 3,
+      "explicacion": "Las discretas se pueden pasar a continuas agrupando los valores en intervalos de clase. Una vez agrupada, tienes tus Mi, tus fi y tus acumuladas, y la ojiva sale igual que siempre. Lo que no se puede hacer es al revés: una continua no se convierte en discreta, porque perderías la información de todo lo que hay entre valor y valor."
+    }
+  ]
+}

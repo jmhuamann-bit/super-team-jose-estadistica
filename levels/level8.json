@@ -1,0 +1,40 @@
+{
+  "id": "level8",
+  "distrito": "Barranco",
+  "clase": "Clase 08",
+  "titulo": "El puente de la ojiva",
+  "tema": "barranco",
+  "musica": "barranco",
+  "vehiculo": "combi",
+  "intro": "Bajando de Miraflores llegas a la bohemia de Barranco, y el Puente de los Suspiros te da la pista: una ojiva es una cuesta que solo sube, nunca baja. Acá se dibuja con frecuencias acumuladas, se lee la concentración mirando la pendiente y, cuando el punto que te piden no cae justo en la reja del gráfico, toca interpolar. Los bichos del puente usan las frecuencias simples, dibujan curvas que bajan y confunden el «menor que» con el «mayor que».",
+  "repaso": [
+    "Cada tipo de variable tiene su gráfico: cualitativa va en barras, cuantitativa DISCRETA en bastones, y cuantitativa CONTINUA en histograma, polígono y OJIVA.",
+    "La ojiva se dibuja con frecuencias ACUMULADAS: en un eje el porcentaje acumulado y en el otro los intervalos de clase.",
+    "Nunca olvides el título ni los nombres de los ejes. El eje Y se llama «porcentaje acumulado de (unidad elemental)».",
+    "La parte derecha de la ojiva queda ABIERTA, con su flechita. Se parece a un polígono de frecuencias que no cierra.",
+    "La ojiva NUNCA decrece: o crece o se mantiene constante, porque lo que se acumula no se puede desacumular.",
+    "1RA CONCLUSIÓN, concentración: a mayor PENDIENTE del tramo, más datos acumulados ahí. En esa zona suele estar la moda.",
+    "2DA CONCLUSIÓN, partir al 50 %: «el 50 % inferior de las unidades elementales tiene un valor menor a X».",
+    "3RA CONCLUSIÓN (opcional): el rango, o sea desde dónde hasta dónde varían los datos.",
+    "MATEMÁTICAS DE LA OJIVA. Caso 01: si el punto se ve en el gráfico, la respuesta es directa. Caso 02: si no se ve, se INTERPOLA.",
+    "Para interpolar: sacas la pendiente m = ΔY/ΔX con los dos puntos que rodean al que buscas, y con ella y un punto conocido despejas el que falta.",
+    "«Mayor que» no está en la ojiva: se saca por complemento, restando a 100 el «menor que»."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                  o o o                               o o o                               o o o                   o o o                   o o o                       o o o                       o o o                 ",
+    "            ?               o o     L             o o       G                   o o               V                   o o     1                   o o       L o o                       ?   o o               1 o o     ",
+    "                  ====                                ====                                ====                    ====                    ====                        ====                        ====                  ",
+    "                        o o               o o                 o o                 o o           o o                         o o             o o           o o             o o             o o               o o         ",
+    "  P             E             C               E           X       E                   C       E     X                     E             C               E         X         E                 X         B           M   ",
+    "####################################   ###################################    ################################   ###############################    ##############################   ###################################",
+    "####################################   ###################################    ################################   ###############################    ##############################   ###################################",
+    "####################################   ###################################    ################################   ###############################    ##############################   ###################################"
+  ]
+}
