@@ -555,9 +555,9 @@ export const TEMAS = {
     suelo: { cara: "#7b6b8f", borde: "#c9a4d6", tierra: "#3d3350", plataforma: "#e07a3f", plataformaBorde: "#ffbc82" },
     acento: "#ff8fab",
     bichos: ["guitarra", "aerosol", "cajon"],
-    nombresBichos: ["La Guitarra sin Acumular", "El Aerosol que Decrece", "El Cajón del Complemento"],
+    nombresBichos: ["La Guitarra de Chabuca", "El Aerosol de la Bajada", "El Cajón al Revés"],
     jefe: "bohemio",
-    nombreJefe: "El Bohemio de la Interpolación",
+    nombreJefe: "El Bohemio del Puente",
 
     fondo(ctx, cam, t) {
       // luna llena sobre el mar

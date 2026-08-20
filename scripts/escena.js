@@ -176,9 +176,10 @@ const FICHAS = [
   { sprite: "parapente", nombre: "El Parapente sin Cerrar", texto: "Su polígono se queda abierto y no sabe por qué." },
   { sprite: "cangrejo", nombre: "El Cangrejo de las Marcas", texto: "Lee el rango en las marcas de clase y se queda corto." },
   { sprite: "gato", nombre: "El Gato Superpuesto", texto: "Jefe de Miraflores: compara dos grupos tapando un histograma con el otro." },
-  { sprite: "guitarra", nombre: "La Guitarra sin Acumular", texto: "Dibuja la ojiva con las frecuencias simples y le sale un polígono." },
-  { sprite: "cajon", nombre: "El Cajón del Complemento", texto: "Le suena igual «menor que» y «mayor que», y se olvida de restar a 100." },
-  { sprite: "bohemio", nombre: "El Bohemio de la Interpolación", texto: "Jefe de Barranco: cuando el punto no se ve en el gráfico, se lo inventa." },
+  { sprite: "guitarra", nombre: "La Guitarra de Chabuca", texto: "Toca las notas una por una y nunca las suma: su ojiva sale sin acumular." },
+  { sprite: "aerosol", nombre: "El Aerosol de la Bajada", texto: "Pinta murales cuesta abajo y le sale una ojiva que decrece." },
+  { sprite: "cajon", nombre: "El Cajón al Revés", texto: "Se sienta encima y ya no distingue el «menor que» del «mayor que»." },
+  { sprite: "bohemio", nombre: "El Bohemio del Puente", texto: "Jefe de Barranco: cuando el punto no cae en la reja, pide un deseo en vez de interpolar." },
 ];
 
 export function galeriaPersonajes(contenedor) {
