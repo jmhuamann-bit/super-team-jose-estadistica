@@ -1,0 +1,138 @@
+{
+  "nivel": "level9",
+  "clase": "Clase 09 · Gráficos especiales: series de tiempo y Pareto",
+  "fuente": "Apuntes de la 9na clase — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e9-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Cómo reconoces que un problema pide una SERIE DE TIEMPO?",
+      "opciones": [
+        "Porque te dan varios periodos de tiempo, mínimo 3",
+        "Porque la variable es cualitativa",
+        "Porque te piden ordenar de mayor a menor",
+        "Porque te dan una tabla de frecuencias ya armada"
+      ],
+      "correcta": 0,
+      "explicacion": "Meses, años o días: si hay al menos tres, es serie de tiempo. Y acá ya no armas tabla de frecuencias, el problema te da los datos listos para ubicar los puntitos y unirlos."
+    },
+    {
+      "id": "e9-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Vas a graficar la tasa de crecimiento del PBI: 3 %, −4 %, −3 %, 0 %, 2 % y 4 %.\n\n¿Puede haber valores negativos en los ejes?",
+      "opciones": [
+        "No, ningún eje acepta negativos",
+        "Solo el eje X puede tenerlos",
+        "Los dos ejes pueden tenerlos sin problema",
+        "El eje Y SÍ puede tener negativos; el eje X, que es el tiempo, NO"
+      ],
+      "correcta": 3,
+      "explicacion": "La variable puede caer por debajo de cero, como acá o con la temperatura. Pero el tiempo no retrocede: el eje X siempre avanza."
+    },
+    {
+      "id": "e9-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "El gráfico de PARETO sirve para encontrar las deficiencias de una empresa y arreglarlas.\n\n¿Con qué tipo de variable trabaja?",
+      "opciones": [
+        "Con cuantitativas continuas",
+        "Con cuantitativas discretas",
+        "SIEMPRE con cualitativas NOMINALES, nunca jerárquicas",
+        "Con cualquiera, por eso es especial"
+      ],
+      "correcta": 2,
+      "explicacion": "Las opiniones sobre las deficiencias de una empresa son categorías sin orden natural entre ellas. En el Pareto el orden lo pones tú, por frecuencia, no viene con la variable."
+    },
+    {
+      "id": "e9-q4",
+      "nivel": "comprension",
+      "enunciado": "Un vecindario registra 4 meses: consumo de agua en LITROS (60 000 · 70 000 · 150 000 · 80 000) y gasto en SOLES (300 · 400 · 200 · 600).\n\n¿Cómo los grafica juntos?",
+      "opciones": [
+        "En un solo eje, poniendo las dos series encima",
+        "Con un gráfico de DOBLE EJE: los litros en un eje y los soles en el otro",
+        "Solo se puede graficar una de las dos",
+        "Convirtiendo los litros a soles"
+      ],
+      "correcta": 1,
+      "explicacion": "El consumo es hasta 250 veces más grande que el gasto: en un solo eje la línea de los soles quedaría pegada al piso. Con doble eje cada serie se lee en su lado, sin separarlas."
+    },
+    {
+      "id": "e9-q5",
+      "nivel": "comprension",
+      "enunciado": "Ahora te dan dos series con el MISMO periodo: una en unidades y la otra ya en porcentaje.\n\n¿Qué puedes hacer para que entren en un solo eje?",
+      "opciones": [
+        "Nada, siempre necesitan doble eje",
+        "Dividir la de unidades entre 100",
+        "Sumarlas y graficar el total",
+        "Adaptar las DOS a porcentaje de variación, y ahí sí comparten eje"
+      ],
+      "correcta": 3,
+      "explicacion": "Si conviertes la serie de unidades a su variación porcentual, las dos pasan a medirse en lo mismo y comparten eje sin problema. Y no olvides la leyenda para saber cuál es cuál."
+    },
+    {
+      "id": "e9-q6",
+      "nivel": "comprension",
+      "enunciado": "Armas la tabla del Pareto y una de las categorías es «otros», que casi siempre tiene poca frecuencia.\n\n¿Dónde la colocas?",
+      "opciones": [
+        "SIEMPRE al final, aunque no sea la de menor frecuencia",
+        "Donde le toque según su frecuencia",
+        "Al inicio, para sacarla del camino",
+        "Se elimina de la tabla"
+      ],
+      "correcta": 0,
+      "explicacion": "«Otros» es un cajón de sastre, no una deficiencia concreta que puedas arreglar, así que va al final por convención. El resto sí se ordena de mayor a menor."
+    },
+    {
+      "id": "e9-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Encuesta en la UP: falta de espacio 10 · mala limpieza de baños 5 · inseguridad 4 · otros 2.\n\n¿Cuál es el porcentaje ACUMULADO de las tres primeras categorías?",
+      "opciones": [
+        "47,62 % · 71,43 % · 100 %",
+        "47,62 % · 23,81 % · 19,05 %",
+        "47,62 % · 71,43 % · 90,48 %",
+        "10 % · 15 % · 19 %"
+      ],
+      "correcta": 2,
+      "explicacion": "El total es 21. Los sueltos son 47,62 · 23,81 · 19,05 · 9,52 y el acumulado los va sumando. La alternativa B te da los sueltos: esos son las barras, no la línea."
+    },
+    {
+      "id": "e9-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Con ese mismo Pareto (acumulado: 47,62 % · 71,43 % · 90,48 % · 100 %) la UP quiere resolver el 60 % de los problemas.\n\n¿Hasta dónde debe atacar?",
+      "opciones": [
+        "Solo la falta de espacio",
+        "Hasta la mala limpieza de baños: los dos primeros",
+        "Hasta la inseguridad: los tres primeros",
+        "Los cuatro, para asegurar"
+      ],
+      "correcta": 1,
+      "explicacion": "Trazas la horizontal en 60 %, tocas la línea acumulada y bajas. El 60 % cae entre 47,62 y 71,43, así que con el primero no alcanza y hay que sumar el segundo."
+    },
+    {
+      "id": "e9-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Misma encuesta, pero ahora quieren resolver el 80 %.\n\n¿Hasta dónde llegan?",
+      "opciones": [
+        "Hasta la inseguridad: los tres primeros",
+        "Hasta la mala limpieza: los dos primeros",
+        "Solo la falta de espacio",
+        "No se puede llegar al 80 %"
+      ],
+      "correcta": 0,
+      "explicacion": "El 80 % cae entre 71,43 y 90,48: con dos te quedas corto. Y fíjate que arreglando 3 de 4 problemas cubres el 90,48 % de las quejas."
+    },
+    {
+      "id": "e9-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Terminas la serie de tiempo de los alumnos de la UP: 4 500 · 2 100 · 4 000 · 5 000 · 8 000 · 8 900, de 2019 a 2024.\n\n¿Qué conclusión escribes?",
+      "opciones": [
+        "Que es decreciente, por la caída de 2020",
+        "Que es constante, porque empieza y termina en miles",
+        "Que no se puede concluir con solo 6 años",
+        "Que la TENDENCIA es CRECIENTE: de 4 500 a 8 900, aunque con una caída fuerte en 2020"
+      ],
+      "correcta": 3,
+      "explicacion": "La conclusión de una serie de tiempo es su tendencia, y se lee comparando el inicio con el final. El bajón de 2020 vale mencionarlo, pero no la cambia."
+    }
+  ]
+}

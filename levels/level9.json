@@ -1,0 +1,40 @@
+{
+  "id": "level9",
+  "distrito": "Chorrillos",
+  "clase": "Clase 09",
+  "titulo": "La caleta de los gráficos",
+  "tema": "muelle",
+  "musica": "muelle",
+  "vehiculo": "mototaxi",
+  "intro": "En la caleta de Chorrillos el pescador no se lleva todo lo que cae en la red: elige. Y eso es lo que hacen los dos gráficos de esta clase. La serie de tiempo elige qué variable seguir a lo largo de los meses, y el Pareto elige qué problemas vale la pena arreglar primero. Acá ya no hay tabla de frecuencias que armar para la línea de tiempo: solo ubicas los puntitos y los unes.",
+  "repaso": [
+    "SERIE DE TIEMPO: en el eje X van los tiempos y en el eje Y la variable. Título general: «Evolución de VARIABLE para el periodo fecha − fecha».",
+    "El eje Y SÍ puede tener negativos (temperatura, inflación, tasa de crecimiento). El eje X del tiempo NO.",
+    "La reconoces porque te dan varios periodos, mínimo 3. Y ya no hace falta tabla de frecuencias: el problema te da los datos listos.",
+    "Para comparar dos grupos, NUNCA olvides la LEYENDA.",
+    "Si las dos series comparten unidad de medida, van juntas en un solo eje.",
+    "Si te dan una en unidades y la otra en porcentaje, puedes adaptar las dos a porcentaje de variación y unificarlas.",
+    "Si las UNIDADES son distintas (litros contra soles, por ejemplo), se hace un gráfico de DOBLE EJE: una serie se lee en el eje izquierdo y la otra en el derecho. No hace falta separarlas en dos gráficos.",
+    "PARETO: solo va con variables CUALITATIVAS NOMINALES, nunca jerárquicas. Sirve para encontrar las deficiencias y arreglarlas.",
+    "Se ordena de MAYOR a MENOR frecuencia, y la categoría «otros» va siempre al final aunque no sea la más chica.",
+    "El Pareto lleva doble eje Y: barras juntitas con el pi, y encima una línea con el porcentaje acumulado Pi, que nace en la punta derecha de la primera barra.",
+    "Para responder «qué arreglo primero»: trazas la horizontal en el porcentaje que te piden, tocas la línea acumulada y bajas. Hasta ahí llegan los problemas que hay que atacar."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                    o o o                               o o o                               o o o                     o o o                     o o o                     o o o                       o o o                     ",
+    "            ?               o o         L         o o             G           o o                     V         o o               1         o o         o o         L                 o o       ?         o o         1         ",
+    "                    ====                                ====                                ====                      ====                      ====                      ====                        ====                      ",
+    "                        o o                 o o               o o                   o o             o o                         o o               o             o o           o o             o o                 o o           ",
+    "  P               E           C                 E           X       E                   C       E       X                   E             C                 E           X         E                 X         B             M   ",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################"
+  ]
+}

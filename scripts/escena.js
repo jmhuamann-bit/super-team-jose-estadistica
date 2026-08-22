@@ -180,6 +180,10 @@ const FICHAS = [
   { sprite: "aerosol", nombre: "El Aerosol de la Bajada", texto: "Pinta murales cuesta abajo y le sale una ojiva que decrece." },
   { sprite: "cajon", nombre: "El Cajón al Revés", texto: "Se sienta encima y ya no distingue el «menor que» del «mayor que»." },
   { sprite: "bohemio", nombre: "El Bohemio del Puente", texto: "Jefe de Barranco: cuando el punto no cae en la reja, pide un deseo en vez de interpolar." },
+  { sprite: "bote", nombre: "El Bote de la Herradura", texto: "Como la bahía, va y vuelve: cree que el eje del tiempo también puede ir para atrás." },
+  { sprite: "red", nombre: "La Red de un Solo Eje", texto: "Echa litros y soles a la misma red, cuando eso pedía un gráfico de doble eje." },
+  { sprite: "pelicano", nombre: "El Pelícano de Villa", texto: "Se posa en cualquier orden, y así mismo arma su Pareto." },
+  { sprite: "pescador", nombre: "El Pescador sin Prioridad", texto: "Jefe de Chorrillos: jala toda la red de un tirón sin elegir qué problema vale la pena arreglar." },
 ];
 
 export function galeriaPersonajes(contenedor) {
