@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase de Estadística 1. Los nueve están abiertos para practicar en cualquier orden.",
+  "descripcion": "Cada distrito es una clase de Estadística 1, agrupados por la práctica que les toca. Todos están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -8,11 +8,13 @@
       "distrito": "Callao",
       "titulo": "El puerto de las muestras",
       "icono": "⚓",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
+      "abierto": true,
       "mapa": "levels/level1.json",
-      "preguntas": "questions/level1_questions.json",
-      "abierto": true
+      "preguntas": "questions/level1_questions.json"
     },
     {
       "id": "level2",
@@ -20,11 +22,13 @@
       "distrito": "San Miguel",
       "titulo": "El malecón del muestreo",
       "icono": "🌳",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
+      "abierto": true,
       "mapa": "levels/level2.json",
-      "preguntas": "questions/level2_questions.json",
-      "abierto": true
+      "preguntas": "questions/level2_questions.json"
     },
     {
       "id": "level3",
@@ -32,6 +36,8 @@
       "distrito": "Pueblo Libre",
       "titulo": "La plaza de las variables",
       "icono": "🏛",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -44,6 +50,8 @@
       "distrito": "Jesús María",
       "titulo": "El parque de las frecuencias",
       "icono": "🌺",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -56,6 +64,8 @@
       "distrito": "Lince",
       "titulo": "La feria de los bastones",
       "icono": "🎪",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -68,6 +78,8 @@
       "distrito": "San Isidro",
       "titulo": "Las torres de los intervalos",
       "icono": "🏢",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -80,6 +92,8 @@
       "distrito": "Miraflores",
       "titulo": "El acantilado de los continuos",
       "icono": "🪂",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -92,6 +106,8 @@
       "distrito": "Barranco",
       "titulo": "El puente de la ojiva",
       "icono": "🌉",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -104,11 +120,27 @@
       "distrito": "Chorrillos",
       "titulo": "La caleta de los gráficos",
       "icono": "🐟",
+      "seccion": "PC1",
+      "seccionNota": "Muestreo, variables, tablas y gráficos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level9.json",
       "preguntas": "questions/level9_questions.json"
+    },
+    {
+      "id": "level10",
+      "clase": "Clase 01",
+      "distrito": "Villa El Salvador",
+      "titulo": "El arenal que busca su centro",
+      "icono": "🧱",
+      "seccion": "PC2",
+      "seccionNota": "Medidas de tendencia central",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level10.json",
+      "preguntas": "questions/level10_questions.json"
     }
   ]
 }

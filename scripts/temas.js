@@ -743,6 +743,143 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     VILLA EL SALVADOR — mediodía en los arenales. El distrito se
+     planificó desde el primer día en grupos residenciales: cada
+     manzana de casitas rodea una plaza que queda justo AL CENTRO.
+     Al fondo, las dunas del Lomo de Corvina, las torres de alta
+     tensión y los talleres del parque industrial.
+     ========================================================= */
+  arenal: {
+    nombre: "Villa El Salvador",
+    cielo: [[0, "#4a8fc4"], [0.42, "#8fc0dd"], [0.78, "#e8d3a8"], [1, "#f0dcb4"]],
+    suelo: { cara: "#c9a86a", borde: "#e8d09a", tierra: "#8a6f42", plataforma: "#5f5348", plataformaBorde: "#e8823c" },
+    acento: "#e8823c",
+    bichos: ["carretilla", "ladrillo", "casco"],
+    nombresBichos: ["La Carretilla Desnivelada", "El Ladrillo sin Peso", "El Casco Desordenado"],
+    jefe: "capataz",
+    nombreJefe: "El Capataz del Grupo Residencial",
+
+    fondo(ctx, cam, t) {
+      // el sol del mediodía, blanco y sin piedad
+      ctx.fillStyle = "rgba(255,250,225,.20)";
+      ctx.beginPath(); ctx.arc(600, 66, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,238,.95)";
+      ctx.beginPath(); ctx.arc(600, 66, 30, 0, Math.PI * 2); ctx.fill();
+
+      // las dunas del Lomo de Corvina, una detrás de otra
+      repetir(ctx, cam, 520, 0.14, (x) => {
+        ctx.fillStyle = "#c2a173";
+        ctx.beginPath();
+        ctx.moveTo(x - 60, 300);
+        ctx.quadraticCurveTo(x + 130, 176, x + 330, 300);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 380, 0.24, (x) => {
+        ctx.fillStyle = "#d4b585";
+        ctx.beginPath();
+        ctx.moveTo(x - 40, 308);
+        ctx.quadraticCurveTo(x + 100, 216, x + 250, 308);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // torres de alta tensión cruzando el arenal
+      repetir(ctx, cam, 300, 0.36, (x) => {
+        const bx = x + 40, base = 306, alto = 118;
+        ctx.strokeStyle = "#6b6357"; ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx - 14, base); ctx.lineTo(bx, base - alto);
+        ctx.moveTo(bx + 14, base); ctx.lineTo(bx, base - alto);
+        for (let k = 1; k <= 4; k++) {
+          const y = base - (alto / 5) * k, w = 13 - k * 2.4;
+          ctx.moveTo(bx - w, y); ctx.lineTo(bx + w, y);
+        }
+        ctx.moveTo(bx - 22, base - alto + 16); ctx.lineTo(bx + 22, base - alto + 16);
+        ctx.stroke();
+        // los cables colgando hacia la siguiente torre
+        ctx.strokeStyle = "rgba(70,66,58,.55)";
+        ctx.beginPath();
+        ctx.moveTo(bx + 22, base - alto + 16);
+        ctx.quadraticCurveTo(bx + 150, base - alto + 46, bx + 300 - 22, base - alto + 16);
+        ctx.stroke();
+      });
+
+      // los grupos residenciales, lejos y lavados por el calor: dos manzanas
+      // de casitas bajas y, entre ellas, la loza deportiva con su arquito, su
+      // arbolito y el mástil. Ese centro es el que el nivel entero anda buscando.
+      repetir(ctx, cam, 232, 0.42, (x, i) => {
+        const bx = x + 8, base = 318;
+        const tonos = ["#dcd2c0", "#d8c6ae", "#ccd2d4", "#e2d6c0"];
+        const casita = (cx, alto, tono) => {
+          ctx.fillStyle = tono;
+          ctx.fillRect(cx, base - alto, 28, alto);
+          ctx.fillStyle = "rgba(120,110,90,.28)";             // el techo plano
+          ctx.fillRect(cx, base - alto, 28, 3);
+          ctx.fillStyle = "rgba(110,135,150,.38)";            // ventanitas
+          ctx.fillRect(cx + 5, base - alto + 9, 7, 8);
+          ctx.fillRect(cx + 16, base - alto + 9, 7, 8);
+          ctx.fillStyle = "rgba(120,100,70,.45)";             // puerta
+          ctx.fillRect(cx + 11, base - 11, 7, 11);
+        };
+        casita(bx, 30 + ((i * 17) % 12), tonos[i % 4]);
+        casita(bx + 30, 27 + ((i * 23) % 13), tonos[(i + 2) % 4]);
+
+        // la loza deportiva: en Villa cada grupo tiene la suya, al centro
+        ctx.fillStyle = "rgba(214,196,166,.85)";
+        ctx.fillRect(bx + 66, base - 4, 88, 4);
+        ctx.strokeStyle = "rgba(150,140,120,.7)"; ctx.lineWidth = 2;   // el arquito
+        ctx.beginPath();
+        ctx.moveTo(bx + 78, base - 4); ctx.lineTo(bx + 78, base - 20);
+        ctx.lineTo(bx + 98, base - 20); ctx.lineTo(bx + 98, base - 4);
+        ctx.stroke();
+        ctx.fillStyle = "#7d6a48";                            // el tronco
+        ctx.fillRect(bx + 118, base - 20, 3, 20);
+        ctx.fillStyle = "#8aa063";                            // la copa del árbol
+        ctx.beginPath(); ctx.arc(bx + 119, base - 26, 10, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#9aa0a6";                            // el mástil
+        ctx.fillRect(bx + 146, base - 42, 2, 42);
+        ctx.fillStyle = "#e8823c";
+        ctx.fillRect(bx + 148, base - 42, 12, 7);
+
+        casita(bx + 160, 29 + ((i * 19) % 12), tonos[(i + 1) % 4]);
+        casita(bx + 190, 32 + ((i * 13) % 11), tonos[(i + 3) % 4]);
+      });
+
+      // los talleres del parque industrial, espaciados, con techo de calamina
+      repetir(ctx, cam, 262, 0.56, (x, i) => {
+        const bx = x + 26, alto = 70 + ((i * 29) % 30), base = 338;
+        ctx.fillStyle = ["#c9bda6", "#d4b88f", "#b9c2c2", "#dcc39c"][i % 4];
+        ctx.fillRect(bx, base - alto, 108, alto);
+        // techo de calamina en dientes de sierra
+        ctx.fillStyle = "#7c838b";
+        for (let k = 0; k < 6; k++) {
+          ctx.beginPath();
+          ctx.moveTo(bx + k * 18, base - alto);
+          ctx.lineTo(bx + k * 18 + 9, base - alto - 12);
+          ctx.lineTo(bx + k * 18 + 18, base - alto);
+          ctx.closePath(); ctx.fill();
+        }
+        // el portón del taller, sus ventanitas y el letrero
+        ctx.fillStyle = "#5e564a";
+        ctx.fillRect(bx + 14, base - 34, 34, 34);
+        ctx.fillStyle = "rgba(80,110,132,.6)";
+        for (let fx = bx + 60; fx < bx + 100; fx += 18) ctx.fillRect(fx, base - alto + 26, 12, 14);
+        ctx.fillStyle = "#e8823c";
+        ctx.fillRect(bx + 60, base - 22, 40, 7);
+      });
+    },
+
+    clima(ctx, t) {
+      // la arena que levanta el viento, de costado
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 149 - t * 3.1) % 880 - 20;
+        const y = 150 + ((i * 61) % 200) + Math.sin(t / 18 + i) * 7;
+        ctx.fillStyle = `rgba(232,214,168,${(0.16 + 0.2 * Math.abs(Math.sin(t / 26 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 9, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

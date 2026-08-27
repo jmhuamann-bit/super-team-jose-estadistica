@@ -184,6 +184,10 @@ const FICHAS = [
   { sprite: "red", nombre: "La Red de un Solo Eje", texto: "Echa litros y soles a la misma red, cuando eso pedía un gráfico de doble eje." },
   { sprite: "pelicano", nombre: "El Pelícano de Villa", texto: "Se posa en cualquier orden, y así mismo arma su Pareto." },
   { sprite: "pescador", nombre: "El Pescador sin Prioridad", texto: "Jefe de Chorrillos: jala toda la red de un tirón sin elegir qué problema vale la pena arreglar." },
+  { sprite: "carretilla", nombre: "La Carretilla Desnivelada", texto: "Carga todo de un lado: con un solo dato atípico se le va el promedio." },
+  { sprite: "ladrillo", nombre: "El Ladrillo sin Peso", texto: "Promedia lotes de distinto tamaño como si todos pesaran igual." },
+  { sprite: "casco", nombre: "El Casco Desordenado", texto: "Quiere al del medio de la fila, pero nunca forma la fila." },
+  { sprite: "capataz", nombre: "El Capataz del Grupo Residencial", texto: "Jefe de Villa El Salvador: busca el centro contando manzanas, no familias." },
 ];
 
 export function galeriaPersonajes(contenedor) {

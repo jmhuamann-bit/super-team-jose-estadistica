@@ -1,0 +1,43 @@
+{
+  "id": "level10",
+  "distrito": "Villa El Salvador",
+  "clase": "Clase 01 · PC2",
+  "titulo": "El arenal que busca su centro",
+  "tema": "arenal",
+  "musica": "arenal",
+  "vehiculo": "bus",
+  "intro": "Villa El Salvador no creció al azar: desde 1971 se planificó en grupos residenciales, y cada manzana de casitas rodea una plaza que queda justo AL CENTRO. Eso mismo vas a buscar hoy dentro de un montón de datos: su centro. La media lo encuentra pesando todos los datos, como un balancín; la mediana lo encuentra formando la fila y parándose en la mitad. Arranca la PC2.",
+  "repaso": [
+    "Una medida estadística resume un grupo de datos en un solo número. Si sale de la POBLACIÓN es un PARÁMETRO (exacto y único); si sale de una MUESTRA es un ESTADÍSTICO (cambia si cambia la muestra).",
+    "Fino: el «parámetro» es el tipo de medida (el promedio); el «valor paramétrico» es el número (21,77 años).",
+    "Estadística DESCRIPTIVA: CALCULA las medidas porque tiene toda la data. INFERENCIAL: solo las ESTIMA, a partir de una muestra ALEATORIA. Ninguna de las dos recolecta datos: eso es un paso previo.",
+    "MEDIA (promedio): el valor de equilibrio, el centro de gravedad. Solo va con variables CUANTITATIVAS. Se escribe μx si es población y x̄ si es muestra.",
+    "Datos NO agrupados: media = Σxi / n. Datos agrupados DISCRETOS: media = Σ(xi·fi) / n, que también sale con fri.",
+    "Datos agrupados CONTINUOS: como no conoces la identidad de cada dato, promedias con la MARCA DE CLASE (el promedio de los dos límites del intervalo) y aplicas Σ(Mi·fi) / n.",
+    "Intervalo ABIERTO: le prestas el TIC del intervalo vecino para cerrarlo y recién le sacas su marca de clase.",
+    "Media SIMPLE y PONDERADA NO son fórmulas distintas. La ponderada aparece cuando los datos se repiten o traen pesos (30 %, 50 %, 20 %): cada dato entra según su peso.",
+    "La media se afecta con muchísima facilidad por los VALORES ATÍPICOS, y ahí deja de ser representativa.",
+    "MEDIANA: parte los datos en 50 % y 50 %. Antes que nada, ORDENAR. Se escribe me si es muestra y Me si es población.",
+    "Posición: si n es PAR, promedias el dato de la posición n/2 con el de la siguiente. Si n es IMPAR, es el de la posición (n+1)/2.",
+    "MEDIANA en CONTINUAS agrupadas (la de oro, cae en el 95 % de los exámenes): Me = LIk + [(n/2 − Fk−1) / fk] · TIC. Primero armas fi y Fi, después ubicas el intervalo donde cae n/2, y recién aplicas.",
+    "La misma con relativas: Me = LIk + [(0,5 − Frk−1) / frk] · TIC.",
+    "La mediana NO usa de modo directo todos los datos: trabaja con la POSICIÓN. Por eso NO se mueve con los atípicos, y cuando los hay, la medida que se reporta es la mediana."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                      o o o                               o o o                                 o o o                     o o o                     o o o                       o o o                       o o o                       ",
+    "            ?                 o o         L         o o             G             o o                     V           o o             1           o o         o o       L                   o o       ?         o o           1         ",
+    "                      ====                                ====                                  ====                      ====                      ====                        ====                        ====                        ",
+    "                          o o                 o o               o o                     o o             o o                         o o               o o           o o           o o               o o                 o o             ",
+    "  P               E           C                   E         X         E                 C           E   X                       E         C                       E     X               E           X               B               M   ",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################"
+  ]
+}

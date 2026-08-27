@@ -1,0 +1,138 @@
+{
+  "nivel": "level10",
+  "clase": "Clase 01 · PC2 — Medidas de tendencia central: media y mediana",
+  "fuente": "Apuntes de la 1era clase de la PC2 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e10-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "El SAR tiene la edad de TODOS los estudiantes de la UP y calcula que el promedio es 21,77 años. Jhon, de 4to ciclo, le pregunta solo a su aula y le sale 20,5 años.\n\n¿Qué son esos dos números?",
+      "opciones": [
+        "21,77 es un parámetro y 20,5 un estadístico",
+        "Los dos son parámetros, porque los dos son promedios",
+        "21,77 es un estadístico y 20,5 un parámetro",
+        "Los dos son observaciones, o sea datos sueltos de la variable"
+      ],
+      "correcta": 0,
+      "explicacion": "El SAR usa toda la POBLACIÓN: su valor es exacto y único, un parámetro. Jhon usa una MUESTRA, y si otro alumno preguntara en otra aula el número cambiaría: estadístico. Y ninguno es una observación: nadie tiene 21,77 años, es un resumen."
+    },
+    {
+      "id": "e10-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Con la planilla completa de los 1 000 trabajadores de un parque industrial se obtiene el sueldo promedio. Con una muestra aleatoria de 60 de ellos se obtiene ese mismo promedio.\n\n¿Qué rama de la estadística hace cada cosa?",
+      "opciones": [
+        "La descriptiva estima con la muestra y la inferencial calcula con la población",
+        "Las dos calculan; la única diferencia es el tamaño de los datos",
+        "La descriptiva CALCULA con toda la data; la inferencial ESTIMA a partir de la muestra aleatoria",
+        "La descriptiva hace las dos cosas, porque además es la que recolecta los datos"
+      ],
+      "correcta": 2,
+      "explicacion": "La descriptiva calcula el valor exacto porque tiene todos los datos. La inferencial solo estima, porque una muestra nunca es exacta, y por eso exige que sea aleatoria. Ojo: ninguna de las dos recolecta datos, eso es un paso previo."
+    },
+    {
+      "id": "e10-q3",
+      "nivel": "comprension",
+      "enunciado": "Un taller de muebles del Parque Industrial anota cuántas sillas armó cada uno de sus 8 obreros en un día: 2 · 1 · 0 · 3 · 2 · 3 · 2 · 43.\n\n¿Qué le pasa al promedio?",
+      "opciones": [
+        "El promedio es 2 y el 43 casi no influye",
+        "El promedio es 1,86, porque el 43 se descarta por raro",
+        "No se puede promediar cuando hay un dato tan alejado",
+        "El promedio es 7, muy por encima de casi todos: ese 43 lo jala solito"
+      ],
+      "correcta": 3,
+      "explicacion": "56/8 = 7, pero 7 de los 8 obreros armaron 3 sillas o menos. La media usa TODOS los datos, así que un solo valor atípico basta para que deje de representar al grupo. Y no se descarta nada: el 43 es un dato real."
+    },
+    {
+      "id": "e10-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Tu nota de trabajos es 12 y vale 30 %, el parcial es 12 y vale 50 %, y el final es 05 y vale 20 %.\n\nTu amigo dice que tu promedio es (12 + 12 + 05)/3 = 9,67. ¿Cuál es de verdad?",
+      "opciones": [
+        "9,67: tu amigo tiene razón, son tres notas",
+        "10,6, porque cada nota entra según su peso",
+        "9,6, porque un final de 05 no levanta nada",
+        "12, porque dos de las tres notas son 12"
+      ],
+      "correcta": 1,
+      "explicacion": "12(0,30) + 12(0,50) + 5(0,20) = 3,6 + 6 + 1 = 10,6. La ponderada no es una fórmula nueva: es la misma media, solo que cada dato entra tantas veces como pesa. El promedio simple vale únicamente si todos pesan igual."
+    },
+    {
+      "id": "e10-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Área de los 200 talleres del Parque Industrial (m²):\n100 a menos de 140 → 40\n140 a menos de 180 → 80\n180 a menos de 220 → 50\n220 a menos de 260 → 30\n\n¿Cuál es el área promedio?",
+      "opciones": [
+        "174 m²",
+        "180 m², el promedio de las cuatro marcas de clase",
+        "160 m², la marca del intervalo con más talleres",
+        "34 800 m², que es la suma de Mi · fi"
+      ],
+      "correcta": 0,
+      "explicacion": "Como no conoces el área exacta de cada taller, promedias con la marca de clase: (120·40 + 160·80 + 200·50 + 240·30)/200 = 34 800/200 = 174 m². Promediar las cuatro marcas sueltas da 180 e ignora cuántos talleres hay en cada intervalo."
+    },
+    {
+      "id": "e10-q6",
+      "nivel": "comprension",
+      "enunciado": "Una tabla de tallas arranca con un intervalo abierto:\nMenos de 1,50 → 400\n1,50 a menos de 1,60 → 300\n1,60 a menos de 1,70 → 150\n\n¿Con qué marca de clase entra el primer intervalo?",
+      "opciones": [
+        "Con 1,50, que es el único límite que tiene",
+        "Con 0,75, promediando 0 con 1,50",
+        "Con ninguna: un intervalo abierto se saca de la tabla",
+        "Con 1,45: le prestas el TIC del vecino (0,10), así el intervalo va de 1,40 a 1,50"
+      ],
+      "correcta": 3,
+      "explicacion": "Un intervalo abierto no tiene los dos límites, así que le prestas el TIC del intervalo más cercano: 1,60 − 1,50 = 0,10. Queda «1,40 a menos de 1,50» y su marca es (1,40 + 1,50)/2 = 1,45."
+    },
+    {
+      "id": "e10-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Ocho carpinteros entregaron estas mesas en la semana: 5 · 12 · 3 · 9 · 4 · 11 · 6 · 4.\n\n¿Cuál es la mediana?",
+      "opciones": [
+        "6,5, promediando los dos del medio de la lista tal como te la dieron",
+        "5,5",
+        "6,75",
+        "5, porque 8/2 = 4 y en la posición 4 está el 5"
+      ],
+      "correcta": 1,
+      "explicacion": "Primero ORDENAS: 3, 4, 4, 5, 6, 9, 11, 12. Como n = 8 es par, promedias la posición 8/2 = 4 con la siguiente: (5 + 6)/2 = 5,5. Sin ordenar sale 6,5, y 6,75 es el promedio, no la mediana."
+    },
+    {
+      "id": "e10-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Talleres por manzana en las 1 000 manzanas del distrito (es la población):\n1 taller → 250 manzanas\n2 talleres → 250\n3 talleres → 400\n4 talleres → 100\n\n¿Cuál es la mediana?",
+      "opciones": [
+        "2, porque 1 000/2 = 500 y la posición 500 cae en el 2",
+        "500, que es la posición del dato del medio",
+        "2,5",
+        "2,35, que es la media"
+      ],
+      "correcta": 2,
+      "explicacion": "Armas la Fi: 250, 500, 900, 1 000. Como n = 1 000 es par, promedias la posición 500 con la 501. La 500 cae justo en el 2 y la 501 ya cae en el 3: (2 + 3)/2 = 2,5 talleres. Y 500 es una posición, nunca el valor."
+    },
+    {
+      "id": "e10-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Área de los 1 000 lotes de un grupo residencial (m²):\n150 a menos de 160 → 400\n160 a menos de 170 → 300\n170 a menos de 180 → 150\n180 a menos de 190 → 100\n190 a menos de 200 → 50\n\n¿Cuál es la mediana?",
+      "opciones": [
+        "163,33 m²",
+        "160 m², el límite inferior de ese intervalo",
+        "165 m², la marca de clase de ese intervalo",
+        "166,67 m²"
+      ],
+      "correcta": 0,
+      "explicacion": "Fi: 400, 700, 850, 950, 1 000. n/2 = 500 cae en el intervalo 160–170. Me = 160 + [(500 − 400)/300] · 10 = 163,33 m². Si restas al revés (700 − 500) te sale 166,67, que es el error más común."
+    },
+    {
+      "id": "e10-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Sueldos de un taller (soles): 1 200 · 1 250 · 1 300 · 1 280 · 1 320 · 9 000 (el dueño). La media sale 2 558,33 y la mediana 1 290.\n\n¿Cuál reportas como medida de tendencia central?",
+      "opciones": [
+        "La media, porque usa todos los datos y siempre es la más representativa",
+        "Las dos, porque terminan diciendo lo mismo",
+        "Ninguna: con un sueldo tan alto ya no se puede resumir el grupo",
+        "La mediana, 1 290: la media perdió representatividad por el valor atípico"
+      ],
+      "correcta": 3,
+      "explicacion": "La media usa todos los datos y por eso se contagia del 9 000: nadie en ese taller gana 2 558 soles. La mediana solo trabaja con la POSICIÓN, así que el atípico no la mueve. Con atípicos, la que se reporta es la mediana."
+    }
+  ]
+}
