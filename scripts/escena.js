@@ -188,6 +188,10 @@ const FICHAS = [
   { sprite: "ladrillo", nombre: "El Ladrillo sin Peso", texto: "Promedia lotes de distinto tamaño como si todos pesaran igual." },
   { sprite: "casco", nombre: "El Casco Desordenado", texto: "Quiere al del medio de la fila, pero nunca forma la fila." },
   { sprite: "capataz", nombre: "El Capataz del Grupo Residencial", texto: "Jefe de Villa El Salvador: busca el centro contando manzanas, no familias." },
+  { sprite: "maniqui", nombre: "El Maniquí Amodal", texto: "En su vitrina todos los modelos se venden igualito, así que ninguno es el más usual." },
+  { sprite: "carrete", nombre: "El Carrete de Dos Colores", texto: "Dos intervalos empatan en el fi más alto y él insiste en que la moda es una sola." },
+  { sprite: "tijera", nombre: "La Tijera del Intervalo", texto: "Corta con el TIC del intervalo de al lado y le sale una moda fuera de sitio." },
+  { sprite: "jalador", nombre: "El Jalador de la Galería", texto: "Jefe de La Victoria: le sube lo mismo a todos los precios y jura que las medidas no se mueven." },
 ];
 
 export function galeriaPersonajes(contenedor) {

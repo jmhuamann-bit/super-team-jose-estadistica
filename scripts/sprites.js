@@ -1009,6 +1009,75 @@ const CAPATAZ = [  // jefe de Villa El Salvador: busca el centro contando manzan
 ];
 const P_CAPATAZ = { y: "#e8b13c", c: "#e8b98d", k: "#3b3b3b", n: "#3f6b8a", w: "#f2f6ff" };
 
+const MANIQUI = [   // maniquí de la vereda de Gamarra: cuando todos se repiten igual, no hay moda (12 × 12)
+  "....kkkk....",
+  "...kkkkkk...",
+  "....kkkk....",
+  "......k.....",
+  "..rrrrrrrr..",
+  ".rrrrrrrrrr.",
+  ".rrrrrrrrrr.",
+  ".rrrrrrrrrr.",
+  "..rrrrrrrr..",
+  "...kkkkkk...",
+  "...kk..kk...",
+  "...kk..kk...",
+];
+const P_MANIQUI = { k: "#8a7a6a", r: "#d0486a" };
+
+const CARRETE = [   // carrete de hilo: dos colores empatados y no elige uno (12 × 12)
+  "............",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "...cccrrr...",
+  "...cccrrr...",
+  "...cccrrr...",
+  "...cccrrr...",
+  "...cccrrr...",
+  "...cccrrr...",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "............",
+];
+const P_CARRETE = { w: "#6b5a44", c: "#3f8fc4", r: "#e0562f" };
+
+const TIJERA = [   // tijera de cortador: corta el intervalo por donde no era (13 × 12)
+  ".............",
+  "kk.........kk",
+  ".kk.......kk.",
+  "..kk.....kk..",
+  "...kk...kk...",
+  "....kk.kk....",
+  ".....kkk.....",
+  "....yy.yy....",
+  "...yy...yy...",
+  "..yy.....yy..",
+  "..yy.....yy..",
+  "...yy...yy...",
+];
+const P_TIJERA = { k: "#b8c0c8", y: "#e0562f" };
+
+const JALADOR = [  // jefe de La Victoria: el jalador que le sube lo mismo a todos los precios (20 × 16)
+  "......kkkkkkkk......",
+  ".....kkkkkkkkkk.....",
+  "......cccccccc......",
+  "......ckcckcc.......",
+  "......cccccccc......",
+  ".......ckkkc........",
+  "......cccccccc......",
+  "...y..aaaaaaaa..y...",
+  "..yy.aaaaaaaaaa.yy..",
+  "...y.aaaaaaaaaa.y...",
+  ".....aaaaaaaaaa.....",
+  ".....aaaaaaaaaa.....",
+  ".....nnnn.nnnn......",
+  ".....nnnn.nnnn......",
+  ".....nnnn.nnnn......",
+  "....kkkkk.kkkkk.....",
+];
+const P_JALADOR = { k: "#241a2e", c: "#c99a6a", a: "#e0562f", n: "#2f3a56", y: "#e8c15a" };
+
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1072,6 +1141,10 @@ const DEFINICIONES = {
   ladrillo:     [LADRILLO, P_LADRILLO],
   casco:        [CASCO, P_CASCO],
   capataz:      [CAPATAZ, P_CAPATAZ],
+  maniqui:      [MANIQUI, P_MANIQUI],
+  carrete:      [CARRETE, P_CARRETE],
+  tijera:       [TIJERA, P_TIJERA],
+  jalador:      [JALADOR, P_JALADOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

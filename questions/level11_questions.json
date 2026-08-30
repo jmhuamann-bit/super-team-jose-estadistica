@@ -1,0 +1,138 @@
+{
+  "nivel": "level11",
+  "clase": "Clase 02 · PC2 — Medidas de tendencia central: la moda y las transformaciones",
+  "fuente": "Apuntes de la 2da clase de la PC2, parte 02 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e11-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En una galería preguntan cuál es el color más pedido de la temporada: rojo 100 · azul 200 · verde 50 · amarillo 600.\n\n¿Se puede sacar la moda de eso?",
+      "opciones": [
+        "No: el color no es un número, no hay nada que promediar",
+        "Sí, la moda es AMARILLO. La moda va con cualquier variable, cuantitativa o cualitativa",
+        "Sí, la moda es 600",
+        "Solo si primero le pones un número a cada color"
+      ],
+      "correcta": 1,
+      "explicacion": "La moda es la única de las tres medidas que también sirve con cualitativas: es la categoría que más se repite. Y ojo con el detalle: la moda es «amarillo», no el 600. El 600 es su frecuencia."
+    },
+    {
+      "id": "e11-q2",
+      "nivel": "comprension",
+      "enunciado": "Las notas de un salón son: 0, 0, 0, 1, 1, 1, 1, 2, 3, 5, 4, 3, 6, 6, 6, 6, 9, 19.\n\n¿Cuál es la moda?",
+      "opciones": [
+        "1, que es el primero en llegar a repetirse",
+        "6, porque es el que más aparece al final",
+        "Es BIMODAL: 1 y 6, los dos aparecen 4 veces",
+        "19, el valor más alto de todos"
+      ],
+      "correcta": 2,
+      "explicacion": "Cuentas las repeticiones: el 0 sale 3 veces, el 1 sale 4, el 3 sale 2 y el 6 sale 4. Empatan el 1 y el 6 con 4, así que hay dos modas. Y el 19, por más grande que sea, sale una sola vez."
+    },
+    {
+      "id": "e11-q3",
+      "nivel": "comprension",
+      "enunciado": "Una tabla de exs por UPapi quedó así:\n1 ex → 100\n2 exs → 100\n3 exs → 100\n4 exs → 100\n\n¿Cuál es la moda?",
+      "opciones": [
+        "4, el valor más alto de la variable",
+        "100, que es la frecuencia que se repite",
+        "2,5, que es el promedio",
+        "NO hay moda: si todas las frecuencias son iguales, ninguno se repite más que otro"
+      ],
+      "correcta": 3,
+      "explicacion": "Una distribución puede tener una moda, varias o ninguna. Acá los cuatro valores empatan, así que no hay ninguno «más usual». Distinto es el caso de más de 3 modas, al que se le dice MULTIMODAL."
+    },
+    {
+      "id": "e11-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Tallas en una galería (metros):\n1,50 a menos de 1,60 → 400\n1,60 a menos de 1,70 → 300\n1,70 a menos de 1,80 → 150\n1,80 a menos de 1,90 → 100\n1,90 a menos de 2,00 → 50\n\n¿Cuál es la moda?",
+      "opciones": [
+        "1,58 m",
+        "1,55 m, la marca de clase del intervalo modal",
+        "1,50 m, el límite inferior del intervalo modal",
+        "400, que es la frecuencia más alta"
+      ],
+      "correcta": 0,
+      "explicacion": "El mayor fi es 400, así que la moda vive en 1,50–1,60. Como no hay intervalo anterior, d1 = 400 − 0 = 400, y d2 = 400 − 300 = 100. Mo = 1,50 + [400/(400 + 100)] · 0,10 = 1,58 m."
+    },
+    {
+      "id": "e11-q5",
+      "nivel": "comprension",
+      "enunciado": "En la fórmula Mo = LIk + [d1 / (d1 + d2)] · TIC:\n\n¿qué son d1 y d2?",
+      "opciones": [
+        "d1 es el límite inferior del intervalo y d2 el superior",
+        "d1 = fi mayor − fi ANTERIOR, y d2 = fi mayor − fi POSTERIOR",
+        "d1 y d2 son las frecuencias acumuladas de los intervalos vecinos",
+        "d1 es n/2 y d2 es el tamaño del intervalo"
+      ],
+      "correcta": 1,
+      "explicacion": "La moda se corre dentro de su intervalo hacia el vecino que más se le parece. Si el de antes tiene casi la misma frecuencia, d1 sale chiquito y la moda se queda pegada al límite inferior."
+    },
+    {
+      "id": "e11-q6",
+      "nivel": "comprension",
+      "enunciado": "Otra tabla de tallas (metros):\nMenos de 1,50 → 100\n1,50 a menos de 1,60 → 400\n1,60 a menos de 1,80 → 50\n1,80 a menos de 1,85 → 400\nMás de 1,85 → 50\n\n¿Cuántas modas hay?",
+      "opciones": [
+        "Una sola: la del primer intervalo que llega a 400",
+        "Ninguna, porque hay un empate",
+        "DOS: el 400 se repite en dos intervalos que no están seguidos",
+        "Cinco, una por cada intervalo"
+      ],
+      "correcta": 2,
+      "explicacion": "Dos intervalos empatan en el mayor fi y no están pegados, así que la distribución es bimodal y hay que aplicar la fórmula dos veces, una por cada uno. El caso especial aparte es cuando los dos intervalos empatados SÍ son seguidos."
+    },
+    {
+      "id": "e11-q7",
+      "nivel": "aplicacion",
+      "enunciado": "De esa misma tabla, la segunda moda cae en «1,80 a menos de 1,85» (fi = 400), con 50 en el intervalo anterior y 50 en el siguiente.\n\n¿Cuánto vale?",
+      "opciones": [
+        "1,825 m",
+        "1,80 m: como d1 y d2 son iguales, la moda no se mueve del límite inferior",
+        "1,85 m, usando el TIC de 0,10 del otro intervalo modal",
+        "0,025 m"
+      ],
+      "correcta": 0,
+      "explicacion": "d1 = 400 − 50 = 350 y d2 = 400 − 50 = 350, así que la fracción es 350/700 = 0,5: la moda cae justo a la mitad. El TIC es el de ESE intervalo, 1,85 − 1,80 = 0,05. Mo = 1,80 + 0,5(0,05) = 1,825 m."
+    },
+    {
+      "id": "e11-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Jhon resolvió un problema de 800 datos, uno por uno, y le salió media 404, moda 501 y mediana 450. Recién ahí le avisan que a CADA dato hay que multiplicarlo por 2 y después sumarle 2.\n\n¿Cuáles son las nuevas medidas?",
+      "opciones": [
+        "Media 810, moda 1 004 y mediana 902",
+        "Media 808, moda 1 002 y mediana 900",
+        "Media 406, moda 503 y mediana 452",
+        "No queda otra que rehacer los 800 datos uno por uno"
+      ],
+      "correcta": 0,
+      "explicacion": "A cada medida le haces exactamente lo mismo que a los datos y en el mismo orden: por 2 y después más 2. 404(2) + 2 = 810, 501(2) + 2 = 1 004 y 450(2) + 2 = 902. Jhon no tiene que tocar ni un dato."
+    },
+    {
+      "id": "e11-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Los datos son 2, 1, 2, 3 y su media es 2.\n\n¿Cuánto da la suma de las diferencias de cada dato respecto de su media?",
+      "opciones": [
+        "8, que es la suma de los datos",
+        "2, la misma media",
+        "0, y da 0 siempre: es una propiedad de la media",
+        "4, que es el número de datos"
+      ],
+      "correcta": 2,
+      "explicacion": "(2−2) + (1−2) + (2−2) + (3−2) = 0 − 1 + 0 + 1 = 0. Pasa con cualquier grupo de datos: lo que sobra por encima de la media es exactamente lo que falta por debajo. Es pregunta de parcial."
+    },
+    {
+      "id": "e11-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. De estas afirmaciones sobre las tres medidas de tendencia central,\n\n¿cuál es la correcta?",
+      "opciones": [
+        "La mediana usa de modo directo todos los datos para determinar su valor",
+        "La media no se ve afectada por los valores atípicos",
+        "Toda distribución tiene una moda, y tiene solo una",
+        "La moda sirve con variables cualitativas, y la mediana trabaja con la POSICIÓN, así que los atípicos no la mueven"
+      ],
+      "correcta": 3,
+      "explicacion": "Las tres propiedades de un tirón: la moda es la única que va con cualitativas; la mediana no usa todos los datos sino su posición, y por eso los atípicos no la tocan; y la media sí se contagia de ellos, que es justo cuando deja de ser representativa."
+    }
+  ]
+}

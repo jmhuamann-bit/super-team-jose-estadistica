@@ -1,0 +1,42 @@
+{
+  "id": "level11",
+  "distrito": "La Victoria",
+  "clase": "Clase 02 · PC2",
+  "titulo": "El emporio de la moda",
+  "tema": "emporio",
+  "musica": "emporio",
+  "vehiculo": "taxi",
+  "intro": "En Gamarra hay miles de puestos y casi todos venden el MISMO modelo: el emporio de la moda es, literalmente, el distrito de lo que más se repite. Eso es la moda estadística, la tercera medida de tendencia central. Y como acá los precios suben todos juntos —«todo a 10 más»—, también vas a ver qué les pasa a la media, la mediana y la moda cuando a cada dato le sumas o le multiplicas lo mismo.",
+  "repaso": [
+    "MODA: el valor que más se repite. En muestra se escribe mo y en población Mo.",
+    "Es la ÚNICA de las tres que sirve con variables CUALITATIVAS, además de las cuantitativas. Y la moda es la CATEGORÍA que más se repite, no su frecuencia.",
+    "Datos NO agrupados: cuentas cuántas veces sale cada valor y te quedas con el o los que más aparecen.",
+    "Una distribución puede tener una moda, varias o NINGUNA. Si todas las frecuencias son iguales, no hay moda. Con más de 3 modas se le dice MULTIMODAL.",
+    "Los VALORES ATÍPICOS no mueven a la moda, igual que no mueven a la mediana.",
+    "MODA en CONTINUAS agrupadas (la que cae en el 95 % de los exámenes): 1er paso, armar la tabla con fi y elegir el intervalo (o los intervalos) con el MAYOR fi. 2do paso, aplicar la fórmula.",
+    "Mo = LIk + [d1 / (d1 + d2)] · TIC, donde d1 = fi mayor − fi ANTERIOR y d2 = fi mayor − fi POSTERIOR. Si no hay intervalo anterior o posterior, ese fi vale 0.",
+    "El TIC que se usa es el del INTERVALO MODAL, no el de otro. Y el fi se puede reemplazar por fri sin problema.",
+    "Si dos intervalos NO seguidos empatan en el mayor fi, hay dos modas y la fórmula se aplica dos veces. Caso especial aparte: dos intervalos SEGUIDOS con la misma frecuencia.",
+    "TEORÍA. Media: usa TODOS los datos, por eso es representativa, pero por eso mismo se le arruina con los atípicos. Σ(xi − x̄) = 0 siempre, y Σ(xi − x̄)² es MÍNIMA (pregunta de parcial).",
+    "TEORÍA. Mediana: NO usa de modo directo todos los datos, trabaja con la POSICIÓN, y por eso los atípicos no la mueven.",
+    "TEORÍA. Moda: va con cualquier tipo de variable; puede no existir; y con más de 3 se le dice multimodal.",
+    "TRANSFORMACIONES. Si a cada dato le sumas o le multiplicas una constante k, la nueva medida sale sumando o multiplicando esa MISMA k: ȳ = x̄ ± k o x̄ · k, y lo mismo con me y con mo. No hay que rehacer los datos uno por uno."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                        o o o                             o o o                           o o o                             o o o                       o o o                           o o o                     o o o                         ",
+    "              ?                   o o       L         o o         G                 o o                     V                   o o       1                 o o         o o L                     o o       ?         o o             1         ",
+    "                        ====                              ====                            ====                              ====                        ====                            ====                      ====                          ",
+    "                            o o                 o o             o o                     o o               o o                           o o               o o                   o o       o o                 o o               o o             ",
+    "  P                 E         C                     E       X         E                 C             E X                           E     C                           E X                     E     X                     B                 M   ",
+    "####################################    ####################################   #######################################    ####################################   #####################################    ######################################",
+    "####################################    ####################################   #######################################    ####################################   #####################################    ######################################",
+    "####################################    ####################################   #######################################    ####################################   #####################################    ######################################"
+  ]
+}

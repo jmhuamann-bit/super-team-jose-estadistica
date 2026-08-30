@@ -85,6 +85,13 @@ const TEMAS_MUSICA = {
     bajo:    ["C3",2,"G2",2,"C3",2,"G2",2,"F2",2,"C3",2,"G2",2,"C3",2,
               "D3",2,"A2",2,"C3",2,"G2",2,"C3",4],
   },
+  emporio: { // La Victoria: Gamarra a media mañana, cumbia de galería, apurada y con gancho
+    tempo: 0.11, onda: "square",
+    melodia: ["A4",1,"C5",1,"E5",1,"A5",2,"G5",1,"E5",1,"D5",2,"C5",2,"A4",2,
+              "C5",1,"E5",1,"G5",1,"A5",2,"G5",1,"E5",1,"D5",2,"C5",2,"A4",2],
+    bajo:    ["A2",2,"A2",2,"E3",2,"E3",2,"F2",2,"F2",2,"G2",2,"G2",2,
+              "A2",2,"C3",2,"E3",2,"D3",2,"A2",4],
+  },
 };
 
 function arrancarCtx() {
