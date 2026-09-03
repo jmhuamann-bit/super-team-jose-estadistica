@@ -1,0 +1,138 @@
+{
+  "nivel": "level12",
+  "clase": "Clase 03 · PC2 — Percentiles, deciles y cuartiles",
+  "fuente": "Apuntes de la 3ra clase de la PC2 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e12-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Una investigación determinó que el 78,3 % INFERIOR de los UPapis tiene menos de 20,3 años. El rango de la distribución iba de 15 a 29 años.\n\n¿Cuál es el VALOR del cuantil 78,3?",
+      "opciones": [
+        "78,3",
+        "20,3 años",
+        "29 años, que es el tope del rango",
+        "21,7 %, que es lo que queda arriba"
+      ],
+      "correcta": 1,
+      "explicacion": "El valor de un cuantil es un NÚMERO sacado de tu información, nunca un porcentaje. El 78,3 % solo sirve para ubicar dónde cae ese valor dentro de la distribución; el valor en sí es 20,3 años."
+    },
+    {
+      "id": "e12-q2",
+      "nivel": "comprension",
+      "enunciado": "Otra investigación concluyó que el 10,9 % SUPERIOR de los alumnos gasta 405 soles en la fiesta de finales.\n\n¿De qué cuantil es ese 405?",
+      "opciones": [
+        "Del cuantil 10,9",
+        "Del cuantil 405",
+        "Del cuantil 89,1: si arriba queda el 10,9 %, abajo queda el 89,1 %",
+        "De ninguno: los cuantiles solo se cuentan desde abajo"
+      ],
+      "correcta": 2,
+      "explicacion": "El subíndice del cuantil siempre es el porcentaje ACUMULADO, o sea el que queda por debajo. Si arriba queda el 10,9 %, abajo queda 100 − 10,9 = 89,1 %."
+    },
+    {
+      "id": "e12-q3",
+      "nivel": "comprension",
+      "enunciado": "En un estudio sobre el tiempo en TikTok, el P35 resultó ser 50 minutos.\n\nSi alguien quiere estar dentro del 75 % SUPERIOR, ¿cuánto tiempo como mínimo tiene que ver?",
+      "opciones": [
+        "50 minutos, el valor del P35",
+        "75 minutos",
+        "El valor del P25, porque el 75 % superior arranca justo ahí",
+        "El valor del P75"
+      ],
+      "correcta": 2,
+      "explicacion": "Para estar en el X % superior hay que pasar el percentil (100 − X). El 75 % superior empieza en el P25, que deja solo un cuarto de los datos por debajo. El P75 te dejaría en el 25 % superior, que es mucho más exigente."
+    },
+    {
+      "id": "e12-q4",
+      "nivel": "reconocimiento",
+      "enunciado": "Jhon Nieves te pide que calcules el P100 y el P0.\n\n¿Existen?",
+      "opciones": [
+        "Sí: son el dato más chico y el más grande de la distribución",
+        "Sí, pero solo cuando los datos están agrupados",
+        "Solo existe el P100; el P0 no",
+        "NO: un cuantil tiene que partir la distribución en DOS partes, y ahí no queda nada de un lado"
+      ],
+      "correcta": 3,
+      "explicacion": "Por definición un cuantil divide la distribución en dos. El P0 no dejaría nada por debajo y el P100 no dejaría nada por encima, así que no parten nada. Lo mismo pasa con el D0 y el D10, y con el Q0 y el Q4."
+    },
+    {
+      "id": "e12-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Los exs de 11 UPmamis, ya ordenados: 0 · 0 · 1 · 1 · 2 · 2 · 3 · 4 · 4 · 5 · 5.\n\n¿Cuánto es el P50?",
+      "opciones": [
+        "2, que además es la mediana",
+        "2,5",
+        "6, que es la posición",
+        "5,5"
+      ],
+      "correcta": 0,
+      "explicacion": "K = (n + 1)·p = 12(0,50) = 6, o sea entero 6 y decimal 0. El dato de la posición 6 es 2, y como el decimal es 0 no hay que avanzar nada. El 6 es la POSICIÓN, no el valor. Y sí: el P50 siempre es la mediana."
+    },
+    {
+      "id": "e12-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Doce tiempos de viaje (horas), ya ordenados: 1,11 · 1,13 · 1,20 · 1,35 · 1,56 · 2,01 · 2,03 · 2,03 · 2,25 · 3,12 · 4,12 · 4,15.\n\n¿Cuánto es el P25?",
+      "opciones": [
+        "1,20, el dato de la posición 3",
+        "1,2375",
+        "3,25, que es la posición",
+        "1,35, el dato de la posición 4"
+      ],
+      "correcta": 1,
+      "explicacion": "K = (12 + 1)(0,25) = 3,25: entero 3, decimal 0,25. Entonces P25 = X3 + 0,25·(X4 − X3) = 1,20 + 0,25(1,35 − 1,20) = 1,2375 horas. Si te quedas en 1,20 te saltaste el segundo paso."
+    },
+    {
+      "id": "e12-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Tallas de 1 000 personas (metros):\n1,50 a menos de 1,60 → 400\n1,60 a menos de 1,70 → 300\n1,70 a menos de 1,80 → 150\n1,80 a menos de 1,90 → 100\n1,90 a menos de 2,00 → 50\n\n¿Cuánto es el P50?",
+      "opciones": [
+        "1,6333 m, que además es la mediana",
+        "1,60 m, el límite inferior del intervalo",
+        "1,65 m, la marca de clase del intervalo",
+        "500, que es el nivel donde cae"
+      ],
+      "correcta": 0,
+      "explicacion": "n·p = 1 000(0,50) = 500. La Fi llega a 400 antes y a 700 en el intervalo 1,60–1,70, así que el percentil vive ahí. P50 = 1,60 + [(500 − 400)/300]·0,10 = 1,6333 m. Y como es el P50, es la mediana."
+    },
+    {
+      "id": "e12-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Otra tabla de tallas, con 1 000 datos:\nMenos de 1,50 → 100\n1,50 a menos de 1,60 → 400\n1,60 a menos de 1,80 → 50\n1,80 a menos de 1,85 → 400\nMás de 1,85 → 50\n\n¿Cuánto es el P1?",
+      "opciones": [
+        "1,50, porque a un intervalo abierto no se le puede entrar",
+        "1,40, el límite inferior que le creaste",
+        "10, que es el nivel donde cae",
+        "1,41"
+      ],
+      "correcta": 3,
+      "explicacion": "n·p = 1 000(0,01) = 10, que cae en el primer intervalo. Como está abierto, le creas el límite inferior con el TIC más cercano: 1,50 − 0,10 = 1,40. P1 = 1,40 + [(10 − 0)/100]·0,10 = 1,41 m."
+    },
+    {
+      "id": "e12-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Con esa misma tabla, el P99 sale 1,89 y el P1 sale 1,41.\n\n¿Cuánto vale el RANGO PERCENTÍLICO y qué captura?",
+      "opciones": [
+        "0,48 m, y captura al 98 % CENTRAL de los datos",
+        "1,89 m, que es directamente el P99",
+        "98 %, que es la resta de los dos porcentajes",
+        "3,30 m, sumando los dos percentiles"
+      ],
+      "correcta": 0,
+      "explicacion": "El rango percentílico es P99 − P1 = 1,89 − 1,41 = 0,48 m. Deja fuera el 1 % de abajo y el 1 % de arriba, así que lo que encierra es el 98 % CENTRAL. Es la misma idea del RIQ y del RID, pero con percentiles."
+    },
+    {
+      "id": "e12-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. De estas afirmaciones sobre deciles y cuartiles,\n\n¿cuál es la correcta?",
+      "opciones": [
+        "Entre decil y decil siempre hay la misma distancia",
+        "El D1 representa al 10 % de los datos",
+        "Los deciles y los cuartiles necesitan fórmulas propias, distintas de la del percentil",
+        "El RIQ = Q3 − Q1 captura al 50 % CENTRAL y el RID = D9 − D1 al 80 % CENTRAL; y Q2 = D5 = P50 = la mediana"
+      ],
+      "correcta": 3,
+      "explicacion": "No hay fórmulas nuevas: un decil o un cuartil se convierte a percentil (D4 = P40, Q3 = P75) y listo. Las distancias entre ellos NO son iguales: cada tramo encierra su porcentaje, pero puede ser corto o larguísimo. Y el D1 no representa al 10 %: es un valor que deja 10 % abajo y 90 % arriba."
+    }
+  ]
+}

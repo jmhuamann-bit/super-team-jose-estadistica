@@ -1,0 +1,43 @@
+{
+  "id": "level12",
+  "distrito": "San Juan de Lurigancho",
+  "clase": "Clase 03 · PC2",
+  "titulo": "El tren de los cuantiles",
+  "tema": "linea",
+  "musica": "linea",
+  "vehiculo": "bus",
+  "intro": "San Juan de Lurigancho es el distrito más poblado del país, y lo cruza entera la Línea 1: una fila ordenada de estaciones, cada una en su posición. Eso es exactamente lo que hace un cuantil — parte una distribución ordenada y te dice en qué punto caes. Hoy vas a subirte a esa línea: percentiles, deciles y cuartiles. Y ojo con la primera regla: antes de buscar la posición, hay que hacer la cola.",
+  "repaso": [
+    "Un CUANTIL es un VALOR (un número de tus datos) que parte la distribución en 2 partes. El porcentaje solo sirve para ubicar dónde cae: el valor de un cuantil NUNCA es un porcentaje.",
+    "Si te dicen que el 10,9 % SUPERIOR gasta 405 soles, ese 405 es el cuantil 89,1: lo que queda abajo es 100 − 10,9.",
+    "PERCENTILES: P45 significa que el 45 % de los datos es menor o igual que ese valor y el 55 % es mayor o igual. Van de 1 en 1.",
+    "Para estar en el X % SUPERIOR hay que pasar el percentil (100 − X). El 75 % superior arranca en el P25, no en el P75.",
+    "El P0 y el P100 NO existen: un cuantil tiene que partir en dos, y ahí no queda nada de un lado. Lo mismo con D0 y D10, y con Q0 y Q4.",
+    "La MEDIANA es el P50. Es el único percentil que además es medida de tendencia central.",
+    "NO AGRUPADOS (y agrupados discretos). PREVIO: ordenar de forma creciente. 1er paso: K = (n + 1)·p, y se separa en parte entera «e» y decimal «d». 2do paso: Pp = Xe + 0,d · [X(e+1) − Xe].",
+    "Ese segundo paso es el que mucha gente se salta: si K sale 3,25, no te quedas con el dato de la posición 3, avanzas el 0,25 del camino hacia el siguiente.",
+    "CONTINUOS AGRUPADOS (la que cae en el 95 % de los exámenes): armas la tabla con fi y Fi, calculas n·p y buscas en la Fi qué intervalo lo contiene. Después: Pp ≅ LI + [(n·p − F(i−1)) / fi] · TIC.",
+    "La misma fórmula con relativas: Pp = LI + [(n·p − Fr(i−1)) / fr(i)] · TIC. Y en continuos agrupados el resultado es siempre APROXIMADO, porque se perdió la identidad individual de los datos.",
+    "Si el intervalo está abierto por abajo y necesitas su límite inferior, lo creas con el TIC más cercano: le restas ese TIC al límite superior.",
+    "DECILES: percentiles cada 10 %. D1 … D9. Se convierten a percentiles (D4 = P40) y no necesitan fórmula nueva. El RID = D9 − D1 y captura el 80 % CENTRAL. D5 = P50 = la mediana.",
+    "CUARTILES: percentiles cada 25 %. Q1, Q2 y Q3, que parten la distribución en 4. Q3 = P75. El RIQ = Q3 − Q1 y captura el 50 % CENTRAL. Q2 = P50 = la mediana.",
+    "Entre decil y decil (o entre cuartil y cuartil) NO hay la misma distancia: cada tramo encierra su porcentaje, pero puede ser corto o larguísimo. Y el D1 no «representa al 10 %»: es un valor que deja 10 % abajo y 90 % arriba."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                          o o o                             o o o                             o o o                             o o o                         o o o                           o o o                       o o o                         ",
+    "                ?                   o o       L         o o           G               o o                     V                     o o         1                 o o         o o L                   o o       ?             o o             1         ",
+    "                          ====                              ====                              ====                              ====                          ====                            ====                        ====                          ",
+    "                              o o                 o o               o o                   o o                   o o                         o o             o o                     o o         o o               o o                   o o             ",
+    "  P                   E           C                   E         X       E                         C       E       X                     E               C                   E           X           E                 X             B               M   ",
+    "########################################   #####################################    ####################################   #######################################    ####################################   ###########################################",
+    "########################################   #####################################    ####################################   #######################################    ####################################   ###########################################",
+    "########################################   #####################################    ####################################   #######################################    ####################################   ###########################################"
+  ]
+}

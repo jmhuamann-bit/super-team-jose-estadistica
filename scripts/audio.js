@@ -92,6 +92,14 @@ const TEMAS_MUSICA = {
     bajo:    ["A2",2,"A2",2,"E3",2,"E3",2,"F2",2,"F2",2,"G2",2,"G2",2,
               "A2",2,"C3",2,"E3",2,"D3",2,"A2",4],
   },
+  linea: { // San Juan de Lurigancho: el tren entrando a la estación, cumbia norteña con paso de riel
+    tempo: 0.12, onda: "square",
+    melodia: ["E4",1,"G4",1,"B4",2,"A4",1,"G4",1,"E4",2,
+              "D4",1,"E4",1,"G4",2,"E4",1,"D4",1,"B3",2,
+              "G4",1,"B4",1,"D5",2,"B4",1,"A4",1,"G4",2,
+              "A4",2,"G4",1,"E4",1,"E4",4],
+    bajo:    ["E3",4,"B2",4,"C3",4,"G2",4,"A2",4,"E3",4,"B2",4,"E3",4],
+  },
 };
 
 function arrancarCtx() {

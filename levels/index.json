@@ -135,7 +135,7 @@
       "titulo": "El arenal que busca su centro",
       "icono": "🧱",
       "seccion": "PC2",
-      "seccionNota": "Medidas de tendencia central",
+      "seccionNota": "Tendencia central y cuantiles",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -149,12 +149,26 @@
       "titulo": "El emporio de la moda",
       "icono": "🧵",
       "seccion": "PC2",
-      "seccionNota": "Medidas de tendencia central",
+      "seccionNota": "Tendencia central y cuantiles",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level11.json",
       "preguntas": "questions/level11_questions.json"
+    },
+    {
+      "id": "level12",
+      "clase": "Clase 03",
+      "distrito": "San Juan de Lurigancho",
+      "titulo": "El tren de los cuantiles",
+      "icono": "🚆",
+      "seccion": "PC2",
+      "seccionNota": "Tendencia central y cuantiles",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level12.json",
+      "preguntas": "questions/level12_questions.json"
     }
   ]
 }

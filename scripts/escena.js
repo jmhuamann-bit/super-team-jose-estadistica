@@ -192,6 +192,10 @@ const FICHAS = [
   { sprite: "carrete", nombre: "El Carrete de Dos Colores", texto: "Dos intervalos empatan en el fi más alto y él insiste en que la moda es una sola." },
   { sprite: "tijera", nombre: "La Tijera del Intervalo", texto: "Corta con el TIC del intervalo de al lado y le sale una moda fuera de sitio." },
   { sprite: "jalador", nombre: "El Jalador de la Galería", texto: "Jefe de La Victoria: le sube lo mismo a todos los precios y jura que las medidas no se mueven." },
+  { sprite: "boleto", nombre: "El Boleto sin Ordenar", texto: "Pide el dato de la posición 6 sin haber hecho antes la cola de menor a mayor." },
+  { sprite: "tarjeta", nombre: "La Tarjeta del Porcentaje", texto: "Le preguntan por el P45 y responde «45»: confunde el valor del cuantil con su porcentaje." },
+  { sprite: "tope", nombre: "El Tope del Cien", texto: "Se para en el final de la vía y jura que ahí todavía hay un percentil 100." },
+  { sprite: "tren", nombre: "El Tren sin Interpolar", texto: "Jefe de San Juan de Lurigancho: la posición le sale 3,25 y él se baja en la estación 3." },
 ];
 
 export function galeriaPersonajes(contenedor) {

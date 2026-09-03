@@ -960,6 +960,132 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     SAN JUAN DE LURIGANCHO — media mañana bajo el viaducto de la
+     Línea 1. El distrito más poblado del país, con los cerros
+     cubiertos de casitas de colores y, cruzándolo todo, la vía
+     elevada del tren: una fila ordenada de estaciones donde cada
+     posición está numerada. Justo lo que hace falta para partir
+     una distribución en pedazos.
+     ========================================================= */
+  linea: {
+    nombre: "San Juan de Lurigancho",
+    cielo: [[0, "#4fa0dc"], [0.45, "#8fc8e8"], [0.8, "#d6e6ea"], [1, "#e8dcc8"]],
+    suelo: { cara: "#6b6b73", borde: "#9a9aa2", tierra: "#43434a", plataforma: "#b8323f", plataformaBorde: "#ffd166" },
+    acento: "#3f8f55",
+
+    bichos: ["boleto", "tarjeta", "tope"],
+    nombresBichos: ["El Boleto sin Ordenar", "La Tarjeta del Porcentaje", "El Tope del Cien"],
+    jefe: "tren",
+    nombreJefe: "El Tren sin Interpolar",
+
+    fondo(ctx, cam, t) {
+      // el sol de media mañana, ya alto
+      ctx.fillStyle = "rgba(255,246,214,.20)";
+      ctx.beginPath(); ctx.arc(140, 74, 56, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,250,230,.92)";
+      ctx.beginPath(); ctx.arc(140, 74, 26, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros de San Juan, cubiertos de casitas hasta arriba
+      repetir(ctx, cam, 480, 0.13, (x, i) => {
+        const bx = x + 200;
+        ctx.fillStyle = "#a8977f";
+        ctx.beginPath();
+        ctx.moveTo(bx - 240, 300);
+        ctx.quadraticCurveTo(bx - 20, 132, bx + 220, 300);
+        ctx.closePath(); ctx.fill();
+        // las casitas trepando la ladera: van pegadas a la curva del cerro,
+        // calculando el punto de la misma Bézier con la que se dibujó
+        const tonos = ["#e8d2b0", "#d9a95c", "#cfd6dc", "#e0562f", "#dcd6c8", "#4fb0a8"];
+        const P0x = -240, P1x = -20, P2x = 220, P0y = 300, P1y = 132, P2y = 300;
+        for (let k = 0; k < 26; k++) {
+          const u = (k + 0.5) / 26, mu = 1 - u;
+          const hx = bx + mu * mu * P0x + 2 * u * mu * P1x + u * u * P2x;
+          const hy = mu * mu * P0y + 2 * u * mu * P1y + u * u * P2y + 3 + ((k * 13) % 9);
+          ctx.fillStyle = tonos[(i + k) % 6];
+          ctx.fillRect(hx - 7, hy - 11, 14, 11);
+          ctx.fillStyle = "rgba(0,0,0,.16)";
+          ctx.fillRect(hx - 7, hy - 3, 14, 3);
+        }
+      });
+
+      // los edificios de la avenida, apretados
+      repetir(ctx, cam, 176, 0.36, (x, i) => {
+        const bx = x + 12, base = 318, alto = 66 + ((i * 31) % 38);
+        ctx.fillStyle = ["#d6cdbc", "#c4c8cc", "#dcc9a8", "#cbd2cf"][i % 4];
+        ctx.fillRect(bx, base - alto, 120, alto);
+        ctx.fillStyle = "rgba(90,110,130,.45)";
+        for (let fy = base - alto + 12; fy < base - 14; fy += 18)
+          for (let fx = bx + 10; fx < bx + 110; fx += 20) ctx.fillRect(fx, fy, 11, 11);
+        ctx.fillStyle = ["#e0562f", "#3f8f55", "#e8c15a"][i % 3];
+        ctx.fillRect(bx + 10, base - 22, 60, 8);
+      });
+
+      // EL VIADUCTO DE LA LÍNEA 1: la viga elevada que cruza todo el nivel
+      const yViga = 236;
+      ctx.fillStyle = "#8f9298";
+      ctx.fillRect(0, yViga, CFG.ANCHO_VISTA, 16);
+      ctx.fillStyle = "#a9adb3";
+      ctx.fillRect(0, yViga, CFG.ANCHO_VISTA, 4);
+      ctx.fillStyle = "rgba(0,0,0,.20)";
+      ctx.fillRect(0, yViga + 12, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 118, 0.46, (x, i) => {
+        // los pilares en forma de Y que la sostienen
+        ctx.fillStyle = "#7f8288";
+        ctx.fillRect(x + 46, yViga + 16, 16, 96);
+        ctx.beginPath();
+        ctx.moveTo(x + 34, yViga + 16); ctx.lineTo(x + 74, yViga + 16);
+        ctx.lineTo(x + 62, yViga + 34); ctx.lineTo(x + 46, yViga + 34);
+        ctx.closePath(); ctx.fill();
+        // la baranda de la vía, tramo por tramo
+        ctx.fillStyle = "rgba(255,255,255,.35)";
+        ctx.fillRect(x + 8, yViga - 9, 100, 3);
+        for (let k = 0; k < 5; k++) ctx.fillRect(x + 8 + k * 24, yViga - 9, 3, 9);
+        // cada cierto tramo, una estación con su techo curvo
+        if (i % 3 === 1) {
+          ctx.fillStyle = "#e8e2d2";
+          ctx.fillRect(x + 4, yViga - 46, 112, 38);
+          ctx.fillStyle = "#3f8f55";
+          ctx.beginPath();
+          ctx.moveTo(x - 2, yViga - 46);
+          ctx.quadraticCurveTo(x + 60, yViga - 72, x + 122, yViga - 46);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(90,120,140,.45)";
+          for (let fx = x + 14; fx < x + 108; fx += 22) ctx.fillRect(fx, yViga - 36, 14, 20);
+        }
+      });
+
+      // los paraderos y los postes de la avenida, ya abajo
+      repetir(ctx, cam, 142, 0.72, (x, i) => {
+        const bx = x + 14, base = 350;
+        if (i % 2 === 0) {
+          ctx.fillStyle = "#5c5c66";                        // el paradero
+          ctx.fillRect(bx, base - 30, 3, 30);
+          ctx.fillRect(bx + 52, base - 30, 3, 30);
+          ctx.fillStyle = "#e0562f";
+          ctx.fillRect(bx - 4, base - 36, 63, 7);
+          ctx.fillStyle = "rgba(255,255,255,.5)";
+          ctx.fillRect(bx + 6, base - 24, 42, 16);
+        } else {
+          ctx.fillStyle = "#7f8288";                        // el poste con su letrero
+          ctx.fillRect(bx + 70, base - 52, 3, 52);
+          ctx.fillStyle = "#3f8f55";
+          ctx.fillRect(bx + 64, base - 58, 18, 9);
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvo fino que levanta la avenida
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 167 - t * 1.6) % 880 - 20;
+        const y = 150 + ((i * 73) % 200) + Math.sin(t / 26 + i) * 9;
+        ctx.fillStyle = `rgba(232,220,196,${(0.10 + 0.16 * Math.abs(Math.sin(t / 32 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 5, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -1078,6 +1078,74 @@ const JALADOR = [  // jefe de La Victoria: el jalador que le sube lo mismo a tod
 const P_JALADOR = { k: "#241a2e", c: "#c99a6a", a: "#e0562f", n: "#2f3a56", y: "#e8c15a" };
 
 
+const BOLETO = [   // el boleto del tren: pide el dato de la posición sin haber hecho la cola (13 × 12)
+  ".............",
+  ".............",
+  ".wwwwwwwwwww.",
+  ".wkkwwwwwwkw.",
+  ".wwwwwwwwwww.",
+  ".wwrrrrrrrww.",
+  ".wwwwwwwwwww.",
+  ".wkkwwwwwwkw.",
+  ".wwwwwwwwwww.",
+  ".w.w.w.w.w.w.",
+  ".............",
+  ".............",
+];
+const P_BOLETO = { w: "#f2ead8", k: "#8a7460", r: "#c2264a" };
+
+const TARJETA = [   // la tarjeta del Metro: canta el porcentaje y cree que ese es el valor (14 × 12)
+  "..............",
+  "..............",
+  ".cccccccccccc.",
+  ".cyyccccccccc.",
+  ".cyycccwwwwcc.",
+  ".cccccccccccc.",
+  ".ccwwccccwwcc.",
+  ".ccwwccccwwcc.",
+  ".cccccccccccc.",
+  ".cccccccccccc.",
+  "..............",
+  "..............",
+];
+const P_TARJETA = { c: "#3f8f55", y: "#e8c15a", w: "#f2f6ff" };
+
+const TOPE = [   // el tope del final de la vía: jura que después de ahí todavía hay percentil (13 × 12)
+  ".............",
+  ".............",
+  "..rrrrrrrrr..",
+  "..wwwwwwwww..",
+  "..rrrrrrrrr..",
+  "..wwwwwwwww..",
+  "..rrrrrrrrr..",
+  "...kkkkkkk...",
+  "..kkkkkkkkk..",
+  ".kkk.kkk.kkk.",
+  "kkkkkkkkkkkkk",
+  ".............",
+];
+const P_TOPE = { r: "#c2264a", w: "#f2f6ff", k: "#5c5c66" };
+
+const TREN = [  // jefe de San Juan de Lurigancho: el tren que se baja en la estación entera (20 × 16)
+  "....................",
+  "....wwwwwwwwwwww....",
+  "...wwwwwwwwwwwwww...",
+  "..wwvvvvvvvvvvvvww..",
+  "..wwvvvvvvvvvvvvww..",
+  "..wwwwwwwwwwwwwwww..",
+  "..wwggggggggggggww..",
+  "..wwwwwwwwwwwwwwww..",
+  "..wwrrrrrrrrrrrrww..",
+  "..wwwwwwwwwwwwwwww..",
+  "..wwvvwwwwwwwwvvww..",
+  "..wwvvwwwwwwwwvvww..",
+  "..wwwwwwwwwwwwwwww..",
+  "..kkkkkkkkkkkkkkkk..",
+  "...kk..kk..kk..kk...",
+  "....................",
+];
+const P_TREN = { w: "#f2f6ff", v: "#4a6b8a", g: "#3f8f55", r: "#c2264a", k: "#5c5c66" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1145,6 +1213,10 @@ const DEFINICIONES = {
   carrete:      [CARRETE, P_CARRETE],
   tijera:       [TIJERA, P_TIJERA],
   jalador:      [JALADOR, P_JALADOR],
+  boleto:       [BOLETO, P_BOLETO],
+  tarjeta:      [TARJETA, P_TARJETA],
+  tope:         [TOPE, P_TOPE],
+  tren:         [TREN, P_TREN],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
