@@ -196,6 +196,10 @@ const FICHAS = [
   { sprite: "tarjeta", nombre: "La Tarjeta del Porcentaje", texto: "Le preguntan por el P45 y responde «45»: confunde el valor del cuantil con su porcentaje." },
   { sprite: "tope", nombre: "El Tope del Cien", texto: "Se para en el final de la vía y jura que ahí todavía hay un percentil 100." },
   { sprite: "tren", nombre: "El Tren sin Interpolar", texto: "Jefe de San Juan de Lurigancho: la posición le sale 3,25 y él se baja en la estación 3." },
+  { sprite: "piedra", nombre: "La Piedra del Huaico", texto: "Baja sola por la quebrada y con ese único dato le infla el rango a todo el valle." },
+  { sprite: "termometro", nombre: "El Termómetro sin Comparar", texto: "Pone dos desviaciones estándar lado a lado sin fijarse en que los promedios son distintos." },
+  { sprite: "cinta", nombre: "La Cinta al Cuadrado", texto: "Mide en metros y jura que la varianza también sale en metros." },
+  { sprite: "chacarero", nombre: "El Chacarero de la Constante", texto: "Jefe de Chaclacayo: le suma lo mismo a cada planta y jura que ahora su chacra quedó más dispersa." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -135,7 +135,7 @@
       "titulo": "El arenal que busca su centro",
       "icono": "🧱",
       "seccion": "PC2",
-      "seccionNota": "Tendencia central y cuantiles",
+      "seccionNota": "Tendencia central, cuantiles y variabilidad",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -149,7 +149,7 @@
       "titulo": "El emporio de la moda",
       "icono": "🧵",
       "seccion": "PC2",
-      "seccionNota": "Tendencia central y cuantiles",
+      "seccionNota": "Tendencia central, cuantiles y variabilidad",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -163,12 +163,26 @@
       "titulo": "El tren de los cuantiles",
       "icono": "🚆",
       "seccion": "PC2",
-      "seccionNota": "Tendencia central y cuantiles",
+      "seccionNota": "Tendencia central, cuantiles y variabilidad",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level12.json",
       "preguntas": "questions/level12_questions.json"
+    },
+    {
+      "id": "level13",
+      "clase": "Clase 04",
+      "distrito": "Chaclacayo",
+      "titulo": "El valle de la dispersión",
+      "icono": "☀️",
+      "seccion": "PC2",
+      "seccionNota": "Tendencia central, cuantiles y variabilidad",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level13.json",
+      "preguntas": "questions/level13_questions.json"
     }
   ]
 }

@@ -1,0 +1,138 @@
+{
+  "nivel": "level13",
+  "clase": "Clase 04 · PC2 — Medidas de variabilidad: rango, varianza, desviación y CV",
+  "fuente": "Apuntes de la 4ta clase de la PC2 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e13-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Cuatro investigaciones, con 8 datos cada una:\n01 → 2 · 2 · 2 · 2 · 2 · 2 · 2 · 2\n02 → 1 · 2 · 2 · 2 · 2 · 2 · 2 · 3\n03 → 0 · 1 · 2 · 3 · 4 · 5 · 5 · 7\n04 → 0 · 2 · 10 · 22 · 104 · 500 · 891 · 901\n\n¿Cuál es la más homogénea y cuál la más dispersa?",
+      "opciones": [
+        "La 01 es la más homogénea (todos los datos son iguales) y la 04 la más dispersa",
+        "La 04 es la más homogénea, porque tiene los números más grandes",
+        "Las cuatro tienen la misma variabilidad: todas tienen 8 datos",
+        "La 03 es la más dispersa, porque tiene más valores distintos entre sí"
+      ],
+      "correcta": 0,
+      "explicacion": "Variabilidad, dispersión y heterogeneidad son la misma cosa. En la 01 todos los datos son idénticos, así que la variabilidad es 0. En la 04 van de 0 a 901: esa es la más heterogénea, y la que menos confianza da."
+    },
+    {
+      "id": "e13-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Las medidas de variabilidad se dividen en ABSOLUTAS y RELATIVAS.\n\n¿Cuál de estas es RELATIVA?",
+      "opciones": [
+        "El rango",
+        "La varianza",
+        "La desviación estándar",
+        "El coeficiente de variabilidad"
+      ],
+      "correcta": 3,
+      "explicacion": "Las absolutas arrastran la unidad de medida: el rango y la desviación estándar salen en metros o soles, y la varianza en metros² o soles². El CV es el único que sale como un número pelado, en porcentaje, y por eso es relativo."
+    },
+    {
+      "id": "e13-q3",
+      "nivel": "comprension",
+      "enunciado": "Dos grupos de datos:\nA → 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8\nB → 1 · 1 · 1 · 1 · 1 · 1 · 1 · 8\n\n¿Tienen el mismo rango? ¿Y la misma dispersión entre dato y dato?",
+      "opciones": [
+        "Tienen rangos distintos y dispersiones distintas",
+        "El MISMO rango (7), pero los datos están repartidos de forma completamente distinta: por eso el rango NO es confiable",
+        "El mismo rango y exactamente la misma dispersión",
+        "El rango de B es mayor, porque tiene un 8 solitario"
+      ],
+      "correcta": 1,
+      "explicacion": "En los dos el mayor es 8 y el menor 1, así que el rango es 7. Pero en A los datos van parejitos de uno en uno y en B hay siete pegados y uno disparado. El rango solo mira los dos extremos y se pierde todo lo que pasa en el medio."
+    },
+    {
+      "id": "e13-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Sobre el RANGO y lo que le pasa cuando transformas los datos,\n\n¿cuál afirmación es la correcta?",
+      "opciones": [
+        "Puede salir negativo si hay datos negativos",
+        "Si le sumas 10 a cada dato, el rango sube 10",
+        "Si le sumas K a cada dato el rango NO cambia; si los multiplicas por K, el rango nuevo es K veces el anterior",
+        "Si multiplicas por K, el rango se queda igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Sumar la misma constante corre todos los datos juntos: las distancias entre ellos quedan iguales. Multiplicar sí las estira. Y ojo, el rango NUNCA es negativo: vale 0 si los datos son homogéneos y más de 0 si son heterogéneos."
+    },
+    {
+      "id": "e13-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Estaturas de una MUESTRA de 8 personas: 1,41 · 1,45 · 1,52 · 1,72 · 1,57 · 1,64 · 1,43 · 1,77.\nEl promedio es 1,56375 y Σ(dato²) = 19,6917.\n\n¿Cuánto son la varianza y la desviación estándar?",
+      "opciones": [
+        "Varianza 0,018456 m² y desviación estándar 0,1359 m",
+        "Varianza 0,018456 m y desviación estándar 0,1359 m²",
+        "Varianza 0,016149 m², dividiendo entre 8",
+        "Varianza 0,12919 m², que es el numerador"
+      ],
+      "correcta": 0,
+      "explicacion": "Fórmula madre: (Σdato² − n·promedio²)/(n − 1), con n − 1 porque es MUESTRA. Da (19,6917 − 8(1,56375)²)/7 = 0,12919/7 = 0,018456, y la desviación es su raíz: 0,1359 m. Si divides entre 8 estás tratando la muestra como población."
+    },
+    {
+      "id": "e13-q6",
+      "nivel": "comprension",
+      "enunciado": "Esas estaturas están medidas en metros.\n\n¿En qué unidad sale la varianza y en cuál la desviación estándar?",
+      "opciones": [
+        "Las dos en metros",
+        "Las dos en metros²",
+        "Ninguna tiene unidad: las dos salen en porcentaje",
+        "La varianza en metros² y la desviación estándar en metros"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso la varianza no se interpreta: «0,018 metros cuadrados de estatura» no significa nada. La desviación estándar sí queda en metros, y mide en promedio qué tan lejos está cada dato del promedio."
+    },
+    {
+      "id": "e13-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Exs por UPapi en toda la POBLACIÓN de 1 000 encuestados:\n1 ex → 150 · 2 exs → 350 · 3 exs → 400 · 4 exs → 100\nEl promedio es 2,45 y Σ(dato² · fi) = 6 750.\n\n¿Cuánto es la varianza?",
+      "opciones": [
+        "0,7475",
+        "0,7482, dividiendo entre 999",
+        "6,75, que es Σ(dato² · fi) entre 1 000",
+        "2,45, que es el promedio"
+      ],
+      "correcta": 0,
+      "explicacion": "Como es POBLACIÓN, abajo va N y no n − 1: (6 750 − 1 000(2,45)²)/1 000 = 747,5/1 000 = 0,7475. La desviación estándar sale de la raíz: 0,8646 exs. El (n − 1) es solo para muestras."
+    },
+    {
+      "id": "e13-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Tardanzas de dos universidades. Los UPapis tienen desviación estándar de 1 minuto con un promedio de 10 minutos; los PUCPinos, desviación estándar de 3 minutos con un promedio de 30.\n\n¿Quién tiene más variabilidad?",
+      "opciones": [
+        "Los PUCPinos, porque 3 es mayor que 1",
+        "Los UPapis, porque llegan menos tarde",
+        "No se pueden comparar con la desviación estándar porque los promedios son distintos. Con el CV los dos dan 10 %: tienen la MISMA variabilidad relativa",
+        "Los PUCPinos, porque su promedio también es más alto"
+      ],
+      "correcta": 2,
+      "explicacion": "La desviación estándar solo se compara entre grupos con promedios iguales o parecidos, y acá son 10 contra 30. Toca el CV: 1/10 = 0,10 y 3/30 = 0,10. Los dos son 10 %, o sea igual de dispersos en términos relativos."
+    },
+    {
+      "id": "e13-q9",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Sobre el COEFICIENTE DE VARIABILIDAD,\n\n¿cuál afirmación es la correcta?",
+      "opciones": [
+        "Se puede calcular siempre, incluso cuando el promedio es 0",
+        "Tiene la misma unidad de medida que los datos",
+        "Es la segunda mejor medida, después de la desviación estándar",
+        "NO se puede calcular si el promedio es 0, y es la MEJOR medida para interpretar y para comparar la dispersión"
+      ],
+      "correcta": 3,
+      "explicacion": "El CV divide entre el promedio, así que con promedio 0 queda indefinido. Sale como porcentaje, sin unidad, y por eso mismo es la mejor para interpretar y para comparar dos grupos distintos. La desviación estándar queda en segundo lugar."
+    },
+    {
+      "id": "e13-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3. A todos los datos les multiplicas por 10.\n\n¿Qué les pasa al rango, a la varianza, a la desviación estándar y al CV?",
+      "opciones": [
+        "Los cuatro se multiplican por 10",
+        "El rango y la desviación se multiplican por 10, la varianza por 100 y el CV NO cambia",
+        "Los cuatro se multiplican por 100",
+        "Ninguno cambia: son medidas de dispersión"
+      ],
+      "correcta": 1,
+      "explicacion": "Conclusión de oro: las medidas absolutas no se enteran si SUMAS una constante, pero sí si MULTIPLICAS. La varianza lleva k² porque ya está elevada al cuadrado. Y el CV no se mueve, porque el promedio también quedó multiplicado por 10 y el efecto se cancela."
+    }
+  ]
+}

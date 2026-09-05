@@ -1,0 +1,43 @@
+{
+  "id": "level13",
+  "distrito": "Chaclacayo",
+  "clase": "Clase 04 · PC2",
+  "titulo": "El valle de la dispersión",
+  "tema": "valle",
+  "musica": "valle",
+  "vehiculo": "combi",
+  "intro": "Chaclacayo es donde Lima por fin encuentra el sol. En el valle del Rímac nada está a la misma distancia de nada: las casas de campo van desperdigadas entre los cerros, y de vez en cuando baja una piedra por la quebrada y se lleva la escala de todo. Eso es la variabilidad — qué tan lejos está cada dato del promedio — y hoy toca medirla de tres formas.",
+  "repaso": [
+    "VARIABILIDAD = dispersión = heterogeneidad. Sirve para saber qué tan confiable es tu información: mientras más parejos los datos, más confianza dan.",
+    "Hay dos familias. VARIABILIDAD ABSOLUTA (el resultado arrastra la unidad de medida): rango, varianza y desviación estándar. VARIABILIDAD RELATIVA (el resultado es un número pelado, en porcentaje): el coeficiente de variabilidad.",
+    "FÓRMULA MADRE (la que se usa en la UP): Varianza = [Σ(Dato² · N° repeticiones) − N° datos · promedio²] / N° datos. Si es MUESTRA, abajo va (n − 1) en vez de n.",
+    "La desviación estándar es la raíz cuadrada de la varianza, y mide en promedio qué tan lejos está cada dato del promedio. Notación: S² y S en muestra, σ² y σ en población.",
+    "RANGO = dato mayor − dato menor (también le dicen amplitud o recorrido).",
+    "Propiedades del rango: NUNCA es negativo; vale 0 si los datos son homogéneos y más de 0 si son heterogéneos; arrastra la unidad de los datos; y NO es una medida confiable, porque solo mira los dos extremos y se pierde todo lo del medio.",
+    "Prueba de eso: 1·2·3·4·5·6·7·8 y 1·1·1·1·1·1·1·8 tienen el mismo rango, 7, pero los datos están repartidos de forma completamente distinta.",
+    "La VARIANZA no se interpreta: su unidad sale al cuadrado (soles², metros², horas²). La que sí tiene la unidad de los datos es la desviación estándar.",
+    "La desviación estándar es confiable, pero es la SEGUNDA mejor: para comparar dos grupos con ella, los dos tienen que tener promedios iguales o parecidos.",
+    "COEFICIENTE DE VARIABILIDAD: CV = desviación estándar / |promedio|. A mayor CV, más dispersos los datos. Es la MEJOR medida para interpretar la dispersión y para comparar dos grupos distintos.",
+    "Ojo con el CV: no tiene unidad (va en porcentaje), lleva el promedio en VALOR ABSOLUTO, y NO se puede calcular si el promedio es 0, porque dividir entre cero no está definido.",
+    "Si un intervalo viene abierto, le creas el límite que falta con el TIC más cercano, igual que en las clases pasadas.",
+    "TRANSFORMACIONES. Si sumas k a cada dato: el rango, la varianza y la desviación NO cambian, pero el CV SÍ (porque le movieron el promedio). Si multiplicas por k: rango y desviación quedan multiplicados por k, la varianza por k², y el CV NO cambia.",
+    "Conclusión de ORO: las medidas de variabilidad absoluta no se enteran de una suma, pero sí de una multiplicación."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                            o o o                             o o o                               o o o                             o o o                         o o o                             o o o                         o o o                         ",
+    "                  ?                   o o       L         o o           G                 o o                     V                     o o         1                   o o         o o L                   o o       ?               o o             1         ",
+    "                            ====                              ====                                ====                              ====                          ====                              ====                          ====                          ",
+    "                                o o                 o o               o o                     o o                   o o                           o o             o o                     o o         o o               o o                     o o             ",
+    "  P                     E           C                   E         X         E                         C       E       X                     E                 C                   E           X           E                 X               B               M   ",
+    "##########################################   #####################################    ######################################   #######################################    ######################################   #############################################",
+    "##########################################   #####################################    ######################################   #######################################    ######################################   #############################################",
+    "##########################################   #####################################    ######################################   #######################################    ######################################   #############################################"
+  ]
+}

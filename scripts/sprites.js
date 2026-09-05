@@ -1146,6 +1146,74 @@ const TREN = [  // jefe de San Juan de Lurigancho: el tren que se baja en la est
 ];
 const P_TREN = { w: "#f2f6ff", v: "#4a6b8a", g: "#3f8f55", r: "#c2264a", k: "#5c5c66" };
 
+const PIEDRA = [   // la piedra que bajó con el huaico: un solo dato y le infla el rango (13 × 12)
+  ".............",
+  ".............",
+  "....gggggg...",
+  "...gggggggg..",
+  "..gggghhhggg.",
+  ".ggggghhhgggg",
+  ".ggggghhhgggg",
+  ".gggggggggggg",
+  "..gggggggggg.",
+  "...kkkkkkkk..",
+  ".............",
+  ".............",
+];
+const P_PIEDRA = { g: "#8a8078", h: "#a8a098", k: "#5e574c" };
+
+const TERMOMETRO = [   // el termómetro del sol eterno: compara sin mirar el promedio (12 × 12)
+  "............",
+  "....wwww....",
+  "....wrrw....",
+  "....wrrw....",
+  "....wrrw....",
+  "....wrrw....",
+  "....wrrw....",
+  "...wwrrww...",
+  "..wwrrrrww..",
+  "..wrrrrrrw..",
+  "...wwrrww...",
+  "............",
+];
+const P_TERMOMETRO = { w: "#f2f6ff", r: "#c2264a" };
+
+const CINTA = [   // la cinta métrica: jura que la varianza también sale en metros (14 × 12)
+  "..............",
+  "..............",
+  "...yyyyyyy....",
+  "..yyyyyyyyy...",
+  ".yyyykkkyyyy..",
+  ".yyykkkkkyyy..",
+  ".yyyykkkyyyy..",
+  "..yyyyyyyyy...",
+  "...yyyyyyy....",
+  "....wwwwwwwww.",
+  "....wkwkwkwkw.",
+  "..............",
+];
+const P_CINTA = { y: "#e8b13c", k: "#5c4632", w: "#f2ead8" };
+
+const CHACARERO = [  // jefe de Chaclacayo: le suma lo mismo a todo y jura que quedó más disperso (20 × 16)
+  "....yyyyyyyyyy......",
+  "...yyyyyyyyyyyy.....",
+  "......cccccc........",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......cmmmmc........",
+  ".....vvvvvvvv.......",
+  "....vvvvvvvvvv..kk..",
+  "...vvvvvvvvvvv..kk..",
+  "...vvvvvvvvvvv..kk..",
+  "...nnnnnnnnnn.kkkk..",
+  "...nnnn..nnnn.......",
+  "...nnnn..nnnn.......",
+  "..kkkkk..kkkkk......",
+  "....................",
+];
+const P_CHACARERO = { y: "#e8c15a", c: "#c9945c", k: "#5c4632", m: "#3b2a1a", v: "#4f8f6b", n: "#3f5670" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1217,6 +1285,10 @@ const DEFINICIONES = {
   tarjeta:      [TARJETA, P_TARJETA],
   tope:         [TOPE, P_TOPE],
   tren:         [TREN, P_TREN],
+  piedra:       [PIEDRA, P_PIEDRA],
+  termometro:   [TERMOMETRO, P_TERMOMETRO],
+  cinta:        [CINTA, P_CINTA],
+  chacarero:    [CHACARERO, P_CHACARERO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

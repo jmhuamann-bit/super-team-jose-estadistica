@@ -1086,6 +1086,129 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     CHACLACAYO — media mañana en el valle del Rímac, donde Lima
+     por fin encuentra el sol. Los cerros secos a los dos lados,
+     las quebradas por donde baja el huaico, el río abajo y las
+     casas de campo desperdigadas entre huertos y palmeras: nada
+     está a la misma distancia de nada. El valle de la dispersión.
+     ========================================================= */
+  valle: {
+    nombre: "Chaclacayo",
+    cielo: [[0, "#2f86d0"], [0.42, "#79bce4"], [0.78, "#d4e4d8"], [1, "#e8dcbc"]],
+    suelo: { cara: "#b09a70", borde: "#d4c294", tierra: "#7a674a", plataforma: "#9c4230", plataformaBorde: "#ffd166" },
+    acento: "#e8a83c",
+
+    bichos: ["piedra", "termometro", "cinta"],
+    nombresBichos: ["La Piedra del Huaico", "El Termómetro sin Comparar", "La Cinta al Cuadrado"],
+    jefe: "chacarero",
+    nombreJefe: "El Chacarero de la Constante",
+
+    fondo(ctx, cam, t) {
+      // el sol eterno de Chaclacayo, alto y sin una nube
+      ctx.fillStyle = "rgba(255,246,204,.26)";
+      ctx.beginPath(); ctx.arc(640, 66, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,224,.98)";
+      ctx.beginPath(); ctx.arc(640, 66, 28, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros secos del fondo, con sus quebradas marcadas
+      repetir(ctx, cam, 460, 0.14, (x, i) => {
+        const bx = x + 40;
+        ctx.fillStyle = i % 2 ? "#9d8a6c" : "#8e7c60";
+        ctx.beginPath();
+        ctx.moveTo(bx - 120, 300);
+        ctx.lineTo(bx + 60, 132);
+        ctx.lineTo(bx + 130, 168);
+        ctx.lineTo(bx + 300, 300);
+        ctx.closePath(); ctx.fill();
+        // la quebrada por donde baja el huaico
+        ctx.strokeStyle = "rgba(120,102,74,.75)"; ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(bx + 60, 140);
+        ctx.quadraticCurveTo(bx + 24, 220, bx + 66, 300);
+        ctx.stroke();
+      });
+
+      // los cerros de adelante, más claros por el sol
+      repetir(ctx, cam, 320, 0.26, (x) => {
+        ctx.fillStyle = "#b8a37e";
+        ctx.beginPath();
+        ctx.moveTo(x - 70, 312);
+        ctx.quadraticCurveTo(x + 80, 208, x + 240, 312);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // el río Rímac, angosto y con las piedras del cauce
+      ctx.fillStyle = "#4f8fae";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 18);
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 61 - (cam * 0.2)) % 880 - 30;
+        ctx.fillStyle = "rgba(255,255,255,.30)";
+        ctx.fillRect(x, 310 + ((i * 13) % 10), 12, 2);
+      }
+      ctx.fillStyle = "#a8a098";
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 97 - (cam * 0.2)) % 880 - 30;
+        ctx.fillRect(x, 318 + ((i * 7) % 5), 9, 5);
+      }
+
+      // las casas de campo, desperdigadas: nunca a la misma distancia
+      repetir(ctx, cam, 196, 0.5, (x, i) => {
+        const bx = x + 14 + ((i * 53) % 46), base = 338;
+        const alto = 42 + ((i * 31) % 20);
+        ctx.fillStyle = ["#f0e4cc", "#e4d0b4", "#dce8dc", "#f0d8c0"][i % 4];
+        ctx.fillRect(bx, base - alto, 84, alto);
+        ctx.fillStyle = "#b5503a";                          // el techo de tejas
+        ctx.beginPath();
+        ctx.moveTo(bx - 8, base - alto);
+        ctx.lineTo(bx + 42, base - alto - 20);
+        ctx.lineTo(bx + 92, base - alto);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(90,120,140,.45)";             // ventanas
+        ctx.fillRect(bx + 12, base - alto + 14, 18, 15);
+        ctx.fillRect(bx + 54, base - alto + 14, 18, 15);
+        ctx.fillStyle = "#7a5c3a";
+        ctx.fillRect(bx + 34, base - 20, 16, 20);
+        // la piscina o el huerto del costado, según toque
+        if (i % 2) {
+          ctx.fillStyle = "#5fb8d4";
+          ctx.fillRect(bx + 94, base - 12, 34, 12);
+        } else {
+          ctx.fillStyle = "#4f8f3a";
+          for (let k = 0; k < 3; k++) ctx.fillRect(bx + 96 + k * 12, base - 16, 8, 16);
+        }
+      });
+
+      // las palmeras y los molles del valle, en primer plano
+      repetir(ctx, cam, 128, 0.76, (x, i) => {
+        const bx = x + 20, base = 356, alto = 54 + ((i * 37) % 26);
+        ctx.fillStyle = "#7a5c3a";
+        ctx.fillRect(bx, base - alto, 5, alto);
+        ctx.fillStyle = i % 2 ? "#3f8f4a" : "#4f9d58";
+        for (let k = 0; k < 5; k++) {
+          const ang = -Math.PI / 2 + (k - 2) * 0.55;
+          ctx.beginPath();
+          ctx.moveTo(bx + 2, base - alto + 3);
+          ctx.quadraticCurveTo(
+            bx + 2 + Math.cos(ang) * 20, base - alto - 6 + Math.sin(ang) * 14,
+            bx + 2 + Math.cos(ang) * 32, base - alto + 6 + Math.sin(ang) * 20);
+          ctx.lineTo(bx + 2, base - alto + 7);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvo seco del valle brillando a contraluz
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 149 - t * 1.5) % 880 - 20;
+        const y = 120 + ((i * 69) % 220) + Math.sin(t / 26 + i) * 11;
+        ctx.fillStyle = `rgba(255,240,196,${(0.10 + 0.18 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 4, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
