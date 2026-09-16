@@ -108,6 +108,13 @@ const TEMAS_MUSICA = {
               "D5",2,"C5",1,"A4",1,"G4",4],
     bajo:    ["G2",4,"D3",4,"C3",4,"G2",4,"A2",4,"E3",4,"D3",4,"G2",4],
   },
+  lomas: { // Pachacámac: invierno con camanchaca, aire de campo lento y verde
+    tempo: 0.17, onda: "triangle",
+    melodia: ["A4",2,"C5",2,"D5",1,"E5",1,"D5",2,"C5",2,
+              "A4",2,"G4",1,"A4",1,"C5",2,"D5",2,"E5",2,
+              "G5",2,"E5",1,"D5",1,"C5",2,"A4",2,"A4",4],
+    bajo:    ["A2",4,"E3",4,"F2",4,"C3",4,"D3",4,"A2",4,"G2",4,"A2",4,"D3",4],
+  },
 };
 
 function arrancarCtx() {

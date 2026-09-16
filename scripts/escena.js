@@ -200,6 +200,10 @@ const FICHAS = [
   { sprite: "termometro", nombre: "El Termómetro sin Comparar", texto: "Pone dos desviaciones estándar lado a lado sin fijarse en que los promedios son distintos." },
   { sprite: "cinta", nombre: "La Cinta al Cuadrado", texto: "Mide en metros y jura que la varianza también sale en metros." },
   { sprite: "chacarero", nombre: "El Chacarero de la Constante", texto: "Jefe de Chaclacayo: le suma lo mismo a cada planta y jura que ahora su chacra quedó más dispersa." },
+  { sprite: "neblina", nombre: "La Neblina de una Sola Ladera", texto: "Ve la colita de un lado y bautiza la asimetría del otro." },
+  { sprite: "lucuma", nombre: "La Lúcuma sin Raíz", texto: "Le dan la varianza y la mete a la fórmula de Pearson sin sacarle la raíz." },
+  { sprite: "caballo", nombre: "El Caballo de los Dos Pasos", texto: "Tiene dos modas y aun así quiere que le calculen el coeficiente de Pearson." },
+  { sprite: "guia", nombre: "El Guía de las Lomas", texto: "Jefe de Pachacámac: te sube a medir qué tan paradita está la puntita sin revisar si el cerro tiene una sola." },
 ];
 
 export function galeriaPersonajes(contenedor) {

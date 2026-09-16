@@ -1214,6 +1214,75 @@ const CHACARERO = [  // jefe de Chaclacayo: le suma lo mismo a todo y jura que q
 ];
 const P_CHACARERO = { y: "#e8c15a", c: "#c9945c", k: "#5c4632", m: "#3b2a1a", v: "#4f8f6b", n: "#3f5670" };
 
+const NEBLINA = [   // la camanchaca que moja una ladera y deja la otra pelada: nombra la colita al revés (15 × 11)
+  "...............",
+  "....wwww.......",
+  "..wwwwwwww.....",
+  ".wwwwwwwwwww...",
+  "wwwwwwwwwwwwww.",
+  "wwggwwwwwwggww.",
+  ".wwwwwwwwwwww..",
+  "..wwwwwwwwww...",
+  "...w.w..w.w....",
+  "...............",
+  "...............",
+];
+const P_NEBLINA = { w: "#dfe6ea", g: "#5a6a74" };
+
+const LUCUMA = [   // la lúcuma de las lomas: le dan la varianza y la mete sin sacarle la raíz (12 × 13)
+  "............",
+  "......nn....",
+  ".....nn.....",
+  "...vvvvvv...",
+  "..vvvvvvvv..",
+  "..aaaaaaaa..",
+  ".aaaaaaaaaa.",
+  ".aaaakkaaaa.",
+  ".aaaakkaaaa.",
+  ".aaaaaaaaaa.",
+  "..aaaaaaaa..",
+  "...aaaaaa...",
+  "............",
+];
+const P_LUCUMA = { n: "#6b4a30", v: "#3f8f5a", a: "#e8a13c", k: "#8a5a20" };
+
+const CABALLO = [   // el caballo de paso con dos pasos: es bimodal y aun así pide Pearson (16 × 13)
+  "................",
+  "...........kkk..",
+  "..........kkkkk.",
+  "..........kkcck.",
+  "...........cccc.",
+  "..kkkkkkkkkccc..",
+  ".kkkkkkkkkkkk...",
+  "kkkkkkkkkkkkk...",
+  "kkkkkkkkkkkkk...",
+  ".kkkkkkkkkkkk...",
+  ".kk.kkkk.kkk....",
+  ".kk.kkkk.kkk....",
+  ".ww.wwww.www....",
+];
+const P_CABALLO = { k: "#6b4a30", c: "#3b2a1a", w: "#2e2620" };
+
+const GUIA = [  // jefe de Pachacámac: sube a medir la puntita sin revisar si el cerro tiene una sola (20 × 16)
+  ".....ggggggg........",
+  "....ggggggggg.......",
+  "....gcccccccg.......",
+  "....cckkcckkc.......",
+  "....cccccccc........",
+  ".....ccmmcc.........",
+  "....vvvvvvvv........",
+  "...vvvvvvvvvv.mm....",
+  "..cvvvvvvvvvvcmm....",
+  "..cvvvvvvvvvvcmm....",
+  "...vvvvvvvvvv.mm....",
+  "....vvvvvvvv........",
+  "....nnnn.nnnn.......",
+  "....nnnn.nnnn.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_GUIA = { g: "#c2913c", c: "#c9945c", k: "#241a2e", m: "#8a6a48", v: "#3f7a4a", n: "#4a5a6b" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1289,6 +1358,10 @@ const DEFINICIONES = {
   termometro:   [TERMOMETRO, P_TERMOMETRO],
   cinta:        [CINTA, P_CINTA],
   chacarero:    [CHACARERO, P_CHACARERO],
+  neblina:      [NEBLINA, P_NEBLINA],
+  lucuma:       [LUCUMA, P_LUCUMA],
+  caballo:      [CABALLO, P_CABALLO],
+  guia:         [GUIA, P_GUIA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

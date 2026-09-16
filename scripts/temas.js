@@ -1209,6 +1209,160 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     PACHACÁMAC — las lomas de Lúcumo en pleno invierno. La
+     camanchaca entra del mar y moja UNA sola ladera: ese lado
+     amanece verde y el de atrás se queda pelado. Abajo, los
+     campestres con sus ramadas, los corrales de caballo de paso
+     y las chacras de lúcumo. Un cerro que no se parece de un
+     lado al otro es justo lo que hay que medir hoy.
+     ========================================================= */
+  lomas: {
+    nombre: "Pachacámac",
+    cielo: [[0, "#8fb4c8"], [0.4, "#c2d2d8"], [0.76, "#dfe4dc"], [1, "#e8e8d8"]],
+    suelo: { cara: "#8a9464", borde: "#b4c084", tierra: "#5e5a3c", plataforma: "#4a3324", plataformaBorde: "#ffd166" },
+    acento: "#3f8f5a",
+
+    bichos: ["neblina", "lucuma", "caballo"],
+    nombresBichos: ["La Neblina de una Sola Ladera", "La Lúcuma sin Raíz", "El Caballo de los Dos Pasos"],
+    jefe: "guia",
+    nombreJefe: "El Guía de las Lomas",
+
+    fondo(ctx, cam, t) {
+      // el sol de invierno, apenas una mancha detrás de la camanchaca
+      ctx.fillStyle = "rgba(250,248,230,.22)";
+      ctx.beginPath(); ctx.arc(628, 82, 66, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,250,238,.55)";
+      ctx.beginPath(); ctx.arc(628, 82, 30, 0, Math.PI * 2); ctx.fill();
+
+      // LAS LOMAS: cada cerro verde por la ladera que le pega la neblina y pelado por la otra
+      repetir(ctx, cam, 470, 0.15, (x, i) => {
+        const bx = x + 60, base = 306, alto = 150 + ((i * 41) % 34), ancho = 210;
+        ctx.fillStyle = "#8a7f68";                          // la ladera seca, la de atrás
+        ctx.beginPath();
+        ctx.moveTo(bx - ancho, base);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx + ancho, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#6f8a52";                          // la ladera que sí se moja
+        ctx.beginPath();
+        ctx.moveTo(bx - ancho, base);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 340, 0.26, (x, i) => {
+        const bx = x + 40, base = 318, alto = 96 + ((i * 29) % 26), ancho = 150;
+        ctx.fillStyle = "#9d9478";                          // la ladera seca
+        ctx.beginPath();
+        ctx.moveTo(bx - ancho, base);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx + ancho, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#86a05e";                          // la que amanece verde
+        ctx.beginPath();
+        ctx.moveTo(bx - ancho, base);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx, base);
+        ctx.closePath(); ctx.fill();
+        // el manchón de flor de amancaes en la parte verde
+        ctx.fillStyle = "rgba(232,200,90,.55)";
+        for (let k = 0; k < 7; k++) {
+          const fx = bx - 20 - k * 16, fy = base - 26 - ((k * 23) % 40);
+          ctx.fillRect(fx, fy, 5, 4);
+        }
+      });
+
+      // la camanchaca metiéndose entre los cerros, en bandas lentas
+      for (let k = 0; k < 4; k++) {
+        const y = 226 + k * 22;
+        const x = ((t / 3 + k * 140) % 1100) - 200;
+        ctx.fillStyle = `rgba(232,238,238,${(0.30 - k * 0.05).toFixed(2)})`;
+        ctx.fillRect(x, y, 380, 13);
+        ctx.fillRect(x - 520, y, 300, 13);
+      }
+
+      // LOS CAMPESTRES: ramadas de estera, el horno de barro y las mesas largas
+      repetir(ctx, cam, 214, 0.52, (x, i) => {
+        const bx = x + 18, base = 352;
+        ctx.fillStyle = "#d8c8a0";                          // la pared de adobe
+        ctx.fillRect(bx, base - 46, 104, 46);
+        ctx.fillStyle = "#c2b088";
+        ctx.fillRect(bx, base - 46, 104, 5);
+        ctx.fillStyle = "#a8763f";                          // el techo de estera a un agua
+        ctx.beginPath();
+        ctx.moveTo(bx - 8, base - 46);
+        ctx.lineTo(bx + 112, base - 62);
+        ctx.lineTo(bx + 112, base - 54);
+        ctx.lineTo(bx - 8, base - 38);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#6b4a30";                          // los horcones
+        ctx.fillRect(bx + 6, base - 44, 5, 44);
+        ctx.fillRect(bx + 92, base - 56, 5, 56);
+        ctx.fillStyle = "#3f5f7d";                          // la puerta
+        ctx.fillRect(bx + 40, base - 26, 22, 26);
+        ctx.fillStyle = "#8a5a3c";                          // el horno de barro con su boca
+        ctx.beginPath();
+        ctx.arc(bx + 128, base - 12, 16, Math.PI, 0); ctx.fill();
+        ctx.fillRect(bx + 112, base - 12, 32, 12);
+        ctx.fillStyle = "#2e2620";
+        ctx.fillRect(bx + 122, base - 12, 12, 10);
+        ctx.fillStyle = "#e8823c";                          // la candela
+        ctx.fillRect(bx + 125, base - 8, 6, 6);
+        // el humito del horno
+        for (let k = 0; k < 2; k++) {
+          const sube = ((t / 2.6 + k * 30 + i * 9) % 64);
+          ctx.fillStyle = `rgba(222,222,214,${(0.30 - sube / 230).toFixed(2)})`;
+          ctx.beginPath();
+          ctx.arc(bx + 128 + Math.sin((sube + k * 20) / 14) * 7, base - 34 - sube, 5 + sube * 0.12, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      // la trocha de tierra por donde se llega a los campestres
+      ctx.fillStyle = "#cdbf9c";
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#bfae88";
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 26; i++) {                        // las piedritas y los matojos del borde
+        const x = (i * 63 - (cam * 0.6)) % 900 - 40;
+        ctx.fillStyle = i % 3 ? "rgba(150,140,110,.45)" : "rgba(110,140,80,.55)";
+        ctx.fillRect(x, 366 + ((i * 11) % 12), i % 3 ? 7 : 5, 3);
+      }
+
+      // LA CHACRA DE LÚCUMO y el corral del caballo de paso
+      repetir(ctx, cam, 186, 0.6, (x, i) => {
+        const bx = x + 12, base = 358;
+        // los lúcumos, en fila
+        for (let k = 0; k < 3; k++) {
+          const tx = bx + k * 28, alto = 24 + ((i + k) % 3) * 4;
+          ctx.fillStyle = "#6b4a30";
+          ctx.fillRect(tx + 7, base - alto, 5, alto);
+          ctx.fillStyle = ["#3f7a4a", "#4a8a52", "#367044"][(i + k) % 3];
+          ctx.beginPath();
+          ctx.arc(tx + 9, base - alto - 4, 11, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = "rgba(232,161,60,.75)";           // las lúcumas colgando
+          ctx.fillRect(tx + 3, base - alto - 5, 3, 3);
+          ctx.fillRect(tx + 13, base - alto - 1, 3, 3);
+        }
+        // el cerco del corral, de palos
+        ctx.fillStyle = "#a8763f";
+        ctx.fillRect(bx + 100, base - 18, 52, 3);
+        ctx.fillRect(bx + 100, base - 10, 52, 3);
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 100 + k * 17, base - 21, 3, 21);
+      });
+    },
+
+    clima(ctx, t) {
+      // la garúa finita de las lomas, casi sin peso
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 131 - t * 1.1) % 880 - 20;
+        const y = (i * 53 + t * 1.7) % 400;
+        ctx.fillStyle = `rgba(226,236,238,${(0.16 + 0.14 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 7);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

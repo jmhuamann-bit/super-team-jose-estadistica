@@ -1,0 +1,138 @@
+{
+  "nivel": "level14",
+  "clase": "Clase 05 · PC2 — Medidas de simetría y dispersión",
+  "fuente": "Apuntes de la 5ta clase de la PC2 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e14-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Una distribución tiene casi todos sus datos amontonados a la izquierda y una colita larga que se estira hacia la derecha.\n\n¿Cómo se llama esa asimetría?",
+      "opciones": [
+        "Asimétrica a la IZQUIERDA, porque ahí está el montón de datos",
+        "Asimétrica a la DERECHA (o positiva): el nombre se lo pone la COLITA, que es la parte más chiquita y menos frecuente",
+        "Simétrica, porque igual tiene datos a los dos lados",
+        "No se puede saber sin calcular el coeficiente de Pearson"
+      ],
+      "correcta": 1,
+      "explicacion": "La asimetría se bautiza por donde queda la colita, no por donde está el montón. Truco del eje X: la derecha es lo positivo, así que colita a la derecha = asimetría positiva."
+    },
+    {
+      "id": "e14-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "En una distribución UNIMODAL de sueldos se calculó: Moda = 1 200, Mediana = 1 500 y Media = 1 900.\n\n¿Qué forma tiene y qué se concluye?",
+      "opciones": [
+        "Asimétrica a la DERECHA: como Moda < Mediana < Media, hay algunos trabajadores con sueldos MAYORES a lo usual",
+        "Asimétrica a la izquierda, porque la media quedó lejos",
+        "Simétrica, porque las tres medidas están cerca",
+        "Asimétrica a la derecha: hay trabajadores con sueldos MENORES a lo usual"
+      ],
+      "correcta": 0,
+      "explicacion": "En unimodales el orden de las tres medidas delata la forma. La media es la que se deja jalar por los atípicos: si se va hacia arriba, es porque unos pocos sueldos altos la arrastraron."
+    },
+    {
+      "id": "e14-q3",
+      "nivel": "comprension",
+      "enunciado": "Pregunta de examen: «si una distribución es SIMÉTRICA, ¿eso significa siempre que Mediana = Media = Moda?»\n\n¿Qué respondes?",
+      "opciones": [
+        "Sí, siempre: es la definición de simetría",
+        "No, nunca se cumple: son medidas distintas",
+        "NO siempre: eso solo vale en las UNIMODALES. Una distribución bimodal puede ser simétrica y tener dos modas que no coinciden con la media",
+        "Sí, siempre que la media sea representativa"
+      ],
+      "correcta": 2,
+      "explicacion": "La igualdad de las tres medidas es una propiedad de las simétricas UNIMODALES. Si hay dos jorobas iguales, la distribución es simétrica pero tiene dos modas y ninguna cae en el centro."
+    },
+    {
+      "id": "e14-q4",
+      "nivel": "aplicacion",
+      "enunciado": "De una MUESTRA de los gastos en la veterinaria «Pituco Dog» se obtuvo: media = 400 soles, mediana = 450 soles y desviación estándar = 70 soles.\n\nCalcula el coeficiente de asimetría de Pearson e interpreta.",
+      "opciones": [
+        "Skp = −2,14: asimétrica a la IZQUIERDA, o sea hay algunos clientes que gastaron MENOS de lo usual",
+        "Skp = −0,71: asimétrica a la izquierda",
+        "Skp = 2,14: asimétrica a la derecha, hay clientes que gastaron más de lo usual",
+        "No se puede calcular porque es una muestra"
+      ],
+      "correcta": 0,
+      "explicacion": "Skp = 3(400 − 450)/70 = −150/70 = −2,14. Sale negativo porque la media quedó por debajo de la mediana, y eso es una colita estirada hacia la izquierda. Además cae dentro del intervalo −3 a 3."
+    },
+    {
+      "id": "e14-q5",
+      "nivel": "aplicacion",
+      "enunciado": "De la POBLACIÓN de precios de productos importados se calculó: promedio = 50 soles, mediana = 49 soles y VARIANZA = 10 soles².\n\nCalcula el coeficiente de asimetría de Pearson.",
+      "opciones": [
+        "Skp = 0,30, porque se reemplaza la varianza de 10 directamente en la fórmula",
+        "Skp = 0,95: abajo va la DESVIACIÓN ESTÁNDAR, o sea √10 = 3,16, y sale 3(50 − 49)/3,16",
+        "Skp = 3, porque la diferencia entre media y mediana es 1",
+        "Skp = −0,95: asimétrica a la izquierda"
+      ],
+      "correcta": 1,
+      "explicacion": "El dato que te dan es la varianza, pero la fórmula pide la desviación estándar: primero raíz cuadrada. Positivo y chiquito quiere decir asimetría a la derecha, poquita."
+    },
+    {
+      "id": "e14-q6",
+      "nivel": "comprension",
+      "enunciado": "En un ejercicio te dan «coeficiente de asimetría de TERCER MOMENTO = −16» para una distribución BIMODAL.\n\n¿Qué haces?",
+      "opciones": [
+        "Digo que está mal: ningún coeficiente de asimetría puede salir de −3 a 3",
+        "No se puede usar: el tercer momento solo vale para unimodales",
+        "Lo divido entre 3 para dejarlo dentro del rango de Pearson",
+        "Lo INTERPRETO nomás: el tercer momento no se calcula, acepta cualquier distribución y va de −infinito a +infinito. Negativo = asimétrica a la izquierda"
+      ],
+      "correcta": 3,
+      "explicacion": "El intervalo cerrado de −3 a 3 y la exigencia de ser unimodal son de PEARSON. El tercer momento es la otra familia: te lo dan hecho, aguanta bimodales y solo miras el signo."
+    },
+    {
+      "id": "e14-q7",
+      "nivel": "aplicacion",
+      "enunciado": "De una muestra de gastos en la veterinaria «Pituco Dog» se determinó RIQ = 2,9 y RID = 2,9, y ya se comprobó que la distribución es unimodal y casi simétrica.\n\nCalcula el coeficiente de curtosis e interpreta.",
+      "opciones": [
+        "Ku = 1: los datos están perfectamente repartidos",
+        "Ku = 2,9: la puntita mide 2,9",
+        "Ku = 0,5: platicúrtica, con la puntita plana",
+        "Ku = 0,5, que es el TOPE del intervalo: distribución LEPTOCÚRTICA, con muchísima concentración en el centro y la puntita bien paradita"
+      ],
+      "correcta": 3,
+      "explicacion": "Ku = ½ · (2,9/2,9) = ½ · 1 = 0,5. Cuando el recorrido intercuartílico y el interdecílico se parecen tanto, quiere decir que casi todos los datos ya están metidos entre Q1 y Q3: puro centro."
+    },
+    {
+      "id": "e14-q8",
+      "nivel": "comprension",
+      "enunciado": "JEFE 1/3. Cuatro afirmaciones sobre los requisitos de cada medida.\n\n¿Cuál es la ÚNICA correcta?",
+      "opciones": [
+        "Para calcular el coeficiente de curtosis con percentiles (Ku) basta con que la distribución sea unimodal",
+        "Para poder interpretar la curtosis de CUARTO momento se requiere que la distribución sea unimodal y simétrica",
+        "Para calcular el coeficiente de PEARSON se necesita que la distribución sea UNIMODAL: no hace falta que sea simétrica",
+        "Para poder interpretar la asimetría de TERCER momento se requiere que la distribución sea unimodal"
+      ],
+      "correcta": 2,
+      "explicacion": "Pearson pide una sola moda y nada más. El Ku de percentiles pide unimodal Y simétrica o casi. Y las dos medidas de momentos no piden nada: aguantan bimodales, trimodales y asimétricas."
+    },
+    {
+      "id": "e14-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Número de hermanos por familia, 500 familias en total:\n1 hermano → 200 familias\n2 hermanos → 120\n3 hermanos → 100\n4 hermanos → 80\n\nSe sabe que la media es 2,12 y la desviación estándar 1,1071. Halla la asimetría de Pearson e interpreta.",
+      "opciones": [
+        "Skp = 0,33: la mediana es 2, así que 3(2,12 − 2)/1,1071 da positivo. Asimétrica A LA DERECHA: hay familias con MÁS hermanos de lo usual",
+        "Skp = 0,33, pero como es positivo la asimetría es a la izquierda",
+        "Skp = −0,33: asimétrica a la izquierda, hay familias con menos hermanos de lo usual",
+        "Simétrica, porque la media 2,12 y la mediana 2 están casi pegadas"
+      ],
+      "correcta": 0,
+      "explicacion": "Las acumuladas son 200, 320, 420 y 500, así que el dato del medio cae en 2. Cuadra con el orden Moda 1 < Mediana 2 < Media 2,12, que ya avisaba asimetría a la derecha antes de calcular nada."
+    },
+    {
+      "id": "e14-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. La pregunta de los 5 puntos: te piden un análisis descriptivo completo.\n\n¿En qué orden se CALCULA y en qué orden se CONCLUYE?",
+      "opciones": [
+        "Se calcula y se concluye en el mismo orden: tendencia central, dispersión, asimetría y concentración",
+        "Se calcula todo y se concluye solo con la medida que salga más alta",
+        "Se calcula: asimetría, tendencia central, dispersión y concentración. Se concluye al revés",
+        "Se calcula: tendencia central, dispersión, asimetría y concentración. Se CONCLUYE: asimetría, tendencia central, dispersión y concentración"
+      ],
+      "correcta": 3,
+      "explicacion": "Primero calculas de lo simple a lo complejo, porque la asimetría necesita la media y la desviación. Pero concluyes arrancando por la asimetría, porque ella decide qué medida de tendencia central es la representativa."
+    }
+  ]
+}
