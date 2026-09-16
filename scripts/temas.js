@@ -1363,6 +1363,138 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     ANCÓN — la bahía en pleno verano, a mediodía. El agua quieta
+     en su herradura, los yates fondeados en el medio y unos pocos
+     bien lejos, el muelle largo metiéndose al mar y, del otro lado
+     de la bahía, las casonas de colores del malecón. Toda la data
+     junta en el centro y los que se fueron lejos bien a la vista.
+     ========================================================= */
+  bahia: {
+    nombre: "Ancón",
+    cielo: [[0, "#2f86d0"], [0.4, "#79bce4"], [0.74, "#bcdcea"], [1, "#e4ecdc"]],
+    suelo: { cara: "#e0cfa8", borde: "#f0e2c0", tierra: "#a89060", plataforma: "#6b4a30", plataformaBorde: "#ffd166" },
+    acento: "#1f9ec4",
+
+    bichos: ["sombrilla", "flotador", "yate"],
+    nombresBichos: ["La Sombrilla del Medio", "El Flotador sin el 1,5", "El Yate Fondeado Lejos"],
+    jefe: "salvavidas",
+    nombreJefe: "El Salvavidas de la Bahía",
+
+    fondo(ctx, cam, t) {
+      // el sol de verano, blanco y alto
+      ctx.fillStyle = "rgba(255,250,214,.28)";
+      ctx.beginPath(); ctx.arc(170, 62, 64, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,232,.96)";
+      ctx.beginPath(); ctx.arc(170, 62, 28, 0, Math.PI * 2); ctx.fill();
+
+      // el brazo de cerro que cierra la herradura
+      repetir(ctx, cam, 620, 0.1, (x) => {
+        ctx.fillStyle = "#9d9478";                          // el cerro seco del brazo
+        ctx.beginPath();
+        ctx.moveTo(x - 90, 262);
+        ctx.lineTo(x + 130, 176);
+        ctx.lineTo(x + 340, 262);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // las casonas de colores del malecón, chiquitas al otro lado de la bahía
+      repetir(ctx, cam, 62, 0.16, (x, i) => {
+        const alto = 26 + ((i * 17) % 16), base = 264;
+        ctx.fillStyle = ["#e8c15a", "#e8823c", "#7ec4d8", "#f2ead8", "#c2264a", "#8fb86a"][i % 6];
+        ctx.fillRect(x + 6, base - alto, 42, alto);
+        ctx.fillStyle = "rgba(255,255,255,.35)";            // el techito
+        ctx.fillRect(x + 4, base - alto - 4, 46, 5);
+        ctx.fillStyle = "rgba(60,70,80,.32)";               // las ventanitas del balcón
+        for (let k = 0; k < 3; k++) ctx.fillRect(x + 11 + k * 12, base - alto + 8, 7, 9);
+      });
+
+      // EL MAR DE LA BAHÍA, quieto como piscina
+      ctx.fillStyle = "#1f9ec4";
+      ctx.fillRect(0, 264, CFG.ANCHO_VISTA, 92);
+      ctx.fillStyle = "#3bb4d6";
+      ctx.fillRect(0, 264, CFG.ANCHO_VISTA, 16);
+      for (let i = 0; i < 34; i++) {                        // el brillo del sol sobre el agua
+        const x = (i * 51 - (cam * 0.2)) % 900 - 40;
+        const y = 282 + ((i * 29) % 62);
+        ctx.fillStyle = "rgba(255,255,255,.30)";
+        ctx.fillRect(x, y + Math.sin(t / 26 + i) * 2, 17, 2);
+      }
+
+      // los yates fondeados: casi todos juntitos y un par bien lejos
+      repetir(ctx, cam, 178, 0.3, (x, i) => {
+        const lejos = i % 4 === 3;                          // el atípico de la bahía
+        const bx = x + (lejos ? 96 : 18), base = lejos ? 292 : 330, esc = lejos ? 0.62 : 1;
+        ctx.fillStyle = "#5e5c58";                          // el palo
+        ctx.fillRect(bx + 22 * esc, base - 34 * esc, 2, 34 * esc);
+        ctx.fillStyle = "#f2ead8";                          // la vela
+        ctx.beginPath();
+        ctx.moveTo(bx + 24 * esc, base - 34 * esc);
+        ctx.lineTo(bx + 40 * esc, base - 6 * esc);
+        ctx.lineTo(bx + 24 * esc, base - 6 * esc);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#cfd6dc";                          // el casco
+        ctx.fillRect(bx + 6 * esc, base - 8 * esc, 44 * esc, 7 * esc);
+        ctx.fillStyle = "#3f6f9d";
+        ctx.fillRect(bx + 6 * esc, base - 4 * esc, 44 * esc, 3 * esc);
+        ctx.fillStyle = "rgba(255,255,255,.35)";            // el reflejo en el agua
+        ctx.fillRect(bx + 8 * esc, base + 2 * esc, 40 * esc, 2);
+      });
+
+      // EL MUELLE DE ANCÓN, metiéndose derecho al mar sobre sus pilotes
+      const yTab = 316;
+      ctx.fillStyle = "#cfc4a8";                            // el tablero
+      ctx.fillRect(0, yTab, CFG.ANCHO_VISTA, 18);
+      ctx.fillStyle = "#e0d8bc";
+      ctx.fillRect(0, yTab, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 58, 0.45, (x) => {
+        ctx.fillStyle = "#8a7a60";                          // los pilotes clavados en el agua
+        ctx.fillRect(x + 10, yTab + 18, 7, 22);
+        ctx.fillStyle = "rgba(255,255,255,.22)";
+        ctx.fillRect(x + 10, yTab + 37, 7, 3);
+      });
+      repetir(ctx, cam, 116, 0.45, (x) => {                 // la baranda
+        ctx.fillStyle = "#b0a488";
+        ctx.fillRect(x + 20, yTab - 14, 4, 14);
+        ctx.fillRect(x + 78, yTab - 14, 4, 14);
+        ctx.fillStyle = "#c2b89c";
+        ctx.fillRect(x + 18, yTab - 16, 66, 3);
+      });
+
+      // LA ARENA con sus toldos y sombrillas, ya en la orilla
+      ctx.fillStyle = "#e8d8b0";
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "rgba(255,255,255,.34)";              // la espuma de la orilla
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 59 - (cam * 0.55)) % 900 - 40;
+        ctx.fillRect(x, 356 + Math.abs(Math.sin(t / 30 + i)) * 3, 26, 3);
+      }
+      repetir(ctx, cam, 152, 0.7, (x, i) => {
+        const bx = x + 14, base = 368;
+        // el toldo de estera de siempre
+        ctx.fillStyle = "#8a7a60";
+        ctx.fillRect(bx + 2, base - 22, 3, 22);
+        ctx.fillRect(bx + 54, base - 22, 3, 22);
+        ctx.fillStyle = ["#e8823c", "#3bb4d6", "#e8c15a", "#c2264a"][i % 4];
+        ctx.beginPath();
+        ctx.moveTo(bx - 4, base - 26);
+        ctx.lineTo(bx + 62, base - 26);
+        ctx.lineTo(bx + 56, base - 18);
+        ctx.lineTo(bx + 2, base - 18);
+        ctx.closePath(); ctx.fill();
+      });
+    },
+
+    clima(ctx, t) {
+      // el resplandor del mediodía de verano, pura luz rebotando
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 167 - t * 0.7) % 880 - 20;
+        const y = 90 + ((i * 71) % 180);
+        ctx.fillStyle = `rgba(255,252,226,${(0.06 + 0.07 * Math.abs(Math.sin(t / 34 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 26, 5);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -204,6 +204,10 @@ const FICHAS = [
   { sprite: "lucuma", nombre: "La Lúcuma sin Raíz", texto: "Le dan la varianza y la mete a la fórmula de Pearson sin sacarle la raíz." },
   { sprite: "caballo", nombre: "El Caballo de los Dos Pasos", texto: "Tiene dos modas y aun así quiere que le calculen el coeficiente de Pearson." },
   { sprite: "guia", nombre: "El Guía de las Lomas", texto: "Jefe de Pachacámac: te sube a medir qué tan paradita está la puntita sin revisar si el cerro tiene una sola." },
+  { sprite: "sombrilla", nombre: "La Sombrilla del Medio", texto: "Planta su sombrilla en el promedio y jura que ahí adentro va la línea de la mediana." },
+  { sprite: "flotador", nombre: "El Flotador sin el 1,5", texto: "Arma los límites con el puro recorrido intercuartílico y se olvida de multiplicarlo por 1,5." },
+  { sprite: "yate", nombre: "El Yate Fondeado Lejos", texto: "Se ancló fuera de los límites y aun así cree que el bigote se estira hasta él." },
+  { sprite: "salvavidas", nombre: "El Salvavidas de la Bahía", texto: "Jefe de Ancón: decide a ojo quién se salió del grupo en vez de calcular los límites." },
 ];
 
 export function galeriaPersonajes(contenedor) {

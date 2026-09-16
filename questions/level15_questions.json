@@ -1,0 +1,138 @@
+{
+  "nivel": "level15",
+  "clase": "Clase 06 · PC2 — Diagrama de caja y bigotes",
+  "fuente": "Apuntes de la 6ta clase de la PC2 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e15-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Te dan una tabla con intervalos: [0 − 10⟩ con 8 datos, [10 − 20⟩ con 15, [20 − 30⟩ con 6.\n\n¿Puedes armar el diagrama de caja y bigotes con eso?",
+      "opciones": [
+        "Sí, usando la marca de clase de cada intervalo",
+        "NO: el diagrama necesita la IDENTIDAD INDIVIDUAL de cada dato, así que va con datos NO agrupados. Con intervalos nunca",
+        "Sí, pero solo si los intervalos son de igual amplitud",
+        "Sí, porque los cuartiles se pueden calcular igual"
+      ],
+      "correcta": 1,
+      "explicacion": "El objetivo del diagrama es señalar cuáles son los valores atípicos, y para eso hay que poder apuntar al dato suelto. Dentro de un intervalo ya perdiste de vista quién es quién."
+    },
+    {
+      "id": "e15-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "En un diagrama de caja y bigotes, ¿qué representa la CAJA y qué representa cada BIGOTE?",
+      "opciones": [
+        "La caja es el rango total y cada bigote la mitad de los datos",
+        "La caja es el 25% central y cada bigote el 50%",
+        "La caja es el RIQ, o sea el 50% CENTRAL de los datos, y cada bigote guarda el 25% sin importar su largo (salvo que haya atípicos de ese lado)",
+        "La altura de la caja indica cuántos datos hay"
+      ],
+      "correcta": 2,
+      "explicacion": "El ancho de la caja es exactamente Q3 − Q1. La altura no significa nada: puedes dibujarla alta o bajita y el diagrama dice lo mismo. Y un bigote largo no guarda más datos, solo datos más separados."
+    },
+    {
+      "id": "e15-q3",
+      "nivel": "comprension",
+      "enunciado": "En una caja, la línea de la mediana quedó bien pegada al lado izquierdo, casi encima de Q1.\n\n¿Está mal dibujada?",
+      "opciones": [
+        "Sí: la mediana siempre va en el centro exacto de la caja",
+        "Sí, porque la mediana tiene que estar a la misma distancia de Q1 y Q3",
+        "No se puede saber sin ver los bigotes",
+        "NO está mal: el Q2 NO tiene por qué estar en el centro de la caja. Que esté corrida hacia Q1 es justamente una pista de asimetría"
+      ],
+      "correcta": 3,
+      "explicacion": "Entre Q1 y Q2 hay 25% de los datos y entre Q2 y Q3 otro 25%, pero esos dos pedazos no miden lo mismo en el eje. Si la mediana está pegada a Q1, del lado derecho los datos están más desparramados."
+    },
+    {
+      "id": "e15-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Gastos de 11 clientes, ya ordenados (en soles):\n10 · 14 · 16 · 20 · 22 · 25 · 28 · 30 · 34 · 38 · 90\nCon la recetita K = (n + 1)·p salen Q1 = 16 y Q3 = 34.\n\n¿Cuáles son los límites para estirar los bigotes?",
+      "opciones": [
+        "LRI = −11 y LRS = 61: el RIQ es 18, su 1,5 es 27, y eso se le resta a Q1 y se le suma a Q3",
+        "LRI = 16 y LRS = 34, que son los propios cuartiles",
+        "LRI = −2 y LRS = 52: se resta y se suma el RIQ de 18 sin multiplicarlo",
+        "LRI = 10 y LRS = 90, el mínimo y el máximo"
+      ],
+      "correcta": 0,
+      "explicacion": "RIQ = 34 − 16 = 18 y 1,5 × 18 = 27. Entonces LRI = 16 − 27 = −11 y LRS = 34 + 27 = 61. Olvidarse del 1,5 es el error más caro de esta clase: te cambia quién es atípico."
+    },
+    {
+      "id": "e15-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Mismos gastos: 10 · 14 · 16 · 20 · 22 · 25 · 28 · 30 · 34 · 38 · 90, con LRI = −11 y LRS = 61.\n\n¿Hasta dónde llega cada bigote y quién es atípico?",
+      "opciones": [
+        "De −11 a 61, que son los límites, y el 90 es atípico alto",
+        "El bigote izquierdo llega a 10 y el derecho a 38, que es el último dato que no pasa el límite. El 90 queda fuera: es atípico ALTO",
+        "De 10 a 90, porque el bigote siempre va del mínimo al máximo",
+        "El izquierdo a 10 y el derecho a 61; no hay atípicos porque 90 está dentro de la caja"
+      ],
+      "correcta": 1,
+      "explicacion": "El límite es un tope, no un destino: el bigote se queda en el último dato real que todavía cabe. Como 38 ≤ 61 y el siguiente es 90, el bigote frena en 38 y el 90 se dibuja solito como punto."
+    },
+    {
+      "id": "e15-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Nueve datos ordenados: 3 · 5 · 6 · 8 · 11 · 14 · 16 · 19 · 25.\n\nHalla Q1 con la recetita: K = (n + 1)·p y luego Pp = Xe + 0,d · [Xe+1 − Xe].",
+      "opciones": [
+        "Q1 = 5, porque K = 2,5 se redondea a la posición 2",
+        "Q1 = 6, porque K = 2,5 se redondea hacia arriba",
+        "Q1 = 5,5: K = 10 × 0,25 = 2,5, o sea e = 2 y d = 0,5, y entonces 5 + 0,5 × (6 − 5)",
+        "Q1 = 2,5, que es la posición misma"
+      ],
+      "correcta": 2,
+      "explicacion": "El K no se redondea nunca: la parte entera dice en qué dato pararse y la decimal cuánto avanzar hacia el siguiente. Acá hay que caminar media distancia entre el 5 y el 6."
+    },
+    {
+      "id": "e15-q7",
+      "nivel": "comprension",
+      "enunciado": "Cierras el análisis de esos gastos, donde el 90 salió atípico alto.\n\n¿Con qué medida concluyes la tendencia central?",
+      "opciones": [
+        "Con la MEDIANA, y además explicas por qué no usaste la media: hay un atípico que la jala hacia arriba y la deja poco representativa",
+        "Con el promedio, porque siempre es la medida más completa",
+        "Con la moda, que es la única que no se altera",
+        "Con el promedio de los datos sin contar el 90"
+      ],
+      "correcta": 0,
+      "explicacion": "La regla de esta clase es directa: promedio solo si NO hay atípicos. Apenas aparece uno, se concluye con la mediana y se dice el motivo, porque justamente el diagrama te lo dejó a la vista."
+    },
+    {
+      "id": "e15-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. De una distribución te dan Q1 = 2,4 y Q3 = 6,45, y en el conjunto aparecen los datos 12,8 y 14,8.\n\nHalla los límites y di quiénes son atípicos.",
+      "opciones": [
+        "LRI = −3,675 y LRS = 12,525: el RIQ es 4,05 y su 1,5 es 6,075. Tanto 12,8 como 14,8 superan el LRS, así que los DOS son atípicos altos",
+        "LRI = −3,675 y LRS = 12,525, pero solo el 14,8 es atípico",
+        "LRI = −1,65 y LRS = 10,5: los dos son atípicos altos",
+        "No hay atípicos: los dos valores están dentro de los límites"
+      ],
+      "correcta": 0,
+      "explicacion": "RIQ = 6,45 − 2,4 = 4,05 y 1,5 × 4,05 = 6,075. Entonces LRI = 2,4 − 6,075 = −3,675 y LRS = 6,45 + 6,075 = 12,525. Los dos valores lo superan, y hay que nombrarlos uno por uno en la justificación."
+    },
+    {
+      "id": "e15-q9",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Mismo caso: dos atípicos altos (12,8 y 14,8) y ningún dato por debajo del LRI.\n\n¿Qué concluyes sobre la forma y sobre los bigotes?",
+      "opciones": [
+        "Asimétrica a la izquierda, porque los atípicos jalan la cola hacia abajo",
+        "Simétrica: dos atípicos son muy pocos para cambiar la forma",
+        "No se puede concluir nada sin conocer el promedio",
+        "Asimétrica a la DERECHA: hay valores mayores a lo usual. El bigote izquierdo sí guarda su 25%, pero el derecho guarda MENOS por los dos atípicos"
+      ],
+      "correcta": 3,
+      "explicacion": "La presencia de atípicos de un solo lado es la justificación más usada para la asimetría. Y el 25% por bigote solo se cumple cuando no hay atípicos: los que se salieron dejan de contar dentro del bigote."
+    },
+    {
+      "id": "e15-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Cuatro afirmaciones sobre diagramas de caja y bigotes.\n\n¿Cuál es la ÚNICA correcta?",
+      "opciones": [
+        "Todo diagrama tiene siempre sus dos bigotes y al menos un valor atípico",
+        "Si la caja se dibuja más alta, significa que ese grupo tiene más datos",
+        "Si el promedio queda a la derecha de la mediana, la distribución es con seguridad asimétrica a la derecha",
+        "Un diagrama puede quedarse SIN bigotes, o con uno solo, y puede no tener ningún valor atípico"
+      ],
+      "correcta": 3,
+      "explicacion": "La altura no dice nada y el promedio a la derecha solo indica que PUEDE SER asimetría a la derecha, y encima únicamente en unimodales. Lo del bigote faltante sí pasa: si el dato extremo coincide con el cuartil, no hay nada que estirar."
+    }
+  ]
+}

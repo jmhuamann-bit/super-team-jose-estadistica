@@ -1283,6 +1283,76 @@ const GUIA = [  // jefe de Pachacámac: sube a medir la puntita sin revisar si e
 ];
 const P_GUIA = { g: "#c2913c", c: "#c9945c", k: "#241a2e", m: "#8a6a48", v: "#3f7a4a", n: "#4a5a6b" };
 
+const SOMBRILLA = [   // la sombrilla de Ancón: la planta en el promedio creyendo que ahí va la mediana (15 × 13)
+  "...............",
+  "......rrr......",
+  "....rrwwwrr....",
+  "..rrrwwwwwrrr..",
+  ".rrrwwwwwwwrrr.",
+  "rrrwwwwwwwwwrrr",
+  "ddddddddddddddd",
+  "......kkk......",
+  ".......k.......",
+  ".......k.......",
+  ".......k.......",
+  ".......k.......",
+  "......kkk......",
+];
+const P_SOMBRILLA = { r: "#c2264a", w: "#f2ead8", d: "#8a1c38", k: "#8a9099" };
+
+const FLOTADOR = [   // el flotador que se olvidó del 1,5 al armar los límites (14 × 12)
+  "..............",
+  "....rrrrrr....",
+  "..rrrrrrrrrr..",
+  ".rrrwwwwwwrrr.",
+  ".rrww....wwrr.",
+  "rrww......wwrr",
+  "rrww......wwrr",
+  ".rrww....wwrr.",
+  ".rrrwwwwwwrrr.",
+  "..rrrrrrrrrr..",
+  "....rrrrrr....",
+  "..............",
+];
+const P_FLOTADOR = { r: "#e8823c", w: "#f2ead8" };
+
+const YATE = [   // el yate fondeado lejos: se salió de los límites y cree que el bigote llega hasta él (18 × 13)
+  "..................",
+  ".........k........",
+  ".........ks.......",
+  ".........kss......",
+  ".........krrr.....",
+  ".........kssss....",
+  ".........ksssss...",
+  "....hhhhhhhhhhh...",
+  "...hhhhhhhhhhhhh..",
+  "...hbbbbbbbbbbbh..",
+  "...hhhhhhhhhhhhh..",
+  "....hhhhhhhhhhh...",
+  "..................",
+];
+const P_YATE = { k: "#2e3238", s: "#f2ead8", h: "#2f4a68", b: "#7ec4d8", r: "#c2264a" };
+
+const SALVAVIDAS = [  // jefe de Ancón: decide a ojo quién es atípico en vez de calcular los límites (20 × 16)
+  ".....yyyyyyy........",
+  "....yyyyyyyyy.......",
+  "....cyyyyyyyc.......",
+  "....cckkcckkc.......",
+  "....cccccccc........",
+  ".....cccccc.........",
+  "....rrccccrr........",
+  ".ccrrrrccrrrrcc.....",
+  ".ccrrrrrrrrrrcc.....",
+  ".ccrrrrrrrrrrcc.....",
+  "...rrrrrrrrrr.......",
+  "....rrrrrrrr........",
+  "....cccc.cccc.......",
+  "....cccc.cccc.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_SALVAVIDAS = { y: "#e8c15a", c: "#c9945c", k: "#2e3238", r: "#c2264a" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1362,6 +1432,10 @@ const DEFINICIONES = {
   lucuma:       [LUCUMA, P_LUCUMA],
   caballo:      [CABALLO, P_CABALLO],
   guia:         [GUIA, P_GUIA],
+  sombrilla:    [SOMBRILLA, P_SOMBRILLA],
+  flotador:     [FLOTADOR, P_FLOTADOR],
+  yate:         [YATE, P_YATE],
+  salvavidas:   [SALVAVIDAS, P_SALVAVIDAS],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
