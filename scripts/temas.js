@@ -1495,6 +1495,117 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     LOS OLIVOS — la avenida del cono norte a media tarde. Las
+     casas de ladrillo con las varillas asomando en la azotea,
+     esperando el piso que viene; los letreros de las tiendas
+     uno encima de otro y la berma con sus palmeras. Acá nadie
+     crece de golpe: se crece un piso por año, y así se saca el
+     promedio de esta clase.
+     ========================================================= */
+  avenida: {
+    nombre: "Los Olivos",
+    cielo: [[0, "#5a89b8"], [0.4, "#9fb8c8"], [0.75, "#dcd2c0"], [1, "#eadfc8"]],
+    suelo: { cara: "#9a968c", borde: "#c2beb2", tierra: "#54504a", plataforma: "#2f4a68", plataformaBorde: "#ffd166" },
+    acento: "#e8823c",
+
+    bichos: ["varilla", "mezcladora", "escalera"],
+    nombresBichos: ["La Varilla del Promedio Simple", "La Mezcladora sin Factor", "La Escalera que no Resta el Uno"],
+    jefe: "maestro",
+    nombreJefe: "El Maestro de Obra del Cono Norte",
+
+    fondo(ctx, cam, t) {
+      // el sol de la tarde, detrás de la calima
+      ctx.fillStyle = "rgba(255,238,196,.20)";
+      ctx.beginPath(); ctx.arc(624, 78, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,246,216,.80)";
+      ctx.beginPath(); ctx.arc(624, 78, 27, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros pelados que cierran el cono norte
+      repetir(ctx, cam, 520, 0.12, (x) => {
+        ctx.fillStyle = "#9a8f80";
+        ctx.beginPath();
+        ctx.moveTo(x - 80, 300);
+        ctx.lineTo(x + 140, 194);
+        ctx.lineTo(x + 340, 300);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LAS CASAS QUE CRECEN: cada una un piso más alta que la anterior, como interés compuesto
+      repetir(ctx, cam, 108, 0.34, (x, i) => {
+        const paso = i % 5;
+        const pisos = 2 + paso;                              // 2, 3, 4, 5 y 6 pisos
+        const altoPiso = 26, bx = x + 8, base = 340;
+        const alto = pisos * altoPiso;
+        ctx.fillStyle = ["#a8543c", "#93402c", "#b06a3c", "#9e4632"][i % 4];
+        ctx.fillRect(bx, base - alto, 92, alto);
+        ctx.fillStyle = "rgba(0,0,0,.14)";                   // la línea de cada losa
+        for (let k = 1; k < pisos; k++) ctx.fillRect(bx, base - k * altoPiso - 3, 92, 4);
+        ctx.fillStyle = "rgba(200,222,236,.60)";             // las ventanas de cada piso
+        for (let k = 0; k < pisos; k++) {
+          for (let v = 0; v < 3; v++) ctx.fillRect(bx + 12 + v * 26, base - (k + 1) * altoPiso + 7, 14, 13);
+        }
+        // las varillas de la azotea, esperando el piso que viene
+        ctx.fillStyle = "#c2703c";
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 8 + k * 19, base - alto - 11, 3, 11);
+        ctx.fillStyle = "#b0aca0";                           // el borde de la azotea
+        ctx.fillRect(bx - 3, base - alto - 4, 98, 5);
+      });
+
+      // LOS LETREROS de las tiendas, apilados sobre la vereda
+      repetir(ctx, cam, 164, 0.5, (x, i) => {
+        const bx = x + 14, base = 352;
+        ctx.fillStyle = "#d8d2c4";                           // el toldo de la tienda
+        ctx.fillRect(bx, base - 20, 108, 20);
+        const cols = ["#c2264a", "#1f7ac4", "#e8a13c", "#3f8f5a"];
+        for (let k = 0; k < 3; k++) {                        // tres letreros, uno sobre otro
+          ctx.fillStyle = cols[(i + k) % 4];
+          ctx.fillRect(bx + 6, base - 46 + k * 9, 96, 7);
+          ctx.fillStyle = "rgba(255,255,255,.55)";
+          for (let v = 0; v < 6; v++) ctx.fillRect(bx + 12 + v * 15, base - 44 + k * 9, 9, 3);
+        }
+      });
+
+      // LA AVENIDA: la berma central con sus palmeras y la pista de dos carriles
+      ctx.fillStyle = "#6e6a64";
+      ctx.fillRect(0, 352, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#7e7a72";
+      ctx.fillRect(0, 352, CFG.ANCHO_VISTA, 3);
+      for (let i = 0; i < 26; i++) {                         // la línea discontinua
+        const x = (i * 56 - (cam * 0.6)) % 900 - 40;
+        ctx.fillStyle = "rgba(240,232,200,.45)";
+        ctx.fillRect(x, 372, 22, 3);
+      }
+      repetir(ctx, cam, 132, 0.62, (x, i) => {               // la berma con palmeras
+        const bx = x + 20, base = 360;
+        ctx.fillStyle = "#8a9464";
+        ctx.fillRect(bx - 6, base - 4, 54, 6);
+        ctx.fillStyle = "#8a6a48";                           // el tronco
+        ctx.fillRect(bx + 18, base - 34, 5, 34);
+        ctx.fillStyle = ["#3f8f5a", "#4a9a62", "#367048"][i % 3];
+        for (let k = 0; k < 5; k++) {                        // las hojas abiertas
+          const ang = Math.PI + (k * Math.PI) / 4;
+          ctx.beginPath();
+          ctx.moveTo(bx + 20, base - 34);
+          ctx.quadraticCurveTo(bx + 20 + Math.cos(ang) * 16, base - 44, bx + 20 + Math.cos(ang) * 26, base - 32 + Math.abs(Math.sin(ang)) * 5);
+          ctx.lineTo(bx + 20, base - 31);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#a8a49a";                             // el sardinel de la vereda
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 6);
+    },
+
+    clima(ctx, t) {
+      // el polvillo de la avenida, flotando sin apuro
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 149 - t * 1.6) % 880 - 20;
+        const y = 120 + ((i * 73) % 210) + Math.sin(t / 24 + i) * 7;
+        ctx.fillStyle = `rgba(232,222,196,${(0.10 + 0.14 * Math.abs(Math.sin(t / 31 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 6, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -1353,6 +1353,77 @@ const SALVAVIDAS = [  // jefe de Ancón: decide a ojo quién es atípico en vez 
 ];
 const P_SALVAVIDAS = { y: "#e8c15a", c: "#c9945c", k: "#2e3238", r: "#c2264a" };
 
+const VARILLA = [   // las varillas que asoman de la azotea: promedia los porcentajes sumándolos (13 × 13)
+  ".............",
+  ".rr.rr.rr.rr.",
+  "..r..r..r..r.",
+  "..r..r..r..r.",
+  "..r..r..r..r.",
+  "..r..r..r..r.",
+  ".ccccccccccc.",
+  "ccccccccccccc",
+  "ccccccccccccc",
+  ".kkkkkkkkkkk.",
+  ".k.........k.",
+  ".k.........k.",
+  ".............",
+];
+const P_VARILLA = { r: "#c2703c", c: "#b0aca0", k: "#8a3b2a" };
+
+const MEZCLADORA = [   // la mezcladora que echa porcentajes crudos en vez de factores (15 × 13)
+  "...............",
+  "....oooooo.....",
+  "..oooooooooo...",
+  ".oooooooooooo..",
+  ".ooookkkkoooo..",
+  ".oooooooooooo..",
+  "..oooooooooo...",
+  "....oooooo.....",
+  ".......k.......",
+  "....kkkkkkk....",
+  "...k.......k...",
+  "..kkk.....kkk..",
+  "..kkk.....kkk..",
+];
+const P_MEZCLADORA = { o: "#e8823c", k: "#3b3630" };
+
+const ESCALERA = [   // la escalera al piso que viene: se queda con el factor y no le resta el uno (14 × 13)
+  "..............",
+  "...........ccc",
+  "...........ckk",
+  "........cccckk",
+  "........ckkkkk",
+  ".....ccccckkkk",
+  ".....ckkkkkkkk",
+  "..ccccckkkkkkk",
+  "..ckkkkkkkkkkk",
+  "ccccckkkkkkkkk",
+  "ckkkkkkkkkkkkk",
+  "ckkkkkkkkkkkkk",
+  "..............",
+];
+const P_ESCALERA = { c: "#e8c15a", k: "#8a3b2a" };
+
+const MAESTRO = [  // jefe de Los Olivos: saca el promedio de crecimiento sumando y dividiendo (20 × 16)
+  ".....yyyyyyy........",
+  "....yyyyyyyyy.......",
+  "...yyyyyyyyyyy......",
+  "....ccccccccc.......",
+  "....cckkcckkc.......",
+  ".....cccccc.........",
+  "....bbbbbbbb........",
+  "..ccbbbbbbbbcc......",
+  "..ccbbbbbbbbccmm....",
+  "..ccbbbbbbbbccmm....",
+  "...bbbbbbbbbb.......",
+  "....bbbbbbbb........",
+  "....nnnn.nnnn.......",
+  "....nnnn.nnnn.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_MAESTRO = { y: "#e8c15a", c: "#c9945c", k: "#2e3238", b: "#3f6f9d", n: "#4a4a52", m: "#8a9099" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1436,6 +1507,10 @@ const DEFINICIONES = {
   flotador:     [FLOTADOR, P_FLOTADOR],
   yate:         [YATE, P_YATE],
   salvavidas:   [SALVAVIDAS, P_SALVAVIDAS],
+  varilla:      [VARILLA, P_VARILLA],
+  mezcladora:   [MEZCLADORA, P_MEZCLADORA],
+  escalera:     [ESCALERA, P_ESCALERA],
+  maestro:      [MAESTRO, P_MAESTRO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

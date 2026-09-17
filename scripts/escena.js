@@ -208,6 +208,10 @@ const FICHAS = [
   { sprite: "flotador", nombre: "El Flotador sin el 1,5", texto: "Arma los límites con el puro recorrido intercuartílico y se olvida de multiplicarlo por 1,5." },
   { sprite: "yate", nombre: "El Yate Fondeado Lejos", texto: "Se ancló fuera de los límites y aun así cree que el bigote se estira hasta él." },
   { sprite: "salvavidas", nombre: "El Salvavidas de la Bahía", texto: "Jefe de Ancón: decide a ojo quién se salió del grupo en vez de calcular los límites." },
+  { sprite: "varilla", nombre: "La Varilla del Promedio Simple", texto: "Suma los porcentajes y los divide entre los años, como si el crecimiento se sumara." },
+  { sprite: "mezcladora", nombre: "La Mezcladora sin Factor", texto: "Echa los porcentajes crudos a la raíz en vez de los índices de crecimiento." },
+  { sprite: "escalera", nombre: "La Escalera que no Resta el Uno", texto: "Se queda con el índice y lo canta como si ya fuera la tasa de crecimiento." },
+  { sprite: "maestro", nombre: "El Maestro de Obra del Cono Norte", texto: "Jefe de Los Olivos: saca el promedio de crecimiento sumando y dividiendo, y por eso su edificio nunca cuadra." },
 ];
 
 export function galeriaPersonajes(contenedor) {
