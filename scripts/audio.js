@@ -130,6 +130,29 @@ const TEMAS_MUSICA = {
               "C5",2,"A4",1,"F4",1,"D4",4],
     bajo:    ["D3",4,"A2",4,"A#2",4,"F2",4,"C3",4,"G2",4,"A2",4,"D3",4],
   },
+  pampa: { // Nazca: quena seca del desierto, poquitas notas y mucho aire
+    tempo: 0.19, onda: "triangle",
+    melodia: ["E4",2,"G4",2,"A4",4,"G4",2,"E4",2,"D4",4,
+              "E4",2,"A4",2,"C5",4,"B4",2,"A4",2,"G4",4,
+              "A4",2,"C5",2,"D5",4,"C5",2,"A4",2,"E4",4],
+    bajo:    ["A2",8,"E3",8,"D3",8,"A2",8,"C3",8,"G2",8,"A2",8,"A2",8],
+  },
+  barro: { // Trujillo: marinera norteña, con ese vaivén de cajón y pañuelo
+    tempo: 0.13, onda: "square",
+    melodia: ["G4",1,"A4",1,"B4",2,"D5",1,"B4",1,"G4",2,
+              "A4",1,"B4",1,"D5",2,"E5",1,"D5",1,"B4",2,
+              "D5",1,"E5",1,"G5",2,"E5",1,"D5",1,"B4",2,
+              "A4",1,"B4",1,"G4",2,"D4",4],
+    bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
+  },
+  belen: { // Iquitos: pandilla amazónica, redonda y pegajosa como el calor
+    tempo: 0.12, onda: "square",
+    melodia: ["C5",1,"B4",1,"A4",2,"G4",1,"A4",1,"B4",2,
+              "C5",1,"D5",1,"E5",2,"D5",1,"C5",1,"B4",2,
+              "A4",1,"B4",1,"C5",2,"E5",1,"D5",1,"C5",2,
+              "B4",1,"A4",1,"G4",2,"E4",4],
+    bajo:    ["E3",4,"A2",4,"C3",4,"G2",4,"A2",4,"D3",4,"E3",4,"A2",4],
+  },
 };
 
 function arrancarCtx() {

@@ -1,0 +1,203 @@
+{
+  "nivel": "level18",
+  "clase": "Clase 02 · Parcial — Permutaciones y combinaciones",
+  "fuente": "Apuntes de la 2da clase del Parcial — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e18-q1",
+      "nivel": "aplicacion",
+      "enunciado": "Tienes un dado de 6 caras y lo lanzas 3 veces. Cada lanzamiento vuelve a tener las seis caras disponibles.\n\n¿De cuántas maneras pueden quedar los resultados?",
+      "opciones": [
+        "18, multiplicando 6 por 3",
+        "120, que es 6 × 5 × 4 porque no se puede repetir",
+        "216, porque es muestreo CON reemplazo: 6 × 6 × 6",
+        "20, que son los tríos distintos sin importar el orden"
+      ],
+      "correcta": 2,
+      "explicacion": "El dado nunca «se gasta»: en cada tiro vuelves a tener las 6 caras. Es N elevado a n, o sea 6³ = 216, y el orden cuenta porque no es lo mismo 1-2-3 que 3-2-1."
+    },
+    {
+      "id": "e18-q2",
+      "nivel": "comprension",
+      "enunciado": "Toda la clase se decide con una sola pregunta.\n\n¿Cuándo se usan PERMUTACIONES y cuándo COMBINATORIAS?",
+      "opciones": [
+        "Permutaciones cuando el ORDEN importa, porque cambiar de puesto da un resultado distinto; combinatorias cuando el orden NO importa y solo cuenta quiénes fueron elegidos",
+        "Permutaciones cuando hay muchos elementos y combinatorias cuando hay pocos",
+        "Permutaciones cuando hay reemplazo y combinatorias cuando no lo hay",
+        "Permutaciones para personas y combinatorias para objetos"
+      ],
+      "correcta": 0,
+      "explicacion": "Si el enunciado habla de puestos, cargos, turnos o posiciones, el orden importa y va permutación. Si habla de un grupo donde todos hacen lo mismo, va combinatoria."
+    },
+    {
+      "id": "e18-q3",
+      "nivel": "aplicacion",
+      "enunciado": "En una empresa hay 8 empleados que se postulan para los puestos de director, subdirector y secretario. Cada puesto es distinto.\n\n¿De cuántas maneras se pueden asignar los 3 puestos?",
+      "opciones": [
+        "24, multiplicando 8 por 3",
+        "336, porque el orden importa: 8 × 7 × 6",
+        "56, porque solo importa quiénes son los tres elegidos",
+        "512, porque cada puesto tiene 8 candidatos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los tres cargos son distintos, así que el orden cuenta. Para el primero hay 8 opciones, para el segundo quedan 7 y para el tercero 6: 8 × 7 × 6 = 336."
+    },
+    {
+      "id": "e18-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Los mismos 8 empleados, pero ahora se forma un equipo de 3 personas donde TODOS tendrán el mismo rol.\n\n¿De cuántas maneras se puede armar el equipo?",
+      "opciones": [
+        "336, igual que con los tres cargos",
+        "24, multiplicando 8 por 3",
+        "512, porque son 8 al cubo",
+        "56, porque el orden no importa y los 336 ordenamientos se agrupan de 6 en 6"
+      ],
+      "correcta": 3,
+      "explicacion": "Mismo enunciado, una palabra distinta. Como los tres hacen lo mismo, Ana-Bruno-Carlos es el mismo equipo en cualquier orden: 336 dividido entre 3! = 56."
+    },
+    {
+      "id": "e18-q5",
+      "nivel": "aplicacion",
+      "enunciado": "¿Cuántas palabras diferentes se pueden formar con las letras AAABB?\n\nSon cinco letras: la A se repite 3 veces y la B se repite 2 veces.",
+      "opciones": [
+        "10, porque con repeticiones se divide: 5! / (3!·2!) = 120/12",
+        "120, porque son 5 letras y 5! = 120",
+        "25, multiplicando 5 por 5",
+        "6, que es 3! porque la A manda"
+      ],
+      "correcta": 0,
+      "explicacion": "Las tres A son idénticas entre sí, así que intercambiarlas no te da una palabra nueva. Por eso se divide entre el factorial de cada repetición: 120 entre 12 son 10."
+    },
+    {
+      "id": "e18-q6",
+      "nivel": "aplicacion",
+      "enunciado": "¿Cuántas palabras diferentes se pueden formar con las letras CCAAAADDD?\n\nSon nueve letras: la C va 2 veces, la A va 4 veces y la D va 3 veces.",
+      "opciones": [
+        "362 880, que es 9!",
+        "24, multiplicando 2 × 4 × 3",
+        "1 260, porque es 9! dividido entre 2!·4!·3!",
+        "504, que es 9 × 8 × 7"
+      ],
+      "correcta": 2,
+      "explicacion": "Arriba va el factorial del total de letras y abajo el factorial de cada repetición: 362 880 entre (2 × 24 × 6) = 362 880 entre 288, que da 1 260."
+    },
+    {
+      "id": "e18-q7",
+      "nivel": "aplicacion",
+      "enunciado": "¿Cuántas palabras diferentes se pueden formar con las letras de SAPITO?\n\nSon seis letras y ninguna se repite.",
+      "opciones": [
+        "36, que es 6 por 6",
+        "720, porque al no repetirse ninguna es simplemente 6!",
+        "120, que es 5!",
+        "60, porque hay que dividir entre las vocales"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando todos los elementos son diferentes no hay nada que dividir: son las permutaciones de los 6, o sea 6 × 5 × 4 × 3 × 2 × 1 = 720."
+    },
+    {
+      "id": "e18-q8",
+      "nivel": "aplicacion",
+      "enunciado": "¿Cuántas placas de auto se pueden hacer si cada placa lleva dos letras DIFERENTES seguidas de tres dígitos DIFERENTES? Considera las 26 letras del alfabeto y los dígitos del 0 al 9.",
+      "opciones": [
+        "676 000, que es 26² × 10³",
+        "260, multiplicando 26 por 10",
+        "1 872, sumando las letras y los dígitos por separado",
+        "468 000, porque es 26 × 25 × 10 × 9 × 8"
+      ],
+      "correcta": 3,
+      "explicacion": "La palabra «diferentes» es la que baja los factores: 26 × 25 para las letras y 10 × 9 × 8 para los dígitos. Como van una tras otra, se multiplica todo."
+    },
+    {
+      "id": "e18-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Se forma un comité de 7 personas eligiendo 4 físicos de un grupo de 8 y 3 matemáticos de un grupo de 6. Dentro del comité todos tienen el mismo rol.\n\n¿De cuántas maneras se puede hacer la selección?",
+      "opciones": [
+        "1 400, porque son 70 formas de elegir a los físicos Y 20 de elegir a los matemáticos: 70 × 20",
+        "90, sumando 70 más 20",
+        "14, sumando los dos grupos",
+        "3 360, porque hay que ordenar a los siete"
+      ],
+      "correcta": 0,
+      "explicacion": "Primero cada grupo por separado, porque dentro de cada uno el orden no importa: 8 elige 4 son 70, y 6 elige 3 son 20. Como es «y», se multiplican."
+    },
+    {
+      "id": "e18-q10",
+      "nivel": "aplicacion",
+      "enunciado": "Hay dos departamentos: A con 5 empleados y B con 4. Se quiere elegir 2 empleados del departamento A **o** 2 del departamento B, para formar un equipo donde el orden no importa.\n\n¿Cuántas maneras hay?",
+      "opciones": [
+        "60, multiplicando 10 por 6",
+        "16, porque son 10 maneras en A más 6 maneras en B",
+        "9, sumando los empleados de los dos departamentos",
+        "4, que es el número de elegidos en total"
+      ],
+      "correcta": 1,
+      "explicacion": "La palabra «o» manda sumar: en A hay 10 parejas posibles y en B hay 6. Son caminos alternativos, no se combinan entre sí, así que 10 + 6 = 16."
+    },
+    {
+      "id": "e18-q11",
+      "nivel": "aplicacion",
+      "enunciado": "El equipo A tiene 4 empleados y el equipo B tiene 3. Se quieren elegir 2 del equipo A **y** 1 del equipo B, y en ninguno de los dos importa el orden.\n\n¿Cuántas maneras hay?",
+      "opciones": [
+        "9, sumando 6 más 3",
+        "12, multiplicando 4 por 3",
+        "18, porque son 6 maneras en A por 3 maneras en B",
+        "7, sumando los empleados de los dos equipos"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada grupo por su cuenta: en A hay 6 parejas y en B hay 3 opciones. Como el enunciado dice «y», las dos cosas pasan a la vez y se multiplican: 6 × 3 = 18."
+    },
+    {
+      "id": "e18-q12",
+      "nivel": "aplicacion",
+      "enunciado": "¿Cuántos números de 4 cifras DIFERENTES y mayores que 6 000 se pueden formar con los dígitos 1, 3, 4, 7 y 9?",
+      "opciones": [
+        "48, porque la primera cifra solo puede ser 7 o 9 y después quedan 4 × 3 × 2",
+        "120, que son todas las formas de tomar 4 de los 5 dígitos en orden",
+        "625, porque cada posición tiene 5 opciones",
+        "24, que es 4!"
+      ],
+      "correcta": 0,
+      "explicacion": "La condición se acomoda primero: para pasar de 6 000 la cifra de millar tiene que ser 7 o 9, o sea 2 opciones. Después quedan 4, 3 y 2 dígitos: 2 × 24 = 48."
+    },
+    {
+      "id": "e18-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. En una fila de 7 asientos se sientan 3 hombres y 4 mujeres, y las mujeres deben ocupar los 4 primeros lugares.\n\n¿De cuántas formas se pueden ubicar, y cambia la respuesta si en vez de eso las mujeres ocupan los lugares impares?",
+      "opciones": [
+        "144, y sí cambia: en los impares serían muchas menos",
+        "144 formas (4! × 3!), y NO cambia: en una fila de 7 los impares son 1, 3, 5 y 7, que también son 4 asientos fijos",
+        "5 040, porque son 7! y la condición no afecta",
+        "12, multiplicando 4 por 3"
+      ],
+      "correcta": 1,
+      "explicacion": "Las mujeres se ordenan entre sí de 4! = 24 formas y los hombres de 3! = 6, o sea 144. Los impares de una fila de 7 también son cuatro asientos, así que el número se repite."
+    },
+    {
+      "id": "e18-q14",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. La selección tiene 20 jugadores y hay que armar un equipo de 11. Todos los jugadores pueden ocupar cualquier posición en el campo.\n\n¿De cuántas formas se puede conformar el equipo?",
+      "opciones": [
+        "220, multiplicando 20 por 11",
+        "20 elevado a la 11, porque cada puesto tiene 20 candidatos",
+        "167 960, porque al poder ocupar cualquier posición el orden no importa y es una combinatoria de 20 en 11",
+        "11!, que es el número de formas de ordenar a los once"
+      ],
+      "correcta": 2,
+      "explicacion": "La frase «todos pueden ocupar cualquier posición» mata el orden: solo interesa quiénes son los once. Si cada uno tuviera su puesto fijo, ya sería permutación y el número explota."
+    },
+    {
+      "id": "e18-q15",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3. Mismo equipo de 11 entre los 20 jugadores, pero ahora los dos mejores NO pueden estar juntos en el mismo equipo. Los equipos que sí tienen a los dos son 48 620.\n\n¿Cuántos equipos quedan?",
+      "opciones": [
+        "216 580, sumando los dos números",
+        "48 620, que son justamente los que los tienen a los dos",
+        "83 980, que es la mitad del total",
+        "119 340, porque al total de 167 960 se le restan los 48 620 equipos que los tienen a los dos"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el complemento otra vez: cuentas todos los equipos posibles y le quitas los que rompen la condición. 167 960 − 48 620 = 119 340."
+    }
+  ]
+}

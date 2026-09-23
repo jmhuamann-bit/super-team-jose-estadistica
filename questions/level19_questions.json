@@ -1,0 +1,203 @@
+{
+  "nivel": "level19",
+  "clase": "Clase 03 · Parcial — Definiciones de probabilidad y ejercicios",
+  "fuente": "Apuntes de la 3era clase del Parcial — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e19-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En una bolsa hay 5 caramelos de fresa, 3 de limón y 2 de menta, y sacas uno al azar.\n\nUsando la definición CLÁSICA, ¿cuál es la probabilidad de que sea de limón?",
+      "opciones": [
+        "3, que es el número de caramelos de limón",
+        "0,3, porque son 3 casos favorables entre 10 posibles",
+        "30%, que es la forma correcta de entregarlo",
+        "0,33, dividiendo 3 entre 9"
+      ],
+      "correcta": 1,
+      "explicacion": "La clásica es casos favorables entre casos posibles: 3 de limón entre 10 caramelos en total. Y va en decimales, que es la regla del curso."
+    },
+    {
+      "id": "e19-q2",
+      "nivel": "comprension",
+      "enunciado": "Lanzas una moneda 1 000 veces y sale cara 520 veces.\n\n¿Qué dice la definición por FRECUENCIA RELATIVA, y qué habría que hacer para acercarse más a la probabilidad real?",
+      "opciones": [
+        "Que la probabilidad es 0,5, porque la moneda siempre es justa",
+        "Que la probabilidad es 520, que son las veces que salió cara",
+        "Que es 0,52, y que habría que experimentar MENOS veces para no desviarse",
+        "Que es 520/1 000 = 0,52, y que habría que experimentar MÁS veces, porque mientras más grande el n, más se acerca a la real"
+      ],
+      "correcta": 3,
+      "explicacion": "La frecuencia relativa es cuántas veces ocurrió entre cuántas veces probaste. Y su regla es que crece en precisión con n: por eso se escribe como un límite cuando n tiende a infinito."
+    },
+    {
+      "id": "e19-q3",
+      "nivel": "comprension",
+      "enunciado": "Pregunta de examen: diferencias entre la definición CLÁSICA y la de FRECUENCIA RELATIVA.\n\n¿Cuál de estas afirmaciones es la CORRECTA?",
+      "opciones": [
+        "La clásica da la probabilidad exacta y no necesita experimento; la de frecuencia relativa da una aproximación, cambia conforme experimentas más y no exige que todos los resultados sean igualmente probables",
+        "Las dos dan el valor exacto, solo cambia el nombre",
+        "La clásica necesita repetir el experimento muchas veces y la de frecuencia relativa no",
+        "La de frecuencia relativa exige que la moneda sea justa y la clásica no"
+      ],
+      "correcta": 0,
+      "explicacion": "Son las tres diferencias del apunte. La de frecuencia relativa es justamente la que sirve para una moneda con trampa, donde no todos los resultados son igual de probables."
+    },
+    {
+      "id": "e19-q4",
+      "nivel": "comprension",
+      "enunciado": "La definición AXIOMÁTICA son las tres reglas matemáticas de la probabilidad.\n\n¿Cuáles son?",
+      "opciones": [
+        "Que sea exacta, que sea aproximada y que sea decimal",
+        "Que el espacio muestral sea finito, numerable y discreto",
+        "No negatividad (nunca sale negativa), certeza (la de todo el espacio muestral es 1) y aditividad (si A y B son excluyentes, P(A∪B) = P(A) + P(B))",
+        "Que se pueda repetir, que se describan los resultados y que se asocie a un modelo"
+      ],
+      "correcta": 2,
+      "explicacion": "Son los tres axiomas. Ojo con el tercero: la suma directa de probabilidades solo vale cuando los eventos son mutuamente excluyentes, o sea cuando no comparten nada."
+    },
+    {
+      "id": "e19-q5",
+      "nivel": "aplicacion",
+      "enunciado": "En una caja hay 7 productos buenos y 3 defectuosos, 10 en total. Seleccionas UN producto al azar.\n\n¿Cuál es la probabilidad de que NO sea defectuoso?",
+      "opciones": [
+        "0,3, porque hay 3 defectuosos",
+        "0,7, porque no ser defectuoso es lo mismo que ser bueno: 7 entre 10",
+        "1, porque siempre puedes elegir uno bueno",
+        "0,4, restando 7 menos 3 entre 10"
+      ],
+      "correcta": 1,
+      "explicacion": "Solo hay dos tipos de producto, así que «no defectuoso» y «bueno» son el mismo evento. También sale por complemento: 1 − 0,3 = 0,7."
+    },
+    {
+      "id": "e19-q6",
+      "nivel": "aplicacion",
+      "enunciado": "De la misma caja (7 buenos y 3 defectuosos) sacas DOS productos CON reemplazo: el primero vuelve a la caja antes de sacar el segundo.\n\n¿Cuál es la probabilidad de que los dos sean buenos?",
+      "opciones": [
+        "0,49, porque con reemplazo el denominador no se mueve: 0,7 × 0,7",
+        "0,4667, que es 7×6 entre 10×9",
+        "1,4, sumando 0,7 más 0,7",
+        "0,35, dividiendo 0,7 entre 2"
+      ],
+      "correcta": 0,
+      "explicacion": "Con reemplazo cada extracción arranca igual que la anterior: siempre 7 buenos de 10. Son fracciones consecutivas con el mismo denominador: 0,7 × 0,7 = 0,49."
+    },
+    {
+      "id": "e19-q7",
+      "nivel": "aplicacion",
+      "enunciado": "De la misma caja sacas DOS productos CON reemplazo.\n\n¿Cuál es la probabilidad de que AL MENOS UNO sea bueno?",
+      "opciones": [
+        "0,49, que es la de los dos buenos",
+        "0,42, que es la de exactamente uno bueno",
+        "0,91, porque por complemento es 1 menos la de que los dos sean defectuosos: 1 − 0,09",
+        "0,7, porque basta con que el primero sea bueno"
+      ],
+      "correcta": 2,
+      "explicacion": "«Al menos uno» siempre se hace por complemento: lo contrario de «al menos un bueno» es «ninguno bueno», o sea los dos defectuosos, que dan 0,3 × 0,3 = 0,09."
+    },
+    {
+      "id": "e19-q8",
+      "nivel": "aplicacion",
+      "enunciado": "De la misma caja (7 buenos, 3 defectuosos) sacas DOS productos SIN reemplazo y sin que importe el orden. Los casos posibles son 45 y los favorables 21.\n\n¿Cuál es la probabilidad de que los dos sean buenos?",
+      "opciones": [
+        "0,49, igual que con reemplazo",
+        "0,0667, que es 3 entre 45",
+        "0,21, que son los casos favorables en decimal",
+        "0,4667, que es 21 entre 45"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin reemplazo se cuenta con combinatorias arriba y abajo: 21 formas de elegir 2 buenos entre los 7, sobre 45 formas de elegir 2 productos entre los 10."
+    },
+    {
+      "id": "e19-q9",
+      "nivel": "aplicacion",
+      "enunciado": "De la misma caja sacas DOS productos SIN reemplazo y sin orden. Los casos posibles siguen siendo 45.\n\n¿Cuál es la probabilidad de que uno sea bueno y el otro defectuoso?",
+      "opciones": [
+        "0,4667, porque los favorables son 7 × 3 = 21, sobre los 45 posibles",
+        "0,21, multiplicando 0,7 por 0,3",
+        "0,0667, que son 3 entre 45",
+        "0,9333, porque se cuentan todos menos los dos defectuosos"
+      ],
+      "correcta": 0,
+      "explicacion": "Elegir 1 de los 7 buenos y 1 de los 3 defectuosos da 7 × 3 = 21 parejas. Da el mismo 21/45 que los dos buenos, que es una coincidencia simpática de esta caja."
+    },
+    {
+      "id": "e19-q10",
+      "nivel": "aplicacion",
+      "enunciado": "En una bolsa hay 4 bolas rojas, 3 verdes, 2 azules y 1 amarilla, 10 en total. Sacas TRES bolas SIN reemplazo y sin orden. Los casos posibles son 120.\n\n¿Cuál es la probabilidad de que SOLO UNA sea roja?",
+      "opciones": [
+        "0,4, porque hay 4 rojas de 10",
+        "0,5, porque los favorables son 4 × 15 = 60, sobre los 120 posibles",
+        "0,033, que es 4 entre 120",
+        "0,12, multiplicando 0,4 por 0,3"
+      ],
+      "correcta": 1,
+      "explicacion": "«Solo una roja» se traduce como 1 roja y 2 no rojas: 4 maneras de elegir la roja por 15 maneras de elegir 2 de las 6 restantes, o sea 60 de 120."
+    },
+    {
+      "id": "e19-q11",
+      "nivel": "aplicacion",
+      "enunciado": "De la misma bolsa (4 rojas, 3 verdes, 2 azules, 1 amarilla) sacas DOS bolas SIN reemplazo y sin orden. Elegir 2 entre las 7 que no son verdes da 21 casos, y los posibles son 45.\n\n¿Cuál es la probabilidad de que AL MENOS UNA sea verde?",
+      "opciones": [
+        "0,0667, que es la de que las dos sean verdes",
+        "0,3, porque hay 3 verdes de 10",
+        "0,5333, porque por complemento es 1 − 21/45 = 24/45",
+        "0,4667, que es 21 entre 45"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo contrario de «al menos una verde» es «ninguna verde», que son las 21 parejas armadas con las 7 bolas no verdes. Entonces 1 − 21/45 = 24/45 = 0,5333."
+    },
+    {
+      "id": "e19-q12",
+      "nivel": "comprension",
+      "enunciado": "En el examen te dicen «se seleccionan dos productos sin reemplazo» y nada más. En otro te dicen «se seleccionan dos productos sin reemplazo, uno tras otro».\n\n¿Qué se infiere en cada caso?",
+      "opciones": [
+        "El primero SIN orden (combinatorias) y el segundo CON orden (permutaciones), que es justo lo que dice el dato curioso del apunte",
+        "Los dos con orden, porque sin reemplazo siempre importa el orden",
+        "Los dos sin orden, porque nunca aclaran nada",
+        "El primero con orden y el segundo sin orden"
+      ],
+      "correcta": 0,
+      "explicacion": "Si no aclaran nada, se asume sin orden. La frase «uno tras otro» es la señal de que las extracciones van numeradas y por lo tanto el orden cuenta."
+    },
+    {
+      "id": "e19-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. De la caja de 7 buenos y 3 defectuosos sacas DOS productos SIN reemplazo y CON orden. Los casos posibles ordenados son 90 y los favorables 42.\n\n¿Cuál es la probabilidad de que los dos sean buenos?",
+      "opciones": [
+        "0,49, la misma que con reemplazo",
+        "0,9333, que es el al menos uno bueno",
+        "0,0667, que es la de los dos defectuosos",
+        "0,4667, que es 42 entre 90, exactamente la misma que salía sin orden"
+      ],
+      "correcta": 3,
+      "explicacion": "Al contar con orden, cada pareja se cuenta dos veces arriba y dos veces abajo, así que el factor se cancela. Por eso da el mismo 0,4667 del conteo sin orden."
+    },
+    {
+      "id": "e19-q14",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. De la misma caja (7 buenos, 3 defectuosos) sacas TRES productos SIN reemplazo. Te piden la probabilidad de que el SEGUNDO que sale sea bueno.\n\n¿Cuánto vale?",
+      "opciones": [
+        "0,343, que es 0,7 al cubo",
+        "0,7, la misma que sacar un solo producto: la posición no le da ninguna ventaja ni desventaja",
+        "0,4667, que es la de dos buenos",
+        "0,233, dividiendo 0,7 entre 3"
+      ],
+      "correcta": 1,
+      "explicacion": "Acá no van permutaciones ni combinatorias, va razonamiento. Antes de mirar nada, cualquiera de los 10 productos tiene la misma chance de caer en la 2da posición: 7 de 10."
+    },
+    {
+      "id": "e19-q15",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3. De la misma caja sacas CINCO productos CON reemplazo. Te piden la probabilidad de que EXACTAMENTE 3 sean buenos. Las formas de acomodar esos 3 buenos entre las 5 extracciones son 10.\n\n¿Cuánto vale?",
+      "opciones": [
+        "0,343, que es solamente 0,7 al cubo",
+        "0,6, porque son 3 de 5 extracciones",
+        "0,3087, porque es 10 × 0,7³ × 0,3²",
+        "0,03087, que es lo mismo pero sin multiplicar por los acomodos"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada acomodo concreto vale 0,7³ × 0,3² = 0,03087, pero B-B-B-D-D no es lo mismo que B-B-D-B-D. Hay 10 acomodos posibles, así que el total es 0,3087."
+    }
+  ]
+}

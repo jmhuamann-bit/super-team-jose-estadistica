@@ -1424,6 +1424,334 @@ const MAESTRO = [  // jefe de Los Olivos: saca el promedio de crecimiento sumand
 ];
 const P_MAESTRO = { y: "#e8c15a", c: "#c9945c", k: "#2e3238", b: "#3f6f9d", n: "#4a4a52", m: "#8a9099" };
 
+
+const RESORTE = [  // trampolín: se pisa y sale disparado mucho más alto (14 × 9)
+  "..............",
+  "..pppppppppp..",
+  "..pppppppppp..",
+  "..kkkkkkkkkk..",
+  "...mmmmmmmm...",
+  "....mmmmmm....",
+  "...mmmmmmmm...",
+  ".kkkkkkkkkkkk.",
+  "..............",
+];
+const P_RESORTE = { p: "#e8504f", k: "#2a2438", m: "#cdd3da" };
+
+/* =========================================================
+   NAZCA — los geoglifos que se levantaron de la pampa.
+   Van con contorno crema sobre cuerpo oscuro para que no se
+   pierdan contra la arena, que es del mismo color que ellos.
+   ========================================================= */
+const COLIBRI = [  // el colibrí de perfil: cree que un evento puede ser más grande que su espacio muestral (16 × 12)
+  "................",
+  ".......cc.......",
+  "......cccc......",
+  ".....cccccc.....",
+  "....cccccc......",
+  "...aaaaaaaaa....",
+  "..aaaaaaaalallll",
+  "..aaaaaaaaaa....",
+  "...aaaaaaaa.....",
+  "..aaaaaa........",
+  "aaaa............",
+  "................",
+];
+const P_COLIBRI = { a: "#3a2f4a", c: "#2fd08a", l: "#f2ead8" };
+
+const MONO = [     // el mono de la cola en espiral: jura que todo espacio infinito es continuo (16 × 14)
+  "................",
+  "....mmmm........",
+  "...mmmmmm.......",
+  "...mlmmlm.......",
+  "...mmmmmm.......",
+  "....mmmm........",
+  "..mmmmmmmm......",
+  "..mmmmmmmmm.ll..",
+  "...mmmmmmm.l..l.",
+  "...mmmmmm..l.ll.",
+  "...mm..mm..l....",
+  "...mm..mm...llll",
+  "..mmm..mmm......",
+  "................",
+];
+const P_MONO = { m: "#e8964f", l: "#f2ead8" };
+
+const ARANA = [    // la araña de las ocho patas: cree que si la intersección de los tres es vacía, son excluyentes de dos en dos (16 × 12)
+  "................",
+  "l............l..",
+  ".l....aa....l...",
+  "..l..aaaa..l....",
+  "l..l.aaaa.l..l..",
+  ".llllaaaallll...",
+  ".llllaaaallll...",
+  "l..l.aaaa.l..l..",
+  "..l..aaaa..l....",
+  ".l....aa....l...",
+  "l............l..",
+  "................",
+];
+const P_ARANA = { a: "#d8303c", l: "#3a2f4a" };
+
+const ASTRONAUTA = [  // el «astronauta» de la ladera: mete el vacío y todo omega dentro de una partición (14 × 15)
+  ".....ccc......",
+  "....ccccc.....",
+  "....clclc.....",
+  "....ccccc.....",
+  ".....ccc......",
+  "...cccccc.c...",
+  "..ccccccccc...",
+  "..cccccccc....",
+  "..cccccccc....",
+  "...cccccc.....",
+  "...cc..cc.....",
+  "...cc..cc.....",
+  "...cc..cc.....",
+  "..ccc..ccc....",
+  "..............",
+];
+const P_ASTRONAUTA = { c: "#5aa8e8", l: "#f2ead8" };
+
+const PUQUIO = [   // el puquio en espiral de Cantalloc: suma los dos conjuntos sin restar lo que comparten (14 × 12)
+  "..............",
+  "..pppppppppp..",
+  ".pggggggggggp.",
+  ".pgppppppppgp.",
+  ".pgpggggggpgp.",
+  ".pgpgppppgpgp.",
+  ".pgpgppppgpgp.",
+  ".pgpggggggpgp.",
+  ".pgpppppppppp.",
+  ".pgggggggggg..",
+  "..pppppppppp..",
+  "..............",
+];
+const P_PUQUIO = { p: "#4a3f2e", g: "#2fb0d8" };
+
+const PILOTO = [   // jefe de Nazca: el único que ve el espacio muestral entero desde arriba, y aun así cuenta mal (18 × 16)
+  ".....bbbbbb.......",
+  "....bbbbbbbb......",
+  "....bssssssb......",
+  "....gggggggg......",
+  "....gwggggwg......",
+  "....ssssssss......",
+  ".....ssmmss.......",
+  "...wwwwwwwwww.....",
+  "..jjjwwwwwwjjj....",
+  "..jjjjjjjjjjjj....",
+  "..jjjjjjjjjjjj.ww.",
+  "..jjjjjjjjjjjj.ww.",
+  "...jjjjjjjjjj.....",
+  "....nnnn.nnnn.....",
+  "...kkkkk.kkkkk....",
+  "..................",
+];
+const P_PILOTO = { b: "#4a2e1c", g: "#2a2438", w: "#f7efe0", s: "#d9a273", m: "#8a3a2e", j: "#6b3420", n: "#2e2a26", k: "#1a1220" };
+
+/* =========================================================
+   TRUJILLO — Chan Chan, la marinera y las huacas. El fondo es
+   adobe claro, así que acá todo va oscuro o muy saturado.
+   ========================================================= */
+const FRISO = [    // el friso de los peces volteados: usa combinatorias cuando el orden sí importa (14 × 12)
+  "..............",
+  ".aaaaaaaaaaaa.",
+  ".a..........a.",
+  ".a.pppp.....a.",
+  ".a.pkppp....a.",
+  ".a.pppp.....a.",
+  ".a.....pppp.a.",
+  ".a....pppkp.a.",
+  ".a.....pppp.a.",
+  ".a..........a.",
+  ".aaaaaaaaaaaa.",
+  "..............",
+];
+const P_FRISO = { a: "#5a4630", p: "#2fb0d8", k: "#f7efe0" };
+
+const PANUELO = [  // la pañoleta de la marinera: usa permutaciones cuando el orden NO importa (14 × 12)
+  "..............",
+  "...rrrrrr.....",
+  "..rwwwwwwr....",
+  ".rwwwwwwwwr...",
+  "rwwwwwwwwwwr..",
+  ".rwwwwwwwwwwr.",
+  "..rwwwwwwwwr..",
+  "...rwwwwwwr...",
+  "....rwwwwr....",
+  ".....rwwr.....",
+  "......rr......",
+  "..............",
+];
+const P_PANUELO = { w: "#f7efe0", r: "#d8303c" };
+
+const VASIJA = [   // la vasija del mismo diseño repetido: no divide entre los factoriales de lo que se repite (14 × 13)
+  "..............",
+  ".....vvvv.....",
+  ".....vvvv.....",
+  "....vvvvvv....",
+  "...vvvvvvvv...",
+  "..vvvvvvvvvv..",
+  "..vwvwvwvwvv..",
+  "..vvvvvvvvvv..",
+  "..vwvwvwvwvv..",
+  "..vvvvvvvvvv..",
+  "...vvvvvvvv...",
+  "....vvvvvv....",
+  "..............",
+];
+const P_VASIJA = { v: "#a83f2e", w: "#f2e2c4" };
+
+const ADOBE = [    // el adobe del signo más: con dos grupos suma cuando tenía que multiplicar (16 × 11)
+  "................",
+  "..bbbbbbbbbbbb..",
+  ".bbbbbbbbbbbbbb.",
+  ".bbbbbbwbbbbbbb.",
+  ".bbbbbbwbbbbbbb.",
+  ".bbbbwwwwwbbbbb.",
+  ".bbbbbbwbbbbbbb.",
+  ".bbbbbbwbbbbbbb.",
+  ".bbbbbbbbbbbbbb.",
+  "..bbbbbbbbbbbb..",
+  "................",
+];
+const P_ADOBE = { b: "#7a5a34", w: "#f2e2c4" };
+
+const PERRO = [    // el perro sin pelo de la huaca: no distingue si el nombre vuelve a la bolsa o no (18 × 12)
+  "..................",
+  ".....pp....pp.....",
+  ".....pp....pp.....",
+  "....pppppppppp....",
+  "....plppppplp.....",
+  "....pppppppppp....",
+  "..pppppppppppp....",
+  ".ppppppppppppp.pp.",
+  ".ppppppppppppp.pp.",
+  ".pp..pp..pp..pp...",
+  ".pp..pp..pp..pp...",
+  "..................",
+];
+const P_PERRO = { p: "#3a3038", l: "#e8a53c" };
+
+const CURACA = [   // jefe de Trujillo: teje el friso sin saber si cambiar el orden cambia el diseño (18 × 16)
+  "...gg......gg.....",
+  "...gggggggggg.....",
+  "...gggggggggg.....",
+  "....ssssssss......",
+  "...gsksssksg......",
+  "...gssssssssg.....",
+  "....ssmmmmss......",
+  "...uuuuuuuuuu.....",
+  "..uuwwuuwwuuuu....",
+  "..uuuuuuuuuuuu....",
+  "..uuwwuuwwuuuu....",
+  "..uuuuuuuuuuuu....",
+  "...uuuuuuuuuu.....",
+  "....nnnn.nnnn.....",
+  "...kkkkk.kkkkk....",
+  "..................",
+];
+const P_CURACA = { g: "#e8c15a", s: "#c9945c", k: "#241a2e", m: "#8a3a2e", u: "#2f6b7a", w: "#f2e2c4", n: "#3b3630" };
+
+/* =========================================================
+   IQUITOS — Belén, el río y la selva. El fondo es verde y
+   marrón, así que acá mandan el rojo, el crema y el azul vivo.
+   ========================================================= */
+const PAICHE = [   // el paiche del porcentaje: da la probabilidad en % cuando en Esta 1 va en decimales (20 × 11)
+  "....................",
+  ".....ffffff.........",
+  "...ffffffffff.....t.",
+  "..fffffffffffff..tt.",
+  ".flffffrrffffffftttt",
+  ".fffffffrrfffffftttt",
+  ".fffffffffffffff.tt.",
+  "..fffffffffffff...t.",
+  "...ffffffffff.......",
+  ".....ffffff.........",
+  "....................",
+];
+const P_PAICHE = { f: "#3f4a5a", l: "#f7efe0", r: "#e8503c", t: "#e8503c" };
+
+const CHARAPA = [  // la charapa que no devuelve: confunde el muestreo con reemplazo y el que es sin reemplazo (16 × 10)
+  "................",
+  ".....cccccc.....",
+  "...cccccccccc...",
+  "..cyccyccyccyc..",
+  "..cccccccccccc..",
+  ".ccccccccccccc.h",
+  ".ccccccccccccchh",
+  "..hh......hh..h.",
+  "..hh......hh....",
+  "................",
+];
+const P_CHARAPA = { c: "#2a3a2e", y: "#f0c341", h: "#d8a83c" };
+
+const PEQUEPEQUE = [  // el peque-peque de los denominadores: con reemplazo le cambia el denominador en cada saque (18 × 10)
+  "..................",
+  "...............kk.",
+  "..............kk..",
+  ".............kk...",
+  "...wwwwwwwwwkk....",
+  ".bbbbbbbbbbbbb....",
+  "bbbbbbbbbbbbbb....",
+  ".bbbbbbbbbbbb.....",
+  "..bbbbbbbbbb......",
+  "..................",
+];
+const P_PEQUEPEQUE = { b: "#2f7ad8", w: "#f7efe0", k: "#241a2e" };
+
+const SACO = [     // el saco del «al menos uno»: se pone a sumar casos en vez de irse por el complemento (14 × 13)
+  "..............",
+  ".....kkk......",
+  "....ssssss....",
+  "...ssssssss...",
+  "..ssssssssss..",
+  "..ssssssssss..",
+  "..rrrrrrrrrr..",
+  "..ssssssssss..",
+  "..ssssssssss..",
+  "..rrrrrrrrrr..",
+  "..ssssssssss..",
+  "..ssssssssss..",
+  "..............",
+];
+const P_SACO = { s: "#f2e2c4", r: "#d8303c", k: "#6b4a24" };
+
+const CAMUCAMU = [ // el racimo de camu camu: usa combinatorias cuando el enunciado dice «uno tras otro» (14 × 12)
+  "..............",
+  ".....gg.......",
+  "....gg........",
+  "...cc.cc......",
+  "..cccccccc....",
+  ".cccccccccc...",
+  ".ccwcccwccc...",
+  ".cccccccccc...",
+  "..cccccccc....",
+  "...cccccc.....",
+  "....cccc......",
+  "..............",
+];
+const P_CAMUCAMU = { c: "#a02050", w: "#f7efe0", g: "#3f8f3a" };
+
+const CASERO = [   // jefe de Iquitos: te vende del saco sin dejarte mirar lo que hay adentro (18 × 16)
+  "....kkkkkkkk......",
+  "...kkkkkkkkkk.....",
+  "....ssssssss......",
+  "....sbsssbss......",
+  "....ssmmmmss......",
+  "...ccccccccc..nnn.",
+  "..cccccccccc.nnnnn",
+  "..cwwwwwwwwc.nnnnn",
+  "..cwwwwwwwwc.nnnnn",
+  "..cwwwwwwwwc..nnn.",
+  "..cwwwwwwwwc......",
+  "...cccccccc.......",
+  "....jjjj.jjjj.....",
+  "....jjjj.jjjj.....",
+  "...bbbbb.bbbbb....",
+  "..................",
+];
+const P_CASERO = { k: "#1f6b4a", s: "#c9945c", b: "#241a2e", m: "#8a3a2e", c: "#d8303c", w: "#f7efe0", n: "#c9a05c", j: "#2f4a6b" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1444,6 +1772,25 @@ const DEFINICIONES = {
   moneda_b:     [MONEDA_B, P_OBJ],
   bloque:       [BLOQUE, P_OBJ],
   bloque_usado: [BLOQUE_USADO, P_OBJ],
+  resorte:      [RESORTE, P_RESORTE],
+  colibri:      [COLIBRI, P_COLIBRI],
+  mono:         [MONO, P_MONO],
+  arana:        [ARANA, P_ARANA],
+  astronauta:   [ASTRONAUTA, P_ASTRONAUTA],
+  puquio:       [PUQUIO, P_PUQUIO],
+  piloto:       [PILOTO, P_PILOTO],
+  friso:        [FRISO, P_FRISO],
+  panuelo:      [PANUELO, P_PANUELO],
+  vasija:       [VASIJA, P_VASIJA],
+  adobe:        [ADOBE, P_ADOBE],
+  perro:        [PERRO, P_PERRO],
+  curaca:       [CURACA, P_CURACA],
+  paiche:       [PAICHE, P_PAICHE],
+  charapa:      [CHARAPA, P_CHARAPA],
+  pequepeque:   [PEQUEPEQUE, P_PEQUEPEQUE],
+  saco:         [SACO, P_SACO],
+  camucamu:     [CAMUCAMU, P_CAMUCAMU],
+  casero:       [CASERO, P_CASERO],
   pua:          [PUA, P_OBJ],
   bandera:      [BANDERA, P_OBJ],
   meta:         [META, P_OBJ],

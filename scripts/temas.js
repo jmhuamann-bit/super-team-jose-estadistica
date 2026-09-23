@@ -1606,6 +1606,380 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     NAZCA — la pampa al mediodía, con ese ocre plano que no
+     termina nunca. Los cerros secos al fondo, las líneas rectas
+     y los trapecios grabados en el desierto, el mirador de
+     fierro junto a la Panamericana y la avioneta del sobrevuelo
+     cruzando el cielo. Desde el suelo solo ves pedazos; el
+     dibujo entero recién aparece desde arriba. Igualito que el
+     espacio muestral y sus eventos.
+     OJO: el fondo lleva solo rectas y trapecios, NUNCA figuras,
+     porque las figuras son los bichos y se camuflarían.
+     ========================================================= */
+  pampa: {
+    nombre: "Nazca",
+    cielo: [[0, "#3f86cc"], [0.42, "#8bbadf"], [0.76, "#d2c9a6"], [1, "#e6d3a8"]],
+    suelo: { cara: "#c9a86a", borde: "#e0c891", tierra: "#8a6e40", plataforma: "#6b4a2e", plataformaBorde: "#f0c341" },
+    acento: "#d8303c",
+
+    bichos: ["colibri", "mono", "arana", "astronauta", "puquio"],
+    nombresBichos: [
+      "El Colibrí que se Sale del Mapa",
+      "El Mono de la Cola Infinita",
+      "La Araña de las Patas Cruzadas",
+      "El Astronauta Desubicado",
+      "El Puquio que Suma de Más",
+    ],
+    andares: ["vuela", "patrulla", "veloz", "salta", "guardia"],
+    jefe: "piloto",
+    nombreJefe: "El Piloto del Sobrevuelo",
+
+    fondo(ctx, cam, t) {
+      // el sol del desierto, blanco y plano
+      ctx.fillStyle = "rgba(255,248,222,.22)";
+      ctx.beginPath(); ctx.arc(150, 62, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,238,.95)";
+      ctx.beginPath(); ctx.arc(150, 62, 24, 0, Math.PI * 2); ctx.fill();
+
+      // LA AVIONETA DEL SOBREVUELO, cruzando lento allá arriba
+      const ax = ((t * 0.9) % 1100) - 150;
+      ctx.fillStyle = "#e8e2d0";
+      ctx.fillRect(ax, 96, 34, 6);
+      ctx.fillRect(ax + 10, 90, 14, 5);
+      ctx.fillRect(ax + 2, 100, 26, 3);
+      ctx.fillStyle = "#c04030";
+      ctx.fillRect(ax + 30, 92, 6, 10);
+      ctx.fillStyle = "rgba(255,255,255,.22)";
+      ctx.fillRect(ax - 46, 99, 44, 2);
+
+      // LOS CERROS SECOS, tres capas cada vez más cerca
+      repetir(ctx, cam, 560, 0.10, (x, i) => {
+        const bx = x + 40, base = 264, alto = 74 + ((i * 47) % 30);
+        ctx.fillStyle = "#a08a64";
+        ctx.beginPath();
+        ctx.moveTo(bx - 170, base);
+        ctx.lineTo(bx - 40, base - alto);
+        ctx.lineTo(bx + 60, base - alto + 14);
+        ctx.lineTo(bx + 180, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 400, 0.19, (x, i) => {
+        const bx = x + 30, base = 282, alto = 46 + ((i * 31) % 22);
+        ctx.fillStyle = "#b39a6e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 120, base);
+        ctx.lineTo(bx - 20, base - alto);
+        ctx.lineTo(bx + 130, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LA PAMPA: la meseta ocre donde están grabadas las líneas
+      ctx.fillStyle = "#c2a266";
+      ctx.fillRect(0, 280, CFG.ANCHO_VISTA, 104);
+      ctx.fillStyle = "#cfae70";
+      ctx.fillRect(0, 280, CFG.ANCHO_VISTA, 8);
+
+      // LAS LÍNEAS Y LOS TRAPECIOS grabados, que se cruzan sin orden aparente
+      repetir(ctx, cam, 300, 0.30, (x, i) => {
+        const bx = x, base = 300 + ((i * 17) % 26);
+        ctx.fillStyle = "rgba(240,224,182,.85)";
+        ctx.fillRect(bx, base, 250, 3);                        // la recta larga
+        ctx.save();                                            // una recta cruzada
+        ctx.translate(bx + 120, base + 16);
+        ctx.rotate(((i % 3) - 1) * 0.16);
+        ctx.fillRect(-110, 0, 220, 2);
+        ctx.restore();
+        ctx.beginPath();                                       // el trapecio
+        ctx.moveTo(bx + 40, base + 40);
+        ctx.lineTo(bx + 76, base + 12);
+        ctx.lineTo(bx + 128, base + 12);
+        ctx.lineTo(bx + 186, base + 40);
+        ctx.closePath();
+        ctx.fillStyle = "rgba(240,224,182,.40)"; ctx.fill();
+        ctx.strokeStyle = "rgba(246,232,196,.9)"; ctx.lineWidth = 2; ctx.stroke();
+      });
+
+      // EL MIRADOR DE FIERRO junto a la carretera
+      repetir(ctx, cam, 620, 0.46, (x, i) => {
+        const bx = x + 60, base = 356;
+        ctx.fillStyle = "#6e5a3a";
+        ctx.fillRect(bx, base - 64, 5, 64);
+        ctx.fillRect(bx + 30, base - 64, 5, 64);
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx, base - 12 - k * 13, 35, 3);
+        ctx.fillStyle = "#8a7248";
+        ctx.fillRect(bx - 8, base - 76, 51, 6);
+        ctx.fillStyle = "#c04030";
+        ctx.fillRect(bx + 14, base - 90, 3, 14);
+        ctx.fillRect(bx + 17, base - 90, 12, 7);
+      });
+
+      // los cactus y las piedras de la orilla de la pampa
+      repetir(ctx, cam, 128, 0.70, (x, i) => {
+        const bx = x + 14, base = 372;
+        if (i % 3 === 0) {
+          ctx.fillStyle = "#5f7a42";
+          ctx.fillRect(bx, base - 26, 6, 26);
+          ctx.fillRect(bx - 6, base - 20, 6, 4);
+          ctx.fillRect(bx - 6, base - 20, 3, 12);
+          ctx.fillRect(bx + 6, base - 24, 6, 4);
+          ctx.fillRect(bx + 9, base - 24, 3, 15);
+        } else {
+          ctx.fillStyle = ["#9c8154", "#8a7248", "#ab9060"][i % 3];
+          ctx.fillRect(bx, base - 6, 11, 6);
+          ctx.fillRect(bx + 2, base - 9, 6, 3);
+        }
+      });
+      ctx.fillStyle = "#b8975e";
+      ctx.fillRect(0, 372, CFG.ANCHO_VISTA, 12);
+    },
+
+    clima(ctx, t) {
+      // el temblor del aire caliente sobre la pampa
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 137 - t * 0.5) % 880 - 20;
+        const y = 250 + ((i * 53) % 110);
+        ctx.fillStyle = `rgba(255,250,228,${(0.05 + 0.09 * Math.abs(Math.sin(t / 34 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y + Math.sin(t / 18 + i) * 2, 22, 2);
+      }
+    },
+  },
+
+  /* =========================================================
+     TRUJILLO — Chan Chan a media tarde: las murallas de adobe
+     con su greca escalonada corriendo a lo largo, las huacas
+     recortadas contra el cielo, los algarrobos torcidos y el
+     mar de Huanchaco allá al fondo. El friso es el mismo motivo
+     repetido, y si le cambias el orden ya es otro friso.
+     OJO: la greca del fondo es escalonada, NO peces, porque el
+     pez enmarcado es un bicho.
+     ========================================================= */
+  barro: {
+    nombre: "Trujillo",
+    cielo: [[0, "#4f93cc"], [0.46, "#a2c4dd"], [0.8, "#d6cdb2"], [1, "#e0d2b0"]],
+    suelo: { cara: "#c9a877", borde: "#e2c69a", tierra: "#8a6a44", plataforma: "#7a5a34", plataformaBorde: "#2fb0d8" },
+    acento: "#d8303c",
+
+    bichos: ["friso", "panuelo", "vasija", "adobe", "perro"],
+    nombresBichos: [
+      "El Friso de los Peces Volteados",
+      "La Pañoleta de la Marinera",
+      "La Vasija del Mismo Diseño",
+      "El Adobe del Signo Más",
+      "El Perro Sin Pelo de la Huaca",
+    ],
+    andares: ["guardia", "vuela", "salta", "patrulla", "veloz"],
+    jefe: "curaca",
+    nombreJefe: "El Curaca de Chan Chan",
+
+    fondo(ctx, cam, t) {
+      // el sol de la tarde, bajito
+      ctx.fillStyle = "rgba(255,240,210,.20)";
+      ctx.beginPath(); ctx.arc(650, 84, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,248,226,.92)";
+      ctx.beginPath(); ctx.arc(650, 84, 26, 0, Math.PI * 2); ctx.fill();
+
+      // EL MAR DE HUANCHACO, una franja lejana
+      ctx.fillStyle = "#3f7fa8";
+      ctx.fillRect(0, 262, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#5a9cc0";
+      ctx.fillRect(0, 262, CFG.ANCHO_VISTA, 6);
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 63 - (cam * 0.12)) % 900 - 40;
+        ctx.fillStyle = "rgba(230,244,250,.30)";
+        ctx.fillRect(x, 272 + ((i * 29) % 12), 14, 2);
+      }
+
+      // LAS HUACAS recortadas, pirámides truncas de adobe
+      repetir(ctx, cam, 520, 0.16, (x, i) => {
+        const bx = x + 50, base = 292, alto = 54 + ((i * 37) % 26);
+        ctx.fillStyle = "#a88a5c";
+        ctx.beginPath();
+        ctx.moveTo(bx - 110, base);
+        ctx.lineTo(bx - 62, base - alto);
+        ctx.lineTo(bx + 62, base - alto);
+        ctx.lineTo(bx + 110, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#bb9c6a";
+        ctx.fillRect(bx - 62, base - alto, 124, 5);
+        ctx.fillStyle = "rgba(90,70,44,.30)";                  // la rampa
+        ctx.fillRect(bx - 10, base - alto + 5, 20, alto - 5);
+      });
+
+      // LAS MURALLAS DE CHAN CHAN con su greca escalonada
+      repetir(ctx, cam, 268, 0.38, (x, i) => {
+        const bx = x, base = 344, alto = 60;
+        ctx.fillStyle = "#c2a06c";
+        ctx.fillRect(bx, base - alto, 250, alto);
+        ctx.fillStyle = "#d6b67e";
+        ctx.fillRect(bx, base - alto, 250, 7);
+        ctx.fillStyle = "rgba(120,94,58,.34)";                 // el desgaste del adobe
+        for (let k = 0; k < 6; k++) ctx.fillRect(bx + 14 + k * 40, base - alto + 14, 3, alto - 22);
+        // la greca: escalones repetidos, el mismo motivo una y otra vez
+        ctx.fillStyle = "#8a6a40";
+        for (let k = 0; k < 10; k++) {
+          const gx = bx + 8 + k * 24;
+          ctx.fillRect(gx, base - 34, 18, 4);
+          ctx.fillRect(gx, base - 30, 5, 5);
+          ctx.fillRect(gx + 13, base - 26, 5, 5);
+          ctx.fillRect(gx, base - 21, 18, 4);
+        }
+      });
+
+      // LOS ALGARROBOS, torcidos y polvorientos
+      repetir(ctx, cam, 204, 0.62, (x, i) => {
+        const bx = x + 24, base = 376;
+        ctx.fillStyle = "#6b5334";
+        ctx.fillRect(bx, base - 38, 6, 38);
+        ctx.fillRect(bx - 9, base - 30, 9, 4);
+        ctx.fillRect(bx + 6, base - 34, 10, 4);
+        ctx.fillStyle = ["#6f8a44", "#7d9650", "#62793c"][i % 3];
+        ctx.beginPath(); ctx.arc(bx + 3, base - 46, 19, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx - 15, base - 38, 12, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx + 21, base - 40, 13, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#bd9c68";
+      ctx.fillRect(0, 376, CFG.ANCHO_VISTA, 8);
+    },
+
+    clima(ctx, t) {
+      // el polvo fino que levanta el viento de la costa norte
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 121 - t * 1.7) % 880 - 20;
+        const y = 150 + ((i * 61) % 220) + Math.sin(t / 22 + i) * 6;
+        ctx.fillStyle = `rgba(238,224,192,${(0.07 + 0.11 * Math.abs(Math.sin(t / 27 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 6, 3);
+      }
+    },
+  },
+
+  /* =========================================================
+     IQUITOS — Belén a media mañana, con la humedad pegada. La
+     pared verde de la selva, el río color café con leche, las
+     casas sobre palafitos con su calamina, la Casa de Fierro
+     asomando y los toldos del mercado. Acá metes la mano al
+     saco sin ver lo que hay dentro: probabilidad pura.
+     OJO: sin botes en el fondo, que el peque-peque es un bicho.
+     ========================================================= */
+  belen: {
+    nombre: "Iquitos",
+    cielo: [[0, "#4585bd"], [0.4, "#93bcd2"], [0.78, "#c8d8c6"], [1, "#dcdcc0"]],
+    suelo: { cara: "#8a6b44", borde: "#a88a56", tierra: "#5a4430", plataforma: "#2f6b4a", plataformaBorde: "#e8c15a" },
+    acento: "#e8503c",
+
+    bichos: ["paiche", "charapa", "pequepeque", "saco", "camucamu"],
+    nombresBichos: [
+      "El Paiche del Porcentaje",
+      "La Charapa que No Devuelve",
+      "El Peque-Peque de los Denominadores",
+      "El Saco del «Al Menos Uno»",
+      "El Camu Camu del Orden",
+    ],
+    andares: ["vuela", "patrulla", "veloz", "guardia", "salta"],
+    jefe: "casero",
+    nombreJefe: "El Casero de Belén",
+
+    fondo(ctx, cam, t) {
+      // el sol tapado por la humedad
+      ctx.fillStyle = "rgba(255,250,224,.26)";
+      ctx.beginPath(); ctx.arc(560, 70, 66, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,238,.80)";
+      ctx.beginPath(); ctx.arc(560, 70, 27, 0, Math.PI * 2); ctx.fill();
+
+      // LA PARED VERDE DE LA SELVA, dos capas de copas
+      repetir(ctx, cam, 300, 0.12, (x, i) => {
+        const bx = x, base = 268;
+        ctx.fillStyle = "#3d6b46";
+        for (let k = 0; k < 6; k++) {
+          ctx.beginPath();
+          ctx.arc(bx + k * 52, base - 26 - ((i + k) % 3) * 13, 34, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.fillRect(bx - 20, base - 26, 320, 32);
+      });
+      repetir(ctx, cam, 240, 0.24, (x, i) => {
+        const bx = x, base = 288;
+        ctx.fillStyle = "#4a8352";
+        for (let k = 0; k < 5; k++) {
+          ctx.beginPath();
+          ctx.arc(bx + k * 50, base - 18 - ((i + k) % 2) * 11, 28, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.fillRect(bx - 20, base - 18, 280, 26);
+      });
+
+      // EL RÍO, café con leche y ancho
+      ctx.fillStyle = "#7a5c38";
+      ctx.fillRect(0, 292, CFG.ANCHO_VISTA, 70);
+      ctx.fillStyle = "#8d6c42";
+      ctx.fillRect(0, 292, CFG.ANCHO_VISTA, 10);
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 51 - (cam * 0.2)) % 900 - 40;
+        const y = 306 + ((i * 37) % 48);
+        ctx.fillStyle = "rgba(214,196,158,.26)";
+        ctx.fillRect(x, y + Math.sin(t / 21 + i) * 2, 17, 2);
+      }
+
+      // LA CASA DE FIERRO, de rato en rato, asomando entre los techos
+      repetir(ctx, cam, 780, 0.40, (x, i) => {
+        const bx = x + 120, base = 322;
+        ctx.fillStyle = "#6f7a80";
+        ctx.fillRect(bx, base - 54, 62, 54);
+        ctx.fillStyle = "#8a959b";
+        ctx.fillRect(bx, base - 54, 62, 6);
+        ctx.fillRect(bx, base - 30, 62, 4);
+        ctx.fillStyle = "rgba(30,40,44,.45)";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 7 + k * 15, base - 24, 7, 16);
+      });
+
+      // LAS CASAS SOBRE PALAFITOS, con su calamina
+      repetir(ctx, cam, 214, 0.52, (x, i) => {
+        const bx = x + 16, base = 358, alto = 40 + ((i * 23) % 14);
+        ctx.fillStyle = "#6b4a2e";                             // los palos que la sostienen
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 8 + k * 26, base, 5, 22);
+        ctx.fillStyle = "#a8834e";                             // el cuerpo de madera
+        ctx.fillRect(bx, base - alto, 116, alto);
+        ctx.fillStyle = "rgba(70,50,30,.34)";
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx, base - alto + 8 + k * 8, 116, 2);
+        ctx.fillStyle = ["#9aa6ab", "#8d9aa0", "#a5b0b4"][i % 3];   // la calamina
+        ctx.beginPath();
+        ctx.moveTo(bx - 8, base - alto);
+        ctx.lineTo(bx + 58, base - alto - 20);
+        ctx.lineTo(bx + 124, base - alto);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(40,55,60,.40)";                  // la ventanita
+        ctx.fillRect(bx + 44, base - alto + 14, 24, 16);
+      });
+
+      // LOS TOLDOS DEL MERCADO y los cajones de la orilla
+      repetir(ctx, cam, 138, 0.74, (x, i) => {
+        const bx = x + 12, base = 378;
+        ctx.fillStyle = ["#7a4232", "#2d4f6b", "#8a6a24"][i % 3];   // apagados a propósito: los vivos son de los bichos
+        ctx.fillRect(bx, base - 26, 54, 8);
+        ctx.fillStyle = "rgba(0,0,0,.20)";
+        ctx.fillRect(bx, base - 19, 54, 3);
+        ctx.fillStyle = "#6b4a2e";
+        ctx.fillRect(bx + 2, base - 18, 4, 18);
+        ctx.fillRect(bx + 48, base - 18, 4, 18);
+        ctx.fillStyle = "#4e3a24";                             // los cajones de madera
+        ctx.fillRect(bx + 12, base - 12, 28, 12);
+        ctx.fillStyle = "rgba(210,180,130,.35)";
+        ctx.fillRect(bx + 12, base - 12, 28, 2);
+      });
+      ctx.fillStyle = "#7d6040";
+      ctx.fillRect(0, 378, CFG.ANCHO_VISTA, 6);
+    },
+
+    clima(ctx, t) {
+      // la humedad de la selva, que se queda flotando
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 109 - t * 0.8) % 880 - 20;
+        const y = 120 + ((i * 71) % 240) + Math.sin(t / 30 + i) * 9;
+        ctx.fillStyle = `rgba(232,244,232,${(0.06 + 0.10 * Math.abs(Math.sin(t / 25 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 9, 4);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

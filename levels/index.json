@@ -225,6 +225,48 @@
       "abierto": true,
       "mapa": "levels/level16.json",
       "preguntas": "questions/level16_questions.json"
+    },
+    {
+      "id": "level17",
+      "clase": "Clase 01",
+      "distrito": "Nazca",
+      "titulo": "Las líneas que solo se ven desde arriba",
+      "icono": "🛩",
+      "seccion": "Parcial",
+      "seccionNota": "Probabilidades: espacio muestral, técnicas de conteo y definición clásica",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level17.json",
+      "preguntas": "questions/level17_questions.json"
+    },
+    {
+      "id": "level18",
+      "clase": "Clase 02",
+      "distrito": "Trujillo",
+      "titulo": "El friso donde el orden es el diseño",
+      "icono": "🏛",
+      "seccion": "Parcial",
+      "seccionNota": "Probabilidades: espacio muestral, técnicas de conteo y definición clásica",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level18.json",
+      "preguntas": "questions/level18_questions.json"
+    },
+    {
+      "id": "level19",
+      "clase": "Clase 03",
+      "distrito": "Iquitos",
+      "titulo": "El saco de Belén que no te deja mirar",
+      "icono": "🛶",
+      "seccion": "Parcial",
+      "seccionNota": "Probabilidades: espacio muestral, técnicas de conteo y definición clásica",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level19.json",
+      "preguntas": "questions/level19_questions.json"
     }
   ]
 }

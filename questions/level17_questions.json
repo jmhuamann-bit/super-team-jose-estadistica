@@ -1,0 +1,203 @@
+{
+  "nivel": "level17",
+  "clase": "Clase 01 · Parcial — Teoría de probabilidades",
+  "fuente": "Apuntes de la 1era clase del Parcial — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e17-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En un salón de 30 estudiantes hay 18 mujeres y 12 hombres, y el profesor elige a uno al azar.\n\n¿Cómo se debe expresar en Esta 1 la probabilidad de que sea hombre?",
+      "opciones": [
+        "40%, que es la forma más clara de decirlo",
+        "0,4, porque en Esta 1 una probabilidad JAMÁS se expresa en porcentaje, siempre en decimales",
+        "12, que es el número de hombres",
+        "2,5, que es 30 dividido entre 12"
+      ],
+      "correcta": 1,
+      "explicacion": "Son 12 de 30, o sea 12/30 = 0,4. El valor es correcto, pero la regla del curso es tajante: se entrega en decimales, no en porcentaje."
+    },
+    {
+      "id": "e17-q2",
+      "nivel": "comprension",
+      "enunciado": "Un EXPERIMENTO ALEATORIO tiene tres condiciones que hay que poder marcar en el examen.\n\n¿Cuál de estas NO es una de ellas?",
+      "opciones": [
+        "Que el resultado se pueda predecir con certeza antes de hacerlo",
+        "Que se pueda repetir siempre bajo las mismas condiciones",
+        "Que se puedan describir todos los resultados posibles",
+        "Que se le pueda asociar un modelo matemático"
+      ],
+      "correcta": 0,
+      "explicacion": "Es justo lo contrario: un experimento es aleatorio porque NO se puede precisar el resultado. Sabes qué te puede quedar, pero no cuál te quedará."
+    },
+    {
+      "id": "e17-q3",
+      "nivel": "comprension",
+      "enunciado": "Se genera un número al azar entre 0 y 1, y se pregunta qué valor puede salir.\n\n¿Qué tipo de espacio muestral es ese?",
+      "opciones": [
+        "Finito, porque entre 0 y 1 hay poquísimos números",
+        "Infinito numerable, porque se pueden ir contando de a uno",
+        "Infinito NO numerable, porque los valores forman un intervalo y por eso es continuo",
+        "No es un espacio muestral, porque no hay experimento"
+      ],
+      "correcta": 2,
+      "explicacion": "La prueba es la pregunta del apunte: ¿cuál es el primer número entre 0 y 1? No existe. Como los valores forman un intervalo, no se pueden numerar: es continuo."
+    },
+    {
+      "id": "e17-q4",
+      "nivel": "comprension",
+      "enunciado": "Pregunta de examen, verdadero o falso.\n\n¿Cuál de estas cuatro afirmaciones sobre el espacio muestral es la ÚNICA VERDADERA?",
+      "opciones": [
+        "Todo espacio numerable solo puede ser finito",
+        "Solo los espacios finitos pueden ser discretos",
+        "Un espacio infinito solo puede ser continuo",
+        "Todo espacio finito es numerable"
+      ],
+      "correcta": 3,
+      "explicacion": "Si es finito lo puedes contar hasta el final, así que siempre es numerable. Las otras tres se caen con el mismo ejemplo: «¿en qué intento sale el 6?» es infinito, numerable y discreto."
+    },
+    {
+      "id": "e17-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Se lanza un dado, así que Ω = {1,2,3,4,5,6}. Se define el evento A = «valores mayores a 7».\n\n¿Qué se puede decir de A?",
+      "opciones": [
+        "Es un evento válido y es el conjunto VACÍO: un evento puede ir desde el vacío hasta todo el espacio muestral",
+        "No es un evento, porque los eventos no pueden ser vacíos",
+        "Es igual a todo el espacio muestral, porque ningún valor lo cumple",
+        "Es un error del enunciado: los eventos siempre tienen al menos dos elementos"
+      ],
+      "correcta": 0,
+      "explicacion": "Un evento es cualquier subconjunto de Ω, y el vacío también es subconjunto. El apunte lo dice así: como mínimo puede ser vacío y como máximo todo el espacio muestral."
+    },
+    {
+      "id": "e17-q6",
+      "nivel": "comprension",
+      "enunciado": "Se lanza un dado y se definen A = {1,4,6}, B = {1,3} y C = {5}. La intersección de los tres, A∩B∩C, es vacía.\n\n¿Son mutuamente excluyentes?",
+      "opciones": [
+        "Sí, porque la intersección de los tres salió vacía",
+        "No: hay que verificarlo DE DOS EN DOS, y A∩B = {1}, que no es vacía",
+        "Sí, porque ninguno de los tres es el conjunto vacío",
+        "No se puede saber sin conocer el espacio muestral completo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la trampa clásica: la triple vacía NO implica que lo sean de dos en dos. Al revés sí se cumple siempre. Acá A y B comparten el 1, así que no son excluyentes."
+    },
+    {
+      "id": "e17-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Se lanza un dado, Ω = {1,2,3,4,5,6}, y se definen A = {2,4,6} y B = {1,2,5}.\n\n¿Son mutuamente EXHAUSTIVOS?",
+      "opciones": [
+        "Sí, porque entre los dos tienen seis elementos en total",
+        "Sí, porque comparten el 2",
+        "No: A∪B = {1,2,4,5,6} y falta el 3, así que la unión no llega a ser todo Ω",
+        "No, porque para ser exhaustivos no deberían compartir ningún elemento"
+      ],
+      "correcta": 2,
+      "explicacion": "Exhaustivos significa que al juntarlos te devuelven el espacio muestral completo. Acá se escapa el 3. Que compartan el 2 no tiene nada que ver: eso es otra propiedad."
+    },
+    {
+      "id": "e17-q8",
+      "nivel": "comprension",
+      "enunciado": "Se lanza un dado y se definen A = { } (el vacío) y B = {1,2,3,4,5,6}.\n\n¿Qué son A y B?",
+      "opciones": [
+        "Ni complementarios ni partición, porque A está vacío",
+        "Partición pero no complementarios",
+        "Complementarios y además partición, porque cumplen las dos condiciones",
+        "Complementarios sí, pero NO forman partición, porque una parte es vacía y la otra es todo Ω"
+      ],
+      "correcta": 3,
+      "explicacion": "Como complementarios cumplen: son dos, no comparten nada y su unión es Ω. Pero la partición prohíbe que una parte sea vacía o sea todo el espacio muestral."
+    },
+    {
+      "id": "e17-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Se lanza un dado y se definen A = {2,4}, B = {1,3} y C = {5,6}.\n\n¿Forman una PARTICIÓN del espacio muestral?",
+      "opciones": [
+        "Sí: son excluyentes de dos en dos, su unión es todo Ω, y ninguno es vacío ni es todo Ω",
+        "No, porque una partición solo puede tener dos partes",
+        "No, porque C tiene dos elementos igual que A",
+        "No, porque falta un evento que contenga al 2 y al 5 juntos"
+      ],
+      "correcta": 0,
+      "explicacion": "Las tres condiciones se cumplen: ninguna pareja comparte elementos, juntas dan {1,2,3,4,5,6}, y ninguna de las tres partes es vacía ni es todo Ω."
+    },
+    {
+      "id": "e17-q10",
+      "nivel": "aplicacion",
+      "enunciado": "En una librería eliges UN libro. La Sección A ofrece ficción, no ficción o novelas gráficas (3 opciones). La Sección B ofrece novelas gráficas o misterio (2 opciones).\n\n¿Cuántas opciones DISTINTAS tienes?",
+      "opciones": [
+        "6, multiplicando 3 por 2",
+        "4, porque n(A∪B) = 3 + 2 − 1: las novelas gráficas están en las dos y se cuentan una sola vez",
+        "5, sumando las tres de A y las dos de B",
+        "1, porque solo las novelas gráficas están en ambas"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el principio de adición con su resta: n(A∪B) = n(A) + n(B) − n(A∩B) = 3 + 2 − 1 = 4. Si no restas lo compartido, cuentas dos veces las novelas gráficas."
+    },
+    {
+      "id": "e17-q11",
+      "nivel": "aplicacion",
+      "enunciado": "Eliges UN almuerzo. Almuerzos UP: arroz con pollo, causa o pollo a la brasa. Base 3: arroz con pollo, chaufa, pizza o pollo a la brasa. La tía Giova: arroz con pollo y pizza.\n\nJhon dice que tienes 9 opciones. ¿Cuántas tienes en realidad?",
+      "opciones": [
+        "9, sumando 3 + 4 + 2",
+        "7, restando solo el arroz con pollo repetido",
+        "5: arroz con pollo, causa, pollo a la brasa, chaufa y pizza, porque los platos repetidos se cuentan una sola vez",
+        "24, multiplicando 3 × 4 × 2"
+      ],
+      "correcta": 2,
+      "explicacion": "Se pide un almuerzo, o sea la UNIÓN de los tres menús. Los platos distintos son cinco: lo que se repite entre cartas no te da una opción nueva."
+    },
+    {
+      "id": "e17-q12",
+      "nivel": "aplicacion",
+      "enunciado": "Tienes 11 polos Y 9 pantalones, y un outfit se arma con 1 polo y 1 pantalón.\n\n¿Cuántos outfits distintos puedes armar y qué principio se usa?",
+      "opciones": [
+        "20 outfits, con el principio de adición, porque se suman las prendas",
+        "99 outfits, con el principio de multiplicación, porque son dos elecciones seguidas e independientes",
+        "11 outfits, porque manda la prenda que tiene más opciones",
+        "2 outfits, porque un outfit tiene dos piezas"
+      ],
+      "correcta": 1,
+      "explicacion": "La palabra clave es «y»: un polo Y un pantalón. Por cada uno de los 11 polos hay 9 pantalones, así que son 11 × 9 = 99 combinaciones distintas."
+    },
+    {
+      "id": "e17-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. En un aula de 7 estudiantes se sortean 2 turnos de exposición: el 1ro expone fotosíntesis y el 2do expone FODA. Cada nombre que sale se REPONE en la bolsita, así que alguien podría exponer las dos veces.\n\n¿Cuántos casos posibles hay?",
+      "opciones": [
+        "49, porque con reposición cada turno vuelve a tener las 7 opciones: 7 × 7",
+        "42, porque después del primero quedan 6",
+        "14, sumando 7 + 7",
+        "21, que son las parejas distintas que se pueden formar"
+      ],
+      "correcta": 0,
+      "explicacion": "Con reposición el total nunca baja: en cada selección vuelves a tener las mismas 7 opciones. Es N elevado a n, o sea 7² = 49."
+    },
+    {
+      "id": "e17-q14",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Mismo sorteo de 7 estudiantes y 2 turnos distintos, pero ahora el nombre NO se repone, así que nadie puede exponer dos veces.\n\n¿Cuántos casos posibles hay?",
+      "opciones": [
+        "49, igual que antes",
+        "13, restando 7 menos 1 más 7",
+        "42, porque el primer turno tiene 7 opciones y el segundo ya solo 6: 7 × 6",
+        "21, porque el orden de los dos turnos da lo mismo"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin reposición las opciones bajan de una en una: N·(N−1). Acá 7 × 6 = 42. No es 21 porque los turnos son distintos, así que el orden sí cuenta."
+    },
+    {
+      "id": "e17-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. En los dos sorteos anteriores el 1er elegido expone fotosíntesis y el 2do expone FODA.\n\n¿Importa el orden en que salgan elegidos?",
+      "opciones": [
+        "No, porque al final los dos exponen igual",
+        "Solo importa en el muestreo sin reposición",
+        "Solo importa en el muestreo con reposición",
+        "Sí importa en los dos casos: salir primero te toca fotosíntesis y salir segundo te toca FODA, así que Ana-Bruno no es lo mismo que Bruno-Ana"
+      ],
+      "correcta": 3,
+      "explicacion": "El orden importa cuando cada puesto es distinto, y acá cada turno tiene su propio tema. Por eso los dos conteos, 49 y 42, cuentan las parejas ordenadas."
+    }
+  ]
+}
