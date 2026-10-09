@@ -281,6 +281,20 @@
       "abierto": true,
       "mapa": "levels/level20.json",
       "preguntas": "questions/level20_questions.json"
+    },
+    {
+      "id": "level21",
+      "clase": "Clase 03",
+      "distrito": "Basilea",
+      "titulo": "El puente de las dos orillas",
+      "icono": "🎲",
+      "seccion": "PC3",
+      "seccionNota": "Variables aleatorias y distribuciones — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level21.json",
+      "preguntas": "questions/level21_questions.json"
     }
   ]
 }

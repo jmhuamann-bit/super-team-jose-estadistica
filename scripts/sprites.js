@@ -1888,6 +1888,139 @@ const METRO = [    // el vagón del Métro de París, con su librea verde y su r
 ];
 const P_METRO = { g: "#2f6b4a", w: "#f2efe4", b: "#44586a", y: "#e8c15a", k: "#2a2620" };
 
+/* =========================================================
+   BASILEA — la ciudad de Jacob Bernoulli. El fondo es piedra pálida,
+   tejado rojo y Rin verde, así que acá los bichos van en NEGRO DE
+   TINTA, verde botella y oro. Nada pálido suelto y nada teja.
+   ========================================================= */
+const DADO = [         // el dado del «cinco o más»: cuenta mal los casos favorables (14 × 12)
+  "..............",
+  "..kkkkkkkkkk..",
+  ".kwwwwwwwwwwk.",
+  ".kwkwwwwwwkwk.",
+  ".kwwwwwwwwwwk.",
+  ".kwwwwkkwwwwk.",
+  ".kwwwwkkwwwwk.",
+  ".kwwwwwwwwwwk.",
+  ".kwkwwwwwwkwk.",
+  ".kwwwwwwwwwwk.",
+  "..kkkkkkkkkk..",
+  "..............",
+];
+const P_DADO = { k: "#20242c", w: "#f0ece0" };
+
+const MONEDA = [       // la moneda que cambia de peso: cree que la probabilidad de éxito puede variar entre pruebas (14 × 14)
+  "..............",
+  "....kkkkkk....",
+  "..kkggggggkk..",
+  ".kggggggggggk.",
+  "kkggggwwggggkk",
+  "kkggggwwggggkk",
+  "kkgwwwwwwwwgkk",
+  "kkgwwwwwwwwgkk",
+  "kkggggwwggggkk",
+  "kkggggwwggggkk",
+  ".kggggggggggk.",
+  "..kkggggggkk..",
+  "....kkkkkk....",
+  "..............",
+];
+const P_MONEDA = { k: "#6b5a2a", g: "#d9b24a", w: "#f0ece0" };
+
+const TAMBOR = [       // el tambor de la Fasnacht: cree que un golpe influye en el siguiente (18 × 12)
+  "..................",
+  "..kkkkkkkkkkkkkk..",
+  ".kwwwwwwwwwwwwwwk.",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kwkwwwkwwwkwwwkk.",
+  ".kkwwwkwwwkwwwkwk.",
+  ".kwkwwwkwwwkwwwkk.",
+  ".kkwwwkwwwkwwwkwk.",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kwwwwwwwwwwwwwwk.",
+  "..kkkkkkkkkkkkkk..",
+  "..................",
+];
+const P_TAMBOR = { k: "#20242c", w: "#f0ece0" };
+
+const BASILISCO = [    // el basilisco de la fuente, emblema de Basilea: aplica la binomial sin revisar los requisitos (18 × 15)
+  "..................",
+  "..........rr......",
+  ".........rrrr.....",
+  "........gggggg....",
+  "........ggykgg....",
+  ".....gggggggggg...",
+  "....gggggggggggg..",
+  "...gggggggggggg...",
+  "..gggggggggg......",
+  "..gggggggg........",
+  "...gggggg.........",
+  "....gggg..........",
+  ".....gg...........",
+  "....kk..kk........",
+  "..................",
+];
+const P_BASILISCO = { r: "#c2263a", g: "#3f6b4a", y: "#e8c15a", k: "#20242c" };
+
+const FRASCO = [       // el frasco de la botica: escribe mal la función de probabilidad (12 × 15)
+  "............",
+  ".....kk.....",
+  ".....kk.....",
+  "....kkkk....",
+  "...kkkkkk...",
+  "..kkbbbbkk..",
+  "..kbbbbbbk..",
+  "..kbwwwwbk..",
+  "..kbwwwwbk..",
+  "..kbbbbbbk..",
+  "..kbbbbbbk..",
+  "..kbbbbbbk..",
+  "..kkbbbbkk..",
+  "...kkkkkk...",
+  "............",
+];
+const P_FRASCO = { k: "#20242c", b: "#2e5a4a", w: "#f0ece0" };
+
+const BOTICARIO = [    // jefe: tiene la fórmula pero no sabe sacarle la media, la varianza ni la utilidad (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  "......ssssss......",
+  "......sksskss.....",
+  "......ssmmss......",
+  ".......ssss.......",
+  "....wwwwwwwwww....",
+  "...wwwwwwwwwwww...",
+  "..swwaaaaaaaawws..",
+  "..swwaaaaaaaawws..",
+  "...wwaaaaaaaaww...",
+  "....waaaaaaaaw....",
+  "....waaaaaaaaw....",
+  "....wwaaaaaaww....",
+  "....jjjj..jjjj....",
+  "...kkkkk..kkkkk...",
+  "..................",
+];
+const P_BOTICARIO = { k: "#20242c", s: "#d9a273", w: "#f0ece0", a: "#2e5a4a", m: "#8a3a2e", j: "#2a2d33" };
+
+const TRANVIA = [      // el tranvía verde de Basilea, que es la salida del distrito (32 × 15)
+  "..............k.................",
+  "...........kkkkkkk..............",
+  "...gggggggggggggggggggggggggg...",
+  "..gggggggggggggggggggggggggggg..",
+  ".gggwwwwwwwwwwwwwwwwwwwwwwwwggg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwwwwwwwwwwwwwwwwwwwwwwwwwwgg.",
+  ".gggggggggggggggggggggggggggggg.",
+  ".ggggyyyyyggggggggggggyyyyygggg.",
+  ".gggggggggggggggggggggggggggggg.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  "...kkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "....kk..kk............kk..kk....",
+  "................................",
+];
+const P_TRANVIA = { g: "#2f7a3e", w: "#f0ece0", b: "#44586a", y: "#e0b24a", k: "#2a2620" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2001,6 +2134,13 @@ const DEFINICIONES = {
   ficha:        [FICHA, P_FICHA],
   banquero:     [BANQUERO, P_BANQUERO],
   metro:        [METRO, P_METRO],
+  dado:         [DADO, P_DADO],
+  moneda:       [MONEDA, P_MONEDA],
+  tambor:       [TAMBOR, P_TAMBOR],
+  basilisco:    [BASILISCO, P_BASILISCO],
+  frasco:       [FRASCO, P_FRASCO],
+  boticario:    [BOTICARIO, P_BOTICARIO],
+  tranvia:      [TRANVIA, P_TRANVIA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

@@ -1,0 +1,42 @@
+{
+  "id": "level21",
+  "distrito": "Basilea",
+  "clase": "Clase 03 · PC3",
+  "titulo": "El puente de las dos orillas",
+  "tema": "basilea",
+  "musica": "basilea",
+  "vehiculo": "tranvia",
+  "intro": "Cambiamos de país: Basilea, en Suiza, donde el Rin hace su recodo. Acá enseñaba matemáticas Jacob Bernoulli, y acá escribió el Ars Conjectandi, el libro que se publicó en 1713, ocho años después de su muerte, y que fundó buena parte de lo que estás estudiando. De él sale el nombre de las PRUEBAS DE BERNOULLI: un experimento con solo dos resultados posibles, éxito o fracaso, que se repite siempre en las mismas condiciones y sin que una prueba influya en la siguiente. Como el Puente del Medio, que cruza el Rin desde 1226 uniendo las dos orillas y nunca tuvo una tercera. Bernoulli está enterrado en el claustro de la catedral, y pidió que en su lápida grabaran una espiral con la frase «eadem mutata resurgo»: cambiada, resurjo la misma. Esa es justo la idea de su prueba — por más veces que la repitas, sigue siendo la misma.",
+  "repaso": [
+    "DE DÓNDE VENIMOS: hasta ahora, para hallar una probabilidad había que armar la función desde cero — listar el espacio muestral, contar los casos y repartir. Eso se acabó para dos casos muy comunes.",
+    "LAS DOS FUNCIONES DE PROBABILIDAD SÚPER CONOCIDAS, que ya traen su fórmula hecha: para variable DISCRETA, la BINOMIAL; para variable CONTINUA, la NORMAL. Las otras entran en Estadística 2. Con la fórmula ya no hace falta combinatorias ni fracciones consecutivas para sacar la probabilidad.",
+    "POR QUÉ SE LLAMA BINOMIAL: porque cada prueba tiene DOS (bi-) resultados posibles, éxito y fracaso.",
+    "QUÉ ES UNA PRUEBA DE BERNOULLI, con sus tres condiciones: (1) dos posibles resultados, que entre los dos cubren todo el espacio muestral; (2) la probabilidad de éxito se mantiene CONSTANTE de una prueba a otra, y la del fracaso también; (3) las pruebas son INDEPENDIENTES — la primera no influye en la segunda. El ejemplo típico de independencia es el muestreo CON REEMPLAZO.",
+    "IDENTIFICAR EL ÉXITO Y SU PROBABILIDAD, que es el paso que más puntos cuesta. Moneda, éxito = cara → π = 1/2. Fábrica con 2 defectuosos de 100, éxito = defectuoso → π = 0,02. Encuesta donde 60 de 200 apoyan al candidato → π = 0,30. Dado, éxito = número MAYOR O IGUAL a 5 → son DOS casos, el 5 y el 6, así que π = 2/6 ≈ 0,3333. Leer «mayor o igual» como un solo caso es el error clásico.",
+    "LOS 4 REQUISITOS DE UN PROBLEMA BINOMIAL: número FIJO de pruebas (n), dos resultados posibles, independencia y probabilidad de éxito constante. Y el TRUCO para reconocerlo en el enunciado: te dan la probabilidad de éxito, O te dicen que el muestreo es con reemplazo. DATO CURIOSO: la unión de varias pruebas de Bernoulli da como resultado una distribución BINOMIAL.",
+    "LA RECETITA, paso a paso. 1) Definir la variable: X = lo que consideras éxito, con rango 0, 1, 2, …, n. 2) Escribir la naturaleza: X ~ B(n; π). 3) Hallar n, π y x, y escribir la función: f(x) = C(n,x)·π^x·(1−π)^(n−x) para x = 0, 1, …, n; y 0 de otro modo. Donde n son las pruebas, x los éxitos, π la probabilidad de éxito y n − x los fracasos.",
+    "PASO 4, OPCIÓN A — la probabilidad. Si piden P(X = 2), basta con reemplazar. Si piden P(X ≥ 2), se SUMAN los casos: P(2) + P(3) + P(4) + … Y siempre se puede controlar por el complemento.",
+    "PASO 4, OPCIÓN B — las medidas, que en la binomial salen con fórmula directa y sin tabla: media = n·π; varianza = n·π·(1−π); CV = desviación / media. Ojo: la desviación es la RAÍZ de la varianza.",
+    "PASO 5 — la vida real: la utilidad. U = Ingreso Total − Costo Total = (ingreso por unidad × VENTAS) − (costo por unidad × PRODUCCIÓN). El ingreso depende de X, el costo no. Después E(U) se transforma entero, pero Var(U) = (ingreso por unidad)² × Var(X): a la varianza no le afectan las sumas ni las restas de constantes.",
+    "LA PASTELERÍA RESUELTA (torta MA: n = 5, π = 0,7). P(X=4) = C(5,4)·0,7⁴·0,3 = 0,36015. P(X=5) = 0,7⁵ = 0,16807. Más de la mitad es X ≥ 3: 0,3087 + 0,36015 + 0,16807 = 0,8369. Media 3,5, varianza 1,05, desviación 1,0247 y CV = 29,28%. Y con precio 25 y costo 15 sobre las 5 producidas: U = 25X − 75, E(U) = 12,5, Var(U) = 625 × 1,05 = 656,25, y CV de la ganancia 204,94% — o sea muy variable.",
+    "LA MISMA IDEA PARA LA TORTA MB (n = 5, π = 0,8): P(X=4) = 0,4096, P(X=5) = 0,32768, P(X≥3) = 0,94208, media 4, varianza 0,8 y CV = 22,36%.",
+    "LA FORMA DEL GRÁFICO, que es parte para marcar: si π < 0,5 sale asimétrico a la DERECHA; si π = 0,5 sale SIMÉTRICO; y si π > 0,5 sale asimétrico a la IZQUIERDA."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                       A                                                   A                                                                    ",
+    "                                                     o o o                                               o o o                                                                  ",
+    "                                                     ======                                              ======                                                                 ",
+    "                                                                                                                                                                                ",
+    "                        o o o                               o o o                           o o o                           o o o                     o o o                     ",
+    "                ?           o o         L                           V               G         o o                   G               o o           1     L                       ",
+    "                        ====                                ====                            ====                            ====                      ====                      ",
+    "                        o o                     o o                                             o o                     o o                     o o                             ",
+    "  P                 E         C             E   T       X       E                 C     E         X T     E             X       E           C                 B             M   ",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################"
+  ]
+}

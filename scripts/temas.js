@@ -2144,6 +2144,173 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     BASILEA — el recodo del Rin a media mañana, en la ciudad donde
+     Jacob Bernoulli escribió el Ars Conjectandi y donde está
+     enterrado. Al fondo la catedral de arenisca roja con sus dos
+     torres y su tejado de tejas vidriadas; al frente la ciudad
+     vieja con sus hastiales escalonados y sus techos de teja; abajo
+     el Rin, verde de deshielo, con el Puente del Medio cruzándolo.
+     OJO 1: el fondo no lleva dados, monedas, tambores ni frascos
+     sueltos — esos son los bichos.
+     OJO 2: el plano del suelo baja SIN CORTES desde las casas hasta
+     la vereda. Si queda un hueco, se asoma el cielo y el fondo
+     parece tener una laguna.
+     OJO 3: la paleta es ARENISCA ROJA y teja a propósito, con un
+     cielo alpino más frío, para no confundirse con el París pálido
+     ni con el Lyon ocre. Los bichos van en negro de tinta, verde
+     botella y oro; ninguno puede ser teja ni piedra pálida.
+     ========================================================= */
+  basilea: {
+    nombre: "Basilea",
+    cielo: [[0, "#3f7bbf"], [0.4, "#8fb6d4"], [0.76, "#c4d0cc"], [1, "#dcddc8"]],
+    suelo: { cara: "#9aa08f", borde: "#b9bda8", tierra: "#4a4a3e", plataforma: "#8a3a2e", plataformaBorde: "#e0c060" },
+    acento: "#c2263a",
+
+    bichos: ["dado", "moneda", "tambor", "basilisco", "frasco"],
+    nombresBichos: [
+      "El Dado del Cinco o Más",
+      "La Moneda que Cambia de Peso",
+      "El Tambor de la Fasnacht",
+      "El Basilisco sin Requisitos",
+      "El Frasco de la Fórmula Rota",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "boticario",
+    nombreJefe: "El Boticario de Basilea",
+
+    fondo(ctx, cam, t) {
+      // el sol alpino, chico y limpio
+      ctx.fillStyle = "rgba(246,250,255,.22)";
+      ctx.beginPath(); ctx.arc(632, 62, 54, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,253,246,.94)";
+      ctx.beginPath(); ctx.arc(632, 62, 23, 0, Math.PI * 2); ctx.fill();
+
+      // LA CATEDRAL de arenisca roja, con sus dos torres y su tejado vidriado
+      repetir(ctx, cam, 1100, 0.07, (x, i) => {
+        const bx = x + 220, base = 306;
+        ctx.fillStyle = "#9e4a3a";
+        ctx.fillRect(bx - 70, base - 96, 140, 96);                 // la nave
+        ctx.fillStyle = "#8a3f31";
+        ctx.fillRect(bx - 76, base - 104, 152, 10);                // la cornisa
+        for (const dx of [-74, 44]) {                              // las dos torres
+          ctx.fillStyle = "#9e4a3a";
+          ctx.fillRect(bx + dx, base - 158, 30, 158);
+          ctx.fillStyle = "#3f6b4a";                               // los chapiteles
+          ctx.beginPath();
+          ctx.moveTo(bx + dx - 4, base - 158);
+          ctx.lineTo(bx + dx + 15, base - 196);
+          ctx.lineTo(bx + dx + 34, base - 158);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(40,30,26,.34)";
+          for (let k = 0; k < 3; k++) ctx.fillRect(bx + dx + 9, base - 142 + k * 30, 12, 18);
+        }
+        // el tejado de tejas vidriadas, el rombo de colores que la hace reconocible
+        for (let k = 0; k < 10; k++) {
+          ctx.fillStyle = ["#c2263a", "#e0c060", "#3f6b4a", "#e0c060"][k % 4];
+          ctx.fillRect(bx - 70 + k * 14, base - 104, 14, 10);
+        }
+        ctx.fillStyle = "rgba(40,30,26,.30)";                       // el rosetón
+        ctx.beginPath(); ctx.arc(bx, base - 66, 13, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // LA CIUDAD VIEJA: hastiales escalonados y techos de teja
+      repetir(ctx, cam, 206, 0.22, (x, i) => {
+        const bx = x + 10, base = 306, alto = 74 + ((i * 37) % 24);
+        ctx.fillStyle = ["#ded5c0", "#d2c9b2", "#e8dfc8"][i % 3];
+        ctx.fillRect(bx, base - alto, 182, alto);
+        // el hastial escalonado, que es LA marca de la casa renana
+        ctx.fillStyle = "#a8503c";
+        for (let k = 0; k < 4; k++) {
+          const w = 182 - k * 42;
+          if (w <= 0) break;
+          ctx.fillRect(bx + k * 21, base - alto - 10 - k * 10, w, 10);
+        }
+        ctx.fillStyle = "rgba(48,38,30,.40)";                       // las ventanas
+        for (let k = 0; k < 4; k++) {
+          ctx.fillRect(bx + 16 + k * 40, base - alto + 16, 20, 26);
+          ctx.fillRect(bx + 16 + k * 40, base - alto + 52, 20, 26);
+        }
+        ctx.fillStyle = "#6b5a46";                                  // el zócalo
+        ctx.fillRect(bx, base - 14, 182, 14);
+      });
+
+      // EL PLANO DEL SUELO, de las casas a la vereda y SIN CORTES:
+      // el muelle de enfrente, el Rin y el muelle de este lado
+      ctx.fillStyle = "#998f7c";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#3f6f66";                                    // EL RIN, verde de deshielo
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#56897a";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 57 - cam * 0.26) % 960 - 40;                 // el Rin corre rápido
+        ctx.fillStyle = "rgba(226,240,234,.30)";
+        ctx.fillRect(x, 324 + ((i * 23) % 18), 16, 2);
+      }
+      ctx.fillStyle = "#a2988a";                                    // el muelle
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#bdb49e";
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // EL PUENTE DEL MEDIO, con su capilla en el pretil
+      repetir(ctx, cam, 440, 0.30, (x, i) => {
+        const bx = x + 40, cubierta = 314;
+        ctx.fillStyle = "#b0a68e";
+        ctx.fillRect(bx, cubierta, 190, 9);
+        ctx.fillStyle = "rgba(250,248,236,.44)";
+        ctx.fillRect(bx, cubierta, 190, 3);
+        ctx.fillStyle = "#8d8371";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 6 + k * 60, cubierta + 9, 16, 24);
+        // la capillita del puente
+        ctx.fillStyle = "#ded5c0";
+        ctx.fillRect(bx + 86, cubierta - 20, 22, 20);
+        ctx.fillStyle = "#a8503c";
+        ctx.beginPath();
+        ctx.moveTo(bx + 82, cubierta - 20); ctx.lineTo(bx + 97, cubierta - 33); ctx.lineTo(bx + 112, cubierta - 20);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LA BOTICA DE LA ESQUINA, que en Basilea es media ciudad
+      repetir(ctx, cam, 296, 0.54, (x, i) => {
+        const bx = x + 30, base = 382, alto = 34;
+        ctx.fillStyle = "#2e5a4a";
+        ctx.fillRect(bx, base - alto, 124, alto);
+        ctx.fillStyle = "#e0c060";
+        ctx.fillRect(bx + 8, base - alto + 4, 108, 8);
+        ctx.fillStyle = "rgba(246,242,220,.86)";
+        ctx.fillRect(bx + 12, base - alto + 16, 46, 16);
+        ctx.fillRect(bx + 66, base - alto + 16, 46, 16);
+        ctx.fillStyle = "#8a3a2e";                                  // el toldo
+        ctx.fillRect(bx - 6, base - alto - 8, 136, 8);
+        ctx.fillStyle = "rgba(0,0,0,.22)";
+        ctx.fillRect(bx - 6, base - alto - 1, 136, 2);
+      });
+
+      // LOS CASTAÑOS de la orilla
+      repetir(ctx, cam, 152, 0.78, (x, i) => {
+        const bx = x + 24, base = 382;
+        ctx.fillStyle = "#5d4c38";
+        ctx.fillRect(bx, base - 28, 5, 28);
+        ctx.fillStyle = ["#44663f", "#527349", "#3a5a36"][i % 3];
+        ctx.beginPath(); ctx.ellipse(bx + 2, base - 42, 17, 16, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx - 10, base - 32, 8, 9, 0.4, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx + 14, base - 34, 8, 9, -0.4, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#8e8574";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la luz fría que rebota en el río
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 151 - t * 0.7) % 880 - 20;
+        const y = 120 + ((i * 73) % 200) + Math.sin(t / 32 + i) * 7;
+        ctx.fillStyle = `rgba(238,248,255,${(0.04 + 0.08 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 5, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

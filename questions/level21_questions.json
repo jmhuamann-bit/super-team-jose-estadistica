@@ -1,0 +1,125 @@
+{
+  "nivel": "level21",
+  "clase": "Clase 03 · PC3 — Pruebas de Bernoulli y distribución binomial",
+  "fuente": "Apuntes de la 3ra clase de la PC3 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "s21-q1",
+      "nivel": "comprension",
+      "enunciado": "Hasta ahora, para hallar una probabilidad había que armar la función desde cero: listar el espacio muestral, contar los casos y repartir. Pero en estadística hay dos funciones de probabilidad súper conocidas que ya traen su fórmula hecha.\n\n¿Cuáles son, y de dónde sale el nombre «binomial»?",
+      "opciones": [
+        "La BINOMIAL para variable discreta y la NORMAL para variable continua. Se llama binomial porque cada prueba tiene dos (bi-) resultados posibles: éxito y fracaso",
+        "La binomial para variable continua y la normal para variable discreta; el nombre viene de que usa dos parámetros, n y π",
+        "La binomial y la de Poisson, las dos para variable discreta; el nombre viene de que se calcula con dos combinatorias",
+        "La normal y la uniforme; «binomial» es el nombre del gráfico, que siempre tiene dos picos"
+      ],
+      "correcta": 0,
+      "explicacion": "Discreta → binomial, continua → normal (las otras entran en Estadística 2). Y el nombre sale de los dos resultados posibles de cada prueba. Con la fórmula ya no hace falta armar la función a mano."
+    },
+    {
+      "id": "s21-q2",
+      "nivel": "comprension",
+      "enunciado": "Una PRUEBA DE BERNOULLI es un experimento aleatorio que cumple tres condiciones.\n\n¿Cuáles son?",
+      "opciones": [
+        "Que el número de pruebas sea par, que la probabilidad sea mayor a 0,5 y que la variable sea continua",
+        "Que haya al menos dos resultados, que la muestra sea grande y que los datos estén ordenados",
+        "Dos posibles resultados, que cubran todo el espacio muestral; que la probabilidad de éxito se mantenga CONSTANTE de una prueba a otra; y que las pruebas sean INDEPENDIENTES, o sea que la primera no influya en la segunda",
+        "Que haya éxito y fracaso, que la probabilidad de éxito sea exactamente 0,5 y que el experimento se repita infinitas veces"
+      ],
+      "correcta": 2,
+      "explicacion": "Dos resultados, probabilidad constante e independencia. Y el ejemplo típico de independencia es el muestreo CON REEMPLAZO: como el papel se repone, lo que salió antes no cambia lo que viene."
+    },
+    {
+      "id": "s21-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Se lanza un dado y defines como ÉXITO que salga un número mayor o igual a 5.\n\n¿Cuánto vale la probabilidad de éxito, y cómo va a salir el gráfico de la función de probabilidad?",
+      "opciones": [
+        "π = 1/6, porque el éxito es un solo resultado; y el gráfico sale simétrico",
+        "π = 2/6 ≈ 0,3333, porque «mayor o igual a 5» son DOS casos favorables, el 5 y el 6. Y como π < 0,5, el gráfico sale asimétrico a la DERECHA",
+        "π = 5/6, porque el éxito es sacar 5 o más de los 6 números; y el gráfico sale asimétrico a la izquierda",
+        "π = 0,5, porque en todo experimento de Bernoulli el éxito y el fracaso son igual de probables"
+      ],
+      "correcta": 1,
+      "explicacion": "El error que más cae acá es leer «mayor o igual» como un solo caso. Y la forma depende de π: menor a 0,5 asimétrico a la derecha, igual a 0,5 simétrico, mayor a 0,5 asimétrico a la izquierda."
+    },
+    {
+      "id": "s21-q4",
+      "nivel": "comprension",
+      "enunciado": "Antes de meter nada en la fórmula hay que estar seguro de que el problema es binomial.\n\n¿Qué requisitos tiene que cumplir, y qué relación hay entre la binomial y las pruebas de Bernoulli?",
+      "opciones": [
+        "Basta con que haya éxito y fracaso; la binomial y la prueba de Bernoulli son exactamente lo mismo",
+        "Que la muestra sea sin reemplazo y que se conozca el tamaño de la población; la binomial es un caso particular de la hipergeométrica",
+        "Que la variable sea continua y que el gráfico sea simétrico; la Bernoulli es la versión continua de la binomial",
+        "Cuatro requisitos: número FIJO de pruebas (n), dos resultados posibles, independencia y probabilidad de éxito constante. Y la relación es que la unión de varias pruebas de Bernoulli da como resultado una distribución BINOMIAL"
+      ],
+      "correcta": 3,
+      "explicacion": "El truco para reconocerla en el enunciado: te dan la probabilidad de éxito, O te dicen que el muestreo es CON REEMPLAZO — y el reemplazo es justamente lo que garantiza la independencia."
+    },
+    {
+      "id": "s21-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Una pastelería produce 5 tortas del tipo MA al día y la probabilidad de vender cada una es 0,7, de forma independiente. Defines X = número de tortas MA vendidas en el día.\n\n¿Cómo se escriben la naturaleza de la variable y su función de probabilidad?",
+      "opciones": [
+        "X ~ B(5; 0,7), y f(x) = C(5,x)·0,7^x·0,3^(5−x) para x = 0, 1, 2, 3, 4, 5; y 0 de otro modo",
+        "X ~ B(0,7; 5), y f(x) = C(5,x)·0,3^x·0,7^(5−x) para cualquier x real",
+        "X ~ N(5; 0,7), y f(x) = 5·0,7^x, porque la binomial multiplica el número de pruebas por la probabilidad",
+        "X ~ B(5; 0,7), y f(x) = 0,7^x·0,3^(5−x), sin el combinatorio, porque el orden de las ventas no importa"
+      ],
+      "correcta": 0,
+      "explicacion": "Primero la naturaleza X ~ B(n; π), con n = pruebas y π = probabilidad de éxito. Y en la fórmula el combinatorio C(n,x) sí va: es el que cuenta de cuántas formas distintas pueden caer esos x éxitos."
+    },
+    {
+      "id": "s21-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Con esa misma pastelería (n = 5 tortas, π = 0,7), te piden la probabilidad de vender exactamente 4 tortas en el día.\n\nDatos para no perder tiempo: C(5,4) = 5 y 0,7⁴ = 0,2401.\n\n¿Cuánto vale P(X = 4)?",
+      "opciones": [
+        "0,2401, que es directamente 0,7 elevado a la 4",
+        "0,8, porque son 4 de las 5 tortas",
+        "0,36015, porque P(X = 4) = C(5,4)·0,7⁴·0,3¹ = 5 × 0,2401 × 0,3",
+        "1,2005, multiplicando 5 por 0,2401"
+      ],
+      "correcta": 2,
+      "explicacion": "Las tres piezas: el combinatorio C(5,4) = 5, la probabilidad de los 4 éxitos (0,7⁴) y la del fracaso que queda (0,3¹). Faltar cualquiera de las tres es el error típico."
+    },
+    {
+      "id": "s21-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Siguen las 5 tortas con π = 0,7, y ahora te piden la probabilidad de vender MÁS DE LA MITAD de las tortas del día.\n\nYa calculadas: P(X=3) = 0,3087 · P(X=4) = 0,36015 · P(X=5) = 0,16807.\n\n¿Cuánto vale, y por qué?",
+      "opciones": [
+        "0,36015, porque más de la mitad de 5 es 2,5 y hay que redondear a 3... pero el valor que corresponde es el de P(X=4)",
+        "0,8369. Más de la mitad de 5 significa X ≥ 3, así que se suman P(3) + P(4) + P(5) = 0,3087 + 0,36015 + 0,16807",
+        "0,5, porque «más de la mitad» siempre deja la mitad de la probabilidad a cada lado",
+        "0,16807, porque para superar la mitad hay que vender todas las tortas"
+      ],
+      "correcta": 1,
+      "explicacion": "Las probabilidades acumuladas se SUMAN caso por caso. Un control rápido: también sale como 1 − P(0) − P(1) − P(2), y da lo mismo."
+    },
+    {
+      "id": "s21-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Con las mismas 5 tortas y π = 0,7, te piden la media, la varianza y el coeficiente de variabilidad del número de ventas. En la binomial no hace falta la tabla: hay fórmula directa.\n\n¿Cuánto valen?",
+      "opciones": [
+        "Media 0,7 y varianza 5, porque la media es la probabilidad y la varianza el número de pruebas",
+        "Media 3,5 y varianza 3,5, porque en la binomial la media y la varianza siempre coinciden",
+        "Media 2,5 y varianza 1,25, usando π = 0,5 como referencia",
+        "Media = n·π = 5(0,7) = 3,5; varianza = n·π·(1−π) = 5(0,7)(0,3) = 1,05; desviación 1,0247 y CV = 1,0247/3,5 = 29,28%"
+      ],
+      "correcta": 3,
+      "explicacion": "Las tres fórmulas de la binomial: media n·π, varianza n·π·(1−π) y CV = desviación sobre media. Ojo con el CV: la desviación es la RAÍZ de la varianza, no la varianza."
+    },
+    {
+      "id": "s21-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Último paso, el de la vida real. De esas 5 tortas producidas, cada una se vende a 25 soles y cuesta 15 soles producirla. El costo se paga por lo PRODUCIDO (las 5), y el ingreso depende de lo VENDIDO (X). Ya sabes que E(X) = 3,5 y Var(X) = 1,05.\n\n¿Cuáles son la utilidad esperada y la varianza de la utilidad?",
+      "opciones": [
+        "E(U) = 12,5 y Var(U) = 656,25. La utilidad es U = 25X − 15(5) = 25X − 75, así que E(U) = 25(3,5) − 75; y la varianza se multiplica por 25² = 625, mientras que el −75 no la toca",
+        "E(U) = 35 y Var(U) = 26,25, multiplicando los 10 soles de ganancia por unidad",
+        "E(U) = 12,5 y Var(U) = 26,25, multiplicando la varianza por 25 en vez de por 25²",
+        "E(U) = 87,5 y Var(U) = 656,25, porque el costo fijo no entra en el valor esperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Las dos reglas de siempre, ahora sobre dinero: al valor esperado se le aplica la transformación completa, pero a la varianza solo la multiplicación, y elevada al cuadrado. La resta de constantes no afecta a la varianza."
+    }
+  ]
+}

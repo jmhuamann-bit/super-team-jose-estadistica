@@ -145,6 +145,14 @@ const TEMAS_MUSICA = {
               "A4",1,"B4",1,"G4",2,"D4",4],
     bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
   },
+  basilea: { // Basilea: aire de pífano y tambor de Fasnacht, marcado y cortito
+    tempo: 0.14, onda: "square",
+    melodia: ["G4",1,"A4",1,"B4",2,"D5",2,"B4",2,"G4",2,"A4",2,
+              "B4",1,"C5",1,"D5",2,"B4",2,"A4",2,"G4",2,"D4",2,
+              "G4",1,"B4",1,"D5",2,"E5",2,"D5",2,"B4",2,"A4",2,
+              "G4",2,"A4",2,"G4",4],
+    bajo:    ["G2",4,"D3",4,"G2",4,"C3",4,"D3",4,"G2",4,"D3",4,"G2",4],
+  },
   sena: { // París: valsecito de acordeón, ligero y con aire de vereda
     tempo: 0.15, onda: "triangle",
     melodia: ["A4",2,"C5",1,"E5",1,"D5",2,"C5",2,"B4",2,
