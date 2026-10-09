@@ -1752,6 +1752,140 @@ const CASERO = [   // jefe de Iquitos: te vende del saco sin dejarte mirar lo qu
 ];
 const P_CASERO = { k: "#1f6b4a", s: "#c9945c", b: "#241a2e", m: "#8a3a2e", c: "#d8303c", w: "#f7efe0", n: "#c9a05c", j: "#2f4a6b" };
 
+/* =========================================================
+   MONTECARLO — la plaza del casino a la hora dorada. El fondo es
+   piedra crema, cobre verde y mar turquesa, así que acá todo va en
+   NEGRO DE SMOKING y rojo de casino. Nada crema suelto.
+   ========================================================= */
+const RULETA = [       // la ruleta: cada tirada es un experimento nuevo, no se acuerda de la anterior (16 × 13)
+  "................",
+  ".....kkkkkk.....",
+  "...kkkkkkkkkk...",
+  "..kkrrwwrrrrkk..",
+  ".kkrrrrkkrrrrkk.",
+  ".kkrrkkkkkkrrkk.",
+  ".kkrkkkggkkkrkk.",
+  ".kkrkkkggkkkrkk.",
+  ".kkrrkkkkkkrrkk.",
+  ".kkrrrrkkrrrrkk.",
+  "..kkrrrrrrrrkk..",
+  "...kkkkkkkkkk...",
+  ".....kkkkkk.....",
+];
+const P_RULETA = { k: "#1f2228", r: "#b3243c", w: "#f2efe4", g: "#d9b24a" };
+
+const CRONOMETRO = [   // el cronómetro del Gran Premio: el tiempo se MIDE, así que es variable continua (14 × 16)
+  "..............",
+  "......gg......",
+  ".....gggg.....",
+  "....kkkkkk....",
+  "..kkkkkkkkkk..",
+  ".kkwwwwwwwwkk.",
+  ".kwwwwwwwwwwk.",
+  "kkwwwwwwwwwwkk",
+  "kkwwwwrwwwwwkk",
+  "kkwwwwrwwwwwkk",
+  "kkwwwrrrwwwwkk",
+  ".kwwwwwwwwwwk.",
+  ".kkwwwwwwwwkk.",
+  "..kkkkkkkkkk..",
+  "....kkkkkk....",
+  "..............",
+];
+const P_CRONOMETRO = { g: "#d9b24a", k: "#2a2e36", w: "#f2efe4", r: "#b3243c" };
+
+const CROUPIER = [     // el croupier del 26: cree que lo que ya salio cambia lo que viene (16 x 17)
+  "................",
+  "...gggggggggg...",
+  "..gggggggggggg..",
+  "......ssss......",
+  ".....sksskss....",
+  ".....ssmmss.....",
+  "......ssss......",
+  "....wwwwwwww....",
+  "...wwwcrrcwww...",
+  "..swwccccccwws..",
+  "...wwccccccww...",
+  "....wwccccww....",
+  "....wwwwwwww....",
+  "....jjj..jjj....",
+  "...kkkk..kkkk...",
+  "................",
+  "................",
+];
+const P_CROUPIER = { g: "#2f6b4a", s: "#d9a273", k: "#1b1e26", m: "#8a3a2e", w: "#f2efe4", c: "#1b1e26", r: "#b3243c", j: "#2a2d33" };
+
+const MESA = [         // la mesa de juego cuyas probabilidades no suman uno (18 × 12)
+  "..................",
+  "..kkkkkkkkkkkkkk..",
+  ".kggggggggggggggk.",
+  ".kggrrggggggrrggk.",
+  ".kggggggggggggggk.",
+  ".kgwwgwwgwwgwwggk.",
+  ".kggggggggggggggk.",
+  "..kkkkkkkkkkkkkk..",
+  "...kk........kk...",
+  "...kk........kk...",
+  "...kk........kk...",
+  "..................",
+];
+const P_MESA = { k: "#3a2a1c", g: "#2f6b4a", r: "#b3243c", w: "#e8dcc0" };
+
+const FICHA = [        // la ficha del hueco: calcula sin despejar la probabilidad que falta (14 × 14)
+  "..............",
+  "....kkkkkk....",
+  "..kkwwkkwwkk..",
+  ".kkwwkkkkwwkk.",
+  ".kwwkkkkkkwwk.",
+  "kkkkkrrrrkkkkk",
+  "kkkkrrrrrrkkkk",
+  "kkkkrrrrrrkkkk",
+  "kkkkkrrrrkkkkk",
+  ".kwwkkkkkkwwk.",
+  ".kkwwkkkkwwkk.",
+  "..kkwwkkwwkk..",
+  "....kkkkkk....",
+  "..............",
+];
+const P_FICHA = { k: "#1f2228", w: "#f2efe4", r: "#b3243c" };
+
+const BANQUERO = [     // jefe: el banquero del casino, que no sabe transformar una variable (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  "......ssssss......",
+  "......sksskss.....",
+  "......ssmmss......",
+  ".......ssss.......",
+  "....cccccccccc....",
+  "...cccwwwwwwccc...",
+  "..sccwwwrrwwwccs..",
+  "..sccwwwwwwwwccs..",
+  "...cccwwwwwwccc...",
+  "....cccggggcccc...",
+  "....cccccccccc....",
+  "....cccc..cccc....",
+  "....jjjj..jjjj....",
+  "...kkkkk..kkkkk...",
+  "..................",
+];
+const P_BANQUERO = { k: "#13161e", s: "#d9a273", c: "#1b1e26", w: "#f2efe4", r: "#b3243c", g: "#d9b24a", m: "#8a3a2e", j: "#23262c" };
+
+const BOLIDO = [       // el monoplaza del Gran Premio de Mónaco, que es la salida del distrito (32 × 12)
+  "................................",
+  "................................",
+  "..............kkk...............",
+  ".............kwwwk..............",
+  "....rrrrrrrrrrwwwrrrrrrrrr......",
+  "..rrrrrrrrrrrrrrrrrrrrrrrrrr....",
+  ".rrrrrrrrrrrrrrrrrrrrrrrrrrrr...",
+  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
+  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
+  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
+  ".kkkk..................kkkkk....",
+  "................................",
+];
+const P_BOLIDO = { r: "#b3243c", k: "#1f2228", w: "#8fb8d8" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1858,6 +1992,13 @@ const DEFINICIONES = {
   mezcladora:   [MEZCLADORA, P_MEZCLADORA],
   escalera:     [ESCALERA, P_ESCALERA],
   maestro:      [MAESTRO, P_MAESTRO],
+  ruleta:       [RULETA, P_RULETA],
+  cronometro:   [CRONOMETRO, P_CRONOMETRO],
+  croupier:     [CROUPIER, P_CROUPIER],
+  mesa:         [MESA, P_MESA],
+  ficha:        [FICHA, P_FICHA],
+  banquero:     [BANQUERO, P_BANQUERO],
+  bolido:       [BOLIDO, P_BOLIDO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

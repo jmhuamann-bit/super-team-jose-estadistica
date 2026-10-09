@@ -1,0 +1,125 @@
+{
+  "nivel": "level20",
+  "clase": "Clase 02 · PC3 — Variable aleatoria, valor esperado y varianza",
+  "fuente": "Apuntes de la 2da clase de la PC3 — Estadística 1",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "s20-q1",
+      "nivel": "comprension",
+      "enunciado": "Un experimento aleatorio es aquel cuyo resultado no se puede precisar con certeza, y el espacio muestral Ω es el conjunto de todos sus resultados posibles. Lanzas una moneda dos veces, así que Ω = {CC, CS, SC, SS}, y defines X = número de caras.\n\n¿Qué es exactamente X?",
+      "opciones": [
+        "Una FUNCIÓN que le asigna un valor numérico a cada resultado del experimento: su dominio es el espacio muestral {CC, CS, SC, SS} y su rango es {0, 1, 2}",
+        "El espacio muestral mismo, nada más que escrito con números en vez de letras",
+        "Un resultado del experimento, o sea uno de los cuatro elementos de Ω",
+        "Una probabilidad, porque los valores que toma siempre están entre 0 y 1"
+      ],
+      "correcta": 0,
+      "explicacion": "La definición exacta: una variable aleatoria es una FUNCIÓN que asigna un valor numérico a cada posible resultado de un experimento aleatorio. Entra un resultado, sale un número."
+    },
+    {
+      "id": "s20-q2",
+      "nivel": "comprension",
+      "enunciado": "Un pescador sale a pescar. Clasifica cada variable según su naturaleza:\n\n(1) El número de peces capturados\n(2) La longitud del pez\n(3) El tiempo que demora en atrapar uno\n(4) El número de amigos con los que va\n\n¿Cuáles son discretas y cuáles continuas?",
+      "opciones": [
+        "Todas son discretas, porque todas se pueden escribir con un número",
+        "La (1) y la (2) son discretas; la (3) y la (4) son continuas",
+        "La (1) y la (4) son DISCRETAS, porque se CUENTAN; la (2) y la (3) son CONTINUAS, porque se MIDEN y pueden tener decimales",
+        "La (2) y la (3) son discretas, porque el instrumento siempre termina dando un valor exacto con dos decimales"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla corta: lo que se CUENTA es discreto (número contable de valores) y lo que se MIDE es continuo. Una balanza que marca 50,10 kg no está dando el valor exacto: lo está redondeando."
+    },
+    {
+      "id": "s20-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Se sortean 3 premios y hay 2 personas en el aula. Después de sacar un nombre el papel SE REPONE en la bolsa, así que la misma persona puede ganar varias veces. Defines X = número de veces que Bruno sale ganador.\n\n¿Cuántos casos posibles hay y cuánto vale f(1) = P(X = 1)?",
+      "opciones": [
+        "Hay 6 casos posibles (3 × 2) y f(1) = 1/6",
+        "Hay 8 casos posibles, porque son N^n = 2³, y f(1) = 3/8: de esos 8 casos, en 3 Bruno gana exactamente una vez",
+        "Hay 8 casos posibles y f(1) = 1/8, porque todos los casos son igual de probables",
+        "No se puede saber sin aplicar antes una técnica de conteo con factoriales"
+      ],
+      "correcta": 1,
+      "explicacion": "Con reemplazo y con orden los casos posibles son N^n: 2 opciones elevado a 3 selecciones = 8. Y Bruno gana exactamente una vez en BOO, OBO y OOB, o sea 3 de los 8."
+    },
+    {
+      "id": "s20-q4",
+      "nivel": "comprension",
+      "enunciado": "Ya tienes la función de probabilidad f(x) de una variable discreta y te piden escribirla en llaves y después armar la acumulada F(x).\n\n¿Qué tiene que cumplirse, y qué hay que recordar al escribirlas?",
+      "opciones": [
+        "Que f(x) sume 1 y que cada valor sea positivo; la acumulada puede subir o bajar según los datos",
+        "Que cada f(x) esté entre 0 y 1; y el «d.o.m» solo se escribe en la acumulada",
+        "Que la suma de f(x) sea 1 y que F(x) termine valiendo 0, porque la probabilidad acumulada se va agotando",
+        "Cada f(x) tiene que estar entre 0 y 1 y todas deben sumar 1. En la NO acumulada siempre se agrega al final el «d.o.m» (de otro modo), y la acumulada F(x) es continua por tramos y NO decreciente: crece o se queda igual, pero nunca baja"
+      ],
+      "correcta": 3,
+      "explicacion": "Las dos condiciones de siempre, más los dos detalles de la escritura: el d.o.m va en la no acumulada, y la acumulada nunca puede bajar porque lo único que hace es ir sumando probabilidades."
+    },
+    {
+      "id": "s20-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Determina el valor esperado de esta función de probabilidad, donde falta un dato:\n\nx: 0 · 1 · 2 · 3 · 4 · 5\nf(x): 0,10 · 0,05 · 0,20 · ¿? · 0,30 · 0,20\n\n¿Cuánto vale E(X)?",
+      "opciones": [
+        "3,10. Primero se despeja el hueco: 1 − 0,85 = 0,15; y después E(X) = 0(0,10) + 1(0,05) + 2(0,20) + 3(0,15) + 4(0,30) + 5(0,20)",
+        "2,50, que es el promedio simple de los valores 0, 1, 2, 3, 4 y 5",
+        "3,55, calculando directo con las cinco probabilidades que sí te dan",
+        "No se puede calcular: falta un dato de la tabla"
+      ],
+      "correcta": 0,
+      "explicacion": "El hueco siempre se despeja con la condición de que las probabilidades sumen 1: 1 − (0,10 + 0,05 + 0,20 + 0,30 + 0,20) = 0,15. Recién ahí se aplica E(X) = Σ x·f(x)."
+    },
+    {
+      "id": "s20-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Con esa misma tabla ya completa (x de 0 a 5 con f(x) = 0,10; 0,05; 0,20; 0,15; 0,30; 0,20) sabes que E(X) = 3,10. En la UP la varianza se calcula con VAR(X) = E(X²) − μ², donde E(X²) = Σ x²·f(x).\n\nSi E(X²) = 12, ¿cuánto vale la varianza?",
+      "opciones": [
+        "12, porque E(X²) ya es la varianza",
+        "8,90, restándole la media sin elevarla al cuadrado: 12 − 3,10",
+        "2,39, porque VAR = 12 − 3,10² = 12 − 9,61",
+        "3,46, que es la raíz cuadrada de 12"
+      ],
+      "correcta": 2,
+      "explicacion": "La fórmula vieja con Σ(x − μ)²/N ya no se usa en la UP. La que sirve es E(X²) − μ², y el error clásico es restar la media sin haberla elevado al cuadrado."
+    },
+    {
+      "id": "s20-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Una variable X tiene E(X) = 3 y VAR(X) = 0,6. Ahora a cada dato se le multiplica por 5 y se le suma 10, o sea Y = 5X + 10.\n\n¿Cuánto valen E(Y) y VAR(Y)?",
+      "opciones": [
+        "E(Y) = 25 y VAR(Y) = 13, aplicándole a las dos exactamente la misma transformación",
+        "E(Y) = 25 y VAR(Y) = 15: la media se multiplica y se suma igual que el dato, pero la varianza solo se multiplica, y por la constante AL CUADRADO (5² × 0,6)",
+        "E(Y) = 15 y VAR(Y) = 3, porque la suma de 10 no afecta a ninguna de las dos",
+        "E(Y) = 25 y VAR(Y) = 0,6, porque la varianza nunca cambia con una transformación"
+      ],
+      "correcta": 1,
+      "explicacion": "Son dos reglas distintas: E(aX + b) = a·E(X) + b, así que 5(3) + 10 = 25. Y VAR(aX + b) = a²·VAR(X), así que 25 × 0,6 = 15. El + 10 no toca la varianza."
+    },
+    {
+      "id": "s20-q8",
+      "nivel": "comprension",
+      "enunciado": "Con esa misma variable (E(X) = 3 y desviación 0,7746) el coeficiente de variabilidad es CV = σ/|μ| × 100% = 25,82%. Aplicas Y = 5X + 10 y el CV te sale 15,49%.\n\n¿Por qué cambió, y qué habría pasado si solo multiplicabas por 5?",
+      "opciones": [
+        "Cambió porque se multiplicó por 5; si solo se hubiera sumado 10, el CV se habría quedado igual",
+        "Cambió porque el CV se mueve con cualquier transformación, sea suma o multiplicación",
+        "No debería haber cambiado: en alguna parte hay un error de cálculo",
+        "Cambió por la SUMA de 10, que mueve la media pero no la desviación. Si solo se multiplicaba por 5, el CV se quedaba en 25,82%, porque la constante se cancela arriba y abajo"
+      ],
+      "correcta": 3,
+      "explicacion": "La regla del apunte: sumar k SÍ cambia el CV (la media lo fregó) y multiplicar por k NO lo cambia (la media lo arregló). Rango, varianza y desviación, en cambio, no se mueven con la suma."
+    },
+    {
+      "id": "s20-q9",
+      "nivel": "aplicacion",
+      "enunciado": "El caso que más cae: te dan cuántas unidades vende una tienda por día con su función de probabilidad, y sale un promedio de 3 unidades. Cada unidad se vende a 20 soles y la tienda tiene un costo fijo de 30 soles diarios, así que la utilidad es Ingreso − Costo = 20X − 30.\n\n¿Cuál es la utilidad esperada del día?",
+      "opciones": [
+        "30 soles. Como la utilidad es una transformación de X, basta con E(20X − 30) = 20·E(X) − 30 = 20(3) − 30",
+        "60 soles, que es 20 × 3, porque el costo fijo no entra en el valor esperado",
+        "No se puede: habría que recalcular la tabla entera multiplicando cada valor por 20 y restándole 30",
+        "−30 soles, porque el costo fijo se paga igual y el promedio de unidades no es un ingreso seguro"
+      ],
+      "correcta": 0,
+      "explicacion": "Para eso sirven las propiedades: en vez de rehacer la tabla se transforma directamente el valor esperado. Y si pidieran la varianza de la utilidad sería 20² × VAR(X), sin tocar el −30."
+    }
+  ]
+}

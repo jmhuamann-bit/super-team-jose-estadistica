@@ -1,0 +1,42 @@
+{
+  "id": "level20",
+  "distrito": "Montecarlo",
+  "clase": "Clase 02 · PC3",
+  "titulo": "La ruleta que no se acuerda",
+  "tema": "montecarlo",
+  "musica": "montecarlo",
+  "vehiculo": "bolido",
+  "intro": "Primera parada de la PC3, y salimos del Perú: Montecarlo. El Casino de Monte-Carlo abrió en 1863, y su sala de ópera la diseñó Charles Garnier, el mismo de la Ópera de París. Pero lo que nos interesa pasó el 18 de agosto de 1913: en una de sus ruletas salió NEGRO veintiséis veces seguidas. La sala se volvió loca apostando al rojo, convencida de que ya le tocaba, y perdió una fortuna. La bolita no se acuerda de nada: cada tirada es un experimento nuevo. Ese error tiene nombre propio y se llama justamente falacia de Montecarlo. Y hay un segundo motivo para venir: el método de Montecarlo, el de resolver problemas simulando al azar, lo bautizaron así Ulam y Metropolis en 1946 por este mismo casino, donde el tío de Ulam iba a jugar. El distrito llega hasta la varianza y el coeficiente de variabilidad; los casos de muestreo SIN reemplazo, que son los de combinatoria, quedan fuera.",
+  "repaso": [
+    "DE DÓNDE SALE TODO: un EXPERIMENTO ALEATORIO es aquel cuyo resultado no se puede precisar con certeza. Sus tres condiciones: se puede repetir siempre bajo las mismas condiciones, se pueden describir todos los resultados posibles, y se puede asociar a un modelo matemático. El ESPACIO MUESTRAL (Ω) es el conjunto de todos esos resultados.",
+    "LA DEFINICIÓN QUE HAY QUE SABER DE MEMORIA: una VARIABLE ALEATORIA es una FUNCIÓN que asigna un valor numérico a cada posible resultado de un experimento aleatorio. Su DOMINIO es el espacio muestral y su RANGO son los números que puede tomar. Entra un resultado, sale un número.",
+    "DISCRETA vs CONTINUA. DISCRETA: asume un número contable de valores, y se reconoce porque se CUENTA (número de hijos, de libros, de peces). CONTINUA: asume un número incontable de valores, y se reconoce porque se MIDE (peso, talla, tiempo). Si una balanza marca 50,10 kg no está dando el valor exacto, lo está redondeando.",
+    "CASO 01, MUESTREO CON REEMPLAZO Y CON ORDEN, que es el único que entra en este nivel. Los casos posibles son N^n, donde N es el número de opciones y n el número de selecciones. Sorteo con 2 personas: con 2 premios son 2² = 4 casos y con 3 premios son 2³ = 8.",
+    "EL SORTEO DE BRUNO RESUELTO. Con 2 premios, X = veces que gana Bruno: f(0) = 1/4, f(1) = 2/4, f(2) = 1/4. Con 3 premios: f(0) = 1/8, f(1) = 3/8, f(2) = 3/8, f(3) = 1/8. Y la acumulada del primero: F(0) = 0,25, F(1) = 0,75, F(2) = 1.",
+    "LAS DOS CONDICIONES DE UNA FUNCIÓN DE PROBABILIDAD: cada f(x) tiene que estar entre 0 y 1, y todas juntas deben sumar 1. Al escribirla en llaves, la NO acumulada lleva siempre al final el «d.o.m» (de otro modo). DATO ORO: la acumulada F(x) es continua POR TRAMOS y NO decreciente — crece o se queda igual, pero nunca baja.",
+    "VALOR ESPERADO: E(X) = Σ x·f(x), que es el promedio de la variable. Si en la tabla falta una probabilidad, lo PRIMERO es despejarla con la suma igual a 1. Ejemplos: x = 1, 2, 3 con f = 0,25; 0,50; 0,25 da E(X) = 2. Y x = 0 a 5 con f = 0,10; 0,05; 0,20; ¿?; 0,30; 0,20 tiene el hueco en 0,15 y da E(X) = 3,10.",
+    "VARIANZA: la fórmula vieja con Σ(x − μ)²/N ya NO se usa. La de la UP es VAR(X) = E(X²) − μ², donde E(X²) = Σ x²·f(x). Ejemplos: con x = 1, 2, 3 y f = 0,25; 0,50; 0,25 sale E(X²) = 4,5 y VAR = 4,5 − 4 = 0,5. Con la tabla de 0 a 5 sale E(X²) = 12 y VAR = 12 − 9,61 = 2,39. El error clásico es restar la media sin elevarla al cuadrado.",
+    "TRANSFORMACIONES, si Y = aX ± b. El VALOR ESPERADO se transforma igualito: E(Y) = a·E(X) ± b. Pero la VARIANZA solo se multiplica, y por la constante AL CUADRADO: VAR(Y) = a²·VAR(X); la suma no la toca. Lo mismo el rango y la desviación, que se multiplican por «a» y no se mueven con la suma.",
+    "COEFICIENTE DE VARIABILIDAD: CV = (desviación / |promedio|) × 100%. A mayor CV, más dispersos están los datos. Y las dos reglas que preguntan: si se SUMA una constante el CV SÍ cambia (la media lo fregó), y si se MULTIPLICA por una constante el CV NO cambia (la media lo arregló).",
+    "EJERCICIO COMPLETO RESUELTO: x = 1 a 5 con f = 0,05; 0,10; 0,70; 0,10; ¿?. El hueco es 0,05. E(X) = 3, E(X²) = 9,6, VAR = 0,6, desviación 0,7746 y CV = 25,82%. Con Y = 5X + 10: E(Y) = 25, VAR(Y) = 15, desviación 3,873 y CV = 15,49% — cambió por la suma. Si solo se multiplicaba por 5, el CV se quedaba en 25,82%.",
+    "EL CASO QUE MÁS CAE: te dan el promedio vendido por día y después te piden la UTILIDAD esperada, que es Ingreso − Costo = Precio × Cantidad − Costo. Como es una transformación, no hay que rehacer la tabla: con E(X) = 3 unidades, precio 20 y costo fijo 30, la utilidad esperada es 20(3) − 30 = 30 soles. Y su varianza sería 20²·VAR(X).",
+    "QUEDA FUERA DE ESTE NIVEL: los CASOS 02 y 03, que son los de muestreo SIN reemplazo (sin orden y con orden) y necesitan combinaciones y permutaciones. Las técnicas de conteo ya se vieron en Iquitos, en el Parcial."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                       A                                                   A                                                                    ",
+    "                                                     o o o                                               o o o                                                                  ",
+    "                                                     ======                                              ======                                                                 ",
+    "                                                                                                                                                                                ",
+    "                        o o o                               o o o                           o o o                           o o o                     o o o                     ",
+    "                ?           o o         L                           V               G         o o                   G               o o           1     L                       ",
+    "                        ====                                ====                            ====                            ====                      ====                      ",
+    "                        o o                     o o                                             o o                     o o                     o o                             ",
+    "  P                 E         C             E   T       X       E                 C     E         X T     E             X       E           C                 B             M   ",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################"
+  ]
+}

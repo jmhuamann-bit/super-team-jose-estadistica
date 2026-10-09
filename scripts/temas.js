@@ -1980,6 +1980,186 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     MONTECARLO — la plaza del casino a la hora dorada. Al fondo el
+     Rocher con el palacio del príncipe; al frente el Casino de
+     Monte-Carlo de la Belle Époque, con sus dos torres de cobre
+     verde y el Hôtel de Paris al lado; abajo el Mediterráneo y el
+     puerto con sus yates, y las palmeras de la terraza. Acá en 1913
+     salió negro 26 veces seguidas en una ruleta y media sala se
+     fundió apostando al rojo: la bolita no se acuerda de nada.
+     OJO 1: el fondo no lleva ruletas, fichas, mesas ni cronómetros
+     sueltos — esos son los bichos.
+     OJO 2: el plano del suelo baja SIN CORTES desde el casino hasta
+     la vereda. Si queda un hueco, se asoma el cielo y el fondo
+     parece tener una laguna.
+     OJO 3: el cielo es CÁLIDO y la piedra crema, a propósito, para
+     no confundirse con París ni con Lyon. Los bichos van en negro
+     de smoking y rojo de casino; ninguno puede ser crema.
+     ========================================================= */
+  montecarlo: {
+    nombre: "Montecarlo",
+    cielo: [[0, "#3d6ba8"], [0.38, "#8ea8c2"], [0.72, "#dcb68a"], [1, "#f0d6a4"]],
+    suelo: { cara: "#b8ab90", borde: "#d4c7a8", tierra: "#5a4d3a", plataforma: "#2f6b5e", plataformaBorde: "#e8c15a" },
+    acento: "#b3243c",
+
+    bichos: ["ruleta", "cronometro", "croupier", "mesa", "ficha"],
+    nombresBichos: [
+      "La Ruleta que No se Acuerda",
+      "El Cronómetro del Gran Premio",
+      "El Croupier del 26",
+      "La Mesa que No Suma Uno",
+      "La Ficha del Hueco",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "banquero",
+    nombreJefe: "El Banquero del Casino",
+
+    fondo(ctx, cam, t) {
+      // el sol bajo sobre el Mediterráneo, a la hora dorada
+      ctx.fillStyle = "rgba(255,226,170,.30)";
+      ctx.beginPath(); ctx.arc(640, 150, 66, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,240,206,.94)";
+      ctx.beginPath(); ctx.arc(640, 150, 27, 0, Math.PI * 2); ctx.fill();
+
+      // EL ROCHER, el peñón con el palacio del príncipe encima
+      repetir(ctx, cam, 1100, 0.07, (x, i) => {
+        const bx = x + 180, base = 306;
+        ctx.fillStyle = "#6e6f66";
+        ctx.beginPath();
+        ctx.moveTo(bx - 230, base);
+        ctx.lineTo(bx - 150, base - 104);
+        ctx.quadraticCurveTo(bx - 40, base - 128, bx + 90, base - 118);
+        ctx.lineTo(bx + 190, base);
+        ctx.closePath(); ctx.fill();
+
+        const by = base - 120;                                     // el palacio, sobre la roca
+        ctx.fillStyle = "#e4d9c2";
+        ctx.fillRect(bx - 120, by - 30, 190, 30);
+        ctx.fillStyle = "#b8a98c";
+        ctx.fillRect(bx - 124, by - 35, 198, 6);
+        ctx.fillStyle = "#cdbfa2";                                  // la torre del reloj
+        ctx.fillRect(bx - 10, by - 58, 22, 24);
+        ctx.fillStyle = "#2f6b5e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 13, by - 58); ctx.lineTo(bx + 1, by - 74); ctx.lineTo(bx + 15, by - 58);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(60,52,38,.34)";                       // las ventanitas
+        for (let k = 0; k < 7; k++) ctx.fillRect(bx - 110 + k * 26, by - 22, 9, 14);
+      });
+
+      // EL CASINO DE MONTE-CARLO y el Hôtel de Paris, en piedra crema
+      repetir(ctx, cam, 236, 0.22, (x, i) => {
+        const bx = x + 8, base = 306, alto = 76 + ((i * 33) % 22);
+        ctx.fillStyle = ["#e8dcc2", "#ded1b4", "#f0e5cc"][i % 3];
+        ctx.fillRect(bx, base - alto, 212, alto);
+        ctx.fillStyle = "#2f6b5e";                                  // el techo de cobre verde
+        ctx.fillRect(bx - 6, base - alto - 10, 224, 10);
+        // las dos torres de cúpula, que es lo que hace reconocible al casino
+        for (const dx of [18, 158]) {
+          ctx.fillStyle = ["#e8dcc2", "#ded1b4", "#f0e5cc"][i % 3];
+          ctx.fillRect(bx + dx, base - alto - 30, 36, 30);
+          ctx.fillStyle = "#2f6b5e";
+          ctx.beginPath();
+          ctx.moveTo(bx + dx - 4, base - alto - 30);
+          ctx.quadraticCurveTo(bx + dx + 18, base - alto - 62, bx + dx + 40, base - alto - 30);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "#d9b24a";
+          ctx.fillRect(bx + dx + 16, base - alto - 70, 4, 10);
+        }
+        ctx.fillStyle = "rgba(70,58,40,.36)";                       // los arcos de la fachada
+        for (let k = 0; k < 5; k++) {
+          const ax = bx + 22 + k * 36;
+          ctx.beginPath();
+          ctx.moveTo(ax, base - alto + 56);
+          ctx.lineTo(ax, base - alto + 30);
+          ctx.quadraticCurveTo(ax + 11, base - alto + 10, ax + 22, base - alto + 30);
+          ctx.lineTo(ax + 22, base - alto + 56);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#c9b894";                                  // la cornisa
+        ctx.fillRect(bx, base - alto + 62, 212, 5);
+      });
+
+      // EL PLANO DEL SUELO, del casino a la vereda y SIN CORTES:
+      // la terraza, el Mediterráneo y el muelle de este lado
+      ctx.fillStyle = "#c2b394";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#2f6b7e";                                    // EL MEDITERRÁNEO
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#3f7f90";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {                                // el reflejo del sol en el agua
+        const x = (i * 57 - cam * 0.22) % 960 - 40;
+        ctx.fillStyle = "rgba(255,232,186,.30)";
+        ctx.fillRect(x, 324 + ((i * 23) % 18), 15, 2);
+      }
+      ctx.fillStyle = "#bdae90";                                    // el muelle
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#d6c8a6";                                    // el pretil
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // LOS YATES DEL PUERTO HÉRCULES
+      repetir(ctx, cam, 300, 0.30, (x, i) => {
+        const bx = x + 40, linea = 330;
+        ctx.fillStyle = "#f2efe4";
+        ctx.beginPath();
+        ctx.moveTo(bx, linea);
+        ctx.lineTo(bx + 86, linea);
+        ctx.lineTo(bx + 74, linea + 10);
+        ctx.lineTo(bx + 10, linea + 10);
+        ctx.closePath(); ctx.fill();
+        ctx.fillRect(bx + 20, linea - 11, 44, 11);                  // la cabina
+        ctx.fillStyle = "#44586a";
+        ctx.fillRect(bx + 26, linea - 8, 32, 5);                    // los ventanales
+        ctx.fillStyle = "#2a2e36";
+        ctx.fillRect(bx + 62, linea - 24, 2, 24);                   // el mástil
+      });
+
+      // LA TERRAZA DEL CAFÉ, con su toldo a rayas
+      repetir(ctx, cam, 292, 0.54, (x, i) => {
+        const bx = x + 30, base = 382, alto = 34;
+        ctx.fillStyle = "#8a6a4a";
+        ctx.fillRect(bx, base - alto, 124, alto);
+        ctx.fillStyle = "#d9b24a";
+        ctx.fillRect(bx + 8, base - alto + 4, 108, 8);
+        ctx.fillStyle = "rgba(250,240,212,.86)";                    // los ventanales iluminados
+        ctx.fillRect(bx + 12, base - alto + 16, 46, 16);
+        ctx.fillRect(bx + 66, base - alto + 16, 46, 16);
+        for (let k = 0; k < 9; k++) {                               // el toldo a rayas
+          ctx.fillStyle = k % 2 ? "#b3243c" : "#f2efe4";
+          ctx.fillRect(bx - 6 + k * 15, base - alto - 8, 15, 8);
+        }
+        ctx.fillStyle = "rgba(0,0,0,.22)";
+        ctx.fillRect(bx - 6, base - alto - 1, 136, 2);
+      });
+
+      // LAS PALMERAS de la plaza del casino
+      repetir(ctx, cam, 150, 0.78, (x, i) => {
+        const bx = x + 24, base = 382;
+        ctx.fillStyle = "#6b5a42";
+        ctx.fillRect(bx, base - 34, 5, 34);
+        ctx.fillStyle = ["#3f6b46", "#4c7a50", "#36603e"][i % 3];
+        for (const [dx, dy] of [[-18, -6], [-11, -12], [0, -15], [11, -12], [18, -6]]) {
+          ctx.beginPath();
+          ctx.ellipse(bx + 2 + dx, base - 36 + dy, 11, 5, dx * 0.05, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#a89a7c";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // las luces de la plaza prendiéndose a la hora dorada
+      for (let i = 0; i < 16; i++) {
+        const x = (i * 163 - t * 0.4) % 880 - 20;
+        const y = 130 + ((i * 83) % 190) + Math.sin(t / 38 + i) * 6;
+        ctx.fillStyle = `rgba(255,236,190,${(0.05 + 0.09 * Math.abs(Math.sin(t / 28 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 3, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

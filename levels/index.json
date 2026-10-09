@@ -1,5 +1,5 @@
 {
-  "titulo": "Lima",
+  "titulo": "Lima, el Perú y el mundo",
   "descripcion": "Cada distrito es una clase de Estadística 1, agrupados por la práctica que les toca. Todos están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
@@ -267,6 +267,20 @@
       "abierto": true,
       "mapa": "levels/level19.json",
       "preguntas": "questions/level19_questions.json"
+    },
+    {
+      "id": "level20",
+      "clase": "Clase 02",
+      "distrito": "Montecarlo",
+      "titulo": "La ruleta que no se acuerda",
+      "icono": "🎰",
+      "seccion": "PC3",
+      "seccionNota": "Variables aleatorias y distribuciones — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level20.json",
+      "preguntas": "questions/level20_questions.json"
     }
   ]
 }
