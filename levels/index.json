@@ -271,9 +271,9 @@
     {
       "id": "level20",
       "clase": "Clase 02",
-      "distrito": "Montecarlo",
+      "distrito": "París",
       "titulo": "La ruleta que no se acuerda",
-      "icono": "🎰",
+      "icono": "🗼",
       "seccion": "PC3",
       "seccionNota": "Variables aleatorias y distribuciones — y ahora visitando el mundo",
       "retos": 7,

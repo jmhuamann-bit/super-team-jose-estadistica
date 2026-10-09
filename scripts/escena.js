@@ -229,12 +229,12 @@ const FICHAS = [
   { sprite: "pequepeque", nombre: "El Peque-Peque de los Denominadores", texto: "Con reemplazo le baja el denominador en cada saque, cuando ahí el total no se mueve." },
   { sprite: "saco", nombre: "El Saco del «Al Menos Uno»", texto: "Se pone a sumar caso por caso en vez de irse por el complemento, que es una sola resta." },
   { sprite: "camucamu", nombre: "El Camu Camu del Orden", texto: "El enunciado dice «uno tras otro» y él igual mete combinatorias." },
-  { sprite: "ruleta", nombre: "La Ruleta que No se Acuerda", texto: "Montecarlo: cree que la variable aleatoria es el resultado mismo, cuando es la FUNCIÓN que le pone un número a cada resultado." },
-  { sprite: "cronometro", nombre: "El Cronómetro del Gran Premio", texto: "Marca tiempos con decimales y jura que eso se cuenta: lo que se MIDE es continuo y lo que se CUENTA es discreto." },
-  { sprite: "croupier", nombre: "El Croupier del 26", texto: "Es el de 1913: salió negro 26 veces seguidas y jura que ya le toca al rojo. Con reemplazo, cada tirada arranca de cero." },
+  { sprite: "ruleta", nombre: "La Ruleta de Pascal", texto: "París: cree que la variable aleatoria es el resultado mismo, cuando es la FUNCIÓN que le pone un número a cada resultado." },
+  { sprite: "cronometro", nombre: "El Cronómetro de la Gare", texto: "Marca tiempos con decimales y jura que eso se cuenta: lo que se MIDE es continuo y lo que se CUENTA es discreto." },
+  { sprite: "croupier", nombre: "El Caballero de Méré", texto: "El jugador que en 1654 le llevó sus dados a Pascal. Jura que lo que ya salió cambia lo que viene: con reemplazo, cada tirada arranca de cero." },
   { sprite: "mesa", nombre: "La Mesa que No Suma Uno", texto: "Reparte probabilidades que no suman 1, o que se salen del rango de 0 a 1, y sigue repartiendo como si nada." },
   { sprite: "ficha", nombre: "La Ficha del Hueco", texto: "Calcula el valor esperado dejando el casillero vacío de la tabla, sin despejarlo primero con la suma igual a 1." },
-  { sprite: "banquero", nombre: "El Banquero del Casino", texto: "Jefe de Montecarlo: cuando a la variable se le multiplica o se le suma algo, recalcula todo desde cero en vez de usar las propiedades." },
+  { sprite: "banquero", nombre: "El Banquero del Palais-Royal", texto: "Jefe de París: cuando a la variable se le multiplica o se le suma algo, recalcula todo desde cero en vez de usar las propiedades." },
   { sprite: "casero", nombre: "El Casero de Belén", texto: "Jefe de Iquitos: te vende del saco sin dejarte mirar adentro, y encima cuenta mal lo que queda." },
 ];
 

@@ -1870,21 +1870,23 @@ const BANQUERO = [     // jefe: el banquero del casino, que no sabe transformar 
 ];
 const P_BANQUERO = { k: "#13161e", s: "#d9a273", c: "#1b1e26", w: "#f2efe4", r: "#b3243c", g: "#d9b24a", m: "#8a3a2e", j: "#23262c" };
 
-const BOLIDO = [       // el monoplaza del Gran Premio de Mónaco, que es la salida del distrito (32 × 12)
-  "................................",
-  "................................",
-  "..............kkk...............",
-  ".............kwwwk..............",
-  "....rrrrrrrrrrwwwrrrrrrrrr......",
-  "..rrrrrrrrrrrrrrrrrrrrrrrrrr....",
-  ".rrrrrrrrrrrrrrrrrrrrrrrrrrrr...",
-  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
-  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
-  "kkkkkkrrrrrrrrrrrrrrrrkkkkkkk...",
-  ".kkkk..................kkkkk....",
+const METRO = [    // el vagón del Métro de París, con su librea verde y su rótulo esmaltado (32 × 14)
+  "...gggggggggggggggggggggggggg...",
+  "..gggggggggggggggggggggggggggg..",
+  ".gggwwwwwwwwwwwwwwwwwwwwwwwwggg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwwwwwwwwwwwwwwwwwwwwwwwwwwgg.",
+  ".gggggggggggggggggggggggggggggg.",
+  ".ggggyyyyyggggggggggggyyyyygggg.",
+  ".gggggggggggggggggggggggggggggg.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  "...kkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "....kk..kk............kk..kk....",
   "................................",
 ];
-const P_BOLIDO = { r: "#b3243c", k: "#1f2228", w: "#8fb8d8" };
+const P_METRO = { g: "#2f6b4a", w: "#f2efe4", b: "#44586a", y: "#e8c15a", k: "#2a2620" };
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -1998,7 +2000,7 @@ const DEFINICIONES = {
   mesa:         [MESA, P_MESA],
   ficha:        [FICHA, P_FICHA],
   banquero:     [BANQUERO, P_BANQUERO],
-  bolido:       [BOLIDO, P_BOLIDO],
+  metro:        [METRO, P_METRO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

@@ -1,12 +1,12 @@
 {
   "id": "level20",
-  "distrito": "Montecarlo",
+  "distrito": "París",
   "clase": "Clase 02 · PC3",
   "titulo": "La ruleta que no se acuerda",
-  "tema": "montecarlo",
-  "musica": "montecarlo",
-  "vehiculo": "bolido",
-  "intro": "Primera parada de la PC3, y salimos del Perú: Montecarlo. El Casino de Monte-Carlo abrió en 1863, y su sala de ópera la diseñó Charles Garnier, el mismo de la Ópera de París. Pero lo que nos interesa pasó el 18 de agosto de 1913: en una de sus ruletas salió NEGRO veintiséis veces seguidas. La sala se volvió loca apostando al rojo, convencida de que ya le tocaba, y perdió una fortuna. La bolita no se acuerda de nada: cada tirada es un experimento nuevo. Ese error tiene nombre propio y se llama justamente falacia de Montecarlo. Y hay un segundo motivo para venir: el método de Montecarlo, el de resolver problemas simulando al azar, lo bautizaron así Ulam y Metropolis en 1946 por este mismo casino, donde el tío de Ulam iba a jugar. El distrito llega hasta la varianza y el coeficiente de variabilidad; los casos de muestreo SIN reemplazo, que son los de combinatoria, quedan fuera.",
+  "tema": "sena",
+  "musica": "sena",
+  "vehiculo": "metro",
+  "intro": "Primera parada de la PC3, y salimos del Perú: París. Acá nació la probabilidad, y nació por una apuesta. En 1654 el caballero de Méré, un jugador de dados de la corte de Luis XIV, le llevó a Blaise Pascal un problema que no le cuadraba: cómo repartir el dinero de una partida que se interrumpe antes de terminar. Pascal le escribió a Fermat, se pasaron cartas todo ese verano, y de esa correspondencia salió la teoría de la probabilidad. Y un detalle que viene al pelo: a Pascal se le atribuye además la primera ruleta, que le salió de una máquina de movimiento perpetuo que nunca llegó a funcionar — le falló la máquina y le salió el juego. Acuérdate de eso mientras corres por el muelle del Sena: la bolita no se acuerda de nada, cada tirada es un experimento nuevo. El distrito llega hasta la varianza y el coeficiente de variabilidad; los casos de muestreo SIN reemplazo, que son los de combinatoria, quedan fuera.",
   "repaso": [
     "DE DÓNDE SALE TODO: un EXPERIMENTO ALEATORIO es aquel cuyo resultado no se puede precisar con certeza. Sus tres condiciones: se puede repetir siempre bajo las mismas condiciones, se pueden describir todos los resultados posibles, y se puede asociar a un modelo matemático. El ESPACIO MUESTRAL (Ω) es el conjunto de todos esos resultados.",
     "LA DEFINICIÓN QUE HAY QUE SABER DE MEMORIA: una VARIABLE ALEATORIA es una FUNCIÓN que asigna un valor numérico a cada posible resultado de un experimento aleatorio. Su DOMINIO es el espacio muestral y su RANGO son los números que puede tomar. Entra un resultado, sale un número.",
