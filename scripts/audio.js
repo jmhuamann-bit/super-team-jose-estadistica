@@ -145,6 +145,14 @@ const TEMAS_MUSICA = {
               "A4",1,"B4",1,"G4",2,"D4",4],
     bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
   },
+  gotinga: { // Gotinga: coral de órgano de pueblo, pausado y de otoño
+    tempo: 0.26, onda: "triangle",
+    melodia: ["D4",4,"A3",2,"D4",2,"F4",4,"E4",2,"D4",2,
+              "G4",4,"F4",2,"E4",2,"D4",4,"A4",4,
+              "Bb4",2,"A4",2,"G4",4,"F4",2,"E4",2,"D4",4,
+              "C4",2,"D4",2,"E4",4,"D4",4],
+    bajo:    ["D2",8,"Bb1",8,"G2",8,"A2",4,"D2",4,"D2",8],
+  },
   basilea: { // Basilea: aire de pífano y tambor de Fasnacht, marcado y cortito
     tempo: 0.14, onda: "square",
     melodia: ["G4",1,"A4",1,"B4",2,"D5",2,"B4",2,"G4",2,"A4",2,

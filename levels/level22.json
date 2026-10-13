@@ -1,0 +1,42 @@
+{
+  "id": "level22",
+  "distrito": "Alemania",
+  "clase": "Clase 04 · PC3",
+  "titulo": "El país que imprimió la campana en un billete",
+  "tema": "gotinga",
+  "musica": "gotinga",
+  "vehiculo": "locomotora",
+  "intro": "Cuarta clase de la PC3, y otro país: Alemania. Entre 1991 y 2001 circuló ahí un billete de diez marcos con la cara de Carl Friedrich Gauss y, al lado, impresa, LA CURVA DE LA CAMPANA con su fórmula — un país que puso una distribución de probabilidad en su propio dinero. Gauss pasó casi toda su vida en Gotinga, dirigiendo el observatorio, y llegó a esa curva MIDIENDO: repitiendo la misma observación astronómica una y otra vez y viendo que los errores se amontonaban alrededor del valor verdadero y se volvían raros hacia los costados. Esa es exactamente la clase de hoy. Hasta ahora la variable se CONTABA y la probabilidad salía de una fórmula con combinatorias. Ahora la variable se MIDE —un precio, un peso, una temperatura— y la probabilidad pasa a ser el ÁREA bajo la curva. Por eso un valor exacto tiene probabilidad CERO: un punto no tiene ancho.",
+  "repaso": [
+    "DE DÓNDE VENIMOS: la clase pasada fue la BINOMIAL, que es discreta y se dibuja con bastones. Hoy entra la NORMAL, que es continua y se dibuja como curva. Las dos ya traen su fórmula armada, así que acá no se vuelve a combinatorias ni a permutaciones.",
+    "LA NOTACIÓN: X ~ N(μ; σ²), donde el «~» se lee «se distribuye como». Y ojo con el segundo lugar: ahí va la VARIANZA, no la desviación. Si te dan desviación 9, la notación es N(μ; 9²).",
+    "LA ESTANDARIZACIÓN es el truco central: Z = (X − μ)/σ convierte CUALQUIER normal en la normal estándar, que tiene media 0 y varianza 1. Se calcula siempre con DOS decimales, porque así está armada la tabla.",
+    "QUÉ DEVUELVE LA TABLA Z, que es lo que más se olvida: SIEMPRE el área acumulada de izquierda a derecha, o sea todo lo que queda por DEBAJO de esa Z. Los números de adentro son probabilidades y los de los bordes son los valores de Z.",
+    "CASO 01 — EL MENOR: P(X < a) sale directo. Se estandariza y se busca en la tabla. Ejemplo: con X ~ N(50; 9²), P(X < 60) tiene Z = 1,11 y da 0,8665.",
+    "CASO 02 — EL MAYOR: no sale directo, va por COMPLEMENTO. P(X > a) = 1 − P(X ≤ a). Con el mismo libro, P(X > 60) = 1 − 0,8665 = 0,1335. Existe el truco de la simetría P(Z > z) = P(Z < −z), pero el apunte lo marca como NO aconsejable porque es facilísimo invertirle el signo.",
+    "CASO 03 — EL INTERVALO: se parte en dos acumuladas y se RESTAN, P(a < X < b) = P(X < b) − P(X < a). Con Iquitos, X ~ N(20; 2²): P(21 < X < 25) = 0,9938 − 0,6915 = 0,3023. Si las sumás te pasás de 1, que ya es el aviso de que está mal.",
+    "CASO 04 — LA PROBABILIDAD DE UN CUANTIL, que es el caso raro: NO hace falta estandarizar, porque el cuantil ya trae su probabilidad en el nombre. Debajo del cuartil 1 queda 0,25; debajo del decil 8 queda 0,80; debajo del percentil 92,5 queda 0,925. Y arriba queda lo que falta para 1.",
+    "CASO 05 — EL VALOR DE UN CUANTIL, que es el proceso INVERSO. Antes ibas X → Z → probabilidad; ahora vas probabilidad → Z → X. Si la probabilidad no está exacta en la tabla se toma la Z más cercana, o se interpola, que es raro.",
+    "LA PROBABILIDAD PUNTUAL ES CERO: P(X = a) = 0 siempre, porque en una continua la probabilidad es ÁREA bajo la curva y un punto no tiene ancho. De ahí sale que da exactamente lo mismo poner «<» que «≤».",
+    "LOS EXTREMOS DE LA TABLA: de ±4 para afuera ya no hay nada que buscar. P(Z < −4) ≈ 0, P(Z > 4) ≈ 0, P(Z > −4) ≈ 1 y P(Z < 4) ≈ 1. Si te sale una Z de 7,78, la respuesta es «prácticamente cero» y listo.",
+    "EL DICCIONARIO DE TEXTO A PLANTEAMIENTO, que el apunte llama ORO PURO: «A es superior a B» es A > B · «superior a B en C» es A − B = C · «superior en MÁS de C» es A − B > C · «superior en MENOS de C» es 0 < A − B < C · «DIFIERE en más de C» es |A − B| > C · «difiere en menos de C» es |A − B| < C. El valor absoluto son LAS DOS COLAS, y por eso casi siempre se resuelve por complemento.",
+    "LOS DOS RESUELTOS PARA TENER A MANO. El libro, X ~ N(50; 9²): P(X < 60) = 0,8665 · P(X < 40) = 0,1335 · P(X < 50) = 0,5 · P(55 < X < 60) = 0,1542 · P(45 < X < 55) = 0,4246 · y el percentil 80 está en 57,56. La temperatura de Iquitos, X ~ N(20; 2²): P(X ≤ 25) = 0,9938 · P(X > 24) = 0,0228 · P(21 < X < 25) = 0,3023 · el 2,5% más caluroso arranca en 23,92 °C y el 30% más frío termina en 18,96 °C."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                            AA                                    ",
+    "                                          o o                                                                                              o o                                    ",
+    "                                                                                                                                                                                  ",
+    "                   o     o          o o  =====                                                   o  o  o             o     o     o        ======                                  ",
+    "                      E            ?              o    V  o      o         G  o      o                           L oo oo oo oo oo oo                       1  L                   ",
+    "                 ===== =====       =====        oo oo                       oo oo  oo oo        ==========                                                              o o o     ",
+    "                                                         ###    ###                                                                                                               ",
+    "  P         C                                            ### E  ###      C       E                  E               X E   X     X      T           E    C           B         M   ",
+    "###############              ################################################  #####  ############################################################################################",
+    "###############              ################################################  #####  ############################################################################################",
+    "###############              ################################################  #####  ############################################################################################"
+  ]
+}

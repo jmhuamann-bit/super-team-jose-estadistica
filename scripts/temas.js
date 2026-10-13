@@ -2311,6 +2311,204 @@ export const TEMAS = {
       }
     },
   },
+
+  gotinga: {
+    nombre: "Alemania",
+    cielo: [[0, "#5f88ae"], [0.4, "#9fb9c8"], [0.7, "#d8d2bc"], [0.8, "#45413a"], [1, "#201c18"]],
+    suelo: { cara: "#8e8a80", borde: "#aaa69a", tierra: "#3e362c", plataforma: "#6b4a30", plataformaBorde: "#d8b65c" },
+    acento: "#c05a3a",
+
+    bichos: ["billete", "balanza", "espejo", "jarra", "birrete", "telegrafo"],
+    nombresBichos: [
+      "El Billete de Diez Marcos",
+      "La Balanza sin Estandarizar",
+      "El Espejo de la Simetría",
+      "La Jarra que Suma en Vez de Restar",
+      "El Birrete que Estandariza de Más",
+      "El Telégrafo al Revés",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "astronomo",
+    nombreJefe: "El Astrónomo de Gotinga",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol de octubre, bajo y lavado
+      ctx.fillStyle = "rgba(250,242,212,.18)";
+      ctx.beginPath(); ctx.arc(640, 88, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,248,228,.78)";
+      ctx.beginPath(); ctx.arc(640, 88, 22, 0, Math.PI * 2); ctx.fill();
+
+      // LAS COLINAS BOSCOSAS DEL HAINBERG, en pleno otoño: lomas redondas con
+      // la copa moteada en oro y herrumbre, que es lo que da la estación
+      repetir(ctx, cam, 182, 0.05, (x, i) => {
+        const bx = x, base = 306, alto = 150 + ((i * 47) % 56);
+        ctx.fillStyle = "#9a854e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 20, base);
+        ctx.quadraticCurveTo(bx + 50, base - alto, bx + 120, base);
+        ctx.closePath(); ctx.fill();
+        const copas = ["#bd9647", "#a37f36", "#cda85a", "#8f6d31"];
+        for (let k = 0; k < 16; k++) {                             // la copa moteada, que es
+          const px = bx - 10 + k * 8;                              // lo que la hace bosque y
+          const borde = alto * 0.5 * (1 - Math.pow((k - 7.5) / 8, 2));   // no una loma pelada
+          const py = base - borde * (0.72 + ((k * 13) % 40) / 100);
+          ctx.fillStyle = elige(copas, i + k);
+          ctx.beginPath(); ctx.arc(px, py, 8, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+
+      // EL OBSERVATORIO de Gauss, con su cúpula, y al lado las dos torres de
+      // la Johanniskirche: es la silueta por la que se reconoce la ciudad
+      repetir(ctx, cam, 544, 0.12, (x, i) => {
+        const bx = x + 50, base = 306;
+        ctx.fillStyle = "#cfc6b0";                                  // el cuerpo del observatorio
+        ctx.fillRect(bx, base - 58, 104, 58);
+        ctx.fillStyle = "#b3a992";
+        ctx.fillRect(bx, base - 58, 104, 5);
+        ctx.fillStyle = "rgba(60,56,48,.40)";                       // la fila de ventanas altas
+        for (let px = bx + 9; px < bx + 96; px += 15) ctx.fillRect(px, base - 44, 8, 20);
+        ctx.fillStyle = "#7f8b84";                                  // LA CÚPULA
+        ctx.beginPath(); ctx.arc(bx + 52, base - 58, 25, Math.PI, 0); ctx.fill();
+        ctx.fillStyle = "#6a766f";
+        ctx.fillRect(bx + 48, base - 92, 8, 10);                    // la rendija del telescopio
+        ctx.fillStyle = "#9aa49c";
+        ctx.fillRect(bx + 27, base - 60, 50, 4);
+
+        for (const tx of [150, 192]) {                              // las dos torres gemelas
+          ctx.fillStyle = "#c2b89f";
+          ctx.fillRect(bx + tx, base - 136, 28, 136);
+          ctx.fillStyle = "#8c5a44";
+          ctx.beginPath();
+          ctx.moveTo(bx + tx - 5, base - 136);
+          ctx.lineTo(bx + tx + 14, base - 176);
+          ctx.lineTo(bx + tx + 33, base - 136);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(58,54,46,.42)";
+          ctx.fillRect(bx + tx + 9, base - 112, 10, 16);
+        }
+      });
+
+      // LOS TEJADOS DEL CASCO VIEJO: hastiales empinados, apretados uno contra
+      // el otro y todos con la misma teja oscura
+      repetir(ctx, cam, 148, 0.22, (x, i) => {
+        const bx = x, base = 306;
+        for (let k = 0; k < 3; k++) {
+          const px = bx + k * 44, alto = 38 + ((i * 19 + k * 23) % 22);
+          ctx.fillStyle = elige(["#d6cdb6", "#c6bda6", "#e0d8c2"], i + k);
+          ctx.fillRect(px, base - alto, 36, alto);
+          ctx.fillStyle = "#6e4f3c";                                // el hastial a dos aguas
+          ctx.beginPath();
+          ctx.moveTo(px - 4, base - alto);
+          ctx.lineTo(px + 18, base - alto - 22);
+          ctx.lineTo(px + 40, base - alto);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(56,52,44,.34)";
+          ctx.fillRect(px + 13, base - alto + 9, 9, 12);
+        }
+      });
+
+      // EL PLANO DEL SUELO DE LA CIUDAD VIEJA, del pie de los tejados hasta el
+      // empedrado y de una sola pieza, para que no se cuele el cielo por el medio
+      ctx.fillStyle = "#7f8a62";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#6d6238";                                    // EL BALUARTE de hayas: en vez
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);                    // de un río, el paseo arbolado
+      ctx.fillStyle = "#87783f";                                    // que rodea el casco antiguo
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 7);
+      for (let i = 0; i < 40; i++) {                                // la copa moteada del paseo
+        const x = (i * 43 - cam * 0.1) % 1000 - 40;
+        ctx.fillStyle = `rgba(${190 - ((i * 7) % 30)},${158 - ((i * 5) % 26)},${70 + ((i * 11) % 24)},.55)`;
+        ctx.beginPath(); ctx.arc(x, 324 + ((i * 13) % 16), 9, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.fillStyle = "#8e8a80";                                    // el empedrado
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#a09c90";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 46; i++) {                                // los adoquines
+        const x = (i * 37 - cam * 0.5) % 980 - 40;
+        ctx.fillStyle = "rgba(60,58,52,.16)";
+        ctx.fillRect(x, 358 + ((i * 11) % 18), 13, 4);
+      }
+
+      // LOS TRONCOS DE HAYA del baluarte, grises y derechos
+      repetir(ctx, cam, 74, 0.3, (x, i) => {
+        const bx = x + 12, base = 352;
+        ctx.fillStyle = "#6f6a5e";
+        ctx.fillRect(bx, base - 40, 7, 40);
+        ctx.fillStyle = "rgba(226,222,206,.26)";
+        ctx.fillRect(bx, base - 40, 2, 40);
+        ctx.fillStyle = "rgba(48,44,36,.30)";
+        ctx.fillRect(bx - 3, base - 2, 13, 3);
+      });
+
+      // LA CASA DE ENTRAMADO (Fachwerk): revoque claro con el maderamen oscuro
+      // en cruz y aspas, que es LA marca de la ciudad
+      repetir(ctx, cam, 286, 0.54, (x, i) => {
+        const bx = x + 32, base = 382, alto = 48;
+        const techo = base - alto;
+        ctx.fillStyle = elige(["#e8e0c8", "#dcd3b8", "#efe8d2"], i);
+        ctx.fillRect(bx, techo, 92, alto);
+        ctx.fillStyle = "#4a3324";                                  // el maderamen
+        ctx.fillRect(bx, techo, 92, 5);
+        ctx.fillRect(bx, techo + 22, 92, 5);
+        ctx.fillRect(bx, base - 5, 92, 5);
+        for (const px of [0, 44, 87]) ctx.fillRect(bx + px, techo, 5, alto);
+        for (const px of [22, 66]) {                                // las aspas
+          ctx.save();
+          ctx.translate(bx + px, techo + 13);
+          ctx.rotate(0.62); ctx.fillRect(-2, -16, 4, 32);
+          ctx.rotate(-1.24); ctx.fillRect(-2, -16, 4, 32);
+          ctx.restore();
+        }
+        ctx.fillStyle = "#6e4f3c";                                  // el tejado empinado
+        ctx.beginPath();
+        ctx.moveTo(bx - 10, techo);
+        ctx.lineTo(bx + 46, techo - 30);
+        ctx.lineTo(bx + 102, techo);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(242,236,216,.84)";                    // las ventanas de la planta baja
+        for (const px of [10, 56]) ctx.fillRect(bx + px, techo + 30, 16, 13);
+        ctx.fillStyle = "#c05a3a";
+        ctx.fillRect(bx + 36, base - 17, 13, 17);                   // la puerta
+      });
+
+      // LOS SETOS BAJOS del paseo, recortados en cuadrado
+      repetir(ctx, cam, 108, 0.78, (x, i) => {
+        const bx = x + 18, base = 382;
+        ctx.fillStyle = elige(["#5f7a4a", "#6d8754", "#536b42"], i);
+        ctx.fillRect(bx, base - 15, 34, 15);
+        ctx.fillStyle = "rgba(214,226,190,.26)";
+        ctx.fillRect(bx, base - 15, 34, 3);
+        ctx.fillStyle = "rgba(40,48,32,.26)";
+        for (let px = bx + 5; px < bx + 34; px += 8) ctx.fillRect(px, base - 12, 2, 12);
+      });
+      ctx.fillStyle = "#847f74";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // las hojas que caen en octubre, girando despacio
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 131 + t * 0.7 + Math.sin(t / 30 + i) * 22) % 1000 - 40;
+        const y = (i * 71 + t * 1.3) % 460;
+        const giro = Math.abs(Math.sin(t / 14 + i));
+        ctx.fillStyle = ["rgba(196,146,58,.80)", "rgba(168,98,48,.78)", "rgba(206,172,76,.74)"][i % 3];
+        ctx.fillRect(x, y, 2 + Math.round(giro * 4), 3);
+      }
+      // y un par de cuervos cruzando alto
+      for (let i = 0; i < 3; i++) {
+        const x = (i * 331 + t * 1.6) % 1040 - 60;
+        const y = 66 + ((i * 37) % 44) + Math.sin(t / 20 + i) * 5;
+        const ala = Math.sin(t / 7 + i * 1.9) * 3;
+        ctx.fillStyle = "rgba(38,36,32,.74)";
+        ctx.fillRect(x, y, 4, 2);
+        ctx.fillRect(x - 4, y - ala, 4, 2);
+        ctx.fillRect(x + 4, y - ala, 4, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

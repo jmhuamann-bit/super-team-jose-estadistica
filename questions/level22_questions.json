@@ -1,0 +1,125 @@
+{
+  "nivel": "level22",
+  "clase": "Clase 04 · PC3 — Variables aleatorias continuas: la distribución normal",
+  "fuente": "Apuntes de la Clase 04 — Variables aleatorias continuas (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e22-q1",
+      "nivel": "comprension",
+      "enunciado": "El precio de un libro se distribuye normalmente, con precio promedio de 50 soles y desviación estándar de 9 soles.\n\n¿Cómo se escribe la notación y cómo se grafica?",
+      "opciones": [
+        "X ~ N(50; 9), con la desviación adentro, y se grafica con un gráfico de bastones",
+        "X ~ N(9; 50), primero la dispersión y después el centro, y se dibuja como curva",
+        "X ~ B(50; 9), porque el precio tiene un valor de éxito y uno de fracaso por libro",
+        "X ~ N(50; 9²): el segundo parámetro es la VARIANZA, y al ser continua va como curva"
+      ],
+      "correcta": 3,
+      "explicacion": "La notación es X ~ N(μ; σ²) y el «~» se lee «se distribuye como». El segundo lugar es para la VARIANZA, no para la desviación. Y como la variable es continua, el dibujo es una curva, no bastones: los bastones son de la binomial, que es discreta."
+    },
+    {
+      "id": "e22-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Con ese mismo libro, X ~ N(50; 9²), te piden P(X < 60).\n\n¿Cuánto vale la Z y qué te devuelve la tabla?",
+      "opciones": [
+        "Z = 1,11 y la tabla devuelve 0,8665, que es el área acumulada desde la izquierda",
+        "Z = 10, que es la distancia a la media, y la tabla devuelve el área de ese tramo",
+        "Z = 1,11 y la tabla devuelve 0,1335, porque da lo que queda del lado derecho",
+        "Z = 0,90, de dividir 54 entre 60, y la tabla devuelve el 90% de la distribución"
+      ],
+      "correcta": 0,
+      "explicacion": "Estandarizar es Z = (X − μ)/σ = (60 − 50)/9 = 1,11, y SIEMPRE con dos decimales, porque así viene armada la tabla. Lo que la tabla devuelve es el área que se va acumulando de izquierda a derecha: todo lo que queda por debajo de esa Z."
+    },
+    {
+      "id": "e22-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Ahora te piden lo contrario: P(X > 60), con el mismo libro X ~ N(50; 9²).\n\n¿Cómo se saca?",
+      "opciones": [
+        "Se busca 1,11 en la tabla y ya está: da 0,8665, porque es la misma Z de antes",
+        "Por complemento: 1 − P(X ≤ 60) = 1 − 0,8665 = 0,1335, porque la tabla solo acumula",
+        "Se le resta la media al resultado de la tabla, así que queda 0,8665 − 0,5 = 0,3665",
+        "No se puede: la tabla Z no trae las colas de la derecha y haría falta integrar a mano"
+      ],
+      "correcta": 1,
+      "explicacion": "La tabla solo sabe acumular hacia la izquierda, así que el «mayor que» va por COMPLEMENTO. Existe el truco de la simetría, P(Z > z) = P(Z < −z), pero el apunte lo marca como no aconsejable justamente porque es fácil invertirle el signo."
+    },
+    {
+      "id": "e22-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La temperatura de Iquitos se distribuye como X ~ N(20; 2²).\n\n¿Cuánto es la probabilidad de que esté entre 21 y 25 grados? Datos de tabla: Φ(0,50) = 0,6915 y Φ(2,50) = 0,9938.",
+      "opciones": [
+        "1,6853, que sale de sumar las dos áreas acumuladas que entrega la tabla Z",
+        "0,9938, que es el área hasta 25 grados y ya contiene al tramo que piden",
+        "0,3023, restando el área del valor mayor menos el área del valor menor",
+        "0,6915, el área hasta 21 grados, que es donde arranca el tramo pedido"
+      ],
+      "correcta": 2,
+      "explicacion": "Un intervalo siempre se parte en dos acumuladas y se RESTAN: P(a < X < b) = P(X < b) − P(X < a). Acá 0,9938 − 0,6915 = 0,3023. Sumarlas es el error típico, y da un número mayor que 1, que ya avisa solo que algo está mal."
+    },
+    {
+      "id": "e22-q5",
+      "nivel": "comprension",
+      "enunciado": "Te preguntan dos cosas sobre el precio de un libro: la probabilidad de que sea superior a su TERCER CUARTIL, y la de que sea inferior a su DECIL 9.\n\n¿Cuánto dan?",
+      "opciones": [
+        "0,75 y 0,10, que es lo que queda al otro lado de cada uno de los dos cuantiles",
+        "No se puede responder sin la media y la desviación, que no aparecen en el enunciado",
+        "0,25 y 0,90, y acá ni siquiera hace falta estandarizar ni entrar a la tabla",
+        "0,25 y 0,90, pero antes hay que pasar cada cuantil a Z para poder confirmarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "El cuantil ya trae su probabilidad metida en el nombre: por debajo del tercer cuartil queda el 75%, así que por encima queda 0,25; y por debajo del decil 9 queda 0,90. No hay nada que estandarizar, y por eso el apunte lo llama «caso raro»."
+    },
+    {
+      "id": "e22-q6",
+      "nivel": "aplicacion",
+      "enunciado": "El precio de un libro es X ~ N(50; 13²).\n\n¿Cuánto debe costar, como mínimo, para estar en el QUINTO SUPERIOR de todos los precios? Dato: la Z más cercana a una probabilidad de 0,80 es 0,84.",
+      "opciones": [
+        "60,92 soles: el quinto superior es el percentil 80, y de Z = 0,84 se despeja la X",
+        "40,00 soles, que es el 80% del precio promedio de los libros de ese catálogo",
+        "10,92 soles, que es lo que Z = 0,84 representa medido en soles de desviación",
+        "0,84 soles por encima de la media, porque la Z ya viene en la escala del precio"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el proceso INVERSO: probabilidad → Z → X. El quinto superior deja 80% abajo, o sea el percentil 80. Con 0,84 = (X − 50)/13 sale X = 50 + 0,84 × 13 = 60,92. Ojo que 0,80 no está exacto en la tabla, por eso se aproxima a la Z más cercana."
+    },
+    {
+      "id": "e22-q7",
+      "nivel": "comprension",
+      "enunciado": "Dos preguntas del mismo examen, las dos con X ~ N(50; 9²):\n\nI. ¿Cuánto es P(X = 60,67)?\nII. ¿Cuánto es P(X > 120)?\n\n¿Qué contestás?",
+      "opciones": [
+        "I vale 0,5 por estar cerca del centro; II vale 0 porque 120 se sale del recorrido",
+        "I hay que estandarizar y buscar 1,19 en la tabla; II es 1 menos ese mismo valor",
+        "I vale 0 porque un punto no tiene área; II es casi 0, porque su Z da 7,78",
+        "Las dos se resuelven igual: se estandariza, se busca en la tabla y se complementa"
+      ],
+      "correcta": 2,
+      "explicacion": "En una variable continua la probabilidad es ÁREA bajo la curva, y un punto solo no tiene ancho: P(X = a) = 0 siempre. Y para Z más allá de ±4 la tabla ya no trae nada: P(Z > 4) ≈ 0 y P(Z < 4) ≈ 1."
+    },
+    {
+      "id": "e22-q8",
+      "nivel": "aplicacion",
+      "enunciado": "El peso neto de un producto es X ~ N(200; 140²). Te piden la probabilidad de que «el peso DIFIERA de su media en MÁS de 120 gramos».\n\nDato: Φ(0,86) = 0,8051 y Φ(−0,86) = 0,1949. ¿Cómo se plantea y cuánto da?",
+      "opciones": [
+        "P(X − μ > 120), de un solo lado, que estandarizando da 1 − 0,8051 = 0,1949",
+        "P(|X − μ| > 120) = 1 − P(−0,86 < Z < 0,86) = 1 − 0,6102, o sea 0,3898",
+        "P(|X − μ| < 120), que es lo mismo escrito al revés y da directamente 0,6102",
+        "P(X > 320), que es la media más los 120 gramos, y eso da 1 − 0,8051 = 0,1949"
+      ],
+      "correcta": 1,
+      "explicacion": "«DIFIERE en más de C» es valor absoluto: |X − μ| > C, y eso son las DOS colas. Se resuelve por complemento: 1 − P(−C < X − μ < C). Distinto de «es superior a su media en más de C», que es un solo lado y va sin valor absoluto."
+    },
+    {
+      "id": "e22-q9",
+      "nivel": "aplicacion",
+      "enunciado": "La temperatura de Iquitos es X ~ N(20; 2²). Datos: Φ(1,96) = 0,9750 y Φ(−0,52) = 0,3015.\n\n¿Cuánto tiene que marcar el termómetro, como mínimo, para estar en el 2,5% más caluroso? ¿Y como máximo para estar en el 30% más frío?",
+      "opciones": [
+        "22,50 °C y 17,00 °C, que son la media más y menos los porcentajes pedidos",
+        "1,96 °C y −0,52 °C, que es lo que la tabla devuelve para cada probabilidad",
+        "24,00 °C y 19,00 °C, redondeando las Z a 2 y a −0,5 para simplificar la cuenta",
+        "23,92 °C y 18,96 °C, despejando la X en cada caso con su Z correspondiente"
+      ],
+      "correcta": 3,
+      "explicacion": "El 2,5% más caluroso deja 97,5% abajo, y esa Z sí está exacta: 1,96 → X = 20 + 1,96 × 2 = 23,92. El 30% más frío deja 0,30 abajo, con Z ≈ −0,52 → X = 20 − 0,52 × 2 = 18,96. Arriba de la media la Z es positiva y abajo negativa: si el signo sale al revés, está mal."
+    }
+  ]
+}

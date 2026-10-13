@@ -2021,6 +2021,155 @@ const TRANVIA = [      // el tranvía verde de Basilea, que es la salida del dis
 ];
 const P_TRANVIA = { g: "#2f7a3e", w: "#f0ece0", b: "#44586a", y: "#e0b24a", k: "#2a2620" };
 
+const BILLETE = [     // el billete de diez marcos: pone la desviación donde va la varianza, N(mu; sigma) en vez de N(mu; sigma cuadrado) (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kkkkkkvvvvkkvvok.",
+  ".kkccckvvvkvvkvvk.",
+  ".kkkkkkvvkvvvvkvk.",
+  ".kkkkkkvvkvvvvkvk.",
+  ".kkccckvkvvvvvvkk.",
+  ".kkccckvkkkkkkkkk.",
+  ".kokkkkvvvvvvvvvk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_BILLETE = { k: "#20201c", v: "#8fae76", c: "#e4e0cc", o: "#c05a3a" };
+
+const BALANZA = [     // la balanza sin estandarizar: no pasa la X a la escala de Z y después busca en la tabla igual (18 × 14)
+  "..................",
+  ".......kkkk.......",
+  ".......kkkk.......",
+  "..kkkkkkkkkkkkkk..",
+  "..kkkkkkkkkkkkkk..",
+  "...k....ss....k...",
+  "...ss...ss....k...",
+  "kkkkkkk.ss.kkkkkkk",
+  ".sssss..ss..sssss.",
+  "..kkk...ss...kkk..",
+  "........ss........",
+  "........ss........",
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+];
+const P_BALANZA = { k: "#20201c", s: "#7f94a4" };
+
+const ESPEJO = [      // el espejo de la simetría: usa el truco P(Z>z)=P(Z<-z) y le da vuelta el signo (18 × 14)
+  "..................",
+  ".....kkkkkkkk.....",
+  "....kggggggggk....",
+  "....kgbbbggggk....",
+  "....kggbbbgggk....",
+  "....kgggbbbggk....",
+  "....kggggggggk....",
+  "....kggggggggk....",
+  "....kggggggggk....",
+  ".....kkkkkkkk.....",
+  "........kk........",
+  "........kk........",
+  "........kk........",
+  ".......kkkk.......",
+];
+const P_ESPEJO = { k: "#20201c", g: "#9fc0cc", b: "#e4f2f6" };
+
+const JARRA = [       // la jarra que suma en vez de restar: en el intervalo junta las dos áreas acumuladas y se pasa de 1 (18 × 14)
+  "..................",
+  "....kkkkkk........",
+  "..kkkksskkkkk.....",
+  "..kkkkkkkkkkk.....",
+  "..kkkkkkkkkk......",
+  "..kppppppppkkkkk..",
+  "..kppppppppk...k..",
+  "..kbbbbbbbbk...k..",
+  "..kbbbbbbbbk...k..",
+  "..kppppppppk...k..",
+  "..kppppppppkkkkk..",
+  "..kppppppppk......",
+  "..kppppppppk......",
+  "..kkkkkkkkkk......",
+];
+const P_JARRA = { k: "#20201c", p: "#c3c8c0", b: "#4a6a9a", s: "#9aa6ae" };
+
+const BIRRETE = [     // el birrete que estandariza de más: pasa el cuantil a Z cuando el cuantil ya trae su probabilidad puesta (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  "...kkkkkrrkkkkk...",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kkkkkkkkkkkkkrkk.",
+  ".....kkkkkkkk.r...",
+  ".....knnnnnnk.r...",
+  ".....knnnnnnk.r...",
+  ".....knnnnnnkrrr..",
+  ".....knnnnnnkrrr..",
+  ".....kkkkkkkkrrr..",
+  ".....kkkkkkkk.....",
+  "..................",
+];
+const P_BIRRETE = { k: "#20201c", n: "#33374a", r: "#c05a3a" };
+
+const TELEGRAFO = [   // el telégrafo al revés: en el proceso inverso va de X a Z, cuando ahora se arranca de la probabilidad (18 × 14)
+  "..................",
+  "cccck.............",
+  "cccck.............",
+  "....k......kkkkk..",
+  "....k......kbbbk..",
+  "...kkkk....ksssk..",
+  "...ksskkkkkkbbbk..",
+  "...ksskkkkkkkkkk..",
+  "..kkkkkkkkkkkkkkk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kmkkkkkkkkkkkmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kkkkkkkkkkkkkkk.",
+];
+const P_TELEGRAFO = { k: "#20201c", m: "#6b4a30", s: "#9aa6ae", b: "#4a6a9a", c: "#e4e0cc" };
+
+const ASTRONOMO = [   // jefe: el astrónomo de Gotinga, que mide una y otra vez y no sabe decidir dónde cortar la curva (18 × 17)
+  "....kkkkkkkk......",
+  "..kkkkkkkkkkkk....",
+  "....kkkkkkkk......",
+  "....kpkppkpk.kkkk.",
+  "....kppppppk.kkkk.",
+  "....kppkkppk..kok.",
+  "....kkkkkkkk..kok.",
+  "..kkkkcccckkkkkok.",
+  "..knnnccccnnnkkok.",
+  "..knnnccccnnnkkok.",
+  "..knnnccccnnnkkok.",
+  "..knnnnccnnnnkkok.",
+  "..kkkkkkkkkkkkkkk.",
+  "..kkkkkkkkkkkk....",
+  "...kkk...kkk......",
+  "...kkk...kkk......",
+  "..kkkkk.kkkkk.....",
+];
+const P_ASTRONOMO = { k: "#20201c", p: "#d9a273", n: "#33374a", c: "#e4e0cc", o: "#b58a3c" };
+
+const LOCOMOTORA = [  // la locomotora, que es la salida del distrito (32 × 16)
+  "..hhhhh.........................",
+  "..hhhhh.........................",
+  "....kkkkk.......................",
+  ".....kkk..........kkkkkkkk......",
+  ".....knk..........kkkkkkkk......",
+  ".....knk..........krrrrrrk......",
+  ".....knk..........krkkkkrk......",
+  ".....knk..........krkcckrkkkkkk.",
+  "..kkkkkkkkkkkkkkkkkrkcckrkkmmmk.",
+  "..koooooooooooooookrkkkkrkkmmmk.",
+  "..knnnnnnnnnnnknnnkrrrrrrkkmmmk.",
+  "..kooookooookkkkkokrrrkrrkkmkmk.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+  ".....kkokk.kkkokkk..kkokk.kkokk.",
+  ".....kkkkk.kkkkkkk..kkkkk.kkkkk.",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+];
+const P_LOCOMOTORA = { k: "#20201c", n: "#33374a", r: "#8a3a2c", c: "#cfe0e8", m: "#6b4a30", o: "#b58a3c", h: "#b9c3c0" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2141,6 +2290,14 @@ const DEFINICIONES = {
   frasco:       [FRASCO, P_FRASCO],
   boticario:    [BOTICARIO, P_BOTICARIO],
   tranvia:      [TRANVIA, P_TRANVIA],
+  billete:      [BILLETE, P_BILLETE],
+  balanza:      [BALANZA, P_BALANZA],
+  espejo:       [ESPEJO, P_ESPEJO],
+  jarra:        [JARRA, P_JARRA],
+  birrete:      [BIRRETE, P_BIRRETE],
+  telegrafo:    [TELEGRAFO, P_TELEGRAFO],
+  astronomo:    [ASTRONOMO, P_ASTRONOMO],
+  locomotora:   [LOCOMOTORA, P_LOCOMOTORA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

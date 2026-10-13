@@ -295,6 +295,20 @@
       "abierto": true,
       "mapa": "levels/level21.json",
       "preguntas": "questions/level21_questions.json"
+    },
+    {
+      "id": "level22",
+      "clase": "Clase 04",
+      "distrito": "Alemania",
+      "titulo": "El país que imprimió la campana en un billete",
+      "icono": "🔔",
+      "seccion": "PC3",
+      "seccionNota": "Variables aleatorias y distribuciones — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level22.json",
+      "preguntas": "questions/level22_questions.json"
     }
   ]
 }
