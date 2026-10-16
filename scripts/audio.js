@@ -145,6 +145,14 @@ const TEMAS_MUSICA = {
               "A4",1,"B4",1,"G4",2,"D4",4],
     bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
   },
+  dublin: { // Dublín: jiga de taberna en 6/8, saltarina y con el bajo al trote
+    tempo: 0.21, onda: "square",
+    melodia: ["D4",2,"D4",1,"E4",1,"F#4",2,"A4",2,"G4",1,"F#4",1,"E4",2,
+              "D4",2,"D4",1,"E4",1,"F#4",2,"D4",2,"E4",2,"D4",2,
+              "A4",2,"A4",1,"B4",1,"A4",2,"F#4",2,"G4",1,"F#4",1,"E4",2,
+              "D4",2,"F#4",2,"A4",2,"G4",1,"F#4",1,"E4",2,"D4",4],
+    bajo:    ["D2",4,"A2",4,"D2",4,"G2",4,"D2",4,"A2",4,"G2",4,"D2",4],
+  },
   gotinga: { // Gotinga: coral de órgano de pueblo, pausado y de otoño
     tempo: 0.26, onda: "triangle",
     melodia: ["D4",4,"A3",2,"D4",2,"F4",4,"E4",2,"D4",2,

@@ -249,6 +249,13 @@ const FICHAS = [
   { sprite: "ficha", nombre: "La Ficha del Hueco", texto: "Calcula el valor esperado dejando el casillero vacío de la tabla, sin despejarlo primero con la suma igual a 1." },
   { sprite: "banquero", nombre: "El Banquero del Palais-Royal", texto: "Jefe de París: cuando a la variable se le multiplica o se le suma algo, recalcula todo desde cero en vez de usar las propiedades." },
   { sprite: "casero", nombre: "El Casero de Belén", texto: "Jefe de Iquitos: te vende del saco sin dejarte mirar adentro, y encima cuenta mal lo que queda." },
+  { sprite: "arpa", nombre: "El Arpa Desafinada", texto: "Irlanda: confunde el PARÁMETRO, que sale de la población entera y es único, con el ESTIMADOR, que sale de una muestra y cambia según cuál te tocó." },
+  { sprite: "cuchara", nombre: "La Cuchara de una Sola Prueba", texto: "Prueba un vaso y ya cree saber cómo salió la tanda: no ve que la distribución muestral se arma mirando MUCHAS muestras, no una." },
+  { sprite: "cebada", nombre: "La Cebada que No Promedia", texto: "No se cree que el promedio de todos los promedios muestrales dé clavada la media poblacional, aunque el salón de cuatro lo muestre con seis muestras." },
+  { sprite: "espuma", nombre: "La Espuma que No Baja", texto: "Cree que agrandar la muestra parte el error en la misma proporción, cuando abajo va la RAÍZ: cuadruplicar n solo lo achica a la mitad." },
+  { sprite: "barril", nombre: "El Barril que No Se Repone", texto: "Muestrea sin reemplazo y se olvida del factor de corrección por población finita, que siempre es menor que 1 y por eso achica el error." },
+  { sprite: "duende", nombre: "El Duende que No Cree en el Teorema", texto: "Si la variable no es normal se rinde, en vez de invocar el Teorema Central del Límite, que con n grande le arregla el promedio igual." },
+  { sprite: "cervecero", nombre: "El Cervecero de Saint James’s Gate", texto: "Jefe de Irlanda: tiene que decidir sobre la tanda entera con el vaso que tiene en la mano, y se le mezclan el error estándar y la desviación de la población." },
 ];
 
 export function galeriaPersonajes(contenedor) {

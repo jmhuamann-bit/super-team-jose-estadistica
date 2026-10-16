@@ -2170,6 +2170,155 @@ const LOCOMOTORA = [  // la locomotora, que es la salida del distrito (32 × 16)
 ];
 const P_LOCOMOTORA = { k: "#20201c", n: "#33374a", r: "#8a3a2c", c: "#cfe0e8", m: "#6b4a30", o: "#b58a3c", h: "#b9c3c0" };
 
+const ARPA = [       // el arpa desafinada: confunde el parámetro, que es único, con el estimador, que cambia con cada muestra (18 × 14)
+  "..................",
+  "...kkkkkkkkkkk....",
+  "..kkkbkkkkkkkkk...",
+  "..kkko.b.....kk...",
+  "..kkko.o.b...kk...",
+  "..kk.o.o.o.b.kk...",
+  "..kk.o.o.o.o.kk...",
+  "..kk.o.o.o.o.bkb..",
+  "..kk.o.o.o.o.kko..",
+  "..kk.o.o.o.o.kko..",
+  "..kk.o.o.o.o.kko..",
+  "..kk.o.o.o.o.kko..",
+  "..kk.o.o.o.o.kko..",
+  "..kkkkkkkkkkkkk...",
+];
+const P_ARPA = { k: "#23201a", o: "#d8b24a", b: "#e8e0c4" };
+
+const CUCHARA = [    // la cuchara de una sola prueba: cree que una muestra sola ya le cuenta cómo salió la tanda entera (18 × 14)
+  ".......kkk........",
+  "......kkskk.......",
+  "......ks.sk.......",
+  ".......kksk.......",
+  "........ksk.......",
+  "........ksk.......",
+  "........ksk.......",
+  ".......kkskk......",
+  "....kkksssskkk....",
+  "...kssssssssssk...",
+  "..ksppppppppppsk..",
+  "..ksppppppppppsk..",
+  "...kssppppppssk...",
+  "....kkkkkkkkkk....",
+];
+const P_CUCHARA = { k: "#23201a", s: "#b8c0c4", p: "#c9a23c" };
+
+const CEBADA = [     // la cebada que no promedia: no ve que el promedio de todos los promedios muestrales da la media poblacional (18 × 14)
+  "..k....k....k.....",
+  "...k...k...k......",
+  "....k..k..k.......",
+  ".....k.k.k........",
+  "......kkkkk.......",
+  "......koook.......",
+  ".....kkoookk......",
+  ".....kooooook.....",
+  "....kkooooookk....",
+  "....kooooooook....",
+  "....kkooooookk....",
+  ".....kooooook.....",
+  "......kkoookk.....",
+  "....ttt.ktk.ttt...",
+];
+const P_CEBADA = { k: "#23201a", o: "#d8b24a", t: "#4a7a3a" };
+
+const ESPUMA = [     // la espuma que no baja: no entiende que al agrandar la muestra el error estándar se achica (18 × 14)
+  "..kkkeeeeeeeekkk..",
+  "..kkeeeeeeeeeekk..",
+  "..kkeeeeeeeeeekk..",
+  "..kkeeeeeeeeeekk..",
+  "..kkeeeeeeeeeekk..",
+  "..kkeeeeeeeeeekk..",
+  "..kkennenneennkk..",
+  "..kknhnnnnnnnnkk..",
+  "..kknhnnnnbnnnkk..",
+  "..kknhnnnnnnnnkk..",
+  "..kknhnnnbnnnnkk..",
+  "..kknnnnnnnnnnkk..",
+  "..kknnnnnnnnnnkk..",
+  "..kkkkkkkkkkkkkk..",
+];
+const P_ESPUMA = { k: "#23201a", n: "#8a4a1e", e: "#efe6cc", b: "#b5702a", h: "#d9b48a" };
+
+const BARRIL = [     // el barril que no se repone: olvida corregir por población finita cuando el muestreo es sin reemplazo (18 × 14)
+  ".......kkkk.......",
+  ".......kaak.......",
+  "..kkkkkkkkkkkkkk..",
+  "..kmmmmmmmmmmmmk..",
+  ".aaaaaaaaaaaaaaaa.",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kmmmmmmmmmmmammk.",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kmmmmmmmmmmmmmmk.",
+  ".aaaaaaaaaaaaaaaa.",
+  "..kmmmmmmmmmmmmk..",
+  "..kkkkkkkkkkkkkk..",
+  "..................",
+];
+const P_BARRIL = { k: "#23201a", m: "#8a5a34", a: "#8a9298" };
+
+const DUENDE = [     // el duende que no cree en el teorema: si la variable no es normal se rinde, en vez de invocar el TLC (18 × 14)
+  "..................",
+  ".....kkkkkkkk.....",
+  ".....kkkkkkkk.....",
+  ".....kvoooovk.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  ".....kkkkkkkk.....",
+  ".....kpkppkpk.....",
+  ".....kprrrrpk.....",
+  ".....krrrrrrk.....",
+  "....kkkkkkkkkk....",
+  "....kvvvoovvvk....",
+  "....kvvvoovvvk....",
+  "....kkkkookkkk....",
+];
+const P_DUENDE = { k: "#23201a", v: "#3f7a3a", p: "#d9a273", r: "#b5542c", o: "#d8b24a" };
+
+const CERVECERO = [  // jefe: el cervecero de Saint James's Gate, que decide sobre la tanda entera con el vaso que tiene en la mano (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  ".....kkkkkkkk.....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  ".....kprrrrpk.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  "...knoooooooonk...",
+  "...knnnnnkkkkkk...",
+  "...knnnnnkmmmkk...",
+  "...knnnnnkeeekk...",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkkkkkkkk...",
+  "....kkk....kkk....",
+  "....kkk....kkk....",
+  "...kkkkk..kkkkk...",
+];
+const P_CERVECERO = { k: "#23201a", p: "#d9a273", n: "#6b4a30", r: "#b5542c", o: "#8a9298", e: "#efe6cc", m: "#2a1f18" };
+
+const VAGONETA = [   // la vagoneta de la cervecería, que es la salida del distrito (32 × 16)
+  "................................",
+  "......kkkkkkk.....kkkkkkk.......",
+  "......aaaaaaa.....aaaaaaa.......",
+  "......kuuuuuk.....kuuuuuk.......",
+  "...kkkkkkkkkkkkkkkkkkkkkkkkk....",
+  "...kaaaaaaaaaaaaaaaaaaaaaaak....",
+  "...kmmmkmmmmkmmmmkmmmmkmmmmk....",
+  "...kmmmkmmmmkmmmmkmmmmkmmmmk....",
+  "...kmmmkmmmmkmmmmkmmmmkmmmmk....",
+  "...kmmmkmmmmkmmmmkmmmmkmmmmk....",
+  "...kmmmkmmmmkmmmmkmmmmkmmmmk....",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  ".....kkaakkk........kkaakkk.....",
+  ".....kkaakkk........kkaakkk.....",
+  "......kkkkk..........kkkkk......",
+];
+const P_VAGONETA = { k: "#23201a", m: "#6b4a30", a: "#8a9298", u: "#8a5a34" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2298,6 +2447,14 @@ const DEFINICIONES = {
   telegrafo:    [TELEGRAFO, P_TELEGRAFO],
   astronomo:    [ASTRONOMO, P_ASTRONOMO],
   locomotora:   [LOCOMOTORA, P_LOCOMOTORA],
+  arpa:         [ARPA, P_ARPA],
+  cuchara:      [CUCHARA, P_CUCHARA],
+  cebada:       [CEBADA, P_CEBADA],
+  espuma:       [ESPUMA, P_ESPUMA],
+  barril:       [BARRIL, P_BARRIL],
+  duende:       [DUENDE, P_DUENDE],
+  cervecero:    [CERVECERO, P_CERVECERO],
+  vagoneta:     [VAGONETA, P_VAGONETA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

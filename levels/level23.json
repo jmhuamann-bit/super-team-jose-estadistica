@@ -1,0 +1,42 @@
+{
+  "id": "level23",
+  "distrito": "Irlanda",
+  "clase": "Clase 05 · PC3",
+  "titulo": "El país que firmó su descubrimiento como «Student»",
+  "tema": "dublin",
+  "musica": "dublin",
+  "vehiculo": "vagoneta",
+  "intro": "Quinta clase de la PC3, y otro país: Irlanda. A principios del siglo pasado trabajaba en la cervecería Guinness de Dublín un químico llamado William Gosset, y su problema era exactamente el de esta clase: no podía probar toda la cebada que compraba ni abrir todos los barriles que salían — tenía que decidir sobre la TANDA ENTERA mirando unas pocas muestras. De tanto pelearse con eso terminó inventando una de las herramientas más usadas de la estadística, y la publicó en 1908 firmando como «Student», porque Guinness no dejaba publicar a sus empleados. Por eso todavía hoy se la llama la t de Student. La t viene después; lo de hoy es lo de antes: qué pasa cuando en vez de medir a toda la población medís solo una muestra, y cómo se porta el promedio de esa muestra. Porque el promedio de una muestra no es un número fijo — cambia según a quién te toque, y esa variación tiene su propia distribución.",
+  "repaso": [
+    "POR QUÉ SE MUESTREA: porque muchas veces no se puede medir a la población entera. Por tiempo, por costo, o porque medir DESTRUYE el elemento — no se puede abrir todos los barriles para saber si la tanda salió bien.",
+    "POBLACIÓN FINITA es la que podés contar con exactitud: los matriculados al curso, las botellas de tu refrigeradora. INFINITA es la que no: la gente que entra y sale de la UP en un día, las botellas de todo Lima.",
+    "PARÁMETRO contra ESTIMADOR, que es la distinción que ordena todo el tema. El PARÁMETRO usa datos de la POBLACIÓN: es exacto y único. El ESTIMADOR (o estadístico) usa datos de una MUESTRA: VARÍA según qué muestra te tocó. Por eso los parámetros van con letras griegas (μ, σ) y los estimadores con latinas (x̄, s).",
+    "QUÉ ES UNA DISTRIBUCIÓN MUESTRAL: la distribución de un ESTADÍSTICO —la media, la proporción— calculado sobre MUCHAS muestras. Ojo: no es la distribución de los datos, es la de los RESULTADOS que van dando las muestras.",
+    "EL EJEMPLO QUE LO DEMUESTRA: un salón de 4 con edades 18, 20, 22 y 24, o sea μ = 21. Todas las muestras de 2 sin reemplazo y sin orden son C(4;2) = 6, y sus promedios dan 19, 20, 21, 21, 22 y 23. El promedio de esos promedios da 21 CLAVADO, que es μ.",
+    "LAS DOS FÓRMULAS DEL PROMEDIO MUESTRAL. La media siempre es la misma: E(x̄) = μ, el centro no se mueve. Lo que cambia según el muestreo es la varianza, porque al promediar los valores altos y bajos se compensan.",
+    "CON REEMPLAZO O POBLACIÓN INFINITA: Var(x̄) = σ²/n, y el ERROR ESTÁNDAR —que es con lo que se estandariza— es σ/√n. Abajo va la RAÍZ de n: cuadruplicar la muestra solo parte el error a la mitad.",
+    "SIN REEMPLAZO O POBLACIÓN FINITA: al error estándar hay que multiplicarlo por el FACTOR DE CORRECCIÓN POR POBLACIÓN FINITA, √((N − n)/(N − 1)), que siempre es menor que 1 y por lo tanto lo ACHICA. La razón es simple: lo que sacás no vuelve, la población se va reduciendo y queda menos incertidumbre.",
+    "LA FRACCIÓN DE MUESTREO es n/N. Si es chica, el factor queda casi en 1 y se puede obviar; si es grande, hay que corregir sí o sí, porque ahí la muestra se está comiendo una parte seria de la población.",
+    "LAS DOS OBSERVACIONES QUE SALVAN EL EJERCICIO. (1) Si no te dicen si es con o sin reemplazo y tampoco te dan la población, se asume CON reemplazo y población infinita, así que no se corrige. (2) Si te dicen SIN reemplazo pero no te dan N, se asume que N es enorme y el factor vuelve a ser 1. Y si te dan N sin decirte el tipo, se asume SIN reemplazo.",
+    "CASO A — LA VARIABLE YA ES NORMAL: entonces el promedio muestral también es normal, exacto y sin invocar ningún teorema. Se estandariza Z = (x̄ − μ) dividido por el ERROR ESTÁNDAR. El error más común es dividir entre σ en vez de entre σ/√n.",
+    "CASO B — LA VARIABLE NO ES NORMAL: ahí entra el TEOREMA CENTRAL DEL LÍMITE. Con la muestra suficientemente grande (de 30 para arriba), el PROMEDIO se aproxima igual a una normal, aunque los datos originales sean cualquier cosa. Y hay que ESCRIBIRLO en la respuesta, porque es parte de lo que se evalúa.",
+    "LOS TRES RESUELTOS. Supermercado, X ~ N(35; 16) con n = 25: error 0,8, Z de 36 = 1,25 y P(x̄ ≤ 36) = 0,8944 — y «mayor a 36» es el complemento, 0,1056; con N = 200 sin reemplazo el factor da 0,9378, el error 0,75, la Z de 34 = −1,33 y P = 0,0918. Tarjetas, X ~ N(200; 400) con n = 10: error 6,32, Z de 210 = 1,58 y P = 0,9429; con N = 100 el factor da 0,9535, el error 6,03, la Z de 190 = −1,66 y P = 0,0485. Fábrica, X NO normal con μ = 30, σ = 5 y n = 50: por TLC, error 0,7071, Z de 32 = 2,83 y P(x̄ ≥ 32) = 0,0023."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                                                                                                  ",
+    "                                                                                                    AA                                                                            ",
+    "                                                                                                   o o                  o o                                                       ",
+    "                                                                                                                                                                                  ",
+    "                                                                             o  o  o              ======          o o  =====             o     o     o                            ",
+    "                                   ?  o      o         V  o      o                           G                   L              o      oo oo oo oo oo oo   1  L                   ",
+    "                   o     o                              oo oo  oo oo        ==========                           =====        oo oo                                     o o o     ",
+    "                      E              ###    ###                                                                                                                                   ",
+    "  P         C    ===== =====         ###    ###              E           C      E              T           E                   E        X E   X     X   C           B         M   ",
+    "###############              ############################  #####  ################################################################################################################",
+    "###############              ############################  #####  ################################################################################################################",
+    "###############              ############################  #####  ################################################################################################################"
+  ]
+}

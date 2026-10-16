@@ -309,6 +309,20 @@
       "abierto": true,
       "mapa": "levels/level22.json",
       "preguntas": "questions/level22_questions.json"
+    },
+    {
+      "id": "level23",
+      "clase": "Clase 05",
+      "distrito": "Irlanda",
+      "titulo": "El país que firmó su descubrimiento como «Student»",
+      "icono": "🍀",
+      "seccion": "PC3",
+      "seccionNota": "Variables aleatorias y distribuciones — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level23.json",
+      "preguntas": "questions/level23_questions.json"
     }
   ]
 }

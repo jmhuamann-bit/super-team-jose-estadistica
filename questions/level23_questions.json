@@ -1,0 +1,125 @@
+{
+  "nivel": "level23",
+  "clase": "Clase 05 · PC3 — Distribuciones muestrales",
+  "fuente": "Apuntes de la Clase 05 — Distribuciones muestrales (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e23-q1",
+      "nivel": "comprension",
+      "enunciado": "El área académica tiene toda la base de datos y calcula que la edad promedio de la universidad es 21,77 años. Jhon Nieves, que es alumno, le pregunta a su salón y le da 20,4.\n\n¿Qué es cada número?",
+      "opciones": [
+        "Los dos son parámetros, porque los dos son un promedio de edades calculado igual",
+        "21,77 es el parámetro, que es único; 20,4 es un estimador, y cambia con cada muestra",
+        "21,77 es el estimador, porque viene de una base de datos que se actualiza todo el tiempo",
+        "20,4 es el parámetro del salón, y 21,77 el estimador de toda la universidad"
+      ],
+      "correcta": 1,
+      "explicacion": "El PARÁMETRO sale de la POBLACIÓN entera y es exacto y único. El ESTIMADOR (o estadístico) sale de una MUESTRA y varía: si el que pregunta hubiese sido otro alumno, con otro salón, el número habría salido distinto. Por eso los parámetros van con letras griegas y los estimadores con latinas."
+    },
+    {
+      "id": "e23-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Un salón tiene 4 alumnos de 18, 20, 22 y 24 años. Se arman TODAS las muestras posibles de 2, sin reemplazo y sin importar el orden.\n\n¿Cuántas muestras salen y cuánto da el promedio de los promedios?",
+      "opciones": [
+        "6 muestras, pero el promedio de los promedios da 20,5 por la pérdida de información",
+        "12 muestras, porque hay que contar también el orden en que salen los dos alumnos",
+        "4 muestras, una por cada alumno, y el promedio de los promedios da 21 igual",
+        "6 muestras, y el promedio de los promedios da 21, que es justo la media poblacional"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin orden y sin reemplazo son combinaciones: C(4;2) = 6. Las medias dan 19, 20, 21, 21, 22 y 23, y su promedio es 21, que es exactamente μ. Esa es la propiedad clave: el promedio muestral es un estimador que NO se desvía en promedio."
+    },
+    {
+      "id": "e23-q3",
+      "nivel": "comprension",
+      "enunciado": "Una distribución muestral es la distribución de un estadístico calculado sobre MUCHAS muestras.\n\n¿Cuánto valen la media y la varianza del promedio muestral cuando el muestreo es con reemplazo?",
+      "opciones": [
+        "La media vale μ/n y la varianza σ², porque el promedio reparte la media entre la muestra",
+        "La media vale μ y la varianza σ²: el promedio hereda tal cual los dos valores de la población",
+        "La media vale μ y la varianza σ²/n: el centro no se mueve pero la dispersión se achica",
+        "Las dos dependen del tamaño de la muestra, así que no se pueden escribir en general"
+      ],
+      "correcta": 2,
+      "explicacion": "El promedio muestral se centra en el mismo lugar que la población, por eso E(x̄) = μ. Lo que cambia es la dispersión: al promediar, los valores altos y bajos se compensan y la varianza queda σ²/n. Promediar no mueve el centro, aprieta los costados."
+    },
+    {
+      "id": "e23-q4",
+      "nivel": "aplicacion",
+      "enunciado": "El tiempo en una tienda tiene σ = 4 minutos. Se toma una muestra de 25 clientes, con reemplazo.\n\n¿Cuánto vale el error estándar del promedio, y qué pasaría si la muestra fuera de 100?",
+      "opciones": [
+        "0,8 ahora, y con 100 bajaría a 0,4: el error cae con la RAÍZ de n, no con n",
+        "0,16 ahora, y con 100 bajaría a 0,04, porque la varianza se divide entre el tamaño",
+        "4 en los dos casos: la desviación de la población no cambia por tomar más gente",
+        "0,8 ahora, y con 100 bajaría a 0,2, porque cuadruplicar n divide el error entre cuatro"
+      ],
+      "correcta": 0,
+      "explicacion": "El error estándar es σ/√n = 4/5 = 0,8. Con n = 100 da 4/10 = 0,4. Cuadruplicar la muestra solo parte el error a la MITAD, porque abajo va la raíz: para afinar el doble hay que cuadruplicar el trabajo."
+    },
+    {
+      "id": "e23-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Mismo caso (σ = 4, n = 25) pero ahora el muestreo es SIN reemplazo y la tienda tiene solo 200 clientes en total.\n\n¿Cambia algo?",
+      "opciones": [
+        "No cambia: el error estándar sigue siendo σ/√n mientras la muestra sea aleatoria",
+        "Sí: hay que multiplicar por √((N−n)/(N−1)), que da 0,9378, y el error baja a 0,75",
+        "Sí: hay que dividir entre 200, porque la población finita reparte el error entre todos",
+        "Sí, pero al revés: con población finita el error SUBE, porque hay menos de dónde elegir"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin reemplazo lo que sacás no vuelve, así que la población se va achicando y queda MENOS incertidumbre: el factor de corrección por población finita siempre es menor que 1 y achica el error. Con N = 200 y n = 25 da √(175/199) = 0,9378, y 0,8 × 0,9378 = 0,75."
+    },
+    {
+      "id": "e23-q6",
+      "nivel": "comprension",
+      "enunciado": "Dos enunciados incompletos:\n\nI. «Se toma una muestra de 40 personas» y nada más\nII. «Se toma una muestra de 40 de un total de 300», sin decir el tipo de muestreo\n\n¿Qué se asume en cada uno?",
+      "opciones": [
+        "En los dos se asume muestreo sin reemplazo, que es el caso general y el más seguro",
+        "En I no se puede asumir nada y hay que pedir el dato; en II se asume con reemplazo",
+        "En I se asume con reemplazo y población infinita; en II, como ya dieron N, se asume SIN reemplazo",
+        "En I se asume población finita de 40, y en II hay que corregir siempre por los 300"
+      ],
+      "correcta": 2,
+      "explicacion": "Son las dos observaciones del apunte. Si no dicen el tipo de muestreo ni dan población, se asume CON reemplazo y población infinita, así que no se corrige. Pero si ya te dieron N, se asume SIN reemplazo y hay que mirar el factor de corrección."
+    },
+    {
+      "id": "e23-q7",
+      "nivel": "aplicacion",
+      "enunciado": "El tiempo que un cliente pasa en un supermercado se distribuye NORMAL con media 35 minutos y varianza 16. Se toma una muestra de 25 clientes, con reemplazo.\n\n¿Cuál es la probabilidad de que el promedio de la muestra sea menor o igual a 36 minutos? Dato: Φ(1,25) = 0,8944.",
+      "opciones": [
+        "0,8944: el error estándar da 0,8 y entonces la Z de 36 minutos queda en 1,25",
+        "0,5987, estandarizando con la desviación de la población, que es 4 minutos",
+        "0,8944, pero solo si antes se corrige por población finita el error estándar",
+        "No se puede: para el promedio muestral hace falta conocer todos los 25 tiempos"
+      ],
+      "correcta": 0,
+      "explicacion": "Como X ya es normal, el promedio también lo es, sin necesidad de ningún teorema. Se estandariza con el ERROR ESTÁNDAR, no con σ: Z = (36 − 35)/(4/√25) = 1/0,8 = 1,25. Y si pidieran «mayor a 36», sería el complemento: 0,1056."
+    },
+    {
+      "id": "e23-q8",
+      "nivel": "aplicacion",
+      "enunciado": "El tiempo que tardan unos empleados NO sigue una distribución normal, pero se sabe que la media es 30 minutos y la varianza 25. Se toma una muestra de 50 empleados.\n\n¿Se puede calcular P(promedio ≥ 32)? Dato: Φ(2,83) = 0,9977.",
+      "opciones": [
+        "No: si la variable no es normal, la tabla Z no sirve y hay que ir caso por caso",
+        "Sí, da 0,9977, que es lo que la tabla devuelve directamente para esa Z",
+        "Sí, da 0,0023, pero primero hay que convertir la variable original a normal",
+        "Sí, por el TEOREMA CENTRAL DEL LÍMITE: con una muestra de 50 da 0,0023"
+      ],
+      "correcta": 3,
+      "explicacion": "Esa es la gracia del TLC: aunque X sea cualquier cosa, con la muestra suficientemente grande el PROMEDIO se aproxima a una normal. El error estándar es 5/√50 = 0,7071, la Z de 32 da 2,83, y como piden «mayor», va por complemento: 1 − 0,9977."
+    },
+    {
+      "id": "e23-q9",
+      "nivel": "aplicacion",
+      "enunciado": "El saldo de las tarjetas es NORMAL con media 200 y varianza 400. Se toman 10 clientes SIN reemplazo de una población de 100.\n\n¿Cuál es la probabilidad de que el promedio sea menor a 190? Datos: √(90/99) = 0,9535 y Φ(−1,66) = 0,0485.",
+      "opciones": [
+        "0,3085, usando la desviación de la población, que es 20, para estandarizar el valor",
+        "0,0485: el error estándar da 6,32, corregido queda 6,03, y la Z de 190 es −1,66",
+        "0,0485, pero sin corregir: con población finita el factor no se aplica a la media",
+        "0,9515, que es el área que queda del otro lado de la Z que devuelve la tabla"
+      ],
+      "correcta": 1,
+      "explicacion": "Tres pasos: el error estándar es 20/√10 = 6,32; como es sin reemplazo con N = 100 se corrige por 0,9535 y queda 6,03; y la Z de 190 da (190 − 200)/6,03 = −1,66. Si te olvidás de corregir, la Z sale −1,58 y la respuesta cambia."
+    }
+  ]
+}

@@ -2509,6 +2509,234 @@ export const TEMAS = {
       }
     },
   },
+
+  dublin: {
+    nombre: "Irlanda",
+    cielo: [[0, "#5f8fb4"], [0.4, "#a9c2cc"], [0.7, "#dce0d4"], [0.8, "#3a3a32"], [1, "#1a1a16"]],
+    suelo: { cara: "#8e8d80", borde: "#a9a89a", tierra: "#3a3428", plataforma: "#6b4a30", plataformaBorde: "#d8b24a" },
+    acento: "#3f7a3a",
+
+    bichos: ["arpa", "cuchara", "cebada", "espuma", "barril", "duende"],
+    nombresBichos: [
+      "El Arpa Desafinada",
+      "La Cuchara de una Sola Prueba",
+      "La Cebada que No Promedia",
+      "La Espuma que No Baja",
+      "El Barril que No Se Repone",
+      "El Duende que No Cree en el Teorema",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "cervecero",
+    nombreJefe: "El Cervecero de Saint James's Gate",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol irlandés: apenas se adivina detrás de la nube
+      ctx.fillStyle = "rgba(250,250,236,.18)";
+      ctx.beginPath(); ctx.arc(236, 80, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,252,244,.52)";
+      ctx.beginPath(); ctx.arc(236, 80, 24, 0, Math.PI * 2); ctx.fill();
+
+      // LAS NUBES BAJAS, que acá nunca se van del todo
+      repetir(ctx, cam, 286, 0.03, (x, i) => {
+        const bx = x, by = 30 + ((i * 47) % 58);
+        ctx.fillStyle = "rgba(242,244,240,.56)";
+        ctx.fillRect(bx, by, 136, 15);
+        ctx.fillRect(bx + 22, by - 9, 88, 11);
+        ctx.fillStyle = "rgba(176,188,192,.40)";
+        ctx.fillRect(bx, by + 13, 136, 4);
+      });
+
+      // LAS COLINAS VERDES, bien altas para que asomen por encima de los
+      // techos, con sus ovejas lejanas de a puntitos
+      repetir(ctx, cam, 188, 0.05, (x, i) => {
+        const bx = x, base = 306, alto = 96 + ((i * 37) % 54);
+        ctx.fillStyle = "#6f9a52";
+        ctx.beginPath();
+        ctx.moveTo(bx - 24, base);
+        ctx.quadraticCurveTo(bx + 54, base - alto, bx + 132, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(246,250,240,.46)";
+        for (let k = 0; k < 5; k++) {
+          ctx.fillRect(bx + 18 + k * 20, base - alto * 0.40 - ((k * 9) % 14), 4, 3);
+        }
+        ctx.strokeStyle = "rgba(122,118,104,.34)";               // los muros que parten la loma
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx + 20, base); ctx.lineTo(bx + 46, base - alto * 0.52);
+        ctx.moveTo(bx + 92, base); ctx.lineTo(bx + 70, base - alto * 0.60);
+        ctx.stroke();
+      });
+
+      // LA CERVECERÍA: la nave de ladrillo con sus dos chimeneas altas, y al
+      // lado la aguja de la iglesia, que es la silueta de cualquier barrio
+      repetir(ctx, cam, 508, 0.12, (x, i) => {
+        const bx = x + 40, base = 306;
+        ctx.fillStyle = "#9a5a44";
+        ctx.fillRect(bx, base - 86, 150, 86);
+        ctx.fillStyle = "#854a38";
+        ctx.fillRect(bx, base - 86, 150, 6);
+        ctx.fillStyle = "rgba(244,240,224,.52)";                   // los ventanales en arco
+        for (let px = bx + 10; px < bx + 142; px += 24) {
+          ctx.fillRect(px, base - 62, 14, 34);
+          ctx.beginPath(); ctx.arc(px + 7, base - 62, 7, Math.PI, 0); ctx.fill();
+        }
+        for (const cx of [26, 112]) {                              // las dos chimeneas
+          ctx.fillStyle = "#854a38";
+          ctx.fillRect(bx + cx, base - 164, 16, 80);
+          ctx.fillStyle = "#6e3d2e";
+          ctx.fillRect(bx + cx - 3, base - 170, 22, 8);
+          ctx.fillStyle = "rgba(206,212,208,.44)";                 // el humo que sale
+          for (let k = 0; k < 3; k++) {
+            ctx.fillRect(bx + cx + 2 - k * 6, base - 180 - k * 9, 15, 7);
+          }
+        }
+        ctx.fillStyle = "#b3aa96";                                 // la aguja de la iglesia
+        ctx.fillRect(bx + 196, base - 124, 24, 124);
+        ctx.beginPath();
+        ctx.moveTo(bx + 192, base - 124);
+        ctx.lineTo(bx + 208, base - 168);
+        ctx.lineTo(bx + 224, base - 124);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(58,54,46,.40)";
+        ctx.fillRect(bx + 203, base - 104, 10, 16);
+      });
+
+      // LA HILERA GEORGIANA: ladrillo oscuro, todas iguales, y cada puerta
+      // pintada de un color distinto, que es la marca de Dublín
+      repetir(ctx, cam, 132, 0.22, (x, i) => {
+        const bx = x, base = 306;
+        const alto = 50 + ((i * 19) % 12);
+        ctx.fillStyle = elige(["#6d4038", "#5e3832", "#78473c"], i);
+        ctx.fillRect(bx, base - alto, 56, alto);
+        ctx.fillStyle = "rgba(38,30,26,.40)";
+        ctx.fillRect(bx, base - alto, 56, 4);
+        ctx.fillStyle = "rgba(226,232,228,.66)";                   // las ventanas de guillotina
+        for (let py = base - alto + 10; py < base - 22; py += 17) {
+          ctx.fillRect(bx + 8, py, 12, 12);
+          ctx.fillRect(bx + 34, py, 12, 12);
+        }
+        ctx.fillStyle = elige(["#c0392b", "#3f6f9a", "#d8b24a", "#3f7a3a", "#7a4a8a"], i);
+        ctx.fillRect(bx + 21, base - 20, 14, 20);                  // LA PUERTA de color
+        ctx.fillStyle = "rgba(246,244,232,.70)";
+        ctx.fillRect(bx + 21, base - 23, 14, 4);                   // el montante en abanico
+      });
+
+      // EL PLANO DEL SUELO IRLANDÉS, del pie de las casas hasta el adoquín y
+      // sin cortes: en lugar de un río va EL MOSAICO DE CAMPOS, las parcelas
+      // separadas por muros de piedra que se ven desde cualquier loma
+      ctx.fillStyle = "#4e6b3a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#6f9a52";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      for (let i = 0; i < 26; i++) {                               // las parcelas
+        const x = (i * 68 - cam * 0.15) % 1060 - 60;
+        const fila = i % 2;
+        ctx.fillStyle = elige(["#7fa85e", "#689450", "#8ab468", "#5f8c48"], i);
+        ctx.fillRect(x, 320 + fila * 15, 64, 14);
+        ctx.fillStyle = "#9a9284";                                 // el muro de piedra seca
+        ctx.fillRect(x - 2, 318 + fila * 15, 3, 16);
+        ctx.fillRect(x, 334, 64, 2);
+      }
+      ctx.fillStyle = "#8e8d80";                                   // el adoquinado
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#a2a194";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 44; i++) {
+        const x = (i * 37 - cam * 0.5) % 980 - 40;
+        ctx.fillStyle = "rgba(58,56,48,.18)";
+        ctx.fillRect(x, 358 + ((i * 11) % 18), 12, 4);
+      }
+
+      // EL PUENTE DE HIERRO que cruza el Liffey, blanco y de un solo arco:
+      // va de lado a lado y por debajo se sigue viendo el campo
+      repetir(ctx, cam, 268, 0.28, (x, i) => {
+        const bx = x + 20, base = 350;
+        const clave = (k) => 176 * (k / 124) * (1 - k / 124);  // altura real del arco
+        ctx.strokeStyle = "rgba(238,236,222,.82)";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(bx, base); ctx.quadraticCurveTo(bx + 62, base - 88, bx + 124, base);
+        ctx.stroke();
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx + 8, base - 18); ctx.lineTo(bx + 116, base - 18);    // el tablero
+        ctx.stroke();
+        for (let k = 16; k < 112; k += 12) {                               // los barrotes
+          const alto = clave(k);
+          if (alto <= 22) continue;
+          ctx.beginPath();
+          ctx.moveTo(bx + k, base - 18); ctx.lineTo(bx + k, base - alto + 2);
+          ctx.stroke();
+        }
+        ctx.fillStyle = "rgba(226,224,208,.80)";                           // los tres faroles
+        for (const k of [14, 62, 110]) ctx.fillRect(bx + k - 2, base - 32, 5, 14);
+      });
+
+      // EL PUB: frente pintado de oscuro, el letrero crema y los ventanales
+      // encendidos, que es lo único que calienta una tarde de llovizna
+      repetir(ctx, cam, 312, 0.54, (x, i) => {
+        const bx = x + 40, base = 382, alto = 54;
+        const techo = base - alto;
+        ctx.fillStyle = elige(["#2f4a38", "#4a2f2f", "#2f3a4a"], i);
+        ctx.fillRect(bx, techo, 100, alto);
+        ctx.fillStyle = "#1f2a24";
+        ctx.fillRect(bx, techo, 100, 5);
+        ctx.fillStyle = "#e8e2cc";                                 // el letrero crema
+        ctx.fillRect(bx + 6, techo + 8, 88, 13);
+        ctx.fillStyle = "rgba(40,36,28,.72)";
+        for (let px = bx + 11; px < bx + 88; px += 7) ctx.fillRect(px, techo + 12, 4, 6);
+        for (const px of [8, 62]) {                                // los ventanales encendidos
+          ctx.fillStyle = "rgba(226,178,96,.82)";
+          ctx.fillRect(bx + px, techo + 26, 30, 20);
+          ctx.fillStyle = "rgba(34,28,22,.52)";                    // los parteluces
+          ctx.fillRect(bx + px + 14, techo + 26, 2, 20);
+          ctx.fillRect(bx + px, techo + 35, 30, 2);
+        }
+        ctx.fillStyle = elige(["#c0392b", "#3f6f9a", "#7a4a8a"], i);
+        ctx.fillRect(bx + 44, base - 26, 16, 26);                  // la puerta
+        ctx.fillStyle = "#e8e2cc";
+        ctx.fillRect(bx + 44, base - 29, 16, 4);
+      });
+
+      // LOS BOLARDOS DE HIERRO y los charcos que deja la llovizna
+      repetir(ctx, cam, 98, 0.78, (x, i) => {
+        const bx = x + 18, base = 382;
+        ctx.fillStyle = "#2a2a26";
+        ctx.fillRect(bx, base - 15, 7, 15);
+        ctx.beginPath(); ctx.arc(bx + 3.5, base - 15, 3.5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(118,118,110,.55)";
+        ctx.fillRect(bx + 1, base - 12, 2, 10);
+        ctx.fillStyle = "rgba(176,198,206,.40)";                   // el charco
+        ctx.beginPath(); ctx.ellipse(bx + 38, base - 3, 20, 4, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(226,234,236,.30)";
+        ctx.beginPath(); ctx.ellipse(bx + 33, base - 4, 7, 1.5, 0, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#847f72";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la llovizna fina, que en Dublín cae de costado y no para
+      for (let i = 0; i < 46; i++) {
+        const x = (i * 97 + t * 3.4) % 1020 - 40;
+        const y = (i * 53 + t * 7) % 470;
+        ctx.fillStyle = "rgba(216,230,238,.34)";
+        ctx.fillRect(x, y, 1, 7);
+      }
+      // y las gaviotas del Liffey, que se meten tierra adentro
+      for (let i = 0; i < 4; i++) {
+        const x = (i * 271 + t * 1.3) % 1040 - 60;
+        const y = 92 + ((i * 53) % 54) + Math.sin(t / 21 + i) * 6;
+        const ala = Math.sin(t / 9 + i * 1.4) * 4;
+        ctx.fillStyle = "rgba(250,250,246,.80)";
+        ctx.fillRect(x, y, 5, 2);
+        ctx.fillRect(x - 5, y - ala, 5, 2);
+        ctx.fillRect(x + 5, y - ala, 5, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
