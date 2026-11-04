@@ -1,0 +1,41 @@
+{
+  "id": "level24",
+  "distrito": "Grecia",
+  "clase": "Clase 02 · PC4",
+  "titulo": "El país del oráculo que nunca te daba un solo número",
+  "tema": "egeo",
+  "musica": "egeo",
+  "vehiculo": "trirreme",
+  "intro": "Entra la ESTADÍSTICA INFERENCIAL: con una muestra aleatoria se sacan conclusiones de toda la población. Toca Grecia por el oráculo de Delfos, que era famoso por no comprometerse con una sola respuesta. Con los parámetros pasa algo parecido: se puede estimar con un solo número, que es la estimación PUNTUAL, exacta pero menos confiable, o con un rango de posibles valores, que es el INTERVALO DE CONFIANZA, no exacto pero más confiable. Hay cuatro modelos: la media, la proporción, la diferencia de medias y la diferencia de proporciones. Y una vez que tienes el intervalo de la media o de la proporción, multiplicas por N y sacas el de la suma total o el de la cantidad.",
+  "repaso": [
+    "PARÁMETRO Y ESTIMADOR: el parámetro usa los datos de toda la POBLACIÓN y es único. El estimador o estadístico usa los de una MUESTRA y puede cambiar si cambia la muestra.",
+    "LAS DOS RAMAS: la descriptiva clasifica, resume y CALCULA de forma exacta parámetros y estadísticos. La inferencial ESTIMA parámetros y prueba hipótesis, y exige que la muestra sea ALEATORIA.",
+    "PUNTUAL O INTERVALO: la estimación puntual da un solo valor (186,5 kg), exacto y menos confiable. El intervalo da un rango (entre 170 y 200 kg), no exacto y más confiable.",
+    "UN BUEN ESTIMADOR: INSESGADO, en promedio no sobreestima ni subestima. EFICIENTE, tiene la menor varianza. CONSISTENTE, con más muestra se acerca más al parámetro. SUFICIENTE, usa todos los datos. La media y la proporción cumplen; la moda no.",
+    "EL NIVEL DE CONFIANZA es 1 − α, donde α es el riesgo. Nada asegura al 100% que el parámetro esté en el intervalo; por eso se define antes. Z(0,975) = 1,96 para 95%, Z(0,95) = 1,645 para 90% y Z(0,995) = 2,576 para 99%.",
+    "MODELO 01, LA MEDIA: si la varianza poblacional es conocida, x̄ ± Z·σ/√n. Si NO es conocida (lo que casi siempre viene), x̄ ± T·S/√n, con T(1 − α/2; n − 1).",
+    "CON O SIN REPOSICIÓN: si te dan la población N, es sin reposición y se añade el factor de corrección (N − n)/(N − 1) a la varianza. Si no te la dan, es con reposición y no se añade.",
+    "MODELO 02, LA PROPORCIÓN: p ± Z·√(p(1 − p)/n), con p = casos de éxito / tamaño de muestra.",
+    "LAS TRANSFORMACIONES: el intervalo de la suma total Σx es N por el intervalo de μ, y el de la cantidad Q es N por el intervalo de π. Las cantidades de personas u objetos no pueden tener decimales: se redondea para que el intervalo quede MÁS grande, el inferior hacia abajo y el superior hacia arriba.",
+    "MODELO 03, DIFERENCIA DE MEDIAS con varianzas desconocidas: si son homogéneas se usa la varianza ponderada y GL = n₁ + n₂ − 2; si son heterogéneas, solo cambian los grados de libertad.",
+    "MODELO 04, DIFERENCIA DE PROPORCIONES: (p₁ − p₂) ± Z·√(p₁(1 − p₁)/n₁ + p₂(1 − p₂)/n₂).",
+    "CÓMO SE CONCLUYE EN LAS DIFERENCIAS: si los dos límites de A − B son positivos, A es mayor que B. Si los dos son negativos, B es mayor que A. Si el intervalo va de negativo a positivo, contiene el cero: no se puede concluir quién es mayor, y podrían ser iguales."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                      ooooooooooo               oo           ooooo                        1   L    oooooooo               ",
+    "                    ======              ======                               ooooo                        ======             oooooo                         ==========              ",
+    "                                                 oooo          =====                                                                                                                ",
+    "  P           C             E                 E           C T             E       X   E X       C                   E    X                C   E                         B       M   ",
+    "##################################################  ##########################   #############################################    ##################################################",
+    "##################################################  ##########################   #############################################    ##################################################",
+    "##################################################  ##########################   #############################################    ##################################################"
+  ]
+}

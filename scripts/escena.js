@@ -256,6 +256,13 @@ const FICHAS = [
   { sprite: "barril", nombre: "El Barril que No Se Repone", texto: "Muestrea sin reemplazo y se olvida del factor de corrección por población finita, que siempre es menor que 1 y por eso achica el error." },
   { sprite: "duende", nombre: "El Duende que No Cree en el Teorema", texto: "Si la variable no es normal se rinde, en vez de invocar el Teorema Central del Límite, que con n grande le arregla el promedio igual." },
   { sprite: "cervecero", nombre: "El Cervecero de Saint James’s Gate", texto: "Jefe de Irlanda: tiene que decidir sobre la tanda entera con el vaso que tiene en la mano, y se le mezclan el error estándar y la desviación de la población." },
+  { sprite: "columna", nombre: "La Columna que Calcula en vez de Estimar", texto: "Grecia: la inferencial no calcula, ESTIMA parámetros, y solo con una muestra aleatoria. La que calcula exacto es la descriptiva." },
+  { sprite: "lechuza", nombre: "La Lechuza que Cree en un Solo Número", texto: "La estimación puntual es exacta pero menos confiable. El intervalo da un rango y es más confiable." },
+  { sprite: "anfora", nombre: "El Ánfora que Derrama Varianza", texto: "Un buen estimador es insesgado, eficiente, consistente y suficiente. Menos varianza es más eficiencia." },
+  { sprite: "corintio", nombre: "El Capitel que Se Olvida de la Raíz", texto: "El error estándar de la media es σ/√n: con σ = 4 y n = 64 da 0,5, y el intervalo queda en [19,02 ; 20,98]." },
+  { sprite: "rayo", nombre: "El Rayo que Usa Z para Todo", texto: "Sin la varianza poblacional va T con n − 1. Y si te dan la población N, se añade el factor (N − n)/(N − 1)." },
+  { sprite: "olivo", nombre: "El Olivo que No Saca la Proporción", texto: "El error de la proporción es √(p(1 − p)/n): con 780 de 1000 al 90%, el intervalo es [0,7585 ; 0,8015]." },
+  { sprite: "oraculo", nombre: "El Oráculo del Intervalo", texto: "Jefe de Grecia: pide pasar el intervalo a cantidades redondeando hacia afuera y concluir con la diferencia de medias y de proporciones." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -145,6 +145,14 @@ const TEMAS_MUSICA = {
               "A4",1,"B4",1,"G4",2,"D4",4],
     bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
   },
+  egeo: { // Grecia: aire de sirtaki, que arranca lento y se va soltando
+    tempo: 0.22, onda: "triangle",
+    melodia: ["D4",4,"F4",2,"G4",2,"A4",4,"G4",2,"F4",2,
+              "E4",4,"G4",2,"A4",2,"Bb4",4,"A4",4,
+              "D5",2,"C5",2,"Bb4",2,"A4",2,"G4",4,"F4",4,
+              "E4",2,"F4",2,"G4",2,"F4",2,"E4",2,"D4",2,"D4",4],
+    bajo:    ["D2",8,"Bb1",4,"C2",4,"A1",8,"D2",4,"A1",4,"D2",8],
+  },
   dublin: { // Dublín: jiga de taberna en 6/8, saltarina y con el bajo al trote
     tempo: 0.21, onda: "square",
     melodia: ["D4",2,"D4",1,"E4",1,"F#4",2,"A4",2,"G4",1,"F#4",1,"E4",2,

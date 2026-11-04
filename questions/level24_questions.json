@@ -1,0 +1,125 @@
+{
+  "nivel": "level24",
+  "clase": "Clase 02 · PC4 — Estimación puntual e intervalos de confianza",
+  "fuente": "Apuntes de la 2da clase — Estimación puntual e intervalo de confianza, parte 01 (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e24-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Marque la afirmación correcta.",
+      "opciones": [
+        "La estadística descriptiva permite realizar la estimación de parámetros",
+        "La estadística inferencial se encarga del cálculo exacto de los parámetros",
+        "La estadística descriptiva calcula de forma exacta estadísticos o estimadores",
+        "La estadística inferencial generaliza la información de cualquier tipo de muestra"
+      ],
+      "correcta": 2,
+      "explicacion": "La descriptiva CALCULA de forma exacta las medidas de los datos que tiene. La inferencial no calcula: ESTIMA los parámetros, y para generalizar exige que la muestra sea ALEATORIA, no de cualquier tipo. Por eso las otras tres están mal."
+    },
+    {
+      "id": "e24-q2",
+      "nivel": "comprension",
+      "enunciado": "Para estimar un peso promedio, un adivino dice «186,5 kilos» y otro dice «entre 170 y 200 kilos».\n\n¿Cuál es la diferencia entre sus estimaciones?",
+      "opciones": [
+        "El primero hace una estimación puntual, exacta pero menos confiable; el segundo, por intervalo, no exacta pero más confiable",
+        "El primero hace una estimación por intervalo y el segundo una puntual",
+        "Las dos son iguales de confiables, porque salen de la misma muestra",
+        "La del primero es más confiable, porque da un valor exacto"
+      ],
+      "correcta": 0,
+      "explicacion": "La estimación PUNTUAL da un solo valor: es exacta, pero es difícil que le atine, así que es menos confiable. La de INTERVALO da un rango de posibles valores donde podría estar el parámetro: no es exacta, pero es más confiable."
+    },
+    {
+      "id": "e24-q3",
+      "nivel": "comprension",
+      "enunciado": "Dos estimadores, A y B, son insesgados, pero la varianza de A es mucho menor que la de B.\n\n¿Qué característica de un buen estimador tiene A a su favor?",
+      "opciones": [
+        "Es más consistente, porque usa una muestra más grande",
+        "Es más suficiente, porque usa más datos de la muestra",
+        "Es menos sesgado, porque la varianza mide el sesgo",
+        "Es más eficiente: menor varianza, resultados más concentrados y más precisos"
+      ],
+      "correcta": 3,
+      "explicacion": "Menor varianza es más EFICIENCIA. Las otras son distintas: INSESGADO es que en promedio no se pasa ni se queda corto; CONSISTENTE, que con más muestra mejora; SUFICIENTE, que usa todos los datos. La media y la proporción cumplen las cuatro; la moda no."
+    },
+    {
+      "id": "e24-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Una universidad estima las horas semanales de estudio. La varianza poblacional es 16. Con una muestra de 64 estudiantes, la media es 20. Asuma con reposición.\n\n¿Cuál es el intervalo del 95% para la media? (Z = 1,96)",
+      "opciones": [
+        "[12,16 ; 27,84], usando la desviación sin dividir entre √n",
+        "[19,02 ; 20,98], porque el error estándar es 4/√64 = 0,5",
+        "[19,51 ; 20,49], usando 16/64 = 0,25 como error estándar",
+        "[18,04 ; 21,96], usando un error estándar de 1"
+      ],
+      "correcta": 1,
+      "explicacion": "Varianza conocida, así que va con Z. σ = √16 = 4 y el error estándar es σ/√n = 4/8 = 0,5. El intervalo es 20 ± 1,96·0,5 = 20 ± 0,98, o sea [19,02 ; 20,98]. Con 95% de confianza, la verdadera media está entre esas horas."
+    },
+    {
+      "id": "e24-q5",
+      "nivel": "comprension",
+      "enunciado": "Una empresa de 300 clientes encuesta a 150 y obtiene una media y una desviación estándar MUESTRAL. La varianza poblacional no se conoce.\n\n¿Qué se usa para el intervalo de la media?",
+      "opciones": [
+        "Z, sin factor de corrección, porque la muestra es grande",
+        "Z, con el factor de corrección, porque te dan la población",
+        "T con n − 1 grados de libertad, y el factor (N − n)/(N − 1) porque te dan la población",
+        "T con n grados de libertad, y sin factor de corrección"
+      ],
+      "correcta": 2,
+      "explicacion": "Si la varianza poblacional NO se conoce, se usa T(1 − α/2; n − 1) y la S de la muestra. Y como te entregan la población, N = 300, es sin reposición: se añade el factor de corrección (N − n)/(N − 1). Si no te dan N, es con reposición y no se añade."
+    },
+    {
+      "id": "e24-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Un hospital encuesta a 1000 pacientes y 780 están satisfechos.\n\n¿Cuál es el intervalo del 90% para la proporción de satisfechos? (Z = 1,645)",
+      "opciones": [
+        "[0,7585 ; 0,8015], porque el error estándar es √(0,78·0,22/1000) = 0,0131",
+        "[0,7400 ; 0,8200], sumando y restando 0,04",
+        "[0,7119 ; 0,8481], porque el error estándar es √(0,78·0,22/100)",
+        "[0,7797 ; 0,7803], usando 0,78·0,22/1000 sin la raíz"
+      ],
+      "correcta": 0,
+      "explicacion": "p = 780/1000 = 0,78. El error estándar es √(p(1 − p)/n) = √(0,78·0,22/1000) = 0,0131. El intervalo es 0,78 ± 1,645·0,0131 = 0,78 ± 0,0215, o sea [0,7585 ; 0,8015]."
+    },
+    {
+      "id": "e24-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del oráculo. Del intervalo [0,758451 ; 0,801549] para la proporción de satisfechos, se quiere el intervalo de la CANTIDAD de satisfechos en una población de 100 000 pacientes.\n\n¿Cuál es?",
+      "opciones": [
+        "[75 845,1 ; 80 154,9], porque no se debe tocar el resultado",
+        "[75 845 ; 80 155], multiplicando por N y redondeando para que el intervalo quede más grande",
+        "[75 846 ; 80 154], redondeando hacia adentro para ser más preciso",
+        "[758 ; 802], multiplicando por el tamaño de la muestra"
+      ],
+      "correcta": 1,
+      "explicacion": "Intervalo de Q = N × intervalo de π, así que da [75 845,1 ; 80 154,9]. Pero no hay fracciones de personas: se redondea, y mejor que sobre a que falte. El inferior va hacia abajo y el superior hacia arriba: [75 845 ; 80 155]. Una suma de puntajes o de horas, en cambio, no necesita redondearse."
+    },
+    {
+      "id": "e24-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. Multas en dos ciudades, con varianzas homogéneas:\nA: n = 20, media 16,828, S = 0,453\nB: n = 30, media 17,786, S = 0,3\n\n¿Cuál es el intervalo del 95% de A − B y qué dice? (GL = 48, T = 2,011)",
+      "opciones": [
+        "[0,744 ; 1,172]: A es mayor que B",
+        "[−1,172 ; 0,744]: no se puede concluir quién es mayor",
+        "[−0,958 ; 0,958]: las dos ciudades son iguales",
+        "[−1,172 ; −0,744]: los dos límites son negativos, así que B es mayor que A"
+      ],
+      "correcta": 3,
+      "explicacion": "La varianza ponderada es (19·0,453² + 29·0,3²)/48 = 0,1356, y la de la diferencia, 0,1356·(1/20 + 1/30) = 0,0113, con raíz 0,1063. Entonces −0,958 ± 2,011·0,1063 = −0,958 ± 0,214, o sea [−1,172 ; −0,744]. Los dos negativos: A − B < 0, B es mayor."
+    },
+    {
+      "id": "e24-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. Viviendas alquiladas más de 10 años:\nDistrito B: 11 de 40\nDistrito C: 15 de 50\n\n¿Cuál es el intervalo del 99% de la diferencia de proporciones (B − C) y qué dice? (Z = 2,576)",
+      "opciones": [
+        "[0,025 ; 0,272]: B tiene mayor proporción",
+        "[−0,272 ; −0,025]: C tiene mayor proporción",
+        "[−0,272 ; 0,222]: contiene el cero, así que no se puede concluir quién es mayor y podrían ser iguales",
+        "[−0,025 ; 0,025]: las proporciones son exactamente iguales"
+      ],
+      "correcta": 2,
+      "explicacion": "p_B = 0,275 y p_C = 0,30, con diferencia −0,025. La varianza es 0,275·0,725/40 + 0,30·0,70/50 = 0,00918, con raíz 0,0958. Entonces −0,025 ± 2,576·0,0958 = −0,025 ± 0,247, o sea [−0,272 ; 0,222]. Va de negativo a positivo: no se puede concluir quién es mayor."
+    }
+  ]
+}

@@ -2319,6 +2319,156 @@ const VAGONETA = [   // la vagoneta de la cervecería, que es la salida del dist
 ];
 const P_VAGONETA = { k: "#23201a", m: "#6b4a30", a: "#8a9298", u: "#8a5a34" };
 
+const COLUMNA = [    // la columna: cree que la inferencial calcula exacto, cuando solo estima (18 × 14)
+  "..kkkkkkkkkkkkkk..",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kmommmmmmmmmmomk.",
+  "..kmmmmmmmmmmmmk..",
+  "..kmmmmmmmmmmmmk..",
+  "...kkmsmsmsmskk...",
+  "....kmsmsmsmsk....",
+  "....kmsmsmsmsk....",
+  "....kmsmsmsmsk....",
+  "....kmsmsmsmsk....",
+  "....kmsmsmsmsk....",
+  "...kkmsmsmsmskk...",
+  "..kmmmmmmmmmmmmk..",
+  "..kmmmmmmmmmmmmk..",
+];
+const P_COLUMNA = { k: "#6b6356", m: "#d8cdb2", s: "#9a9078", o: "#c4b99c" };
+
+const LECHUZA = [    // la lechuza: confía en un solo número en vez de en un intervalo (18 × 14)
+  "..................",
+  "...kkk......kkk...",
+  "..kpppkkkkkkpppk..",
+  "..kppppppppppppk..",
+  "..kppbbbppbbbppk..",
+  "...kbbkbbbbkbbk...",
+  "..kpbkkkbbkkkbpk..",
+  "..kpbbkboobkbbpk..",
+  "..kppbbboobbbppk..",
+  "..kpppppoopppppk..",
+  "..kppdppdppdppdk..",
+  "...kdppdppdppdk...",
+  "....kpdppdppdk....",
+  ".....koodpook.....",
+];
+const P_LECHUZA = { k: "#2a2418", p: "#a8894e", b: "#e8dcbc", o: "#d8a03c", d: "#8a6c3a" };
+
+const ANFORA = [    // el ánfora: no sabe que menos varianza es más eficiencia (18 × 14)
+  ".....kaaaaaak.....",
+  ".....kaaaaaak.....",
+  "...kkkkaaaakkkk...",
+  "..kaaakaaaakaaak..",
+  "..kakaaaaaaaakak..",
+  "..kakaaaaaaaakak..",
+  "..kaaaaaaaaaaaak..",
+  "...knnnnnnnnnnk...",
+  "...kaaaaaaaaaak...",
+  "...kaaaaaaaaaak...",
+  "...knnnnnnnnnnk...",
+  "....kaaaaaaaak....",
+  ".....kaaaaaak.....",
+  ".....kaaaaaak.....",
+];
+const P_ANFORA = { k: "#2e2014", a: "#c2762c", n: "#2a1a12" };
+
+const CORINTIO = [    // el capitel: se olvida de dividir entre la raíz de n (18 × 14)
+  "...krrrrrrrrrrk...",
+  "...krrrrrrrrrrk...",
+  "..krrrrrrrrrrrrk..",
+  "..krrrrrrrrrrrrk..",
+  "...kbbbbkkbbbbk...",
+  "...kbkkbkkbkkbk...",
+  "..kbbkkbkkbkkbbk..",
+  "..kbbkkbkkbkkbbk..",
+  "..kbbkkbkkbkkbbk..",
+  "..kbbbbbkkbbbbbk..",
+  "..kbbbbbkkbbbbbk..",
+  "..kbbbbbkkbbbbbk..",
+  "..kbbbbbkkbbbbbk..",
+  "..kbbbbbkkbbbbbk..",
+];
+const P_CORINTIO = { k: "#201a14", b: "#b08a3c", r: "#a8302a" };
+
+const RAYO = [    // el rayo: usa Z para todo y se olvida del factor de corrección (18 × 14)
+  "..........koaook..",
+  ".........koaoook..",
+  "........koaokkk...",
+  ".......koaok......",
+  "......koaokkk.....",
+  ".....koaoooaok....",
+  "......kkkoaok.....",
+  ".......koaok......",
+  "......koaok.......",
+  ".....koaok........",
+  "....koaok.........",
+  "...koaook.........",
+  "...kaoook.........",
+  "....kkkk..........",
+];
+const P_RAYO = { k: "#3a2e10", o: "#f0cc3c", a: "#fdf0a0" };
+
+const OLIVO = [    // el olivo: no saca bien el error estándar de la proporción (18 × 14)
+  "......kvvvvkkkmmk.",
+  "......kvvvvnnnmk..",
+  ".......kvvknnnk...",
+  "........kvvnnnk...",
+  ".......kkvvvvk....",
+  ".kkkk.kvvvvvk.....",
+  "kvvvvknnnvvk......",
+  "kvvvvknnnvk.......",
+  ".kvvkknnnk........",
+  "..knnnmkk.........",
+  "..knnnk...........",
+  "..knnnk...........",
+  ".kmmkk............",
+  "..kk..............",
+];
+const P_OLIVO = { k: "#2a2a18", m: "#8a7a52", v: "#6f9a52", n: "#3f4a20" };
+
+const ORACULO = [    // jefe: el oráculo, que transforma el intervalo y compara dos grupos (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kvvvvvvvvk....",
+  "...kvvvvvvvvvvk...",
+  "....kkppppppkk....",
+  ".....kppppppk.....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  ".....kpkkkkpk.....",
+  "....kkppppppkk....",
+  "..kkwwwdwwwdwwkk..",
+  ".kpppwdwwwdwwpppk.",
+  ".kpppdwwwdwwwpppk.",
+  "..kkdwwwdwwwdwkk..",
+  "...kwwwdwwwdwwk...",
+  "...kwwdwwwdwwwk...",
+  "....kooooooook....",
+  "....kookookook....",
+];
+const P_ORACULO = { k: "#2a2420", v: "#4a7a3a", p: "#d9b07a", w: "#e8dcbc", d: "#cfc6ac", o: "#a8893c" };
+
+const TRIRREME = [    // el trirreme, que es el vehículo de salida del distrito (32 × 16)
+  "........kkkkkkkkkkkkkkk.........",
+  ".......kmmmmmmmmmmmmmmmk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  ".......krvvvrvvvrvvvrvvk........",
+  "........kkkkkkmmkkkkkkk.........",
+  "...kkkkkkkkcccccccccckkkkkkkk...",
+  "kkkooooooooooooooooooooooooook..",
+  "ccccbbbccccccccccccccccccccccck.",
+  "ccccbkbccccccccccccccccccccccck.",
+  "kkccbbbccccccccccccccccccccccck.",
+  "..kkkkkkmmkmmkmmkmmkmmkmmkmmkk..",
+  ".......kmmkmmkmmkmmkmmkmmkmmk...",
+];
+const P_TRIRREME = { k: "#2a2014", m: "#8a6a3a", v: "#e8dcbc", r: "#a8302a", c: "#6b4a2a", o: "#c2a05a", b: "#e8dcbc" };
+
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2455,6 +2605,14 @@ const DEFINICIONES = {
   duende:       [DUENDE, P_DUENDE],
   cervecero:    [CERVECERO, P_CERVECERO],
   vagoneta:     [VAGONETA, P_VAGONETA],
+  columna:      [COLUMNA, P_COLUMNA],
+  lechuza:      [LECHUZA, P_LECHUZA],
+  anfora:       [ANFORA, P_ANFORA],
+  corintio:     [CORINTIO, P_CORINTIO],
+  rayo:         [RAYO, P_RAYO],
+  olivo:        [OLIVO, P_OLIVO],
+  oraculo:      [ORACULO, P_ORACULO],
+  trirreme:     [TRIRREME, P_TRIRREME],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
