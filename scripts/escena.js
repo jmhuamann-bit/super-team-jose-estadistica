@@ -263,6 +263,13 @@ const FICHAS = [
   { sprite: "rayo", nombre: "El Rayo que Usa Z para Todo", texto: "Sin la varianza poblacional va T con n − 1. Y si te dan la población N, se añade el factor (N − n)/(N − 1)." },
   { sprite: "olivo", nombre: "El Olivo que No Saca la Proporción", texto: "El error de la proporción es √(p(1 − p)/n): con 780 de 1000 al 90%, el intervalo es [0,7585 ; 0,8015]." },
   { sprite: "oraculo", nombre: "El Oráculo del Intervalo", texto: "Jefe de Grecia: pide pasar el intervalo a cantidades redondeando hacia afuera y concluir con la diferencia de medias y de proporciones." },
+  { sprite: "samovar", nombre: "El Samovar que Habla de la Muestra", texto: "Rusia: el intervalo habla de la POBLACIÓN. Con 95% de confianza, el verdadero valor de la media está entre esos dos límites." },
+  { sprite: "oso", nombre: "El Oso que Se Cree Seguro al 95%", texto: "Nada asegura al 100% que el parámetro esté adentro. El nivel de confianza es 1 − α, y α es el riesgo que se acepta." },
+  { sprite: "matrioshka", nombre: "La Matrioshka que No Abre el Enunciado", texto: "Si piden la cantidad de edificios, adentro hay una proporción: primero su intervalo y después se multiplica por N." },
+  { sprite: "termoruso", nombre: "El Termómetro que Usa Z sin Permiso", texto: "Si no conoces la varianza de la población, que es lo que casi siempre pasa, va T y no Z." },
+  { sprite: "ajedrez", nombre: "La Torre que Se Olvida del Factor", texto: "Si te dan la población y la muestra es sin reemplazo, va el factor de corrección. Si no te la dan, se asume con reemplazo." },
+  { sprite: "sputnik", nombre: "El Sputnik que No Lee la Pregunta", texto: "La tabla da las viviendas de más de 10 años; si te piden las de un máximo de 10, son las que faltan: el complemento." },
+  { sprite: "zar", nombre: "El Zar que Decreta Quién Es Mayor", texto: "Jefe de Rusia: en una diferencia, quien manda es el signo de los límites. Si el cero queda adentro, nadie puede decretar nada." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -1,0 +1,41 @@
+{
+  "id": "level25",
+  "distrito": "Rusia",
+  "clase": "Clase 03 · PC4",
+  "titulo": "El país de las muñecas, donde la verdad queda adentro",
+  "tema": "moscu",
+  "musica": "moscu",
+  "vehiculo": "troika",
+  "intro": "Tercera clase de la PC4: los INTERVALOS DE CONFIANZA, parte 2, y esta vez casi sin cuentas. Toca Rusia por las matrioshkas: abres la muñeca y lo que buscas está adentro. Con un intervalo pasa igual: no sabes cuánto vale exactamente el parámetro, pero dices entre qué límites debería quedar adentro. Acá importa leer: qué modelo te están pidiendo, si va Z o T, si hay que corregir por población finita y, sobre todo, qué se puede concluir cuando comparas dos grupos.",
+  "repaso": [
+    "CÓMO SE INTERPRETA: con 95% de confianza se puede afirmar que el VERDADERO valor de la media poblacional está entre el límite inferior y el superior. El intervalo habla de la población, no de la muestra.",
+    "NIVEL DE CONFIANZA: es 1 − α, y α es el riesgo. Nada asegura al 100% que el parámetro esté adentro; por eso el nivel se define antes de calcular.",
+    "LOS CUATRO MODELOS: media, proporción, diferencia de medias y diferencia de proporciones. El enunciado te lo pide de forma explícita.",
+    "Z O T EN LA MEDIA: si la varianza poblacional se conoce (casi nunca) va Z. Si no se conoce (casi siempre) va T, con la S de la muestra.",
+    "CON O SIN REEMPLAZO: si te entregan la población, es sin reemplazo y se añade el factor de corrección; se aplica cuando la fracción de muestreo n/N es de 0,05 o más. Si no te dan la población, se asume con reemplazo.",
+    "LAS TRANSFORMACIONES: el intervalo de la suma total es N por el intervalo de la media. El de la cantidad de éxitos es N por el intervalo de la proporción. Las sumas no se redondean; las cantidades de personas u objetos sí, para que el intervalo quede más grande.",
+    "LEE QUÉ ES EL ÉXITO: si la tabla da las viviendas alquiladas MÁS de 10 años y te piden las de un MÁXIMO de 10, el éxito es el complemento.",
+    "PONERLE ETIQUETA: si más de 60% de grasa vuelve dañino a un producto y el intervalo llega como máximo a 56,67%, se infiere que no es dañino.",
+    "DIFERENCIA DE MEDIAS: te dicen si las varianzas son homogéneas o heterogéneas. Homogéneas: se usa la varianza ponderada y GL = n₁ + n₂ − 2. Heterogéneas: no se pondera y los grados de libertad salen con la fórmula larga de λ.",
+    "SI LOS DOS LÍMITES DE A − B SON POSITIVOS, A es mayor que B. SI LOS DOS SON NEGATIVOS, B es mayor que A.",
+    "SI EL CERO QUEDA ADENTRO (de negativo a positivo), no se puede concluir quién es mayor: podrían ser iguales.",
+    "LO MISMO VALE para la diferencia de proporciones: con [−0,086 ; 0,164] al 80%, no hay evidencia para decir que un distrito tenga más vigilancia que el otro."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo1oo          oooo               oo                                      ooooooooooo               oo              ooooo                     L   V    oooooooo               ",
+    "                    ======              ======                                               oooo         ======                 oooooo                     ==========              ",
+    "                              ooooo                            =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X         C                 E       X             C   E                         B       M   ",
+    "###############################   ############################################################  ##################################    ##############################################",
+    "###############################   ############################################################  ##################################    ##############################################",
+    "###############################   ############################################################  ##################################    ##############################################"
+  ]
+}

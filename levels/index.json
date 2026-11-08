@@ -337,6 +337,20 @@
       "abierto": true,
       "mapa": "levels/level24.json",
       "preguntas": "questions/level24_questions.json"
+    },
+    {
+      "id": "level25",
+      "clase": "Clase 03",
+      "distrito": "Rusia",
+      "titulo": "El país de las muñecas, donde la verdad queda adentro",
+      "icono": "🪆",
+      "seccion": "PC4",
+      "seccionNota": "Estimación e intervalos de confianza — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level25.json",
+      "preguntas": "questions/level25_questions.json"
     }
   ]
 }

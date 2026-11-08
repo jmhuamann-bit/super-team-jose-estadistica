@@ -1,0 +1,125 @@
+{
+  "nivel": "level25",
+  "clase": "Clase 03 · PC4 — Intervalos de confianza, parte 2",
+  "fuente": "Apuntes de la clase 06 — Estimación por intervalo, parte 2 (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e25-q1",
+      "nivel": "comprension",
+      "enunciado": "Un estudio obtiene: confianza [25 ≤ μ ≤ 56] = 95%.\n\n¿Cómo se interpreta?",
+      "opciones": [
+        "El 95% de las personas de la muestra tiene un valor entre 25 y 56",
+        "Con 95% de confianza, el verdadero valor de la media poblacional está entre 25 y 56",
+        "La media de la muestra vale exactamente 40,5 en el 95% de los casos",
+        "La media poblacional está seguro entre 25 y 56, sin ningún riesgo"
+      ],
+      "correcta": 1,
+      "explicacion": "El intervalo habla del PARÁMETRO, de la media de toda la población, no de las personas de la muestra. Y lo dice con un nivel de confianza: hay un riesgo de que el verdadero valor haya quedado afuera."
+    },
+    {
+      "id": "e25-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Un intervalo se construye con 92% de confianza.\n\n¿Qué significa ese número?",
+      "opciones": [
+        "Que es imposible que el parámetro esté fuera del intervalo",
+        "Que el 92% de los datos de la muestra cae adentro",
+        "Que el riesgo es α = 8%: nada asegura al 100% que el parámetro esté adentro",
+        "Que el error de estimación vale 0,92"
+      ],
+      "correcta": 2,
+      "explicacion": "Nivel de confianza = 1 − α, y α es el riesgo. Con 92% de confianza, α = 0,08. Por eso se define antes de calcular: ningún intervalo garantiza al 100% que el parámetro salga adentro."
+    },
+    {
+      "id": "e25-q3",
+      "nivel": "comprension",
+      "enunciado": "En un distrito se pide un intervalo para la CANTIDAD de edificios que cuentan con vigilancia diurna.\n\n¿Cómo se ataca?",
+      "opciones": [
+        "Con el intervalo de la media del gasto, porque el dato viene en soles",
+        "Directo con la cantidad de la muestra, sin pasar por ningún otro intervalo",
+        "Con la diferencia de proporciones, porque hay edificios con y sin vigilancia",
+        "Primero el intervalo de la proporción, y después se multiplica por N"
+      ],
+      "correcta": 3,
+      "explicacion": "Tener o no tener vigilancia es éxito o fracaso: es una proporción. El intervalo de la cantidad se obtiene transformando: N por el intervalo de π. Como son edificios, se redondea para que el intervalo quede más grande."
+    },
+    {
+      "id": "e25-q4",
+      "nivel": "comprension",
+      "enunciado": "Se quiere un intervalo para la media del gasto. Solo se conoce la desviación estándar de la MUESTRA.\n\n¿Qué se usa?",
+      "opciones": [
+        "T, porque la varianza poblacional no se conoce",
+        "Z, porque en los intervalos siempre se usa Z",
+        "Z, siempre que la muestra tenga menos de 30 datos",
+        "Ninguna: sin la varianza poblacional no hay intervalo"
+      ],
+      "correcta": 0,
+      "explicacion": "Si la varianza poblacional se conoce, va Z; pero eso casi nunca viene. Lo normal es no conocerla y trabajar con T y con la S de la muestra."
+    },
+    {
+      "id": "e25-q5",
+      "nivel": "comprension",
+      "enunciado": "Un estudio toma, con muestras aleatorias y SIN reemplazo, 39 edificios de un distrito que tiene 490.\n\n¿Hay que tocar la varianza de la media?",
+      "opciones": [
+        "No: el factor de corrección solo se usa en las proporciones",
+        "No: si la muestra es aleatoria nunca se corrige",
+        "Sí: hay población y n/N supera 0,05, así que se añade el factor de corrección",
+        "Sí: se le suma el tamaño de la población a la varianza"
+      ],
+      "correcta": 2,
+      "explicacion": "Si te entregan la población es sin reemplazo. Aquí la fracción de muestreo es 39/490, más de 0,05, y se multiplica por el factor (N − n)/(N − 1). Sirve igual para medias y proporciones. Si no te dan la población, se asume con reemplazo."
+    },
+    {
+      "id": "e25-q6",
+      "nivel": "comprension",
+      "enunciado": "De 42 viviendas de un distrito, 14 estuvieron alquiladas MÁS de 10 años. Te piden un intervalo para las viviendas alquiladas un MÁXIMO de 10 años.\n\n¿Cuál es el éxito?",
+      "opciones": [
+        "Las 14 viviendas de la tabla, porque ese es el dato que te dan",
+        "Las otras 28: un máximo de 10 años es el complemento de más de 10",
+        "Las 42, porque todas fueron alquiladas alguna vez",
+        "No se puede hacer, porque la tabla no da ese dato"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que da la tabla no siempre es lo que te piden. Máximo 10 años es lo contrario de más de 10 años, así que el éxito son 42 − 14 = 28 viviendas. Leer bien eso vale tanto como la fórmula."
+    },
+    {
+      "id": "e25-q7",
+      "nivel": "comprension",
+      "enunciado": "Primera pregunta del zar. Un investigador dice que las multas son mayores en la ciudad B. El intervalo del 95% para μA − μB salió de −1,19 a −0,72.\n\n¿Qué información da?",
+      "opciones": [
+        "No se puede concluir, porque los límites son negativos",
+        "Que A es mayor que B, porque −0,72 es el valor más alto",
+        "Que las dos ciudades son iguales, porque los límites están cerca",
+        "Los dos límites son negativos: μA − μB < 0, y B es mayor, como dice el investigador"
+      ],
+      "correcta": 3,
+      "explicacion": "Si los dos límites de A − B son negativos, A − B es menor que cero, así que el promedio de B es mayor. Si fueran los dos positivos, A sería mayor. Basta mirar los signos."
+    },
+    {
+      "id": "e25-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. El intervalo del 80% para la diferencia de proporciones de edificios con vigilancia (A − B) salió de −0,086 a 0,164.\n\n¿Qué se concluye?",
+      "opciones": [
+        "El cero queda adentro: no se puede concluir quién es mayor y podrían ser iguales",
+        "A tiene más vigilancia, porque 0,164 es mayor que 0,086",
+        "B tiene más vigilancia, porque el límite inferior es negativo",
+        "Que las proporciones son exactamente iguales, sin ninguna duda"
+      ],
+      "correcta": 0,
+      "explicacion": "De negativo a positivo: el cero está adentro. No hay evidencia para decir que las proporciones sean diferentes, pero tampoco se afirma que sean exactamente iguales: solo que PUEDEN serlo."
+    },
+    {
+      "id": "e25-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. Para una diferencia de medias te dicen que las varianzas son desconocidas pero HOMOGÉNEAS.\n\n¿Qué cambia respecto de cuando son heterogéneas?",
+      "opciones": [
+        "Nada: las dos se resuelven exactamente igual",
+        "Que con homogéneas se usa Z y con heterogéneas se usa T",
+        "Con homogéneas se usa la varianza ponderada y GL = n₁ + n₂ − 2; con heterogéneas, GL sale de la fórmula de λ",
+        "Que con homogéneas ya no hace falta conocer el tamaño de las muestras"
+      ],
+      "correcta": 2,
+      "explicacion": "Las dos van con T, porque las varianzas son desconocidas. Con homogéneas se juntan las dos varianzas en una ponderada y GL = n₁ + n₂ − 2. Con heterogéneas no se pondera y los grados de libertad salen de la fórmula larga de λ. El enunciado te dice cuál es."
+    }
+  ]
+}

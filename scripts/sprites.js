@@ -2468,6 +2468,156 @@ const TRIRREME = [    // el trirreme, que es el vehículo de salida del distrito
 ];
 const P_TRIRREME = { k: "#2a2014", m: "#8a6a3a", v: "#e8dcbc", r: "#a8302a", c: "#6b4a2a", o: "#c2a05a", b: "#e8dcbc" };
 
+const SAMOVAR = [    // el samovar: interpreta el intervalo como si hablara de la muestra (18 × 14)
+  ".....kooooook.....",
+  ".....kooooook.....",
+  "......kooook......",
+  ".....kkmmmmkk.....",
+  "....kmmmmmmmmk....",
+  "..kkddddddddddkk..",
+  ".kommmmmmmmmmmmok.",
+  ".koommmmmmmmooook.",
+  ".koommmmmmmmooook.",
+  ".koodddddddddoook.",
+  "..kkkmmmmmmmmokk..",
+  "...kmmmmmmmmmmk...",
+  "..kooooooooooook..",
+  "..kooooooooooook..",
+];
+const P_SAMOVAR = { k: "#2e2014", m: "#c2922c", o: "#8a6a24", d: "#9a7420" };
+
+const OSO = [    // el oso: cree que con 95% de confianza ya es seguro (18 × 14)
+  "....k..kkkk..k....",
+  "...knkknnnnkknk...",
+  "..knnnnnnnnnnnnk..",
+  ".knnnnnnnnnnnnnnk.",
+  "..knnnknnnnknnnk..",
+  "...knnnnnnnnnnk...",
+  "...knnnhhhhnnnk...",
+  "...knnhhkkhhnnk...",
+  "....knnhhhhnnk....",
+  "....kknnnnnnkk....",
+  "...knnnnhhnnnnk...",
+  "..knnnhhhhhhnnnk..",
+  "..knnnhhhhhhnnnk..",
+  "..knnnhhhhhhnnnk..",
+];
+const P_OSO = { k: "#231a12", n: "#7a5434", h: "#b5906a" };
+
+const MATRIOSHKA = [    // la matrioshka: no ve qué modelo lleva adentro el enunciado (18 × 14)
+  "....kaaaaaaaak....",
+  "....kaaaaaaaak....",
+  "...kaaarppraaak...",
+  "...kaaappppaaak...",
+  "...kaaakppkaaak...",
+  "...krrppccpprrk...",
+  "..krrrrrpprrrrrk..",
+  "..krrrwwwwwwrrrk..",
+  "..krrrwwaawwrrrk..",
+  "..krrrwwaawwrrrk..",
+  "..krrrwwaawwrrrk..",
+  "...krrwwwwwwrrk...",
+  "....krrrrrrrrk....",
+  ".....krrrrrrk.....",
+];
+const P_MATRIOSHKA = { k: "#2a1a18", r: "#c0392b", p: "#e8c4a0", a: "#e8b43c", w: "#f2ece0", c: "#d9736a" };
+
+const TERMORUSO = [    // el termómetro: usa Z aunque no conozca la varianza de la población (18 × 14)
+  "......kvvvvk......",
+  "....kkkvrrvkkk....",
+  "...keeevrrveeek...",
+  "....kkkvrrvkkk....",
+  "...keeevrrveeek...",
+  "....kkkvrrvkkk....",
+  "...keeevrrveeek...",
+  "....kkkvrrvkkk....",
+  "......kvrrvk......",
+  ".....kvvvvvvk.....",
+  ".....kvrrrrvk.....",
+  ".....kvrrrrvk.....",
+  ".....kvrrrrvk.....",
+  ".....kvvvvvvk.....",
+];
+const P_TERMORUSO = { k: "#2a2a30", v: "#dfe6ea", r: "#c0392b", e: "#8a929a" };
+
+const AJEDREZ = [    // la torre: se olvida del factor cuando es sin reemplazo (18 × 14)
+  "..kmmkkmkkmkkmmk..",
+  "..kmmkkmkkmkkmmk..",
+  "..kmmmmmmmmmmmmk..",
+  "...kmmmmmmmmmmk...",
+  "...kmmmmmmmmmmk...",
+  "....kmdmmdmmdk....",
+  "....kmdmmdmmdk....",
+  "....kmdmmdmmdk....",
+  "....kmdmmdmmdk....",
+  "....kmdmmdmmdk....",
+  "....kmdmmdmmdk....",
+  "...kmmmmmmmmmmk...",
+  "...kmmmmmmmmmmk...",
+  "..kmmmmmmmmmmmmk..",
+];
+const P_AJEDREZ = { k: "#0e0e12", m: "#3a3a44", d: "#22222a" };
+
+const SPUTNIK = [    // el sputnik: toma el dato de la tabla sin leer lo que le piden (18 × 14)
+  ".k...............k",
+  "kakk...........kka",
+  ".kaakk.......kkaak",
+  "..kkaakkkkkkkaakk.",
+  "....kkadmmddakk...",
+  "....kdmbbmmmdk....",
+  "....kdmmmmmmdk....",
+  "....kdmmmmmmdk....",
+  "....kdmmmmmmdk....",
+  "....kdmmmmmmdk....",
+  "....kkadmmddakk...",
+  "..kkaakkkkkkkaakk.",
+  ".kaakk.......kkaak",
+  "kakk...........kka",
+];
+const P_SPUTNIK = { k: "#0e0e14", m: "#5a6470", d: "#38404a", a: "#8a96a4", b: "#cfd8e0" };
+
+const ZAR = [    // jefe: el zar, que decreta quién es mayor sin mirar el signo de los límites (18 × 17)
+  "....kroorooork....",
+  "....kooooooook....",
+  "...kfoooooooofk...",
+  "...kffffffffffk...",
+  "...kffffffffffk...",
+  "....kkppppppkk....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  "...kkkppppppkkk...",
+  "..krrrwwwwwwrrrk..",
+  ".kpprowwwwwwrrppk.",
+  ".kpprowwwwwwrrppk.",
+  ".kpprowwwwwwrrppk.",
+  ".kpprowwwwwwrrppk.",
+  "..krrowwwwwwrrrk..",
+  "..krrorrrrorrrrk..",
+  "..krrorrrrorrrrk..",
+];
+const P_ZAR = { k: "#1e1612", f: "#5a4430", o: "#e8c45a", p: "#d9a273", w: "#f2ece0", r: "#8a2a3a" };
+
+const TROIKA = [    // la troika, que es el vehículo de salida del distrito (32 × 16)
+  ".........kcccckk................",
+  ".........kcccccck...............",
+  "........knnncckck...............",
+  "........knnnccccck...........kk.",
+  "........knnnccccck..........kmmk",
+  "..kkkkkkknnnckkkk...........kmmk",
+  ".knncccccnnnck...kkkkkkkkkkkkmmk",
+  ".knnccccccccckk.koooooooooooommk",
+  ".knnccccccccnnnkkmmmmmmmmmmmmmmk",
+  ".knncccccccckkknnnmmmmmmmmmmmmk.",
+  "..kccccccccck..kkmmmmmmmmmmmmmk.",
+  "...kckckkckck.knnmmmmmmmmmmmmmkk",
+  "...kckckkckck.knnnnnnnnnnnnnnnnn",
+  "...kckckkckck..knnnnnnnnnnnnnnnn",
+  "...kckckkckck...kkkkkkkkkkkkkkkk",
+  "....k.k..k.k....................",
+];
+const P_TROIKA = { k: "#1e1a16", c: "#8a6a4a", n: "#3a2e24", m: "#8a2a3a", o: "#e8c45a" };
+
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -2613,6 +2763,14 @@ const DEFINICIONES = {
   olivo:        [OLIVO, P_OLIVO],
   oraculo:      [ORACULO, P_ORACULO],
   trirreme:     [TRIRREME, P_TRIRREME],
+  samovar:      [SAMOVAR, P_SAMOVAR],
+  oso:          [OSO, P_OSO],
+  matrioshka:   [MATRIOSHKA, P_MATRIOSHKA],
+  termoruso:    [TERMORUSO, P_TERMORUSO],
+  ajedrez:      [AJEDREZ, P_AJEDREZ],
+  sputnik:      [SPUTNIK, P_SPUTNIK],
+  zar:          [ZAR, P_ZAR],
+  troika:       [TROIKA, P_TROIKA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
