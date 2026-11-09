@@ -2617,6 +2617,156 @@ const TROIKA = [    // la troika, que es el vehículo de salida del distrito (32
 ];
 const P_TROIKA = { k: "#1e1a16", c: "#8a6a4a", n: "#3a2e24", m: "#8a2a3a", o: "#e8c45a" };
 
+const VALIJA = [     // la valija: pone la igualdad en la hipótesis alterna (18 × 14)
+  "..................",
+  ".......kkkk.......",
+  ".......k..k.......",
+  "..kkkkkkkkkkkkkk..",
+  "..kuukkuuuukkuuk..",
+  "..kuukkuuuukkuuk..",
+  "..kuukkppppkkuuk..",
+  "..kuubkppppkbuuk..",
+  "..kuukkppppkkuuk..",
+  "..kuukkuuuukkuuk..",
+  "..kuukkuuuukkuuk..",
+  "..kuukkuuuukkuuk..",
+  "..kkkkkkkkkkkkkk..",
+  "..................",
+];
+const P_VALIJA = { k: "#231b14", u: "#8a5a34", p: "#e8e0c8", b: "#c9a24a" };
+
+const RECIBO = [     // el recibo: plantea la hipótesis con la media de la muestra (18 × 14)
+  "..................",
+  "..kkkkkkkkkkkkkk..",
+  "..kppppppppppppk..",
+  "..kpkkkkkkkkkkpk..",
+  "..kppppppppppppk..",
+  "..kpggggggggpppk..",
+  "..kppppppppppppk..",
+  "..kpggggggggpppk..",
+  "..kpppppppkkkkkk..",
+  "..kpggggggkrprkk..",
+  "..kpppppppkrprkk..",
+  "..kpppppppkkkkkk..",
+  "..kkkkkkkkkkkkkk..",
+  "..................",
+];
+const P_RECIBO = { k: "#231b14", p: "#e8e4d4", g: "#9a9484", r: "#a8324a" };
+
+const MOLINETE = [   // el molinete: no mira hacia dónde apunta la alterna (18 × 14)
+  "..................",
+  "..................",
+  ".......kkkk.......",
+  ".......kvvk.......",
+  ".......kkkk.......",
+  ".......kssk.......",
+  ".sskkkkksskkkkkss.",
+  ".kkkkkkksskkkkkkk.",
+  ".......kssk.......",
+  ".......kkkk.......",
+  ".......kkkk.......",
+  ".......kkkk.......",
+  ".......kkkk.......",
+  ".......kkkk.......",
+];
+const P_MOLINETE = { k: "#231b14", s: "#8e9aa0", v: "#5ac46e" };
+
+const CHANGUITO = [  // el changuito: no parte el alfa en dos cuando la prueba es bilateral (18 × 14)
+  "..................",
+  "............kkkkk.",
+  "..............kk..",
+  "..............kk..",
+  "..............kk..",
+  "..kkkkkkkkkkkkkk..",
+  "..kmmmkmmkmmkmmk..",
+  "...kmmkmmkmmkmk...",
+  "....kmkmmkmmkk....",
+  "....kkkkkkkkkk....",
+  "......k....k......",
+  ".....kk...kk......",
+  ".....kk...kk......",
+  "..................",
+];
+const P_CHANGUITO = { k: "#231b14", m: "#9aa2a8" };
+
+const BANDONEON = [  // el bandoneón: concluye sobre la Hp y no sobre lo que pide el examen (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  ".kkkk.k.k.k.kkkkk.",
+  ".knnkkfkfkfkfknnk.",
+  ".kbnkffffffffkbnk.",
+  ".knnkffffffffknnk.",
+  ".knbkffffffffknbk.",
+  ".knnkffffffffknnk.",
+  ".kbnkffffffffkbnk.",
+  ".knnkkfkfkfkfknnk.",
+  ".kkkk.k.k.k.kkkkk.",
+  "..................",
+  "..................",
+];
+const P_BANDONEON = { k: "#231b14", n: "#2f2a3a", f: "#7a4436", b: "#d8cfae" };
+
+const GANCHO = [     // el gancho: confunde el error tipo I con el tipo II (18 × 14)
+  "..................",
+  "ssssssssssssssssss",
+  "kkkkkkkkkkkkkkkkkk",
+  "........kkkk......",
+  "........kssk......",
+  "........kkkk......",
+  ".........sk.......",
+  ".........sk.......",
+  ".........sk.......",
+  ".........kk.......",
+  ".......kkkk.......",
+  "......kkkk........",
+  "......kk..........",
+  ".......kkk........",
+];
+const P_GANCHO = { k: "#231b14", s: "#aab2b6" };
+
+const OFICIAL = [    // jefe: el árbitro, que puede anular un gol bueno o dar uno malo (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkbbbbbbkk....",
+  ".....kkkkkkkk.....",
+  ".....kckcckck.....",
+  ".....kcccccck.....",
+  ".....kckkkkck.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  "...knnnnbbnnnnk...",
+  "...knnnnbbkkkkk...",
+  "...knnnnbbkpppk...",
+  "...knnnnbbkpppk...",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkkkkkkkk...",
+  "....kkk....kkk....",
+  "....kkk....kkk....",
+  "...kkkkk..kkkkk...",
+];
+const P_OFICIAL = { k: "#231b14", c: "#d9a273", n: "#2c3a4e", b: "#c9a24a", p: "#e8e4d4" };
+
+const COLECTIVO = [  // el colectivo, que es la salida del distrito (32 × 16)
+  "................................",
+  "................................",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  ".kmmmmmmmmmmmmmmmmmmmmmmmmmmmk..",
+  ".kmmkkkkmkkkkmkkkkmkkkkmkkvvvk..",
+  ".ammkvvkmkvvkmkvvkmkvvkmkvvvvk..",
+  ".ammkvvkmkvvkmkvvkmkvvkmkvvvvk..",
+  ".ammkkkkmkkkkmkkkkmkkkkmkkvvvk..",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrrk..",
+  ".kmmmmmmmmmmmmmmmmmmmmmmmmmmmk..",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  ".....kkkkk...........kkkkk......",
+  "....kksskkk.........kksskkk.....",
+  "....kksskkk.........kksskkk.....",
+  ".....kkkkk...........kkkkk......",
+];
+const P_COLECTIVO = { k: "#231b14", m: "#c9a24a", v: "#cfe0e4", r: "#a8324a", a: "#e8e4d4", s: "#8e9aa0" };
+
+
 
 
 /* ---------------------------------------------------------------
@@ -2771,6 +2921,14 @@ const DEFINICIONES = {
   sputnik:      [SPUTNIK, P_SPUTNIK],
   zar:          [ZAR, P_ZAR],
   troika:       [TROIKA, P_TROIKA],
+  valija:       [VALIJA, P_VALIJA],
+  recibo:       [RECIBO, P_RECIBO],
+  molinete:     [MOLINETE, P_MOLINETE],
+  changuito:    [CHANGUITO, P_CHANGUITO],
+  bandoneon:    [BANDONEON, P_BANDONEON],
+  gancho:       [GANCHO, P_GANCHO],
+  oficial:      [OFICIAL, P_OFICIAL],
+  colectivo:    [COLECTIVO, P_COLECTIVO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

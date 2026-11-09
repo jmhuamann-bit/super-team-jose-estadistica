@@ -270,6 +270,13 @@ const FICHAS = [
   { sprite: "ajedrez", nombre: "La Torre que Se Olvida del Factor", texto: "Si te dan la población y la muestra es sin reemplazo, va el factor de corrección. Si no te la dan, se asume con reemplazo." },
   { sprite: "sputnik", nombre: "El Sputnik que No Lee la Pregunta", texto: "La tabla da las viviendas de más de 10 años; si te piden las de un máximo de 10, son las que faltan: el complemento." },
   { sprite: "zar", nombre: "El Zar que Decreta Quién Es Mayor", texto: "Jefe de Rusia: en una diferencia, quien manda es el signo de los límites. Si el cero queda adentro, nadie puede decretar nada." },
+  { sprite: "valija", nombre: "La Valija que Pone el Igual en la Alterna", texto: "Argentina: los signos con igual (≥, ≤, =) van en la Hp. La Ha lleva <, > o ≠." },
+  { sprite: "recibo", nombre: "El Recibo que Habla de la Muestra", texto: "Las hipótesis son sobre la población: μ o π, nunca x̄ ni p. La muestra solo da los datos para probarla." },
+  { sprite: "molinete", nombre: "El Molinete que No Mira a Dónde Apunta", texto: "La región de rechazo está donde apunta la Ha: si dice <, a la izquierda; si dice >, a la derecha; si dice ≠, a los dos lados." },
+  { sprite: "changuito", nombre: "El Changuito que No Parte el Alfa", texto: "Si la prueba es bilateral, el α se reparte en dos colas: con α = 0,10, cada lado se lleva 0,05." },
+  { sprite: "bandoneon", nombre: "El Bandoneón que Concluye lo que No Le Piden", texto: "La decisión es sobre la Hp; la conclusión responde lo que pregunta el examen, aunque eso esté en la Ha." },
+  { sprite: "gancho", nombre: "El Gancho que Confunde los Errores", texto: "Rechazar algo verdadero es error tipo I (α). Aceptar algo falso es error tipo II (β)." },
+  { sprite: "oficial", nombre: "El Árbitro que Puede Equivocarse", texto: "Jefe de Argentina: pide decidir con el Z calculado y clasificar el error cuando aparece el valor real." },
 ];
 
 export function galeriaPersonajes(contenedor) {

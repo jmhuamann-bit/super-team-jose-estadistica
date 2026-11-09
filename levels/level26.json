@@ -1,0 +1,41 @@
+{
+  "id": "level26",
+  "distrito": "Argentina",
+  "clase": "Clase 04 · PC4",
+  "titulo": "El país del fútbol, donde el árbitro también se equivoca",
+  "tema": "riachuelo",
+  "musica": "riachuelo",
+  "vehiculo": "colectivo",
+  "intro": "Cuarta clase de la PC4: la PRUEBA DE HIPÓTESIS. Toca Argentina por el fútbol: el árbitro mira la jugada, decide si fue gol o no, y a veces se equivoca. Una prueba de hipótesis es igual. Se plantean dos hipótesis sobre la población, se elige el riesgo α, se dibuja dónde se rechaza mirando a dónde apunta la alterna, y se decide con lo que dice la muestra. Y como el árbitro, se puede anular un gol bueno (error tipo I) o validar uno malo (error tipo II).",
+  "repaso": [
+    "QUÉ ES UNA HIPÓTESIS: una afirmación sobre un posible resultado en la POBLACIÓN. Siempre se plantean dos, y se prueban en seis pasos.",
+    "LOS SEIS PASOS: 1) plantear las hipótesis, 2) el nivel de significación α, 3) el estadístico de prueba (solo la fórmula), 4) la región crítica, 5) el cálculo del estadístico y 6) la decisión y la conclusión.",
+    "Hp Y Ha: la hipótesis planteada o nula (H0) lleva los signos con igual: ≥, ≤ o =. La alterna (H1) lleva <, > o ≠. «Mayor que 15» es Ha; «menor o igual que 29» es Hp.",
+    "SIEMPRE SOBRE LA POBLACIÓN: se escribe con μ o π, nunca con x̄ ni p. Los datos de la muestra solo sirven para probarla.",
+    "EL α: es el riesgo de que no se cumpla lo que dice la Hp. Si el examen no lo da, se asume 0,05 en pruebas unilaterales y 0,10 en bilaterales.",
+    "LA REGIÓN CRÍTICA: el truco es mirar a dónde apunta la Ha. Si dice <, se rechaza a la izquierda; si dice >, a la derecha; si dice ≠, en las dos colas, con α/2 a cada lado.",
+    "LOS VALORES CRÍTICOS con α = 0,05 a un lado, o α = 0,10 bilateral: ±1,645 en la tabla Z.",
+    "Z O T: con la varianza poblacional conocida, o con n grande en proporciones, va Z. Si no se conoce la varianza poblacional, va T con n − 1 grados de libertad. Con población finita y n/N ≥ 0,05 se agrega el factor de corrección.",
+    "LA DECISIÓN es SIEMPRE sobre la Hp: se acepta o se rechaza. Si el estadístico cae en la región de rechazo, se rechaza.",
+    "LA CONCLUSIÓN responde lo que pregunta el examen: con α, hay o no hay suficiente evidencia para afirmar lo que te pidieron, aunque eso esté en la Ha.",
+    "ERROR TIPO I (α): rechazar una Hp verdadera, como rechazar el amor verdadero. ERROR TIPO II (β): aceptar una Hp falsa, como aceptar el amor falso.",
+    "CÓMO CLASIFICARLO: 1) ¿se aceptó o se rechazó la Hp? 2) el valor real, ¿encaja con la Hp? Si encaja es verdadero; si no, es falso. Aceptar lo verdadero (1 − α) y rechazar lo falso (1 − β, la potencia de la prueba) no son errores."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooVoo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   ?    oooooooo               ",
+    "                    ======              ======                                                 ooooo      ======               oooooo                       ==========              ",
+    "                                    oooo                       =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X    C                      E       X             C   E                         B       M   ",
+    "#####################################  #########################################################   #############################    ################################################",
+    "#####################################  #########################################################   #############################    ################################################",
+    "#####################################  #########################################################   #############################    ################################################"
+  ]
+}

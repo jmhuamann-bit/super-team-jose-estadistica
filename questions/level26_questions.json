@@ -1,0 +1,125 @@
+{
+  "nivel": "level26",
+  "clase": "Clase 04 · PC4 — Prueba de hipótesis",
+  "fuente": "Apuntes de prueba de hipótesis (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e26-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Mario piensa que el promedio será MENOR O IGUAL que 29.\n\n¿Qué hipótesis está planteando?",
+      "opciones": [
+        "La alterna, Ha: μ < 29",
+        "La planteada, Hp: μ ≤ 29, porque lleva el signo con igual",
+        "La alterna, Ha: μ ≤ 29, porque es la que se quiere probar",
+        "Ninguna: «menor o igual» no se puede probar"
+      ],
+      "correcta": 1,
+      "explicacion": "Los signos con igual (≥, ≤, =) van siempre en la Hp, la planteada o nula. La Ha lleva <, > o ≠. Su pareja sería Ha: μ > 29."
+    },
+    {
+      "id": "e26-q2",
+      "nivel": "comprension",
+      "enunciado": "Dos alumnos plantean la misma idea:\nA: Hp: μ ≥ 10\nB: Hp: x̄ ≥ 10\n\n¿Cuál está bien?",
+      "opciones": [
+        "A: las hipótesis se plantean sobre la población, con μ",
+        "B: la hipótesis se prueba con los datos de la muestra",
+        "Las dos, porque la media y el promedio son lo mismo",
+        "Ninguna: la Hp no puede llevar ≥"
+      ],
+      "correcta": 0,
+      "explicacion": "Las pruebas de hipótesis son sobre la POBLACIÓN, así que se escriben con μ o π. La muestra (x̄, p, n, S) solo aporta los datos para decidir. Escribir la Hp con x̄ o con p es un error."
+    },
+    {
+      "id": "e26-q3",
+      "nivel": "comprension",
+      "enunciado": "Una prueba tiene Ha: μ < 10.\n\n¿Dónde está la región de rechazo?",
+      "opciones": [
+        "En la cola derecha, porque ahí están los valores grandes",
+        "En las dos colas, partiendo el α",
+        "En el centro de la campana",
+        "En la cola izquierda: la región está a donde apunta la Ha"
+      ],
+      "correcta": 3,
+      "explicacion": "El truco es mirar a dónde apunta la Ha. Si dice <, se rechaza a la izquierda; si dice >, a la derecha; si dice ≠, en las dos colas."
+    },
+    {
+      "id": "e26-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Una prueba bilateral tiene Ha: μ ≠ 10 y α = 0,10.\n\n¿Cuáles son los valores críticos en la tabla Z?",
+      "opciones": [
+        "Solo 1,282, con todo el α en una cola",
+        "−1,645 y 1,645: el α se parte, y cada cola se lleva 0,05",
+        "−1,282 y 1,282, usando 0,10 en cada cola",
+        "Solo −1,645, porque la Ha apunta a los dos lados"
+      ],
+      "correcta": 1,
+      "explicacion": "En una prueba bilateral el α se reparte entre las dos colas: 0,10/2 = 0,05 a cada lado. Z(0,05) = −1,645 y Z(0,95) = 1,645. Si el Z calculado queda entre ellos, se acepta la Hp."
+    },
+    {
+      "id": "e26-q5",
+      "nivel": "reconocimiento",
+      "enunciado": "El examen no dice cuánto vale α.\n\n¿Qué se asume?",
+      "opciones": [
+        "0,05 si la prueba es unilateral y 0,10 si es bilateral",
+        "0,05 siempre, sin importar la prueba",
+        "0,10 si es unilateral y 0,05 si es bilateral",
+        "0,01, porque es el riesgo más seguro"
+      ],
+      "correcta": 0,
+      "explicacion": "Por convención del curso: si no te lo dan, α = 0,05 para pruebas unilaterales y 0,10 para bilaterales. El α es el riesgo de que no se cumpla lo que dice la Hp."
+    },
+    {
+      "id": "e26-q6",
+      "nivel": "comprension",
+      "enunciado": "El examen pregunta: «¿Será posible que el promedio sea menor que 10?». Se probó Hp: μ ≥ 10 contra Ha: μ < 10, y salió Z = −3,5 con un crítico de −1,645.\n\n¿Cómo se decide y qué se concluye?",
+      "opciones": [
+        "Se acepta la Hp, así que el promedio no es menor que 10",
+        "Se rechaza la Hp, así que no es posible afirmar que sea menor que 10",
+        "Se rechaza la Hp: hay suficiente evidencia para afirmar que el promedio es menor que 10",
+        "No se puede decidir, porque el Z es negativo"
+      ],
+      "correcta": 2,
+      "explicacion": "−3,5 < −1,645: cae en la región de rechazo, se rechaza la Hp. La decisión es sobre la Hp, pero la conclusión responde lo que pide el examen, que aquí es la Ha: sí es posible afirmar que μ < 10."
+    },
+    {
+      "id": "e26-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del árbitro. Una profesora dice que el promedio es mayor a 80. Se plantea Hp: μ ≤ 80 y Ha: μ > 80, y con la muestra sale Z = −2,25. El crítico es 1,645.\n\n¿Qué se decide?",
+      "opciones": [
+        "Se rechaza la Hp, porque −2,25 es un valor muy alejado del cero",
+        "Se rechaza la Hp, porque 2,25 > 1,645",
+        "No se decide nada: con un Z negativo la prueba no sirve",
+        "Se acepta la Hp: no hay evidencia para afirmar que el promedio sea mayor a 80"
+      ],
+      "correcta": 3,
+      "explicacion": "La Ha apunta a la derecha: se rechaza solo si Z > 1,645. −2,25 está del lado contrario, en la zona de aceptación. Se acepta μ ≤ 80: no es posible afirmar lo que decía la profesora. Ojo con quitarle el signo al Z."
+    },
+    {
+      "id": "e26-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. En esa prueba se aceptó Hp: μ ≤ 80. Semanas después se supo que el promedio real era 78,2.\n\n¿Hubo algún error?",
+      "opciones": [
+        "Error tipo I, porque se aceptó la Hp",
+        "Error tipo II, porque el valor real es menor que 80",
+        "No hay error: 78,2 encaja con la Hp, era verdadera y se aceptó (1 − α)",
+        "No hay error tipo II: es la potencia de la prueba (1 − β)"
+      ],
+      "correcta": 2,
+      "explicacion": "Idea clave: ¿se aceptó o se rechazó la Hp? Se aceptó. ¿El valor real encaja con la Hp? 78,2 ≤ 80, sí: era verdadera. Aceptar algo verdadero no es error, y su probabilidad es 1 − α."
+    },
+    {
+      "id": "e26-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. La Hp decía μ = 17 y se ACEPTÓ. Después se confirmó que el promedio real era 13.\n\n¿Qué pasó?",
+      "opciones": [
+        "Error tipo II (β): se aceptó una Hp falsa",
+        "Error tipo I (α): se rechazó una Hp verdadera",
+        "No hay error, porque la Hp se aceptó",
+        "Es la potencia de la prueba, porque el valor cambió"
+      ],
+      "correcta": 0,
+      "explicacion": "13 no encaja con μ = 17: la Hp era falsa, y se aceptó. Aceptar algo falso es el error tipo II, β, como aceptar el amor falso. Rechazar algo verdadero sería el tipo I; rechazar algo falso es la potencia de la prueba, 1 − β."
+    }
+  ]
+}

@@ -145,6 +145,14 @@ const TEMAS_MUSICA = {
               "A4",1,"B4",1,"G4",2,"D4",4],
     bajo:    ["G2",4,"D3",4,"E3",4,"G2",4,"C3",4,"D3",4,"G2",4,"G2",4],
   },
+  riachuelo: { // Argentina: aire de tango de bandoneón, arrastrado y con pausa
+    tempo: 0.25, onda: "sawtooth",
+    melodia: ["A3",3,"C4",1,"E4",4,"D4",2,"C4",2,"B3",4,
+              "E4",3,"G4",1,"B4",4,"A4",2,"G4",2,"E4",4,
+              "F4",3,"E4",1,"D4",4,"C4",2,"B3",2,"A3",4,
+              "E4",2,"D4",2,"C4",4,"A3",4],
+    bajo:    ["A1",8,"E2",8,"F2",8,"E2",4,"A1",4,"A1",8],
+  },
   moscu: { // Rusia: aire de danza eslava en menor, que arranca pesado y se va apurando
     tempo: 0.23, onda: "square",
     melodia: ["A3",4,"C4",2,"E4",2,"A4",4,"G#4",2,"A4",2,

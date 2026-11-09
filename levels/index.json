@@ -331,7 +331,7 @@
       "titulo": "El país del oráculo que nunca te daba un solo número",
       "icono": "🏛",
       "seccion": "PC4",
-      "seccionNota": "Estimación e intervalos de confianza — y seguimos dando la vuelta al mundo",
+      "seccionNota": "Estimación, intervalos y prueba de hipótesis — y seguimos dando la vuelta al mundo",
       "retos": 7,
       "duracion": "3 min",
       "abierto": true,
@@ -345,12 +345,26 @@
       "titulo": "El país de las muñecas, donde la verdad queda adentro",
       "icono": "🪆",
       "seccion": "PC4",
-      "seccionNota": "Estimación e intervalos de confianza — y seguimos dando la vuelta al mundo",
+      "seccionNota": "Estimación, intervalos y prueba de hipótesis — y seguimos dando la vuelta al mundo",
       "retos": 7,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level25.json",
       "preguntas": "questions/level25_questions.json"
+    },
+    {
+      "id": "level26",
+      "clase": "Clase 04",
+      "distrito": "Argentina",
+      "titulo": "El país del fútbol, donde el árbitro también se equivoca",
+      "icono": "⚽",
+      "seccion": "PC4",
+      "seccionNota": "Estimación, intervalos y prueba de hipótesis — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level26.json",
+      "preguntas": "questions/level26_questions.json"
     }
   ]
 }
