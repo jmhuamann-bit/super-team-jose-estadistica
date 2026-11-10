@@ -1,0 +1,125 @@
+{
+  "nivel": "level27",
+  "clase": "Clase 05 · PC4 — Prueba de hipótesis, parte 2",
+  "fuente": "Apuntes de la 8va clase — Prueba de hipótesis (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e27-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Marque la afirmación correcta sobre la estadística paramétrica y la no paramétrica.",
+      "opciones": [
+        "La no paramétrica solo sirve si los datos siguen una distribución normal",
+        "La paramétrica se usa principalmente cuando los datos provienen de una distribución normal",
+        "La paramétrica es obligatoria cuando los datos son cualitativos",
+        "La no paramétrica es más exacta que la paramétrica"
+      ],
+      "correcta": 1,
+      "explicacion": "La PARAMÉTRICA pide datos cuantitativos con distribución normal o aproximada, y por eso es más exacta. La NO paramétrica sirve para cualquier distribución y también para datos cualitativos, pero es aproximada."
+    },
+    {
+      "id": "e27-q2",
+      "nivel": "comprension",
+      "enunciado": "Tus datos sí tienen distribución normal.\n\n¿Qué estadística conviene usar?",
+      "opciones": [
+        "Solo la no paramétrica, porque sirve para todo",
+        "Ninguna, hasta tener datos cualitativos",
+        "Se puede usar cualquiera, pero se sugiere la paramétrica, porque es más exacta",
+        "Solo la paramétrica: con datos normales la no paramétrica está prohibida"
+      ],
+      "correcta": 2,
+      "explicacion": "Con datos normales se puede trabajar con las dos. Pero la paramétrica es más exacta, así que se sugiere esa. La no paramétrica es la salida cuando no hay normalidad o los datos son cualitativos."
+    },
+    {
+      "id": "e27-q3",
+      "nivel": "comprension",
+      "enunciado": "RStudio reporta para una media:\nOne Sample t-test\nt = 2.31, df = 49, p-value = 0.0251\nalternative hypothesis: true mean is not equal to 17\n\nCon α = 0,05, ¿qué se decide?",
+      "opciones": [
+        "Se rechaza la Hp: como 0,0251 < 0,05, el promedio es diferente de 17",
+        "Se acepta la Hp, porque 2,31 es mayor que 0,05",
+        "Se acepta la Hp: el promedio es igual a 17",
+        "No se decide nada sin la tabla T"
+      ],
+      "correcta": 0,
+      "explicacion": "Basta el valor P: 0,0251 < 0,05, se rechaza la Hp (μ = 17). La alterna del reporte dice «not equal to 17», así que hay evidencia de que el promedio es diferente de 17. El t y los df no hacen falta para decidir."
+    },
+    {
+      "id": "e27-q4",
+      "nivel": "comprension",
+      "enunciado": "RStudio reporta para una proporción:\n1-sample proportions test\nX-squared = 1.2, df = 1, p-value = 0.2733\nalternative hypothesis: true p is greater than 0.6\n\nCon α = 0,05, ¿qué se decide?",
+      "opciones": [
+        "Se rechaza la Hp: la proporción es mayor que 0,6",
+        "Se rechaza la Hp, porque 1,2 es mayor que 0,05",
+        "No se puede decidir: X-squared no es una prueba de proporciones",
+        "Se acepta la Hp: no hay evidencia para afirmar que la proporción sea mayor que 0,6"
+      ],
+      "correcta": 3,
+      "explicacion": "0,2733 ≥ 0,05: se acepta la Hp (π ≤ 0,6). No hay evidencia para la alterna que dice el reporte, «greater than 0.6». Lo que se compara con α es el p-value, no el estadístico."
+    },
+    {
+      "id": "e27-q5",
+      "nivel": "comprension",
+      "enunciado": "Se toman 51 empresas de un rubro con 550 en total, sin reemplazo, para probar una proporción.\n\n¿Qué hay que hacer con la varianza?",
+      "opciones": [
+        "Nada: en las proporciones nunca se corrige",
+        "Agregar el factor (N − n)/(N − 1), porque n/N = 0,09 ≥ 0,05",
+        "Restarle el tamaño de la población",
+        "Usar T en vez de Z, porque la población es finita"
+      ],
+      "correcta": 1,
+      "explicacion": "La fracción de muestreo es 51/550 = 0,09, mayor o igual a 0,05, y es sin reemplazo: va el factor de corrección. Con n > 30 la proporción sigue yendo con Z, por el TLC."
+    },
+    {
+      "id": "e27-q6",
+      "nivel": "comprension",
+      "enunciado": "Se probó Hp: π ≤ 0,6 y se RECHAZÓ. Después se supo que la proporción real era 0,58.\n\n¿Se cometió algún error?",
+      "opciones": [
+        "No hay error, porque 0,58 es menor que la muestral",
+        "Error tipo II, porque se aceptó algo falso",
+        "Error tipo I: 0,58 encaja con la Hp, y se rechazó algo verdadero",
+        "No hay error tipo II: es la potencia de la prueba"
+      ],
+      "correcta": 2,
+      "explicacion": "Primero: se rechazó la Hp. Segundo: 0,58 ≤ 0,6, encaja con la Hp, así que era verdadera. Rechazar algo verdadero es el error tipo I, de probabilidad α."
+    },
+    {
+      "id": "e27-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del estadístico. ¿El puntaje promedio de Piura es diferente al de Arequipa? Con varianzas homogéneas, α = 0,01 y GL = 111, los críticos son ±2,626, y el T calculado sale 5,36.\n\n¿Qué se concluye?",
+      "opciones": [
+        "Se acepta la Hp: los promedios son iguales",
+        "Se rechaza la Hp porque el T es positivo, sin mirar los críticos",
+        "No se puede concluir con α = 0,01",
+        "Se rechaza Hp: μP − μA = 0; sí es posible afirmar que los promedios son diferentes"
+      ],
+      "correcta": 3,
+      "explicacion": "La Hp es μP − μA = 0 y la Ha, μP − μA ≠ 0: bilateral. 5,36 > 2,626 cae en la región de rechazo. Hay evidencia para afirmar que el puntaje promedio de Piura es diferente al de Arequipa."
+    },
+    {
+      "id": "e27-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. ¿La proporción con vigilancia del distrito A excede a la del D en MÁS de 0,10? Con α = 0,10 el crítico es 1,282, y el Z calculado sale −0,287.\n\n¿Qué se concluye?",
+      "opciones": [
+        "Se acepta Hp: πA − πD ≤ 0,10; no es posible concluir que lo exceda en más de 0,10",
+        "Se rechaza la Hp, porque el Z es negativo",
+        "Se acepta la Hp: las dos proporciones son iguales",
+        "Se rechaza la Hp: A excede a D en más de 0,10"
+      ],
+      "correcta": 0,
+      "explicacion": "El examen pide πA − πD > 0,10: esa es la Ha, y la Hp es πA − πD ≤ 0,10. La región de rechazo está a la derecha; −0,287 ≤ 1,282, se acepta. No hay evidencia para decir que A supere a D en más de 0,10. Ojo: eso no dice que sean iguales."
+    },
+    {
+      "id": "e27-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. 48 de 150 analistas de un grupo y 35 de 80 del otro creen que el mercado es eficiente. ¿Hay diferencia entre las proporciones? Con α = 0,05, los críticos son ±1,96 y el Z sale cerca de −1,77.\n\n¿Qué se concluye?",
+      "opciones": [
+        "Se rechaza la Hp, porque −1,77 es negativo",
+        "Se rechaza la Hp: el segundo grupo tiene mayor proporción",
+        "Se acepta Hp: π1 − π2 = 0; no hay evidencia de que las proporciones sean diferentes",
+        "No se puede concluir, porque las muestras son de distinto tamaño"
+      ],
+      "correcta": 2,
+      "explicacion": "Hp: π1 − π2 = 0 y Ha: π1 − π2 ≠ 0, bilateral. −1,96 ≤ −1,77 ≤ 1,96: cae en la aceptación. No hay evidencia para afirmar que los dos tipos de analistas piensen distinto. Que las muestras tengan distinto tamaño no es problema."
+    }
+  ]
+}

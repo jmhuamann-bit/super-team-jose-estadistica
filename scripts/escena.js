@@ -277,6 +277,13 @@ const FICHAS = [
   { sprite: "bandoneon", nombre: "El Bandoneón que Concluye lo que No Le Piden", texto: "La decisión es sobre la Hp; la conclusión responde lo que pregunta el examen, aunque eso esté en la Ha." },
   { sprite: "gancho", nombre: "El Gancho que Confunde los Errores", texto: "Rechazar algo verdadero es error tipo I (α). Aceptar algo falso es error tipo II (β)." },
   { sprite: "oficial", nombre: "El Árbitro que Puede Equivocarse", texto: "Jefe de Argentina: pide decidir con el Z calculado y clasificar el error cuando aparece el valor real." },
+  { sprite: "pinguino", nombre: "El Pingüino que Pide Normalidad para Todo", texto: "Sudáfrica: la paramétrica pide datos cuantitativos y normales, y es más exacta. La no paramétrica sirve para cualquier distribución y para datos cualitativos, pero es aproximada." },
+  { sprite: "vuvuzela", nombre: "La Vuvuzela que No Escucha el Valor P", texto: "En un reporte de RStudio basta el p-value: si es menor que α se rechaza la Hp; si es mayor o igual, se acepta." },
+  { sprite: "cascosa", nombre: "El Casco que Lee la Proporción al Revés", texto: "Un prop.test con p-value grande no rechaza: no hay evidencia para la alterna que dice el reporte." },
+  { sprite: "protea", nombre: "La Protea que Se Olvida del Factor", texto: "Con 51 empresas de 550, n/N = 0,09 ≥ 0,05: va el factor de corrección (N − n)/(N − 1)." },
+  { sprite: "cabria", nombre: "La Cabria que No Sabe Qué Error Cometió", texto: "Se rechazó π ≤ 0,6 y el valor real era 0,58, que encaja con la Hp: se rechazó algo verdadero, error tipo I." },
+  { sprite: "rand", nombre: "El Rand que Compara sin Restar", texto: "Al comparar dos grupos se escribe la diferencia: μP − μA ≠ 0 o πA − πD > 0,10." },
+  { sprite: "estadistico", nombre: "El Estadístico de las Dos Muestras", texto: "Jefe de Sudáfrica: pide comparar dos regiones, dos distritos y dos tipos de analistas." },
 ];
 
 export function galeriaPersonajes(contenedor) {

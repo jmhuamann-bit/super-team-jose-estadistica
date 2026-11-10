@@ -1,0 +1,40 @@
+{
+  "id": "level27",
+  "distrito": "Sudáfrica",
+  "clase": "Clase 05 · PC4",
+  "titulo": "El país de las dos tasas, donde siempre se compara de a dos",
+  "tema": "cabo",
+  "musica": "cabo",
+  "vehiculo": "teleferico",
+  "intro": "Quinta clase de la PC4: la PRUEBA DE HIPÓTESIS, segunda parte. Toca Sudáfrica porque publica dos tasas de desempleo, y aquí casi todo es comparar: dos regiones, dos distritos, dos tipos de analistas. Antes, un repaso corto de paramétrica contra no paramétrica. Después, leer el valor P de un reporte de RStudio para una media y para una proporción. Y al final, los cuatro casos: una media, una proporción, diferencia de medias y diferencia de proporciones.",
+  "repaso": [
+    "PARAMÉTRICA: estima parámetros (μ, π) y pide datos cuantitativos con distribución normal o aproximada. Es más EXACTA. Hace intervalos de confianza y pruebas de hipótesis.",
+    "NO PARAMÉTRICA: sirve para CUALQUIER distribución y para datos cuantitativos y cualitativos, por ejemplo si el color favorito y el género son independientes. Es aproximada.",
+    "SI LOS DATOS SON NORMALES se puede trabajar con las dos, pero se sugiere la paramétrica, porque es más exacta.",
+    "REQUISITOS DE TODA INFERENCIA: muestra aleatoria y poblaciones independientes.",
+    "EL VALOR P DE RSTUDIO: en t.test (media) o prop.test (proporción) basta mirar el p-value. Si p-value < α se RECHAZA la Hp; si p-value ≥ α se ACEPTA. La línea «alternative hypothesis» te dice cuál es la Ha.",
+    "LOS CUATRO CASOS: una media (Z si se conoce σ², T si no), una proporción (Z, con n > 30 por TLC), diferencia de medias y diferencia de proporciones.",
+    "EL FACTOR DE CORRECCIÓN: si te dan la población y n/N ≥ 0,05, se multiplica la varianza por (N − n)/(N − 1). Con 51 de 550, n/N = 0,09: va el factor.",
+    "DIFERENCIA DE MEDIAS: si las varianzas son homogéneas, se pondera y GL = n₁ + n₂ − 2; si son heterogéneas, cambian los grados de libertad.",
+    "DIFERENCIA DE PROPORCIONES: puede probar que la diferencia es 0 (¿hay diferencia?) o que supera un número (¿excede en más de 0,10?). Ese número va en la Hp y en la fórmula.",
+    "LA DECISIÓN es sobre la Hp; la CONCLUSIÓN responde lo que pide el examen.",
+    "LOS ERRORES: rechazar una Hp verdadera es tipo I (α); aceptar una Hp falsa es tipo II (β). El valor real es verdadero si encaja con la Hp."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooLoo          oooo               oo                                      ooooooooooo               oo              ooooo                     V   1    oooooooo               ",
+    "                    ======              ======                                                     oooo   ======                   oooooo                   ==========              ",
+    "                                ooooo                          =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X       C                   E       X             C   E                         B       M   ",
+    "#################################   ###############################################################  ################################    ###########################################",
+    "#################################   ###############################################################  ################################    ###########################################",
+    "#################################   ###############################################################  ################################    ###########################################"
+  ]
+}

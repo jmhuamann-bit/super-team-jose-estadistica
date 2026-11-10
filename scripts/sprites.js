@@ -2766,6 +2766,156 @@ const COLECTIVO = [  // el colectivo, que es la salida del distrito (32 × 16)
 ];
 const P_COLECTIVO = { k: "#231b14", m: "#c9a24a", v: "#cfe0e4", r: "#a8324a", a: "#e8e4d4", s: "#8e9aa0" };
 
+const PINGUINO = [     // el pingüino: cree que la no paramétrica pide datos normales (18 × 14)
+  "..................",
+  ".....kkkkkkkk.....",
+  ".....kkkkkkkk.....",
+  ".....kkpkkpkk.....",
+  ".....kpkppkpk.....",
+  ".....kppooppk.....",
+  "...kkkppooppkkk...",
+  "...kkkppppppkkk...",
+  "...kkkppppppkkk...",
+  "...kkkppppppkkk...",
+  "...kkkppppppkkk...",
+  ".....kppppppk.....",
+  ".....kppppppk.....",
+  ".....oookkooo.....",
+];
+const P_PINGUINO = { k: "#20201c", p: "#eeeadc", o: "#e0912a" };
+
+const VUVUZELA = [     // la vuvuzela: no sabe leer el valor P del RStudio (18 × 14)
+  "..................",
+  "................k.",
+  ".............kkka.",
+  "..........kkkaaaa.",
+  ".......kkkaaaaaaa.",
+  "....kkkaaaaaaaaaa.",
+  "kkkkaaaaaaaaaaaaa.",
+  "kcckaaaaaaaaacccc.",
+  "kkkkaaaaaaaaaaaaa.",
+  "....kkkaaaaaaaaaa.",
+  ".......kkkaaaaaaa.",
+  "..........kkkaaaa.",
+  ".............kkka.",
+  "................k.",
+];
+const P_VUVUZELA = { k: "#20201c", a: "#e0912a", c: "#f6e2a8" };
+
+const CASCOSA = [        // el casco: lee al revés el reporte de la proporción (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  ".....kkkkkkkk.....",
+  "....kyyynnyyyk....",
+  ".kkkkyyynnyyyyk...",
+  "ckcckyyynnyyyyk...",
+  "ckcckyyynnyyyyk...",
+  ".kkkkyyynnyyyyk...",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_CASCOSA = { k: "#20201c", y: "#e0b32a", n: "#a8801c", c: "#f6f0cc" };
+
+const PROTEA = [       // la protea: se olvida del factor cuando la muestra es grande frente a N (18 × 14)
+  "..................",
+  ".......rrr........",
+  "...rrr.rkr..rrr...",
+  "...rkrkkkkkkrkr...",
+  "..rrrrkppppkrrrrr.",
+  "..rkr.kpkkpk..rkr.",
+  "..rrrrkppppkrrrrr.",
+  "...rkrkkkkkkrkr...",
+  "...rrr..rkr.rrr...",
+  "........rrr.......",
+  "........tt........",
+  "....tttttttttt....",
+  "........tt........",
+  "........tt........",
+];
+const P_PROTEA = { k: "#20201c", t: "#4e7a3a", r: "#d4566a", p: "#f6d8c0" };
+
+const CABRIA = [       // la cabria: no sabe qué error cometió cuando aparece el valor real (18 × 14)
+  "..................",
+  "..................",
+  ".....kkkkkkkk.....",
+  ".....kkkkkkkk.....",
+  ".....ss....ss.....",
+  "....ss..oo..ss....",
+  "....ssssoossss....",
+  "...ss........ss...",
+  "...ss........ss...",
+  "..ssssssssssssss..",
+  "..ss..........ss..",
+  ".ss............ss.",
+  "..kkkkkkkkkkkkkk..",
+  "..kkkkkkkkkkkkkk..",
+];
+const P_CABRIA = { k: "#20201c", s: "#b5603a", o: "#e8c24a" };
+
+const RAND = [         // el rand: compara dos grupos sin escribir la diferencia (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kvvvvvvvvvvvvvok.",
+  ".kvkkkkkvvkkkkkvk.",
+  ".kvkccckvvvvvvvvk.",
+  ".kvkcnnkvvkkkkkvk.",
+  ".kvkcnnkvvvvvvvvk.",
+  ".kvkkkkkvvkkkvvvk.",
+  ".kovvvvvvvvvvvvvk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_RAND = { k: "#20201c", v: "#7aa86a", c: "#e8e4cc", n: "#4e7a3a", o: "#e0912a" };
+
+const ESTADISTICO = [  // jefe: el estadístico, que compara dos regiones, dos distritos y dos tipos de analistas (18 × 17)
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  ".....kkkkkkkk.....",
+  ".....kcckkcck.....",
+  ".....kppppppk.....",
+  ".....kppkkppk.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkknnnnnk...",
+  "...kkoooknnkknk...",
+  "...kkoovknnkknk...",
+  "...kkkkkknnnnnk...",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkkkkkkkk...",
+  "....kkk....kkk....",
+  "....kkk....kkk....",
+  "...kkkkk..kkkkk...",
+];
+const P_ESTADISTICO = { k: "#20201c", p: "#d9a273", c: "#e8f0f4", n: "#6a6a4a", v: "#e8e4cc", o: "#d4566a" };
+
+const TELEFERICO = [   // el teleférico de la Montaña de la Mesa, que es la salida del distrito (32 × 16)
+  "................................",
+  "ssssssssssssssssssssssssssssssss",
+  ".............kkkkkk.............",
+  ".............kkkkkk.............",
+  "...............kk...............",
+  "...............kk...............",
+  "...............kk...............",
+  ".......kkkkkkkkkkkkkkkkkk.......",
+  ".....kvvvvvvvvvvvvvvvvvvvvk.....",
+  "....kvvvvvvvvvvvvvvvvvvvvvvk....",
+  "....kccckcccckcccckcccckccck....",
+  "....kccckcccckcccckcccckccck....",
+  "....kvvvvvvvvvvvvvvvvvvvvvvk....",
+  ".....kvoooooooooooooooooovk.....",
+  ".......kkkkkkkkkkkkkkkkkk.......",
+  "................................",
+];
+const P_TELEFERICO = { k: "#20201c", s: "#8a9298", v: "#c8502c", c: "#dceaf0", o: "#e0b32a" };
+
+
 
 
 
@@ -2929,6 +3079,14 @@ const DEFINICIONES = {
   gancho:       [GANCHO, P_GANCHO],
   oficial:      [OFICIAL, P_OFICIAL],
   colectivo:    [COLECTIVO, P_COLECTIVO],
+  pinguino:     [PINGUINO, P_PINGUINO],
+  vuvuzela:     [VUVUZELA, P_VUVUZELA],
+  cascosa:      [CASCOSA, P_CASCOSA],
+  protea:       [PROTEA, P_PROTEA],
+  cabria:       [CABRIA, P_CABRIA],
+  rand:         [RAND, P_RAND],
+  estadistico:  [ESTADISTICO, P_ESTADISTICO],
+  teleferico:   [TELEFERICO, P_TELEFERICO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

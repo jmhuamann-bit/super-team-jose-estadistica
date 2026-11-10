@@ -365,6 +365,20 @@
       "abierto": true,
       "mapa": "levels/level26.json",
       "preguntas": "questions/level26_questions.json"
+    },
+    {
+      "id": "level27",
+      "clase": "Clase 05",
+      "distrito": "Sudáfrica",
+      "titulo": "El país de las dos tasas, donde siempre se compara de a dos",
+      "icono": "🦓",
+      "seccion": "PC4",
+      "seccionNota": "Estimación, intervalos y prueba de hipótesis — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level27.json",
+      "preguntas": "questions/level27_questions.json"
     }
   ]
 }
