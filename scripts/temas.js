@@ -3589,11 +3589,11 @@ export const TEMAS = {
       "El Asteroide que Confunde Relación con Causa",
       "El Cristal que Ve Cero y Dice Nada",
       "El Gusano que Usa Pearson para Todo",
-      "La Medusa que No Lee el R Cuadrado",
+      "La Medusa que No Ve el Valor Atípico",
     ],
     andares: ["vuela", "salta", "patrulla", "guardia", "veloz", "vuela"],
     jefe: "reysaturno",
-    nombreJefe: "El Rey de la Recta",
+    nombreJefe: "El Rey del Orden",
 
     fondo(ctx, cam, t) {
       const elige = (a, n) => a[((n % a.length) + a.length) % a.length];

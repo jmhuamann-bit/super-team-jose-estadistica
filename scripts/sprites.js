@@ -3005,7 +3005,7 @@ const GUSANO = [    // el gusano: usa Pearson con variables cualitativas jerárq
 ];
 const P_GUSANO = { k: "#14201a", v: "#b06ad0", w: "#ffffff" };
 
-const MEDUSA = [    // la medusa: no sabe leer el coeficiente de determinación (18 × 14)
+const MEDUSA = [    // la medusa: no ve que un valor atípico tuerce a Pearson (18 × 14)
   "......kkkkkk......",
   "....kkppppppkk....",
   "...kppwppppwppk...",
@@ -3023,7 +3023,7 @@ const MEDUSA = [    // la medusa: no sabe leer el coeficiente de determinación 
 ];
 const P_MEDUSA = { k: "#201428", p: "#e870b0", w: "#ffffff" };
 
-const REYSATURNO = [    // jefe: el rey de los anillos, que dibuja la recta de regresión (18 × 17)
+const REYSATURNO = [    // jefe: el rey de los anillos, que ordena todo por posiciones (18 × 17)
   "....y..y..y..y....",
   "....yyyyyyyyyy....",
   "....ycyyyyyycy....",

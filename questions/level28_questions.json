@@ -1,6 +1,6 @@
 {
   "nivel": "level28",
-  "clase": "Clase 02 · Final — Medidas de asociación y regresión",
+  "clase": "Clase 02 · Final — Medidas de asociación",
   "fuente": "Apuntes de medidas de asociación (Estadística 1)",
   "preguntasJefe": 3,
   "preguntas": [
@@ -72,54 +72,54 @@
     {
       "id": "e28-q6",
       "nivel": "comprension",
-      "enunciado": "Un modelo de regresión tiene r² = 0,81.\n\n¿Qué significa?",
+      "enunciado": "Un alumno dice: «la varianza y la covarianza son lo mismo, solo cambia el nombre».\n\n¿Tiene razón?",
       "opciones": [
-        "Que X causa el 81% de Y",
-        "Que el 81% de la variabilidad de Y está explicado por X",
-        "Que la pendiente de la recta es 0,81",
-        "Que el 81% de los puntos caen exactamente sobre la recta"
+        "Sí: las dos miden qué tan dispersos están los datos",
+        "No: la varianza mide la dispersión de una sola variable; la covarianza, si dos variables se mueven juntas",
+        "Sí, porque las dos se miden en las mismas unidades",
+        "No: la covarianza siempre es mayor que la varianza"
       ],
       "correcta": 1,
-      "explicacion": "El coeficiente de determinación mide qué parte de los cambios de Y se explica por X: aquí el 81%. Es el cuadrado de Pearson (r = 0,9) y dice qué tan buena es la estimación. Mientras más alto, mejor explica el modelo."
+      "explicacion": "La varianza habla de una variable: qué tan dispersos están sus datos. La covarianza habla de dos: si se mueven en la misma dirección (positiva) o en direcciones opuestas (negativa)."
     },
     {
       "id": "e28-q7",
-      "nivel": "comprension",
-      "enunciado": "Primera pregunta del rey de la recta. La recta estimada entre el salario (X) y el gasto en consumo (Y) es ŷ = 10 + 3X.\n\n¿Qué dice el coeficiente de regresión?",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del rey del orden. Entre las horas de celular y las horas de estudio:\nCovarianza = −2,75\nDesviaciones estándar: 1,732 y 2,456\n\n¿Cuánto vale Pearson y qué dice?",
       "opciones": [
-        "Que con salario cero, el gasto es 3",
-        "Que la relación es fuerte, porque 3 es mayor que 1",
-        "Que si el salario sube en una unidad, el gasto sube en promedio 3",
-        "Que el 3% del gasto se explica por el salario"
+        "−0,65: relación inversa y moderada; a más celular, menos estudio",
+        "−2,75: relación inversa y muy fuerte",
+        "0,65: relación directa y moderada",
+        "−6,73: se multiplica todo, y es inversa"
       ],
-      "correcta": 2,
-      "explicacion": "El coeficiente de regresión es la pendiente: cuánto cambia Y, en promedio, cuando X sube en una unidad. Aquí, 3. El 10 es el intercepto. La pendiente puede tomar cualquier valor y no mide la fuerza: eso lo dice Pearson."
+      "correcta": 0,
+      "explicacion": "Pearson = covarianza / (Sx × Sy) = −2,75 / (1,732 × 2,456) = −0,65. El signo negativo dice que la relación es inversa, y 0,65 dice que es moderada. La covarianza sola (−2,75) no dice la fuerza."
     },
     {
       "id": "e28-q8",
       "nivel": "comprension",
-      "enunciado": "Segunda pregunta. El modelo estadístico es Y = 10 + 3X + ε, pero el matemático es μy = 10 + 3X.\n\n¿A dónde se fue el error?",
+      "enunciado": "Segunda pregunta. En tus datos hay un valor atípico enorme, muy lejos del resto.\n\n¿Qué coeficiente conviene?",
       "opciones": [
-        "Se eliminó porque era muy pequeño",
-        "Se pasó al intercepto, que ahora vale 10 + ε",
-        "Nunca existió: era un error de notación",
-        "El modelo matemático usa el promedio de Y, y el promedio de los errores es cero"
+        "Pearson, porque usa todos los valores tal cual",
+        "La covarianza, porque no tiene límites",
+        "Spearman: usa posiciones, y al atípico solo le toca el último puesto",
+        "Cualquiera, porque los atípicos no afectan a ninguno"
       ],
-      "correcta": 3,
-      "explicacion": "Para un mismo X, Y puede tomar varios valores por culpa del error. Si se toma el promedio de todos esos Y, los errores se cancelan, porque su promedio es cero. Por eso el modelo matemático y el estimado ya no muestran ε."
+      "correcta": 2,
+      "explicacion": "Pearson es sensible a los valores atípicos: un solo dato raro lo puede torcer. Spearman no usa el valor sino el orden: el atípico solo ocupa el primer o último puesto, como cualquier otro extremo."
     },
     {
       "id": "e28-q9",
       "nivel": "comprension",
-      "enunciado": "Tercera pregunta. ¿Cuál NO es una condición que deben cumplir los errores del modelo de regresión?",
+      "enunciado": "Tercera pregunta. Al ordenar los datos para Spearman, dos valores iguales caen en las posiciones 4 y 5.\n\n¿Qué posición le toca a cada uno?",
       "opciones": [
-        "Tener promedio cero",
-        "Tener distribución normal",
-        "Tener varianza constante",
-        "Estar correlacionados entre sí"
+        "4 a uno y 5 al otro, al azar",
+        "Los dos se eliminan, porque no se pueden ordenar",
+        "Los dos llevan 4, la primera posición",
+        "Los dos llevan 4,5: se promedia la posición de los empatados"
       ],
       "correcta": 3,
-      "explicacion": "Los errores deben tener promedio cero, distribución normal y varianza constante, y NO deben estar relacionados unos con otros. Si estuvieran correlacionados, el modelo dejaría de funcionar bien."
+      "explicacion": "Spearman trabaja con rangos (posiciones). Si dos datos se repiten, se usa el rango corregido: el promedio de las posiciones que ocupan, (4 + 5)/2 = 4,5. Después se resta el rango de X con el de Y."
     }
   ]
 }

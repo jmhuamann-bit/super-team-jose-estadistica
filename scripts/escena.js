@@ -289,8 +289,8 @@ const FICHAS = [
   { sprite: "asteroide", nombre: "El Asteroide que Confunde Relación con Causa", texto: "Pearson dice el tipo y la fuerza de la relación, pero nada sobre la dependencia: que dos cosas se muevan juntas no dice que una cause a la otra." },
   { sprite: "cristal", nombre: "El Cristal que Ve Cero y Dice Nada", texto: "Pearson cercano a cero puede ser que no hay relación, o que la relación no es lineal, por ejemplo exponencial." },
   { sprite: "gusano", nombre: "El Gusano que Usa Pearson para Todo", texto: "Pearson es para dos variables cuantitativas y normales. Spearman usa posiciones: sirve para cualitativas jerárquicas y no le afectan los atípicos." },
-  { sprite: "medusa", nombre: "La Medusa que No Lee el R Cuadrado", texto: "El r² dice qué porcentaje de la variabilidad de Y está explicado por X. Con r = 0,9, r² = 0,81: el 81%." },
-  { sprite: "reysaturno", nombre: "El Rey de la Recta", texto: "Jefe de Saturno: pide interpretar el coeficiente de regresión, saber por qué desaparece el error y qué cumplen los errores." },
+  { sprite: "medusa", nombre: "La Medusa que No Ve el Valor Atípico", texto: "Pearson es sensible a los valores atípicos: un solo dato raro lo puede torcer. Spearman, que usa posiciones, no se deja engañar." },
+  { sprite: "reysaturno", nombre: "El Rey del Orden", texto: "Jefe de Saturno: pide calcular e interpretar un Pearson, elegir entre Pearson y Spearman, y ordenar datos empatados." },
 ];
 
 export function galeriaPersonajes(contenedor) {
