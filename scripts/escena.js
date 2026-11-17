@@ -284,6 +284,13 @@ const FICHAS = [
   { sprite: "cabria", nombre: "La Cabria que No Sabe Qué Error Cometió", texto: "Se rechazó π ≤ 0,6 y el valor real era 0,58, que encaja con la Hp: se rechazó algo verdadero, error tipo I." },
   { sprite: "rand", nombre: "El Rand que Compara sin Restar", texto: "Al comparar dos grupos se escribe la diferencia: μP − μA ≠ 0 o πA − πD > 0,10." },
   { sprite: "estadistico", nombre: "El Estadístico de las Dos Muestras", texto: "Jefe de Sudáfrica: pide comparar dos regiones, dos distritos y dos tipos de analistas." },
+  { sprite: "anillo", nombre: "El Anillo que Mide Fuerza con la Covarianza", texto: "Saturno: de la covarianza solo importa el signo. Puede valer 10,51 o −6666,6: no dice qué tan fuerte es la relación." },
+  { sprite: "sonda", nombre: "La Sonda que Se Sale del Menos Uno al Uno", texto: "Pearson va de −1 a 1, no tiene unidades y tiene el mismo signo que la covarianza." },
+  { sprite: "asteroide", nombre: "El Asteroide que Confunde Relación con Causa", texto: "Pearson dice el tipo y la fuerza de la relación, pero nada sobre la dependencia: que dos cosas se muevan juntas no dice que una cause a la otra." },
+  { sprite: "cristal", nombre: "El Cristal que Ve Cero y Dice Nada", texto: "Pearson cercano a cero puede ser que no hay relación, o que la relación no es lineal, por ejemplo exponencial." },
+  { sprite: "gusano", nombre: "El Gusano que Usa Pearson para Todo", texto: "Pearson es para dos variables cuantitativas y normales. Spearman usa posiciones: sirve para cualitativas jerárquicas y no le afectan los atípicos." },
+  { sprite: "medusa", nombre: "La Medusa que No Lee el R Cuadrado", texto: "El r² dice qué porcentaje de la variabilidad de Y está explicado por X. Con r = 0,9, r² = 0,81: el 81%." },
+  { sprite: "reysaturno", nombre: "El Rey de la Recta", texto: "Jefe de Saturno: pide interpretar el coeficiente de regresión, saber por qué desaparece el error y qué cumplen los errores." },
 ];
 
 export function galeriaPersonajes(contenedor) {

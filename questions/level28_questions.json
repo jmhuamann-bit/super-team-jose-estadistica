@@ -1,0 +1,125 @@
+{
+  "nivel": "level28",
+  "clase": "Clase 02 · Final — Medidas de asociación y regresión",
+  "fuente": "Apuntes de medidas de asociación (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e28-q1",
+      "nivel": "comprension",
+      "enunciado": "La covarianza entre dos variables salió −6666,6.\n\n¿Qué se puede afirmar?",
+      "opciones": [
+        "Que la relación es inversa, y nada más sobre su fuerza",
+        "Que la relación es inversa y muy fuerte, porque el número es enorme",
+        "Que no hay relación, porque el número es negativo",
+        "Que la relación es directa, porque el valor absoluto es grande"
+      ],
+      "correcta": 0,
+      "explicacion": "De la covarianza solo importa el signo: negativo es relación inversa. El número puede ser cualquiera y depende de las unidades, así que no dice qué tan fuerte es la relación. Para eso está Pearson."
+    },
+    {
+      "id": "e28-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Entre qué valores se mueve el coeficiente de correlación de Pearson?",
+      "opciones": [
+        "Entre 0 y 1",
+        "Entre −1 y 1",
+        "Entre 0 e infinito",
+        "Puede tomar cualquier valor, como la covarianza"
+      ],
+      "correcta": 1,
+      "explicacion": "Pearson va de −1 a 1: el signo dice si es directa o inversa, y qué tan cerca está de los extremos dice la fuerza. Es una medida relativa, sin unidades. La covarianza, en cambio, no tiene límite."
+    },
+    {
+      "id": "e28-q3",
+      "nivel": "comprension",
+      "enunciado": "Pearson entre el dinero y la felicidad salió 0,98.\n\n¿Qué se puede concluir?",
+      "opciones": [
+        "Que el dinero causa la felicidad",
+        "Que la felicidad depende del dinero en un 98%",
+        "Que hay relación directa y muy fuerte; de la dependencia no se puede afirmar nada",
+        "Que el 98% de las personas con dinero son felices"
+      ],
+      "correcta": 2,
+      "explicacion": "Pearson informa el tipo de relación (directa, por el signo positivo) y su grado (muy fuerte, cerca de 1). No dice nada de la dependencia: que dos variables se muevan juntas no prueba que una cause a la otra."
+    },
+    {
+      "id": "e28-q4",
+      "nivel": "comprension",
+      "enunciado": "El Pearson entre dos variables salió prácticamente 0.\n\n¿Qué puede estar pasando?",
+      "opciones": [
+        "Seguro que no hay ninguna relación entre ellas",
+        "Que la relación es inversa y débil",
+        "Que hay un error de cálculo, porque Pearson nunca vale 0",
+        "Que no hay relación, o que la relación existe pero no es lineal, por ejemplo exponencial"
+      ],
+      "correcta": 3,
+      "explicacion": "Pearson solo mide relaciones LINEALES. Un valor cercano a 0 puede significar que no hay relación, pero también que hay una relación curva que Pearson no capta. Por eso conviene mirar el diagrama de dispersión."
+    },
+    {
+      "id": "e28-q5",
+      "nivel": "comprension",
+      "enunciado": "Quieres relacionar el nivel de estudios (primaria, secundaria, superior) con el puesto en un ranking.\n\n¿Qué coeficiente conviene?",
+      "opciones": [
+        "Spearman: trabaja con posiciones, así que sirve para cualitativas jerárquicas",
+        "Pearson, porque es el mejor de todos",
+        "La covarianza, porque no pide normalidad",
+        "Ninguno: con variables cualitativas no se puede medir asociación"
+      ],
+      "correcta": 0,
+      "explicacion": "Pearson pide dos variables cuantitativas y normales. Spearman no usa el valor del dato sino su orden, así que funciona con cualitativas jerárquicas, es no paramétrico y no le afectan los atípicos."
+    },
+    {
+      "id": "e28-q6",
+      "nivel": "comprension",
+      "enunciado": "Un modelo de regresión tiene r² = 0,81.\n\n¿Qué significa?",
+      "opciones": [
+        "Que X causa el 81% de Y",
+        "Que el 81% de la variabilidad de Y está explicado por X",
+        "Que la pendiente de la recta es 0,81",
+        "Que el 81% de los puntos caen exactamente sobre la recta"
+      ],
+      "correcta": 1,
+      "explicacion": "El coeficiente de determinación mide qué parte de los cambios de Y se explica por X: aquí el 81%. Es el cuadrado de Pearson (r = 0,9) y dice qué tan buena es la estimación. Mientras más alto, mejor explica el modelo."
+    },
+    {
+      "id": "e28-q7",
+      "nivel": "comprension",
+      "enunciado": "Primera pregunta del rey de la recta. La recta estimada entre el salario (X) y el gasto en consumo (Y) es ŷ = 10 + 3X.\n\n¿Qué dice el coeficiente de regresión?",
+      "opciones": [
+        "Que con salario cero, el gasto es 3",
+        "Que la relación es fuerte, porque 3 es mayor que 1",
+        "Que si el salario sube en una unidad, el gasto sube en promedio 3",
+        "Que el 3% del gasto se explica por el salario"
+      ],
+      "correcta": 2,
+      "explicacion": "El coeficiente de regresión es la pendiente: cuánto cambia Y, en promedio, cuando X sube en una unidad. Aquí, 3. El 10 es el intercepto. La pendiente puede tomar cualquier valor y no mide la fuerza: eso lo dice Pearson."
+    },
+    {
+      "id": "e28-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. El modelo estadístico es Y = 10 + 3X + ε, pero el matemático es μy = 10 + 3X.\n\n¿A dónde se fue el error?",
+      "opciones": [
+        "Se eliminó porque era muy pequeño",
+        "Se pasó al intercepto, que ahora vale 10 + ε",
+        "Nunca existió: era un error de notación",
+        "El modelo matemático usa el promedio de Y, y el promedio de los errores es cero"
+      ],
+      "correcta": 3,
+      "explicacion": "Para un mismo X, Y puede tomar varios valores por culpa del error. Si se toma el promedio de todos esos Y, los errores se cancelan, porque su promedio es cero. Por eso el modelo matemático y el estimado ya no muestran ε."
+    },
+    {
+      "id": "e28-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. ¿Cuál NO es una condición que deben cumplir los errores del modelo de regresión?",
+      "opciones": [
+        "Tener promedio cero",
+        "Tener distribución normal",
+        "Tener varianza constante",
+        "Estar correlacionados entre sí"
+      ],
+      "correcta": 3,
+      "explicacion": "Los errores deben tener promedio cero, distribución normal y varianza constante, y NO deben estar relacionados unos con otros. Si estuvieran correlacionados, el modelo dejaría de funcionar bien."
+    }
+  ]
+}

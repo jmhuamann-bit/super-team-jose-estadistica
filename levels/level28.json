@@ -1,0 +1,41 @@
+{
+  "id": "level28",
+  "distrito": "Saturno",
+  "clase": "Clase 02 · Final",
+  "titulo": "El planeta de los anillos, donde todo gira junto",
+  "tema": "saturno",
+  "musica": "saturno",
+  "vehiculo": "nave",
+  "intro": "Arranca el modo galaxia en el examen final: Titán, la luna de Saturno. Los anillos giran junto con el planeta, y la pregunta de esta clase es esa: ¿dos variables se mueven juntas? Las MEDIDAS DE ASOCIACIÓN responden si hay relación, si es directa o inversa y qué tan fuerte es: primero la covarianza, después el coeficiente de Pearson y, como curiosidad, el de Spearman. Y el ANÁLISIS DE REGRESIÓN dibuja la recta que permite predecir Y a partir de X, con el r² para saber qué tan bien lo hace.",
+  "repaso": [
+    "EL OBJETIVO: relacionar dos variables y analizar si tienen relación o no. Primero se ve el diagrama de dispersión: la relación puede ser positiva, negativa o no haber; más fuerte o más débil; y no todas son lineales.",
+    "LA COVARIANZA: solo importa su SIGNO. Positiva es relación directa, negativa es inversa. El número no importa: puede ser 10,51 o −6666,6. Sale con las unidades de las variables (soles × risas).",
+    "COVARIANZA CERO: no hay relación lineal. Y no es lo mismo que la varianza: la varianza mide la dispersión de una sola variable.",
+    "LIMITACIÓN DE LA COVARIANZA: dice si la relación es directa o inversa, pero no qué tan fuerte es.",
+    "PEARSON: covarianza dividida entre el producto de las dos desviaciones estándar. Con covarianza 4,5 y desviaciones 1,531 y 3,003 sale 0,98: relación directa y muy fuerte.",
+    "LO QUE DICE PEARSON: el tipo de relación (por el signo) y su grado o fuerza (qué tan cerca está de 1 o −1). No dice NADA de la dependencia: relación no es causalidad.",
+    "LAS PROPIEDADES DE PEARSON: es una medida RELATIVA, sin unidades. Va de −1 a 1. Tiene el mismo signo que la covarianza. Solo mide relaciones LINEALES. Es sensible a valores atípicos. Pide variables con distribución normal.",
+    "PEARSON CERCA DE CERO puede ser que no hay relación o que la relación no es lineal (por ejemplo, exponencial).",
+    "SPEARMAN: trabaja con el ORDEN o posición de cada dato, no con su valor. Por eso sirve para variables cualitativas jerárquicas y no le afectan los atípicos. Es no paramétrico. Si dos datos empatan, se promedia su posición.",
+    "LOS TRES MODELOS DE REGRESIÓN: el ESTADÍSTICO, Y = β0 + β1X + ε, con el error. El MATEMÁTICO, μy = β0 + β1X: el promedio de los errores es cero y desaparece. El ESTIMADO, ŷ = b0 + b1X, que usa la muestra y es el más práctico para predecir.",
+    "EL COEFICIENTE DE REGRESIÓN es la pendiente b1: cuánto cambia Y, en promedio, cuando X sube en una unidad. Puede tomar cualquier valor. β0 es el intercepto.",
+    "LOS ERRORES: promedio cero, distribución normal, varianza constante y no están correlacionados entre sí. EL r²: el cuadrado de Pearson; mide el % de la variabilidad de Y explicado por X. Mientras más alto, mejor explica."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                          V                                                           G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======                    ======                                       ooooo          ======               oooooo                       ==========              ",
+    "                                       oooooo                  =====                                                                                                                ",
+    "  P           C             E                           E C T               E     X   E X       C                   E       X             C   E                         B       M   ",
+    "########################################    ################################################   #################################    ################################################",
+    "########################################    ################################################   #################################    ################################################",
+    "########################################    ################################################   #################################    ################################################"
+  ]
+}

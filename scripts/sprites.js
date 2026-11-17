@@ -2915,6 +2915,155 @@ const TELEFERICO = [   // el teleférico de la Montaña de la Mesa, que es la sa
 ];
 const P_TELEFERICO = { k: "#20201c", s: "#8a9298", v: "#c8502c", c: "#dceaf0", o: "#e0b32a" };
 
+const ANILLO = [    // el anillo: cree que el número de la covarianza dice qué tan fuerte es la relación (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  "....kkooooookk....",
+  "...kooywwooyook...",
+  ".kkkooykkooykookkk",
+  "kppkoooooooookpppk",
+  "kpppkkkkkkkkkkpppk",
+  ".kkppppppppppppkk.",
+  "...kkkooooooookk..",
+  "....kooookkoook...",
+  ".....kooooooook...",
+  "......kkkkkkkk....",
+  "..................",
+  "..................",
+];
+const P_ANILLO = { k: "#1a1420", o: "#e8b86a", y: "#fff2c0", w: "#ffffff", p: "#c49a5a" };
+
+const SONDA = [    // la sonda: no sabe entre qué valores se mueve Pearson (18 × 14)
+  "........kk........",
+  "........kr........",
+  ".......kkkk.......",
+  "......kmmmmk......",
+  "..kkkkmmccmmkkkk..",
+  "..kbbkmmccmmkbbk..",
+  "..kbbkmmmmmmkbbk..",
+  "..kkkkmmmmmmkkkk..",
+  "......kmmmmk......",
+  ".......kmmk.......",
+  "......kk..kk......",
+  ".....ky....yk.....",
+  "..................",
+  "..................",
+];
+const P_SONDA = { k: "#141420", r: "#ff4a4a", m: "#c6ccd6", c: "#5ae0f0", b: "#e8a83a", y: "#f2d24a" };
+
+const ASTEROIDE = [    // el asteroide: cree que correlación es causalidad (18 × 14)
+  "..................",
+  ".......kkkkk......",
+  ".....kkgggggkk....",
+  "....kgggdggggk....",
+  "...kggwkggwkggk...",
+  "...kgggggggggdk...",
+  "..kgdgggkkgggggk..",
+  "..kggggggggdgggk..",
+  "...kgggdgggggggk..",
+  "...kgggggggdggk...",
+  "....kkgggggggk....",
+  "......kkkkkkk.....",
+  "..................",
+  "..................",
+];
+const P_ASTEROIDE = { k: "#141418", g: "#8a8a96", d: "#5a5a66", w: "#ffffff" };
+
+const CRISTAL = [    // el cristal: cree que Pearson cero es que no hay ninguna relación (18 × 14)
+  "........kk........",
+  ".......kcck.......",
+  "......kcwcck......",
+  ".....kccwccck.....",
+  "....kcccccccck....",
+  "...kccwkcckwcck...",
+  "...kcccccccccck...",
+  "....kcccckkccck...",
+  ".....kcccccccck...",
+  "......kcccccck....",
+  ".......kcccck.....",
+  "........kcck......",
+  ".........kk.......",
+  "..................",
+];
+const P_CRISTAL = { k: "#142030", c: "#9ad8f0", w: "#ffffff" };
+
+const GUSANO = [    // el gusano: usa Pearson con variables cualitativas jerárquicas (18 × 14)
+  "..................",
+  "..................",
+  "............kkkk..",
+  "...........kvvvvk.",
+  "..........kvwkvwk.",
+  "..........kvvvvvk.",
+  "..kkkk...kvvvvvk..",
+  ".kvvvvk.kvvvvvk...",
+  "kvvvvvvkvvvvvk....",
+  "kvvkvvvvvvvvk.....",
+  ".kvvvvvvvvvk......",
+  "..kkvvvvvkk.......",
+  "....kkkkk.........",
+  "..................",
+];
+const P_GUSANO = { k: "#14201a", v: "#b06ad0", w: "#ffffff" };
+
+const MEDUSA = [    // la medusa: no sabe leer el coeficiente de determinación (18 × 14)
+  "......kkkkkk......",
+  "....kkppppppkk....",
+  "...kppwppppwppk...",
+  "..kppwkppppwkppk..",
+  "..kppppppppppppk..",
+  "..kppppkkkkppppk..",
+  "...kkkkkkkkkkkk...",
+  "...k.p.k.p.k.p.k..",
+  "...p.k.p.k.p.k.p..",
+  "...k.p.k.p.k.p.k..",
+  "...p...p...p...p..",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_MEDUSA = { k: "#201428", p: "#e870b0", w: "#ffffff" };
+
+const REYSATURNO = [    // jefe: el rey de los anillos, que dibuja la recta de regresión (18 × 17)
+  "....y..y..y..y....",
+  "....yyyyyyyyyy....",
+  "....ycyyyyyycy....",
+  "....kkkkkkkkkk....",
+  "...koooooooooook..",
+  "...kokkoooookkok..",
+  "...kowkoooooowkk..",
+  "...koooooooooook..",
+  "kkkkkooookkoookkkk",
+  "kppppkoooooookpppk",
+  ".kkkpppkkkkkpppkk.",
+  "...kvvvvvvvvvvk...",
+  "..kvvvyyyyyyvvvk..",
+  ".kvvvvvyyyyvvvvvk.",
+  ".kvvvvvvyyvvvvvvk.",
+  "..kkvvvvvvvvvvkk..",
+  "...kvvvvkkvvvvk...",
+];
+const P_REYSATURNO = { k: "#1a1420", y: "#f2c84a", c: "#5ae0f0", o: "#e8b86a", w: "#ffffff", p: "#c49a5a", v: "#3a5ab0" };
+
+const NAVE = [    // la nave, que es el vehículo de salida del planeta (32 × 16)
+  "................................",
+  "................................",
+  "..........kkkkkk................",
+  ".........kccccccck..............",
+  "........kcwccccccck.............",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkk......",
+  "kmmmmmmmmmmmmmmmmmmmmmmmmmkk....",
+  "kmrrmmmmmmmmmmmmmmmmmmmmmmmmkk..",
+  "kmmmmmyymmmyymmmyymmmyymmmmmmmk.",
+  "kmmmmmmmmmmmmmmmmmmmmmmmmmmmmkk.",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "....kmmk..........kmmk..........",
+  "...kmmmmk........kmmmmk.........",
+  "..oooooooo......oooooooo........",
+  "...oyyyyo........oyyyyo.........",
+  "....oooo..........oooo..........",
+];
+const P_NAVE = { k: "#141420", m: "#c6ccd6", c: "#9fe0f0", w: "#ffffff", r: "#c0392b", y: "#f2d24a", o: "#f0a83c" };
+
 
 
 
@@ -3087,6 +3236,14 @@ const DEFINICIONES = {
   rand:         [RAND, P_RAND],
   estadistico:  [ESTADISTICO, P_ESTADISTICO],
   teleferico:   [TELEFERICO, P_TELEFERICO],
+  anillo:       [ANILLO, P_ANILLO],
+  sonda:        [SONDA, P_SONDA],
+  asteroide:    [ASTEROIDE, P_ASTEROIDE],
+  cristal:      [CRISTAL, P_CRISTAL],
+  gusano:       [GUSANO, P_GUSANO],
+  medusa:       [MEDUSA, P_MEDUSA],
+  reysaturno:   [REYSATURNO, P_REYSATURNO],
+  nave:         [NAVE, P_NAVE],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
