@@ -387,12 +387,26 @@
       "titulo": "El planeta de los anillos, donde todo gira junto",
       "icono": "💫",
       "seccion": "Final",
-      "seccionNota": "Medidas de asociación — modo galaxia, ahora visitando otros mundos",
+      "seccionNota": "Asociación y regresión — modo galaxia, ahora visitando otros mundos",
       "retos": 7,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level28.json",
       "preguntas": "questions/level28_questions.json"
+    },
+    {
+      "id": "level29",
+      "clase": "Clase 03",
+      "distrito": "Júpiter",
+      "titulo": "El planeta de las lunas que siguen su órbita en línea",
+      "icono": "🌕",
+      "seccion": "Final",
+      "seccionNota": "Asociación y regresión — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level29.json",
+      "preguntas": "questions/level29_questions.json"
     }
   ]
 }

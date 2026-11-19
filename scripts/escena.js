@@ -291,6 +291,13 @@ const FICHAS = [
   { sprite: "gusano", nombre: "El Gusano que Usa Pearson para Todo", texto: "Pearson es para dos variables cuantitativas y normales. Spearman usa posiciones: sirve para cualitativas jerárquicas y no le afectan los atípicos." },
   { sprite: "medusa", nombre: "La Medusa que No Ve el Valor Atípico", texto: "Pearson es sensible a los valores atípicos: un solo dato raro lo puede torcer. Spearman, que usa posiciones, no se deja engañar." },
   { sprite: "reysaturno", nombre: "El Rey del Orden", texto: "Jefe de Saturno: pide calcular e interpretar un Pearson, elegir entre Pearson y Spearman, y ordenar datos empatados." },
+  { sprite: "lentes", nombre: "Los Lentes que Confunden Pendiente con Intercepto", texto: "Júpiter: en ŷ = b0 + b1X, b0 es el intercepto y b1 la pendiente, el coeficiente de regresión: cuánto cambia Y en promedio si X sube en 1." },
+  { sprite: "boletoj", nombre: "El Boleto que No Ve Desaparecer el Error", texto: "El modelo estadístico tiene error; el matemático trabaja con el promedio de Y, y como el promedio de los errores es cero, el error ya no aparece." },
+  { sprite: "cajota", nombre: "La Cajota que Cambia los Signos", texto: "El coeficiente de regresión, el de Pearson y la covarianza siempre tienen el mismo signo." },
+  { sprite: "escalonj", nombre: "La Escalera que Lee Mal el R Cuadrado", texto: "El r² va de 0 a 1, solo positivo, y dice qué % de la variabilidad de Y explica X. Pearson en valor absoluto es su raíz." },
+  { sprite: "dni", nombre: "El DNI que Usa Pearson para Todo", texto: "Pearson pide dos variables cuantitativas continuas y normales. Con escalas de 1 a 7 o datos jerárquicos va Spearman." },
+  { sprite: "lunita", nombre: "La Lunita que No Minimiza los Cuadrados", texto: "Mínimos cuadrados: la recta pasa por donde la suma de los errores al cuadrado es la mínima posible." },
+  { sprite: "jupiterino", nombre: "El Señor de la Recta", texto: "Jefe de Júpiter: pide sacar Pearson de un r², la recta con matrices y las propiedades de X´X." },
 ];
 
 export function galeriaPersonajes(contenedor) {

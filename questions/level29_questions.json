@@ -1,0 +1,125 @@
+{
+  "nivel": "level29",
+  "clase": "Clase 03 · Final — La ecuación de regresión",
+  "fuente": "Apuntes de la 2da clase de regresión — Ecuación de regresión (Estadística 1)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e29-q1",
+      "nivel": "comprension",
+      "enunciado": "La recta estimada entre el salario (X) y el gasto en consumo (Y) es ŷ = 10 + 3X.\n\n¿Cómo se interpreta el 3?",
+      "opciones": [
+        "Con salario cero, el gasto es 3",
+        "Si el salario aumenta en 1 unidad, el gasto aumenta en promedio 3",
+        "El 3% del gasto se explica por el salario",
+        "La relación es fuerte, porque 3 es mayor que 1"
+      ],
+      "correcta": 1,
+      "explicacion": "El 3 es la pendiente, el coeficiente de regresión: cuánto cambia Y, en promedio, cuando X sube en una unidad. El 10 es el intercepto. La pendiente no mide la fuerza: eso lo dice Pearson."
+    },
+    {
+      "id": "e29-q2",
+      "nivel": "comprension",
+      "enunciado": "El modelo estadístico es Y = 10 + 3X + ε y el matemático es μy = 10 + 3X.\n\n¿A dónde se fue el error?",
+      "opciones": [
+        "Se pasó al intercepto",
+        "Se borró porque era muy chico",
+        "El matemático usa el promedio de Y, y el promedio de los errores es cero",
+        "Nunca existió"
+      ],
+      "correcta": 2,
+      "explicacion": "Para un mismo X, Y puede tomar varios valores por el error. Si se toma el promedio de todos ellos, los errores se cancelan porque su promedio es cero. Por eso el modelo matemático y el estimado ya no muestran ε."
+    },
+    {
+      "id": "e29-q3",
+      "nivel": "comprension",
+      "enunciado": "Marque la afirmación correcta.",
+      "opciones": [
+        "La covarianza debe estar entre −1 y 1",
+        "El coeficiente de correlación y el de regresión pueden tener signos diferentes",
+        "El r² y Pearson siempre tienen el mismo signo",
+        "El coeficiente de regresión, el de Pearson y la covarianza siempre tienen el mismo signo"
+      ],
+      "correcta": 3,
+      "explicacion": "Los tres dicen el tipo de relación, así que comparten signo. La covarianza no tiene límites; solo Pearson va de −1 a 1. Y el r² no tiene signo: siempre es positivo, porque es Pearson al cuadrado."
+    },
+    {
+      "id": "e29-q4",
+      "nivel": "comprension",
+      "enunciado": "Un modelo tiene r² = 0,81.\n\n¿Qué significa?",
+      "opciones": [
+        "El 81% de la variabilidad de Y está explicado por X",
+        "La pendiente de la recta es 0,81",
+        "Pearson vale 0,81",
+        "El 81% de los puntos cae exactamente sobre la recta"
+      ],
+      "correcta": 0,
+      "explicacion": "El coeficiente de determinación dice qué parte de los movimientos de Y explica X: aquí el 81%. Va de 0 a 1, solo positivo. Pearson en valor absoluto es su raíz: 0,9."
+    },
+    {
+      "id": "e29-q5",
+      "nivel": "comprension",
+      "enunciado": "Se estudia la calificación del delivery y la de la página web, las dos en escalas de 1 (pésimo) a 7 (excelente).\n\n¿Qué coeficiente conviene?",
+      "opciones": [
+        "Pearson, porque las dos son números",
+        "Spearman: son escalas ordenadas, no variables continuas",
+        "Ninguno, porque son calificaciones",
+        "La covarianza, porque no pide normalidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Pearson es para dos variables cuantitativas continuas, de preferencia normales. Una calificación de 1 a 7 es una escala ordenada, una variable jerárquica: ahí va Spearman, que trabaja con posiciones."
+    },
+    {
+      "id": "e29-q6",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Por qué el método se llama de MÍNIMOS CUADRADOS?",
+      "opciones": [
+        "Porque usa la menor cantidad de datos posible",
+        "Porque la pendiente siempre sale chica",
+        "Porque la recta pasa por donde la suma de los errores al cuadrado es la mínima",
+        "Porque solo sirve para matrices cuadradas"
+      ],
+      "correcta": 2,
+      "explicacion": "La recta que se elige es la que deja los puntos lo más cerca posible: la que hace mínima la suma de los errores al cuadrado. Se elevan al cuadrado porque, sin elevar, los errores positivos y negativos se cancelan y suman cero."
+    },
+    {
+      "id": "e29-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del señor de la recta. Entre las ventas de W y de X se obtuvo:\nŴ = 32,67 − 0,58X\nr² = 0,81\n\n¿Cuánto vale el coeficiente de correlación?",
+      "opciones": [
+        "0,9, porque es la raíz de 0,81",
+        "0,81, porque es el mismo r²",
+        "−0,58, porque es la pendiente",
+        "−0,9: la raíz de 0,81 con el signo de la pendiente"
+      ],
+      "correcta": 3,
+      "explicacion": "En valor absoluto, Pearson es la raíz del r²: √0,81 = 0,9. El signo se lo da la pendiente, que es negativa (−0,58), porque regresión y Pearson comparten signo. Entonces r = −0,9."
+    },
+    {
+      "id": "e29-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. Con el método matricial, ¿cómo salen los coeficientes b0 y b1?",
+      "opciones": [
+        "b = (X´X)⁻¹ X´Y: se invierte X´X y se multiplica por X´Y",
+        "b = X´X × X´Y, sin invertir nada",
+        "b = X´Y dividido entre n",
+        "b = el determinante de X´X"
+      ],
+      "correcta": 0,
+      "explicacion": "De X´Y = (X´X)·b se despeja b multiplicando por la inversa: b = (X´X)⁻¹ X´Y. Se arman las sumas (n, Σx, Σx², Σy, Σxy), se invierte X´X con su determinante y se multiplica."
+    },
+    {
+      "id": "e29-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. ¿Qué propiedades tiene la matriz X´X que se usa en la regresión?",
+      "opciones": [
+        "Es rectangular y su determinante es cero",
+        "Es cuadrada, simétrica y regular (su determinante es distinto de cero)",
+        "Es una matriz de 3 × 2 que no se puede invertir",
+        "Es igual a su inversa"
+      ],
+      "correcta": 1,
+      "explicacion": "X´X es cuadrada (2 × 2 en Estadística 1), simétrica (su transpuesta es igual a ella) y regular: su determinante, ad − bc, es distinto de cero. Por eso se puede invertir y sacar los coeficientes."
+    }
+  ]
+}

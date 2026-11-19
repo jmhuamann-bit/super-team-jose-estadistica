@@ -3064,6 +3064,135 @@ const NAVE = [    // la nave, que es el vehículo de salida del planeta (32 × 1
 ];
 const P_NAVE = { k: "#141420", m: "#c6ccd6", c: "#9fe0f0", w: "#ffffff", r: "#c0392b", y: "#f2d24a", o: "#f0a83c" };
 
+const LENTES = [    // los lentes: confunden el intercepto con la pendiente (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  "kkkkkkkkkkkkkkkkkk",
+  "kccccck....kccccck",
+  "kcwccckkkkkkcwccck",
+  "kccccck....kccccck",
+  "kcccrck....kcccrck",
+  ".kkkkk......kkkkk.",
+  "..................",
+  "..................",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_LENTES = { k: "#141420", c: "#5ae0f0", w: "#ffffff", r: "#e83a5a" };
+
+const BOLETOJ = [    // el boleto: cree que el error se queda en el modelo matemático (18 × 14)
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kyyyyyyyyyyyyyyk.",
+  "kyykyyyyyyyyyykyyk",
+  "kyyyyrrrrrrrryyyyk",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kyyyrryyyyrryyyk.",
+  "kyyyyyyyyyyyyyyyyk",
+  "kyykyyyyyyyyyykyyk",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_BOLETOJ = { k: "#201a10", y: "#f2d24a", r: "#c0392b" };
+
+const CAJOTA = [    // la cajota: no ve que regresión, Pearson y covarianza comparten signo (18 × 14)
+  "..................",
+  "...kkkkkkkkkkkk...",
+  "..kmmmmmmmmmmmmk..",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbwkbbbbbbwkbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbbbbkkkkbbbbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbrrrrrrrrrrbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_CAJOTA = { k: "#1e140c", m: "#d8a860", b: "#b07a40", w: "#ffffff", r: "#c0392b" };
+
+const ESCALONJ = [    // la escalera: lee mal el coeficiente de determinación (18 × 14)
+  "..................",
+  "............kkkkk.",
+  "............kgggk.",
+  "........kkkkkgggk.",
+  "........kgggggggk.",
+  "....kkkkkgggggggk.",
+  "....kgwkgggwkggk..",
+  "kkkkkgggggggggggk.",
+  "kgggggggggggggggk.",
+  "kgggggggggggggggk.",
+  "kggggggkkkkggggk..",
+  "kgggggggggggggggk.",
+  "kkkkkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_ESCALONJ = { k: "#141c14", g: "#7ac07a", w: "#ffffff" };
+
+const DNI = [    // el DNI: usa Pearson con calificaciones de 1 a 7 (18 × 14)
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbkkkkbbbbbbbbbk.",
+  ".kbkppkbmmmmmmbbk.",
+  ".kbkpwkbbbbbbbbbk.",
+  ".kbkppkbmmmmbbbbk.",
+  ".kbkkkkbbbbbbbbbk.",
+  ".kbbbbbbmmmmmmmbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbmmmmmmmmmmmbbk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_DNI = { k: "#141420", b: "#bfe0f0", p: "#e8b896", w: "#ffffff", m: "#5a6a8a" };
+
+const LUNITA = [    // la lunita: no sabe por qué se llaman mínimos cuadrados (18 × 14)
+  "......kkkkkk......",
+  "....kkyyyyyykk....",
+  "...kyyoyyyyyyyk...",
+  "..kyyyyyyyoyyyyk..",
+  "..kyywkyyyywkyyk..",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kyoyyyyyyyyyoyyk.",
+  ".kyyyykkkkkkyyyyk.",
+  "..kyyyyyyyyyyyyk..",
+  "..kyyyyyoyyyyyyk..",
+  "...kyyyyyyyyyyk...",
+  "....kkyyyyyykk....",
+  "......kkkkkk......",
+  "..................",
+];
+const P_LUNITA = { k: "#2a1a08", y: "#f2d24a", o: "#e8763a", w: "#ffffff" };
+
+const JUPITERINO = [    // jefe: el señor de las lunas, que arma la recta con matrices (18 × 17)
+  "....r..r..r..r....",
+  "....rrrrrrrrrr....",
+  "....ryrrrrrryr....",
+  "....kkkkkkkkkk....",
+  "...koooooooooook..",
+  "...kccccccccccck..",
+  "...kowkoooooowkk..",
+  "...koooooooooook..",
+  "...kccckkkkcccck..",
+  "....koooooooook...",
+  "...kkrrrrrrrrrkk..",
+  "..krrrrryyrrrrrk..",
+  ".krrrrryyyyrrrrrk.",
+  ".kcrrrrryyrrrrrck.",
+  ".kckrrrrrrrrrrkck.",
+  "..kkrrrrrrrrrrkk..",
+  "...krrrrkkrrrrk...",
+];
+const P_JUPITERINO = { k: "#1a1010", r: "#c0502a", y: "#f2d24a", o: "#e8c08a", c: "#c08a5a", w: "#ffffff" };
+
 
 
 
@@ -3244,6 +3373,13 @@ const DEFINICIONES = {
   medusa:       [MEDUSA, P_MEDUSA],
   reysaturno:   [REYSATURNO, P_REYSATURNO],
   nave:         [NAVE, P_NAVE],
+  lentes:       [LENTES, P_LENTES],
+  boletoj:      [BOLETOJ, P_BOLETOJ],
+  cajota:       [CAJOTA, P_CAJOTA],
+  escalonj:     [ESCALONJ, P_ESCALONJ],
+  dni:          [DNI, P_DNI],
+  lunita:       [LUNITA, P_LUNITA],
+  jupiterino:   [JUPITERINO, P_JUPITERINO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

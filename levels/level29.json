@@ -1,0 +1,41 @@
+{
+  "id": "level29",
+  "distrito": "Júpiter",
+  "clase": "Clase 03 · Final",
+  "titulo": "El planeta de las lunas que siguen su órbita en línea",
+  "tema": "jupiter",
+  "musica": "jupiter",
+  "vehiculo": "nave",
+  "intro": "Tercera parada del modo galaxia: Europa, la luna helada de Júpiter. Las lunas siguen su órbita sin salirse, y eso busca la ECUACIÓN DE REGRESIÓN: una recta que pase lo más cerca posible de los puntos para predecir Y a partir de X. Primero, los tres modelos (estadístico, matemático y estimado). Después, qué dice cada coeficiente: covarianza, Pearson, regresión y determinación. Y al final, cómo se arma la recta con mínimos cuadrados y con matrices.",
+  "repaso": [
+    "LOS TRES MODELOS: el ESTADÍSTICO, Y = β0 + β1X + ε, incluye el error y para un X da un rango de valores de Y. El MATEMÁTICO, μy = β0 + β1X, usa el promedio de Y: como el promedio de los errores es cero, el error desaparece; pero usa la población. El ESTIMADO, ŷ = b0 + b1X, usa la muestra y es el más práctico para predecir.",
+    "LOS COEFICIENTES DE LA RECTA: b0 es el intercepto en Y y b1 es la pendiente, la que acompaña a X.",
+    "EL COEFICIENTE DE REGRESIÓN es la pendiente b1. Se interpreta así: si X aumenta en 1 unidad, Y aumenta (o disminuye) en promedio b1. Puede tomar cualquier valor.",
+    "LOS ERRORES: la diferencia entre lo observado y lo esperado. Deben tener promedio cero, distribución normal, varianza constante y no estar relacionados entre sí.",
+    "EL COEFICIENTE DE DETERMINACIÓN (r²): mide qué % de la variabilidad de Y está explicado por X. Va de 0 a 1, solo positivo. A mayor r², mejor explica X el comportamiento de Y.",
+    "PEARSON Y r²: Pearson en valor absoluto es la raíz del r². El signo se lo da la pendiente: con ŷ = 32,67 − 0,58X y r² = 0,81, Pearson es −0,9.",
+    "LOS CUATRO COEFICIENTES: la covarianza mide el tipo de relación; Pearson, el tipo y el grado; el de regresión es la pendiente; el de determinación, el % explicado.",
+    "MISMO SIGNO: el coeficiente de regresión, el de Pearson y la covarianza siempre tienen el mismo signo. El r² no tiene signo.",
+    "PEARSON O SPEARMAN: Pearson para dos variables cuantitativas continuas, de preferencia normales. Si alguna es una escala o una variable cualitativa jerárquica (de 1 a 7, de 1 a 5), va Spearman. Pearson se ve afectado por los atípicos; Spearman no.",
+    "INVERSA NO ES INDIRECTA: una correlación de −0,88 es una relación INVERSA. «Indirecta» no es un tipo de asociación.",
+    "MÍNIMOS CUADRADOS: la recta pasa por donde la suma de los errores al cuadrado es mínima. Los errores suman cero y sus cuadrados, lo menos posible.",
+    "EL MÉTODO MATRICIAL: se arman n, Σx, Σx², Σy y Σxy; se halla X´X y su inversa, luego X´Y, y los coeficientes salen de b = (X´X)⁻¹ X´Y. X´X es cuadrada, simétrica y regular (determinante distinto de cero). En una 2×2, Det = ad − bc; la inversa cambia de lugar la diagonal principal, le cambia el signo a la secundaria y divide entre el determinante."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooLoo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======              ======                                                 ooooo      ======                     oooooo                 ==========              ",
+    "                              ooooo                            =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X    C                      E       X                C   E                      B       M   ",
+    "###############################   ##############################################################   ###################################    ##########################################",
+    "###############################   ##############################################################   ###################################    ##########################################",
+    "###############################   ##############################################################   ###################################    ##########################################"
+  ]
+}
